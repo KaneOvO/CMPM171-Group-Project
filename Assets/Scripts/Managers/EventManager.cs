@@ -20,11 +20,15 @@ public class EventManager : MonoBehaviour
     {
         _instance = this;
     }
+    [SerializeField]
     public List<BasicEvent> eventList = new List<BasicEvent>();
     private BasicEvent currentEvent;
     private int currentEventIndex = 0;
     public void Start()
     {
+        eventList.Add(new TestEvent01());
+        eventList.Add(new TestEvent02());
+        eventList.Add(new TestEvent03());
         EventWapper();
         LoadEvent(currentEventIndex);
     }
@@ -36,25 +40,29 @@ public class EventManager : MonoBehaviour
             eventList.Add(new DayEnd());
             return;
         }
-        eventList.RemoveAll(x => x.eventID == "DayStart" || x.eventID == "DayEnd");
+        eventList.RemoveAll(x => x.id == "DayStart" || x.id == "DayEnd");
         eventList.Insert(0, new DayStart());
         eventList.Add(new DayEnd());
     }
 
-    private void LoadEvent(int currentEventIndex){
+    private void LoadEvent(int currentEventIndex)
+    {
         currentEvent = eventList[currentEventIndex];
         currentEvent.OnEnter();
     }
-    public void NextEvent(){
+    public void NextEvent()
+    {
         currentEvent.OnExit();
         currentEventIndex++;
         LoadEvent(currentEventIndex);
     }
 
-    private void Update(){
+    private void Update()
+    {
         currentEvent.OnUpdate();
     }
-    private void FixedUpdate(){
+    private void FixedUpdate()
+    {
         currentEvent.OnFixedUpdate();
     }
 }

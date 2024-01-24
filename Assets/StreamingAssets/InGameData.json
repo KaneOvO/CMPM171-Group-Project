@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "id": "00",
+            "name": [
+                "test_item_00",
+                "测试道具_00"
+            ],
+            "price": [-1],
+            "maxStack": 1,
+            "description": [
+                "This is test item 00.",
+                "这是测试道具00。"
+            ],
+            "spriteUrl": "test_item_00.png"
+        },
+        {
+            "id": "01",
+            "name": [
+                "test_item_01",
+                "测试道具_01"
+            ],
+            "price": [1],
+            "maxStack": 10,
+            "description": [
+                "This is test item 01.",
+                "这是测试道具01。"
+            ],
+            "spriteUrl": "test_item_01.png"
+        }
+    ]
+}

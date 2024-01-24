@@ -1,0 +1,9 @@
+{
+    "currentDay": -1,
+    "PlayerState": {
+        "money": -1,
+        "health": -1,
+        "reputation": -1,
+        "moral": -1
+    }
+}

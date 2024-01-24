@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public abstract class BasicEvent
 {
-    public readonly string eventID;
+    public readonly string id;
     public readonly bool skippable;
-    public BasicEvent(string id, bool isSkippable)
+    public BasicEvent(string id, bool skippable)
     {
-        eventID = id;
-        skippable = isSkippable;
+        this.id = id;
+        this.skippable = skippable;
     }
     public virtual void Buff() { }
     public abstract void OnEnter();

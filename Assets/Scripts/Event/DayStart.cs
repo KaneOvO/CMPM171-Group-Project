@@ -5,7 +5,7 @@ using UnityEngine;
 public class DayStart : BasicEvent
 {
     public DayStart() : base("DayStart", false) { }
-    private float timer = 0;
+    private float timer = 2f;
     public override void Buff()
     {
 
@@ -13,20 +13,21 @@ public class DayStart : BasicEvent
 
     public override void OnEnter()
     {
-        Debug.Log("Now enter DayStart");
+        UIManager.Instance.testText.text = "A new day, wait for 10 seconds to quit this event";
     }
 
     public override void OnExit()
     {
-        Debug.Log("Now exit DayStart");
+        UIManager.Instance.testText.text = "the day start event is over";
     }
 
     public override void OnUpdate()
     {
-        timer += Time.deltaTime;
-        Debug.Log(timer);
-        if (timer > 10)
+        timer -= Time.deltaTime;
+        UIManager.Instance.testText.text = $"A new day, wait for {timer.ToString("F2")} seconds to quit this event";
+        if (timer <= 0)
         {
+            timer = 10f;
             EventManager.Instance.NextEvent();
         }
     }
