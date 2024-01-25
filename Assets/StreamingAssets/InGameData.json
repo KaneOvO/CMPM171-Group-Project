@@ -12,7 +12,7 @@
                 "This is test item 00.",
                 "这是测试道具00。"
             ],
-            "spriteUrl": "test_item_00.png"
+            "spriteUrl": "test_item_00"
         },
         {
             "id": "01",
@@ -26,7 +26,7 @@
                 "This is test item 01.",
                 "这是测试道具01。"
             ],
-            "spriteUrl": "test_item_01.png"
+            "spriteUrl": "test_item_01"
         }
     ]
 }

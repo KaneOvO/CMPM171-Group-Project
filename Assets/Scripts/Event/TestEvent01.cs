@@ -17,7 +17,9 @@ public class TestEvent01 : BasicEvent
         GameObject test_sprite = new GameObject("test_sprite");
         test_sprite.transform.parent = EventManager.Instance.transform;
         test_sprite.AddComponent<SpriteRenderer>();
-        Sprite loadedSprite = Resources.Load<Sprite>("test_sprite_00.png");
+        Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
+        Sprite loadedSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        test_sprite.GetComponent<SpriteRenderer>().sprite = loadedSprite;
     }
 
     public override void OnExit()
