@@ -7,6 +7,7 @@
                 "测试道具_00"
             ],
             "price": [-1],
+            "sellRate":0.1,
             "maxStack": 1,
             "description": [
                 "This is test item 00.",
@@ -21,6 +22,7 @@
                 "测试道具_01"
             ],
             "price": [1],
+            "sellRate":0.1,
             "maxStack": 10,
             "description": [
                 "This is test item 01.",

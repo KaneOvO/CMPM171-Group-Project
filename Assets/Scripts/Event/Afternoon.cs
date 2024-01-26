@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DayEnd : BasicEvent
+public class Afternoon : BasicEvent
 {
-    public DayEnd() : base("DayEnd", false) { }
+    public Afternoon() : base("Afternoon", true) { }
     public override void Buff()
     {
 

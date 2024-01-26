@@ -22,38 +22,52 @@ public class EventManager : MonoBehaviour
     }
     [SerializeField]
     public List<BasicEvent> eventList = new List<BasicEvent>();
+    private readonly List<BasicEvent> initializedEventList = new List<BasicEvent>()
+    {
+        new Morning(),
+        new PickAction(),
+        new Noon(),
+        new PickAction(),
+        new Afternoon(),
+        new PickAction(),
+        new Night()
+    };
     private BasicEvent currentEvent;
     private int currentEventIndex = 0;
     public void Start()
     {
-        eventList.Add(new TestEvent01());
-        eventList.Add(new TestEvent02());
-        eventList.Add(new TestEvent03());
-        EventWapper();
+        InitializedEventList();
         LoadEvent(currentEventIndex);
     }
-    private void EventWapper()
+    private void InitializedEventList()
     {
-        if (eventList.Count == 0)
-        {
-            eventList.Add(new DayStart());
-            eventList.Add(new DayEnd());
-            return;
-        }
-        eventList.RemoveAll(x => x.id == "DayStart" || x.id == "DayEnd");
-        eventList.Insert(0, new DayStart());
-        eventList.Add(new DayEnd());
+        eventList.Clear();
+        eventList.AddRange(initializedEventList);
     }
 
     private void LoadEvent(int currentEventIndex)
     {
+        currentEventIndex = Mathf.Clamp(currentEventIndex, 0, eventList.Count - 1);
         currentEvent = eventList[currentEventIndex];
         currentEvent.OnEnter();
     }
     public void NextEvent()
     {
-        currentEvent.OnExit();
+        QuitEvent();
         currentEventIndex++;
+        LoadEvent(currentEventIndex);
+    }
+
+    public void QuitEvent()
+    {
+        currentEvent.OnExit();
+    }
+
+    public void LoadEvent(BasicEvent basicEvent)
+    {
+        currentEvent = eventList.Find(x => x.id == basicEvent.id);
+        if (currentEvent == null) Debug.Log($"Current event {basicEvent.id} is not found");
+        currentEventIndex = currentEvent == null ? eventList.Count - 1 : eventList.FindIndex(x => x.id == basicEvent.id);
         LoadEvent(currentEventIndex);
     }
 

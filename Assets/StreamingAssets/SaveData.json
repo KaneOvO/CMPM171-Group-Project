@@ -1,9 +1,14 @@
 {
-    "currentDay": -1,
-    "PlayerState": {
-        "money": -1,
-        "health": -1,
-        "reputation": -1,
-        "moral": -1
+    "currentDay": 1,
+    "playerState": {
+        "energy": 3,
+        "isSick": false,
+        "money": 0,
+        "health": 100,
+        "reputation": 10,
+        "moral": 10
+    },
+    "playerItems": {
+        "00": 1
     }
 }

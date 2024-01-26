@@ -20,9 +20,21 @@ public class ItemManager : MonoBehaviour
     {
         _instance = this;
     }
-    public List<Item> items;
+    public List<Item> items { get { return GameManager.Instance.inGameData.items; } }
     public Item ID(string id)
     {
         return items.Find(x => x.id == id);
+    }
+    public Dictionary<string, int> playerItems => GameManager.Instance.saveData.playerItems;
+    public void AddItem(string id, int amount = 1)
+    {
+        if (playerItems.ContainsKey(id))
+        {
+            playerItems[id] += amount;
+        }
+        else
+        {
+            playerItems.Add(id, amount);
+        }
     }
 }

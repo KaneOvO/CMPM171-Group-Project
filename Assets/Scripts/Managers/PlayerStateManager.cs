@@ -23,5 +23,5 @@ public class PlayerStateManager : MonoBehaviour
     {
         _instance = this;
     }
-    public PlayerState playerState;
+    public PlayerState playerState => GameManager.Instance.saveData.playerState;
 }

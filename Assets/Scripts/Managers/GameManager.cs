@@ -7,7 +7,9 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-    public int currentDay = -1;
+    public int currentDay { get { return saveData.currentDay; } }
+    public InGameData inGameData;
+    public SaveData saveData;
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -34,8 +36,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-    public InGameData inGameData;
-    public SaveData saveData;
     private IEnumerator Start()
     {
         string filePath = Path.Combine(Application.streamingAssetsPath, "InGameData.json");
@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
             {
                 string dataAsJson = webRequest.downloadHandler.text;
                 inGameData = JsonUtility.FromJson<InGameData>(dataAsJson);
-                ItemManager.Instance.items = inGameData.items;
             }
         }
 
@@ -69,8 +68,6 @@ public class GameManager : MonoBehaviour
             {
                 string dataAsJson = webRequest.downloadHandler.text;
                 saveData = JsonUtility.FromJson<SaveData>(dataAsJson);
-                currentDay = saveData.currentDay;
-                PlayerStateManager.Instance.playerState = saveData.playerState;
             }
         }
     }
