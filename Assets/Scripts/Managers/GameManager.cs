@@ -4,7 +4,9 @@ using UnityEngine;
 using System.Reflection;
 using UnityEngine.Networking;
 using System.IO;
+using UnityEditor;
 
+[AddComponentMenu("Managers/GameManager")]
 public class GameManager : MonoBehaviour
 {
     public int currentDay { get { return saveData.currentDay; } }
@@ -70,5 +72,12 @@ public class GameManager : MonoBehaviour
                 saveData = JsonUtility.FromJson<SaveData>(dataAsJson);
             }
         }
+    }
+
+    private void InitializedSaveData(){
+        saveData = new SaveData();
+        saveData.currentDay = 1;
+        saveData.playerState = inGameData.initialDatas.playerState;
+        saveData.inventory = new Dictionary<string, int>();
     }
 }

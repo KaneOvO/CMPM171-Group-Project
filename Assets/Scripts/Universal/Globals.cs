@@ -2,26 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [System.Serializable]
-public class SaveData{
+public class SaveData
+{
     public int currentDay;
     public PlayerState playerState;
-    public Dictionary<string,int> playerItems;
+    public Dictionary<string, int> inventory;
 }
 [System.Serializable]
 public class PlayerState
 {
-    public int energy;
+    [Range(0, 3)] public int energy;
     public bool isSick;
-    public int money;
-    public int health;
-    public int reputation;
-    public int moral;
+    public float money;
+    [Range(0, 100)] public int health;
+    [Range(0, 100)] public int reputation;
+    [Range(0, 100)] public int moral;
 }
 [System.Serializable]
-public class InGameData{
+public class InGameData
+{
     public List<Item> items;
+    public InitialDatas initialDatas;
+}
+[System.Serializable]
+public class InitialDatas
+{
+    public PlayerState playerState;
 }
 
 [System.Serializable]
