@@ -5,10 +5,10 @@
         "isSick": false,
         "money": 0,
         "health": 100,
-        "reputation": 10,
-        "moral": 10
+        "reputation": 50,
+        "moral": 50
     },
-    "playerItems": {
+    "inventory": {
         "00": 1
     }
 }

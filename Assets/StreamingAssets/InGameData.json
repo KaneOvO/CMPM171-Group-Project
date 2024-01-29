@@ -6,8 +6,10 @@
                 "test_item_00",
                 "测试道具_00"
             ],
-            "price": [-1],
-            "sellRate":0.1,
+            "price": [
+                -1
+            ],
+            "sellRate": 0.1,
             "maxStack": 1,
             "description": [
                 "This is test item 00.",
@@ -21,8 +23,10 @@
                 "test_item_01",
                 "测试道具_01"
             ],
-            "price": [1],
-            "sellRate":0.1,
+            "price": [
+                1
+            ],
+            "sellRate": 0.1,
             "maxStack": 10,
             "description": [
                 "This is test item 01.",
@@ -36,7 +40,10 @@
                 "Spicy Strips",
                 "辣条"
             ],
-            "price": [4, 5],
+            "price": [
+                4,
+                5
+            ],
             "sellRate": 0.5,
             "maxStack": 99,
             "description": [
@@ -51,7 +58,10 @@
                 "Coke",
                 "可乐"
             ],
-            "price": [2.5, 3],
+            "price": [
+                2.5,
+                3
+            ],
             "sellRate": 0.6,
             "maxStack": 99,
             "description": [
@@ -66,7 +76,10 @@
                 "Ice Cream",
                 "冰激凌"
             ],
-            "price": [7, 10],
+            "price": [
+                7,
+                10
+            ],
             "sellRate": 0.45,
             "maxStack": 99,
             "description": [
@@ -81,7 +94,10 @@
                 "Game Console",
                 "游戏机"
             ],
-            "price": [2000, 2200],
+            "price": [
+                2000,
+                2200
+            ],
             "sellRate": 0.8,
             "maxStack": 99,
             "description": [
@@ -96,7 +112,10 @@
                 "doll",
                 "娃娃"
             ],
-            "price": [500, 700],
+            "price": [
+                500,
+                700
+            ],
             "sellRate": 0.3,
             "maxStack": 99,
             "description": [
@@ -111,7 +130,10 @@
                 "Dinosaur Toys",
                 "小恐龙"
             ],
-            "price": [300, 400],
+            "price": [
+                300,
+                400
+            ],
             "sellRate": 0.25,
             "maxStack": 99,
             "description": [
@@ -126,7 +148,10 @@
                 "Cigarette",
                 "香烟"
             ],
-            "price": [50, 80],
+            "price": [
+                50,
+                80
+            ],
             "sellRate": 0.4,
             "maxStack": 99,
             "description": [
@@ -141,7 +166,10 @@
                 "Wine",
                 "葡萄酒"
             ],
-            "price": [100, 140],
+            "price": [
+                100,
+                140
+            ],
             "sellRate": 0.5,
             "maxStack": 99,
             "description": [
@@ -156,7 +184,10 @@
                 "Flower",
                 "鲜花"
             ],
-            "price": [35, 50],
+            "price": [
+                35,
+                50
+            ],
             "sellRate": 0.5,
             "maxStack": 99,
             "description": [
@@ -171,7 +202,10 @@
                 "strange pills",
                 "奇怪的药丸"
             ],
-            "price": [100, 200],
+            "price": [
+                100,
+                200
+            ],
             "sellRate": 1,
             "maxStack": 99,
             "description": [
@@ -186,7 +220,10 @@
                 "Pistol",
                 "手枪"
             ],
-            "price": [500, 1200],
+            "price": [
+                500,
+                1200
+            ],
             "sellRate": 1,
             "maxStack": 99,
             "description": [
@@ -195,5 +232,15 @@
             ],
             "spriteUrl": "#"
         }
-    ]
+    ],
+    "initialDatas": {
+        "playerState": {
+            "energy": 3,
+            "isSick": false,
+            "money": 0,
+            "health": 100,
+            "reputation": 50,
+            "moral": 50
+        }
+    }
 }

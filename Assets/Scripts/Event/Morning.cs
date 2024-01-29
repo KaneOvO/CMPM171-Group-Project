@@ -20,7 +20,7 @@ public class Morning : BasicEvent
     {
         UIManager.Instance.testText.text = "the day start event is over";
         PlayerStateManager.Instance.playerState.energy = 3;
-        Debug.Log(ItemManager.Instance.ID("00").sellRate);
+        //Debug.Log(ItemManager.Instance.ID("00").sellRate);
     }
 
     public override void OnUpdate()

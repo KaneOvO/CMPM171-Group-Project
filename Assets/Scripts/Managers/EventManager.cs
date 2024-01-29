@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor;
+[AddComponentMenu("Managers/EventManager")]
 public class EventManager : MonoBehaviour
 {
     private static EventManager _instance;
