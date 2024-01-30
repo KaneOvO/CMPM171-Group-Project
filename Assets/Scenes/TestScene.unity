@@ -258,6 +258,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d43a1c9cfca2e4b861c14bb02c0378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energyEmpty:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383250284}
+        m_TargetAssemblyTypeName: PlayerActivityManager, Assembly-CSharp
+        m_MethodName: SkippedActivity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &383250285
 Transform:
   m_ObjectHideFlags: 0
@@ -297,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029489baecb8ded429b1a4d5621c6932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endDay: 10
   inGameData:
     items: []
     initialDatas:
@@ -345,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &529159655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -378,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.8599885, b: 0.53129226, a: 1}
+  m_Color: {r: 0.9811321, g: 0.8599885, b: 0.53129226, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

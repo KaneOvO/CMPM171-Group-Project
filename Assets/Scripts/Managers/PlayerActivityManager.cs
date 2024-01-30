@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Events;
 [AddComponentMenu("Managers/PlayerActivityManager")]
 public class PlayerActivityManager : MonoBehaviour
 {
     private static PlayerActivityManager _instance;
     public SaveData saveData => GameManager.Instance.saveData;
+    public UnityEvent energyEmpty;
     public static PlayerActivityManager Instance
     {
         get
@@ -39,6 +41,11 @@ public class PlayerActivityManager : MonoBehaviour
     public void Start()
     {
         InitializedActivityList();
+        //  LoadActivity;
+        LoadActivity();
+    }
+    public void LoadActivity()
+    {
         LoadActivity(currentActivityIndex);
     }
     private void InitializedActivityList()
@@ -51,6 +58,7 @@ public class PlayerActivityManager : MonoBehaviour
     {
         currentActivityIndex = (int)Mathf.Clamp(currentActivityIndex, 0, activityList.Count - 1);
         currentActivity = activityList[currentActivityIndex];
+        // FindObjectOfType<GameManager>().OnJsonLoad += currentActivity.OnEnter;
         currentActivity.OnEnter();
     }
     public void NextActivity()
@@ -73,6 +81,14 @@ public class PlayerActivityManager : MonoBehaviour
         LoadActivity(currentActivityIndex);
     }
 
+    public void LoadActivity(string id)
+    {
+        currentActivity = activityList.Find(x => x.id == id);
+        if (currentActivity == null) Debug.Log($"Current activity {id} is not found");
+        currentActivityIndex = currentActivity == null ? activityList.Count - 1 : activityList.FindIndex(x => x.id == id);
+        LoadActivity(currentActivityIndex);
+    }
+
     private void Update()
     {
         currentActivity.OnUpdate();
@@ -82,10 +98,23 @@ public class PlayerActivityManager : MonoBehaviour
         currentActivity.OnFixedUpdate();
     }
 
-    public void NewDay(){
+    public void NewDay()
+    {
         saveData.currentDay++;
+        if (saveData.currentDay > GameManager.Instance.endDay) { LoadEnd(); return; }
         InitializedActivityList();
         currentActivityIndex = 0;
         LoadActivity(currentActivityIndex);
+    }
+    public void LoadEnd()
+    {
+        BasicActivity theEnd = new End();
+        activityList.Add(theEnd);
+        LoadActivity(theEnd);
+    }
+
+    public void SkippedActivity()
+    {
+        LoadActivity("Night");
     }
 }

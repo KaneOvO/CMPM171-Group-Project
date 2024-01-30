@@ -24,7 +24,7 @@ public class Noon : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, 2f);
-        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on Noon. Wait {timer.ToString("F2")} seconds to continue.";
+        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on {id}. \nWait {timer.ToString("F2")} seconds to continue.";
         if (timer <= 0) PlayerActivityManager.Instance.NextActivity();
     }
 

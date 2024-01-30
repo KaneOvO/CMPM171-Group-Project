@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-    public int currentDay;
+    public uint currentDay;
     public PlayerState playerState;
     public Dictionary<string, int> inventory;
 }

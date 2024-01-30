@@ -12,6 +12,7 @@ public class Night : BasicActivity
 
     public override void OnEnter()
     {
+        timer = maxTime;
         PlayerStateManager.Instance.ClearEnergy();
         PlayerStateManager.Instance.playerState.isSick = false;
         UIManager.Instance.testText.text = "Now on Night.";
@@ -25,7 +26,7 @@ public class Night : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on night, wait for {timer.ToString("F2")} seconds to quit this event";
+        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on {id}.\nWait for {timer.ToString("F2")} seconds to continue.";
         if (timer <= 0)
         {
             PlayerActivityManager.Instance.NewDay();

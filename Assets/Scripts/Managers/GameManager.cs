@@ -5,14 +5,18 @@ using System.Reflection;
 using UnityEngine.Networking;
 using System.IO;
 using UnityEditor;
-
+using UnityEngine.Events;
+using System;
 [AddComponentMenu("Managers/GameManager")]
 public class GameManager : MonoBehaviour
 {
-    public int currentDay => saveData.currentDay;
+    public uint currentDay => saveData.currentDay;
+    [Range(0, 30)] public uint endDay = 3;
     public InGameData inGameData;
     public SaveData saveData;
     private static GameManager _instance;
+
+    public event Action OnJsonLoad;
     public static GameManager Instance
     {
         get
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
                 saveData = JsonUtility.FromJson<SaveData>(dataAsJson);
             }
         }
+        OnJsonLoad?.Invoke();
     }
 
     private void InitializedSaveData()
