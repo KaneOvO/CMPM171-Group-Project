@@ -9,7 +9,7 @@ using UnityEditor;
 [AddComponentMenu("Managers/GameManager")]
 public class GameManager : MonoBehaviour
 {
-    public int currentDay { get { return saveData.currentDay; } }
+    public int currentDay => saveData.currentDay;
     public InGameData inGameData;
     public SaveData saveData;
     private static GameManager _instance;
@@ -74,7 +74,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void InitializedSaveData(){
+    private void InitializedSaveData()
+    {
         saveData = new SaveData();
         saveData.currentDay = 1;
         saveData.playerState = inGameData.initialDatas.playerState;
