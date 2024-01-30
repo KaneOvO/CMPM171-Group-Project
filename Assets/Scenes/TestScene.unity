@@ -285,11 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8e39c4eb492ae4fb0d18655af15137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerState:
-    money: 0
-    health: 0
-    reputation: 0
-    moral: 0
 --- !u!114 &383250287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,16 +297,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029489baecb8ded429b1a4d5621c6932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: -1
   inGameData:
     items: []
+    initialDatas:
+      playerState:
+        energy: 0
+        isSick: 0
+        money: 0
+        health: 0
+        reputation: 0
+        moral: 0
   saveData:
     currentDay: 0
     playerState:
+      energy: 0
+      isSick: 0
       money: 0
-      health: 0
-      reputation: 0
-      moral: 0
+      health: 100
+      reputation: 100
+      moral: 100
 --- !u!114 &383250288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807f7977ca652b499a5dc2245ef08db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
 --- !u!1 &529159654
 GameObject:
   m_ObjectHideFlags: 0

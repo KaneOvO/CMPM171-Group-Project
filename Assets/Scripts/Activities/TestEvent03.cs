@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestEvent03 : BasicEvent
+public class TestEvent03 : BasicActivity
 {
-    public TestEvent03() : base("TestEvent03", false) { }
+    public TestEvent03() : base("TestEvent03") { }
     public override void Buff()
     {
 
@@ -24,7 +24,7 @@ public class TestEvent03 : BasicEvent
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            EventManager.Instance.NextEvent();
+            PlayerActivityManager.Instance.NextActivity();
         }
     }
 

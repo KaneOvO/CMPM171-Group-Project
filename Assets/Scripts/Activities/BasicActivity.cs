@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public abstract class BasicEvent
+public abstract class BasicActivity
 {
     public readonly string id;
-    public readonly bool skippable;
-    public BasicEvent(string id, bool skippable)
+    public float timer;
+    public float maxTime;
+    public BasicActivity(string id, float maxTime = 2f)
     {
         this.id = id;
-        this.skippable = skippable;
+        this.maxTime = maxTime;
     }
     public virtual void Buff() { }
     public abstract void OnEnter();

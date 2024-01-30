@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestEvent02 : BasicEvent
+public class TestEvent02 : BasicActivity
 {
-    public TestEvent02() : base("TestEvent02", false) { }
+    public TestEvent02() : base("TestEvent02") { }
     private Coroutine testcoroutine;
     public override void Buff()
     {
@@ -31,14 +31,14 @@ public class TestEvent02 : BasicEvent
             yield return null;
             timer -= Time.deltaTime;
         }
-        EventManager.Instance.NextEvent();
+        PlayerActivityManager.Instance.NextActivity();
     }
 
     public override void OnUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Space) && testcoroutine == null)
         {
-            testcoroutine = EventManager.Instance.StartCoroutine(WaitToQuit());
+            testcoroutine = PlayerActivityManager.Instance.StartCoroutine(WaitToQuit());
         }
     }
 
