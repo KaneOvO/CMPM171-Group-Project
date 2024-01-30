@@ -40,12 +40,11 @@
                 "Spicy Strips",
                 "辣条"
             ],
-            "price": [
-                4,
-                5
-            ],
-            "sellRate": 0.5,
-            "maxStack": 99,
+            "sellPrice": 6.5,
+            "purchasePrice": 4,
+            "sellRate": 0.8,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "Who says spicy strips can't be eaten as a meal?",
                 "谁说辣条不能当饭吃？"
@@ -58,12 +57,11 @@
                 "Coke",
                 "可乐"
             ],
-            "price": [
-                2.5,
-                3
-            ],
-            "sellRate": 0.6,
-            "maxStack": 99,
+            "sellPrice": 2,
+            "purchasePrice": 3,
+            "sellRate": 0.9,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "Coke, the taste of happiness.",
                 "快乐水，人间至味。"
@@ -76,12 +74,11 @@
                 "Ice Cream",
                 "冰激凌"
             ],
-            "price": [
-                7,
-                10
-            ],
-            "sellRate": 0.45,
-            "maxStack": 99,
+            "sellPrice": 9,
+            "purchasePrice": 7,
+            "sellRate": 0.8,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "Ice Cream, the goat of all desserts.",
                 "我冰伟大，无需多言"
@@ -94,12 +91,11 @@
                 "Game Console",
                 "游戏机"
             ],
-            "price": [
-                2000,
-                2200
-            ],
-            "sellRate": 0.8,
-            "maxStack": 99,
+            "sellPrice": 750,
+            "purchasePrice": 500,
+            "sellRate": 0.3,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "A game console that has just been listed and has received rave reviews.",
                 "刚上市的游戏机，大受好评"
@@ -112,12 +108,11 @@
                 "doll",
                 "娃娃"
             ],
-            "price": [
-                500,
-                700
-            ],
+            "sellPrice": 560,
+            "purchasePrice": 350,
             "sellRate": 0.3,
-            "maxStack": 99,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "Every doll has a story.",
                 "每一个娃娃都有一个故事"
@@ -130,12 +125,11 @@
                 "Dinosaur Toys",
                 "小恐龙"
             ],
-            "price": [
-                300,
-                400
-            ],
+            "sellPrice": 360,
+            "purchasePrice": 200,
             "sellRate": 0.25,
-            "maxStack": 99,
+            "maxSell": 100,
+            "maxStack": 999,
             "description": [
                 "",
                 ""
@@ -148,10 +142,7 @@
                 "Cigarette",
                 "香烟"
             ],
-            "price": [
-                50,
-                80
-            ],
+            "price": [50, 120],
             "sellRate": 0.4,
             "maxStack": 99,
             "description": [
@@ -166,10 +157,7 @@
                 "Wine",
                 "葡萄酒"
             ],
-            "price": [
-                100,
-                140
-            ],
+            "price": [100, 210],
             "sellRate": 0.5,
             "maxStack": 99,
             "description": [
