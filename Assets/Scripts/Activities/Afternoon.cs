@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Afternoon :BasicActivity
+public class Afternoon : BasicActivity
 {
     public Afternoon() : base("Afternoon") { }
     public override void Buff()
@@ -13,6 +13,7 @@ public class Afternoon :BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
+        ClockController.Instance.AfternoonClockAnimation(maxTime);
     }
 
     public override void OnExit()

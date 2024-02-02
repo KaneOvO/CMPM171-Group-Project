@@ -13,6 +13,7 @@ public class Night : BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
+        ClockController.Instance.NightClockAnimation(maxTime);
         PlayerStateManager.Instance.ClearEnergy();
         PlayerStateManager.Instance.playerState.isSick = false;
         UIManager.Instance.testText.text = "Now on Night.";

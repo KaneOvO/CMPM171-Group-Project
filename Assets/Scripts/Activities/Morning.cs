@@ -13,6 +13,7 @@ public class Morning : BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
+        ClockController.Instance.MorningClockAnimation(maxTime);
     }
 
     public override void OnExit()

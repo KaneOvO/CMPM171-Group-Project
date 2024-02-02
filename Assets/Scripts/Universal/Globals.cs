@@ -42,3 +42,14 @@ public class Item
     public List<string> description;
     public string spriteUrl;
 }
+
+[System.Serializable]
+public class InGameTime{
+    public int hour;
+    public int minute;
+}
+
+public static class Global{
+    public const int TEST_INT = 0;
+    public const string NOTIFICATION = "Json has been loaded.";
+}

@@ -12,7 +12,8 @@ public class Noon : BasicActivity
 
     public override void OnEnter()
     {
-      timer = maxTime;
+        timer = maxTime;
+        ClockController.Instance.NoonClockAnimation(maxTime);
     }
 
     public override void OnExit()
