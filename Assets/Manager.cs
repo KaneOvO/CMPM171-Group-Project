@@ -33,12 +33,14 @@ public class Manager : MonoBehaviour
     public void DangerLevelUp()
     {
         DangerLevel += 50;
+        Debug.Log(DangerLevel);
 
     }
 
     public void DangerLevelDown()
     {
         DangerLevel -= 50;
+        Debug.Log(DangerLevel);
     }
 
     public void ResetDangerLevel()
