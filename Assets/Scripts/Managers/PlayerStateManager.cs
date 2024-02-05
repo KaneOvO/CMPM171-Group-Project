@@ -24,6 +24,7 @@ public class PlayerStateManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        transform.parent = GameObject.Find("Managers").transform;
     }
     private void Update()
     {
