@@ -15,7 +15,7 @@ public class PickAction : BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
-        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nCurrent Energy:{PlayerStateManager.Instance.playerState.energy}\nNow on PickAction.\nPress Space to continue.";
+        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nCurrent Energy:{PlayerStateManager.Instance.playerState.energy}\nNow on {id}.\nPress Space or Click to continue.";
     }
 
     public override void OnExit()
@@ -26,9 +26,14 @@ public class PickAction : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space)||Input.GetMouseButtonUp(0))
         {
-            Debug.Log("Space is pressed");
+            string useringPut = Input.GetKeyUp(KeyCode.Space)? "Space":"Mouse";
+            Debug.Log($"{useringPut} is pressed");
+            if(playerState.energy <= 0){
+                PlayerActivityManager.Instance.energyEmpty.Invoke();
+                return;
+            }
             PlayerActivityManager.Instance.NextActivity();
         }
     }

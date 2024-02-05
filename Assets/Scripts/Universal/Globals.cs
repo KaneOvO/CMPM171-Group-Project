@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-    public int currentDay;
+    public uint currentDay;
     public PlayerState playerState;
     public Dictionary<string, int> inventory;
 }
@@ -41,4 +41,15 @@ public class Item
     public int maxStack;
     public List<string> description;
     public string spriteUrl;
+}
+
+[System.Serializable]
+public class InGameTime{
+    public int hour;
+    public int minute;
+}
+
+public static class Global{
+    public const int TEST_INT = 0;
+    public const string NOTIFICATION = "Json has been loaded.";
 }

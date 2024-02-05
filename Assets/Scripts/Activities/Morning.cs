@@ -13,6 +13,7 @@ public class Morning : BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
+        ClockController.Instance.MorningClockAnimation(maxTime);
     }
 
     public override void OnExit()
@@ -25,7 +26,7 @@ public class Morning : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nA new day, wait for {timer.ToString("F2")} seconds to continue.";
+        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on {id}.\nWait for {timer.ToString("F2")} seconds to continue.";
         if (timer <= 0)
         {
             PlayerActivityManager.Instance.NextActivity();

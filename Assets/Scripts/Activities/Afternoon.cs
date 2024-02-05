@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Afternoon :BasicActivity
+public class Afternoon : BasicActivity
 {
     public Afternoon() : base("Afternoon") { }
     public override void Buff()
@@ -13,6 +13,7 @@ public class Afternoon :BasicActivity
     public override void OnEnter()
     {
         timer = maxTime;
+        ClockController.Instance.AfternoonClockAnimation(maxTime);
     }
 
     public override void OnExit()
@@ -24,7 +25,7 @@ public class Afternoon :BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, 2f);
-        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on Afternoon. Wait {timer.ToString("F2")} seconds to continue.";
+        UIManager.Instance.testText.text = $"Day:{GameManager.Instance.saveData.currentDay}\nNow on Afternoon. \nWait {timer.ToString("F2")} seconds to continue.";
         if (timer <= 0) PlayerActivityManager.Instance.NextActivity();
     }
 
