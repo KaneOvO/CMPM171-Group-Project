@@ -23,6 +23,7 @@ public class PlayerActivityManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        transform.parent = GameObject.Find("Managers").transform;
     }
     [SerializeField]
     public List<BasicActivity> activityList = new List<BasicActivity>();

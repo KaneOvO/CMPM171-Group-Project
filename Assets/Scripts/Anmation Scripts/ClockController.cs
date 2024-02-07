@@ -40,11 +40,11 @@ public class ClockController : MonoBehaviour
         }
         _instance = this;
         // DontDestroyOnLoad(gameObject);
+        minuteHand = transform.GetChild(0).GetComponent<RectTransform>();
+        hourHand = transform.GetChild(1).GetComponent<RectTransform>();
     }
     private void Start()
     {
-        hourHand = transform.GetChild(1).GetComponent<RectTransform>();
-        minuteHand = transform.GetChild(0).GetComponent<RectTransform>();
         hourHand.rotation = Quaternion.Euler(0f, 0f, -30 * currentHours);
         minuteHand.rotation = Quaternion.Euler(0f, 0f, -6 * currentMinutes);
     }

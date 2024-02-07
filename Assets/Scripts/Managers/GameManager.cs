@@ -13,11 +13,11 @@ public class GameManager : MonoBehaviour
     [Header("Game Information")]
     [Range(0f, 1f)] public float fpsUpdateInterval = 0.5f;
     public float framesPerSecond = 0;
-    private uint frames = 0;
+    private int frames = 0;
     private double lastInterval;
 
     [Header("InGame Data Information")]
-    [Range(0, 30)] public uint endDay = 3;
+    [Range(0, 30)] public int endDay = 3;
     [HideInInspector]public InGameData inGameData;
     public SaveData saveData;
     private static GameManager _instance;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 
     public void Pause()

@@ -27,7 +27,7 @@ public class ItemManager : MonoBehaviour
     {
         return items.Find(x => x.id == id);
     }
-    public void AddItem(string id, int amount = 1)
+    public bool AddItemAmount(string id, int amount = 1)
     {
         if (inventory.ContainsKey(id))
         {
@@ -37,15 +37,38 @@ public class ItemManager : MonoBehaviour
         {
             inventory.Add(id, amount);
         }
-        OrganizeInventory();
+        return OrganizeInventory();
     }
-    public void OrganizeInventory()
+    public bool AddItemAmount(Dictionary<string, int> itemDic)
+    {
+        foreach (var item in itemDic)
+        {
+            if (inventory.ContainsKey(item.Key))
+            {
+                inventory[item.Key] += item.Value;
+            }
+            else
+            {
+                inventory.Add(item.Key, item.Value);
+            }
+        }
+        return OrganizeInventory();
+    }
+    public bool SetItemAmount(string id, int amount = 0)
+    {
+        if (amount < 0) return false;
+        if (!inventory.ContainsKey(id)) return false;
+        inventory[id] = amount;
+        return OrganizeInventory();
+    }
+    public bool OrganizeInventory()
     {
         foreach (var item in inventory)
         {
             inventory[item.Key] = (int)Mathf.Clamp(item.Value, 0, ID(item.Key).maxStack);
             if (inventory[item.Key] <= 0) inventory.Remove(item.Key);
         }
+        return true;
     }
     public GameObject MakeItemGameObject(Item item)
     {
