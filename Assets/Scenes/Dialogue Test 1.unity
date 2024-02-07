@@ -2709,9 +2709,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2057562108}
+  - {fileID: 2057562122}
   selectedCommands:
-  - {fileID: 2057562116}
+  - {fileID: 2057562124}
   variables:
   - {fileID: 2057562115}
   - {fileID: 2057562123}
@@ -3674,8 +3674,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 2057562121}
   commandList:
-  - {fileID: 2057562120}
   - {fileID: 2057562124}
+  - {fileID: 2057562120}
   suppressAllAutoSelections: 0
 --- !u!114 &2057562123
 MonoBehaviour:

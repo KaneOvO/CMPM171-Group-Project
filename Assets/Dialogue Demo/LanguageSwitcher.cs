@@ -27,12 +27,12 @@ public class LanguageSwitcher : MonoBehaviour
         
     }
 
-    //编写一个函数设置fungus插件本地化为英文
+    
     public void SetEnglish()
     {
-        currentLanguage = "English";
+        currentLanguage = "EN";
         flowchart.SetStringVariable("Language", currentLanguage);
-        localizationComponent.SetActiveLanguage(currentLanguage, true);
+        UpdateLanguage();
     }
 
 
@@ -41,6 +41,11 @@ public class LanguageSwitcher : MonoBehaviour
     {
         currentLanguage = "";
         flowchart.SetStringVariable("Language", currentLanguage);
+        UpdateLanguage();
+    }
+
+    public void UpdateLanguage()
+    {
         localizationComponent.SetActiveLanguage(currentLanguage, true);
     }
 }
