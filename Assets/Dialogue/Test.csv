@@ -1,11 +1,11 @@
 ﻿Key,Description,Standard,English
-SAY.Flowchart.2.NPC,,你好，请问这个地方怎,"Hello, may I ask how to get to this place?"
-MENU.Flowchart.3,,这里这么走,This way here
+SAY.Flowchart.2.NPC,,你好，请问这个地方怎么去？,"Hello, may I ask how to get to this place?"
+MENU.Flowchart.3,,这里这样走,This way here
 MENU.Flowchart.4,,离我远点,Leave far away
 SAY.Flowchart.7.NPC,,谢谢你,Thank You
 SAY.Flowchart.9.Me,,不客气,You are Welcome
 SAY.Flowchart.10.NPC,,再见,Bye
-SAY.Flowchart.11.,,“你活下来了”,"""You survived"""
+SAY.Flowchart.11.,,[你活下来了],[You survived]
 SAY.Flowchart.14.NPC,,那你去死吧,Then go to hell
 SAY.Flowchart.15.Me,,啊啊啊啊啊啊啊啊啊啊,Ahhhhhhhhhhhhhhhhhhhhh
 SAY.Flowchart.16.,,“你死了”,"""you are dead"""

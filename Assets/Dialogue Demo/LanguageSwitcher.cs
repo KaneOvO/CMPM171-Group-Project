@@ -6,10 +6,14 @@ using UnityEngine;
 public class LanguageSwitcher : MonoBehaviour
 {
     public Localization localizationComponent;
+    public Flowchart flowchart;
+
+    private string currentLanguage;
 
     void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
+        flowchart =  FindObjectOfType<Flowchart>();
     }
     // Start is called before the first frame update
     void Start()
@@ -26,13 +30,17 @@ public class LanguageSwitcher : MonoBehaviour
     //编写一个函数设置fungus插件本地化为英文
     public void SetEnglish()
     {
-        localizationComponent.SetActiveLanguage("English", true);
+        currentLanguage = "English";
+        flowchart.SetStringVariable("Language", currentLanguage);
+        localizationComponent.SetActiveLanguage(currentLanguage, true);
     }
 
 
 
     public void SetChinese()
     {
-        localizationComponent.SetActiveLanguage("", true);
+        currentLanguage = "";
+        flowchart.SetStringVariable("Language", currentLanguage);
+        localizationComponent.SetActiveLanguage(currentLanguage, true);
     }
 }
