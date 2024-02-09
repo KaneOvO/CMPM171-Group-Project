@@ -8,7 +8,8 @@ public class PlayerActivityManager : MonoBehaviour
 {
     private static PlayerActivityManager _instance;
     public SaveData saveData => GameManager.Instance.saveData;
-    public UnityEvent energyEmpty;
+    [Header("Event Listener: On Energy Empty.")]
+    public VoidEventSO energyEmpty;
     public static PlayerActivityManager Instance
     {
         get
@@ -23,7 +24,7 @@ public class PlayerActivityManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        transform.parent = GameObject.Find("Managers").transform;
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
     [SerializeField]
     public List<BasicActivity> activityList = new List<BasicActivity>();
@@ -39,11 +40,22 @@ public class PlayerActivityManager : MonoBehaviour
     };
     private BasicActivity currentActivity;
     private int currentActivityIndex = 0;
+    private void OnEnable()
+    {
+        energyEmpty.onEventRaised += HandleEnergyEmpty;
+    }
+    private void OnDisable()
+    {
+        energyEmpty.onEventRaised -= HandleEnergyEmpty;
+    }
+    private void HandleEnergyEmpty()
+    {
+        return;
+    }
     public void Start()
     {
         InitializedActivityList();
-        //  LoadActivity;
-        LoadActivity();
+        // LoadActivity();
     }
     public void LoadActivity()
     {
@@ -92,11 +104,11 @@ public class PlayerActivityManager : MonoBehaviour
 
     private void Update()
     {
-        currentActivity.OnUpdate();
+        currentActivity?.OnUpdate();
     }
     private void FixedUpdate()
     {
-        currentActivity.OnFixedUpdate();
+        currentActivity?.OnFixedUpdate();
     }
 
     public void NewDay()
@@ -118,4 +130,5 @@ public class PlayerActivityManager : MonoBehaviour
     {
         LoadActivity("Night");
     }
+
 }

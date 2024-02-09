@@ -24,12 +24,9 @@ public class PlayerStateManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        transform.parent = GameObject.Find("Managers").transform;
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
-    private void Update()
-    {
-        CheckSick();
-    }
+
     public PlayerState playerState => GameManager.Instance.saveData.playerState;
     public PlayerState initialPlayerStates => GameManager.Instance.inGameData.initialDatas.playerState;
     [ContextMenu("Check Health")]
@@ -37,17 +34,21 @@ public class PlayerStateManager : MonoBehaviour
     {
         return playerState.isSick = playerState.health * 2 < initialPlayerStates.health;
     }
-    public void EnergyChange(int amount){
+    public void EnergyChange(int amount)
+    {
         playerState.energy += amount;
         playerState.energy = (int)Mathf.Clamp(playerState.energy, 0, initialPlayerStates.energy);
     }
-    public void ResetEnergy(){
+    public void ResetEnergy()
+    {
         playerState.energy = initialPlayerStates.energy;
     }
-    public void ClearEnergy(){
+    public void ClearEnergy()
+    {
         playerState.energy = 0;
     }
-    public void SetEnergy(int amount){
+    public void SetEnergy(int amount)
+    {
         playerState.energy = (int)Mathf.Clamp(amount, 0, initialPlayerStates.energy);
     }
 }

@@ -20,6 +20,7 @@ public class ItemManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
     public List<Item> items { get { return GameManager.Instance.inGameData.items; } }
     public Dictionary<string, int> inventory => GameManager.Instance.saveData.inventory;

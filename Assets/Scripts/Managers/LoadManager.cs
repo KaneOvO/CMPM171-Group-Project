@@ -3,11 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 public class LoadManager : MonoBehaviour
 {
-    public float processValue = 0;
-    public AsyncOperation asyncLoad;
+    public GameSceneSO firstGameSceneSO;
+    [Header("Events listener:load new scene")]
+    public SceneLoadEventSO sceneLoadEvent;
+    [Header("Events sender:load new scene completed")]
+    public VoidEventSO sceneLoadCompletedEvent;
+    [Header("Events sender:fade canvas")]
+    public FadeEventSO fadeEvent;
     private static LoadManager _instance;
+    [SerializeField] private GameSceneSO currentSceneSO;
+    [SerializeField] private GameSceneSO sceneToGoSO;
+    private bool fade = false;
+    private float fadeDuration = 0.5f;
+    private bool isLoading = false;
     public static LoadManager Instance
     {
         get
@@ -25,7 +38,6 @@ public class LoadManager : MonoBehaviour
             return _instance;
         }
     }
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -34,28 +46,60 @@ public class LoadManager : MonoBehaviour
             return;
         }
         _instance = this;
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
+    }
+    // Register this class as listener to the SceneLoadEventSO
+    private void OnEnable()
+    {
+        sceneLoadEvent.LoadRequestedEvent += OnLoadRequestedEvent;
     }
 
-    public void LoadNextScene()
+    private void OnDisable()
     {
-        StartCoroutine(Loading());
+        sceneLoadEvent.LoadRequestedEvent -= OnLoadRequestedEvent;
     }
 
-    private IEnumerator Loading()
+    public void OnLoadRequestedEvent(GameSceneSO sceneSO, bool fade)
     {
-        asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        asyncLoad.allowSceneActivation = false;
-        while (!asyncLoad.isDone)
+        if (isLoading) return;
+        isLoading = true;
+        sceneToGoSO = sceneSO;
+        this.fade = fade;
+
+        StartCoroutine(UnloadPreviousScene());
+    }
+
+    public void Start()
+    {
+        sceneToGoSO = firstGameSceneSO;
+        LoadNewScene();
+    }
+    private IEnumerator UnloadPreviousScene()
+    {
+        if (fade)
         {
-            processValue = asyncLoad.progress;
-            if (asyncLoad.progress >= 0.9f)
-            {
-                if (Input.anyKeyDown)
-                {
-                    asyncLoad.allowSceneActivation = true;
-                }
-            }
-            yield return null;
+            //TODO: DO fade 
+            fadeEvent.FadeIn(fadeDuration);
         }
+        yield return new WaitForSeconds(fadeDuration);
+        yield return currentSceneSO.sceneReference.UnLoadScene();
+        LoadNewScene();
+    }
+    public void LoadNewScene()
+    {
+        var loadingOption = sceneToGoSO.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+        loadingOption.Completed += OnSceneLoadComplete;
+    }
+    private void OnSceneLoadComplete(AsyncOperationHandle<SceneInstance> obj)
+    {
+
+        currentSceneSO = sceneToGoSO;
+        if (fade)
+        {
+            //TODO: DO fade
+            fadeEvent.FadeOut(fadeDuration);
+        }
+        isLoading = false;
+        sceneLoadCompletedEvent.RaiseEvent();
     }
 }

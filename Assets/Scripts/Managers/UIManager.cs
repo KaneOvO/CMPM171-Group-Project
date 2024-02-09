@@ -22,8 +22,8 @@ public class UIManager : MonoBehaviour
     }
     private void Awake()
     {
-       _instance = this;
-       transform.parent = GameObject.Find("Managers").transform;
-       testText = GameObject.Find("Canvas/Test Text").GetComponent<TextMeshProUGUI>();
+        _instance = this;
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
+        testText.gameObject.SetActive(false);
     }
 }

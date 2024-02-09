@@ -26,12 +26,13 @@ public class PickAction : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        if (Input.GetKeyUp(KeyCode.Space)||Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
-            string useringPut = Input.GetKeyUp(KeyCode.Space)? "Space":"Mouse";
+            string useringPut = Input.GetKeyUp(KeyCode.Space) ? "Space" : "Mouse";
             Debug.Log($"{useringPut} is pressed");
-            if(playerState.energy <= 0){
-                PlayerActivityManager.Instance.energyEmpty.Invoke();
+            if (playerState.energy <= 0)
+            {
+                PlayerActivityManager.Instance.energyEmpty.RaiseEvent();
                 return;
             }
             PlayerActivityManager.Instance.NextActivity();

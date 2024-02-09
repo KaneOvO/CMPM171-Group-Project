@@ -4,11 +4,14 @@ using UnityEngine;
 using TMPro;
 public class Opening : MonoBehaviour
 {
+    public SceneLoadEventSO loadEventSO;
+    public GameSceneSO sceneToGo;
     private Queue<GameObject> queue = new Queue<GameObject>();
     public uint circleCount = 20;
     public float duration = 1f;
     public float radius = 2f;
     public TextMeshPro openingText;
+    public FadeCanvas fadeCanvas;
     void Awake()
     {
         openingText = GetComponent<TextMeshPro>();
@@ -22,6 +25,7 @@ public class Opening : MonoBehaviour
             queue.Enqueue(circle);
         }
         StartCoroutine(CircleAnimation());
+        StartCoroutine(NextScene());
     }
     public GameObject GetCircle()
     {
@@ -55,14 +59,9 @@ public class Opening : MonoBehaviour
             round = round - (int)round;
         }
     }
-    private void Start()
+    private IEnumerator NextScene()
     {
-        StartCoroutine(LoadNextScene());
-    }
-    private IEnumerator LoadNextScene()
-    {
-        LoadManager.Instance.LoadNextScene();
         yield return new WaitForSeconds(duration * 5);
-        LoadManager.Instance.asyncLoad.allowSceneActivation = true;
+        loadEventSO.RaiseEvent(sceneToGo, true);
     }
 }

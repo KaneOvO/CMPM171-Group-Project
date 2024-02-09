@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
 
     [Header("InGame Data Information")]
     [Range(0, 30)] public int endDay = 3;
-    [HideInInspector]public InGameData inGameData;
+    [HideInInspector] public InGameData inGameData;
     public SaveData saveData;
     private static GameManager _instance;
 
-    public event Action OnJsonLoad;
+    public VoidEventSO OnJsonLoad;
     public static GameManager Instance
     {
         get
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         _instance = this;
-        // DontDestroyOnLoad(gameObject);
+        transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
 
     public void Pause()
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 
         yield return LoadJsonFilesAsync();
 
-        OnJsonLoad?.Invoke();
+        OnJsonLoad.RaiseEvent();
         Debug.Log($"{Global.NOTIFICATION}");
     }
 
