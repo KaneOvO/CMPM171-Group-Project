@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
-  sceneToGo: {fileID: 11400000, guid: ff2a079e55124684c8ef5f59ef97b7c9, type: 2}
+  sceneToGo: {fileID: 11400000, guid: 1f6e9444205b604449981870e07a0773, type: 2}
   circleCount: 20
   duration: 1
   radius: 2

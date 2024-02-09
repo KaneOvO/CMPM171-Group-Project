@@ -35,6 +35,31 @@ MonoBehaviour:
     m_SerializedLabels:
     - Test Scene
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e15e88731af3be149b3e1e00b7382417
+    m_Address: Dialogue Test
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88dd6766f97a5234793e730130eec490
+    m_Address: Dialogue Test 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89ffece56e7ddbe42bdf6588146c0879
+    m_Address: GameScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c3e8be3c0ba0674289b46d94c8c087f
+    m_Address: MenuScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d699095bc268554aa984ef3c4fd8928
+    m_Address: New Scene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 09edbaf00523db443a08213adc71ea0e, type: 2}
   m_SchemaSet:

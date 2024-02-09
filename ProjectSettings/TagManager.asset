@@ -8,6 +8,7 @@ TagManager:
   - Canvas
   - Manager
   - ManagersContainer
+  - EventSystem
   layers:
   - Default
   - TransparentFX
