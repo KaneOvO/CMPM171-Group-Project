@@ -25,3 +25,11 @@ public enum SceneType
     Ending = 5,
     Test = 6,
 }
+public enum Stage
+{
+    Default = 0,
+    Morning = 1,
+    Noon = 2,
+    Afternoon = 3,
+    Night = 4,
+}

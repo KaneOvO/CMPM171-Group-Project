@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Opening : MonoBehaviour
+public class OpeningScene : MonoBehaviour
 {
+    [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadEventSO;
-    public GameSceneSO sceneToGo;
+    [Header("Scene Script Object: Title Scene")]
+    public GameSceneSO titleScene;
     private Queue<GameObject> queue = new Queue<GameObject>();
     public uint circleCount = 20;
     public float duration = 1f;
@@ -59,9 +61,16 @@ public class Opening : MonoBehaviour
             round = round - (int)round;
         }
     }
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            loadEventSO.RaiseEvent(titleScene, true);
+        }
+    }
     private IEnumerator NextScene()
     {
         yield return new WaitForSeconds(duration * 5);
-        loadEventSO.RaiseEvent(sceneToGo, true);
+        loadEventSO.RaiseEvent(titleScene, true);
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 025f07342bf1fd9498eee9dcfd4ec4f9, type: 3}
-  m_Name: Menu
+  m_Name: CreditScene
   m_EditorClassIdentifier: 
-  sceneType: 1
+  sceneType: 3
   sceneReference:
-    m_AssetGUID: 3c3e8be3c0ba0674289b46d94c8c087f
+    m_AssetGUID: 97f2fc7bd7330a64cbaf32fade4cd0c1
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

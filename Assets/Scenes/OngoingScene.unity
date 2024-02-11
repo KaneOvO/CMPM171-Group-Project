@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 450749589}
   - component: {fileID: 450749590}
   m_Layer: 0
-  m_Name: PlayerActivityManager
+  m_Name: StageManager
   m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,6 +422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyEmpty: {fileID: 11400000, guid: fa8dc010d16d9244c88b5a7f230d7100, type: 2}
+  OnJsonLoad: {fileID: 11400000, guid: 57faeaf991e5e614b95ee70066d3171c, type: 2}
+  startClickedEvent: {fileID: 11400000, guid: 3460dd6e3247ef640ad1b5f1931fe41b, type: 2}
 --- !u!1 &482214963
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +483,7 @@ MonoBehaviour:
         moral: 0
   saveData:
     currentDay: 0
+    currentStage: 0
     playerState:
       energy: 0
       isSick: 0

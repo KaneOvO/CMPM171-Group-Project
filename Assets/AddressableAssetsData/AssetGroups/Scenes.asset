@@ -18,13 +18,13 @@ MonoBehaviour:
   m_GUID: 163e2c5108ad5da4fafd4ef2b10a5028
   m_SerializeEntries:
   - m_GUID: b1e54160802b07c4ab8f60b7620c3e72
-    m_Address: Opening
+    m_Address: OpeningScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Opening Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1bee197cfe206d44910d32b0724b488
-    m_Address: Ongoing
+    m_Address: OngoingScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Permanent Scene
@@ -36,7 +36,7 @@ MonoBehaviour:
     - Test Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e15e88731af3be149b3e1e00b7382417
-    m_Address: Dialogue Test
+    m_Address: DialogueScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -46,12 +46,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89ffece56e7ddbe42bdf6588146c0879
-    m_Address: GameScene
+    m_Address: ActivityScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c3e8be3c0ba0674289b46d94c8c087f
-    m_Address: MenuScene
+    m_Address: TitleScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -59,6 +59,12 @@ MonoBehaviour:
     m_Address: New Scene
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97f2fc7bd7330a64cbaf32fade4cd0c1
+    m_Address: CreditScene
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Credit Scene
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 09edbaf00523db443a08213adc71ea0e, type: 2}

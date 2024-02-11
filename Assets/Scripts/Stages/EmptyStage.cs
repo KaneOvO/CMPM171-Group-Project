@@ -2,18 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class End : BasicActivity
+public class EmptyStage : BasicStage
 {
-    public End() : base("End") { }
-    public override void Buff()
-    {
-
-    }
+    public EmptyStage() : base(Stage.Default) { }
 
     public override void OnEnter()
     {
         timer = maxTime;
-        UIManager.Instance.testText.text = $"Now on day:{GameManager.Instance.saveData.currentDay}\nGame is over.";
+        saveData.currentStage = stage;
     }
 
     public override void OnExit()
@@ -24,10 +20,5 @@ public class End : BasicActivity
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, 2f);
-    }
-
-    public override void OnFixedUpdate()
-    {
-
     }
 }
