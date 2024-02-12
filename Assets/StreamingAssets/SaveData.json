@@ -1,7 +1,8 @@
 {
     "currentDay": 1,
+    "currentStage": 0,
     "playerState": {
-        "energy": 3,
+        "energy": 2,
         "isSick": false,
         "money": 0,
         "health": 100,

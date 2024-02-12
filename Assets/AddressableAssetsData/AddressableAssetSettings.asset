@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 163e2c5108ad5da4fafd4ef2b10a5028
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 88354cc5d9ef76287421994afc2625b0
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
     - Permanent Scene
     - Opening Scene
     - Test Scene
+    - Credit Scene
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: d698467596a42534fadf790a5e370c43, type: 2}
