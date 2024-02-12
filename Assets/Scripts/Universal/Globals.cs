@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+    public Language currentLanguage;
     public int currentDay;
     public Stage currentStage;
     public PlayerState playerState;

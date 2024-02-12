@@ -626,6 +626,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551946230}
   m_CullTransparentMesh: 1
+--- !u!1 &757503532
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757503534}
+  - component: {fileID: 757503533}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &757503533
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757503532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 0}
+--- !u!4 &757503534
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757503532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760644811
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204be6253f3839419df01b3d6076545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstGameSceneSO: {fileID: 11400000, guid: 77f7cd5a7689b6749a9554a7943330a9, type: 2}
+  firstGameSceneSO: {fileID: 11400000, guid: 72c02b25b61800d4599fed7f0bed042e, type: 2}
   sceneLoadEvent: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   sceneLoadCompletedEvent: {fileID: 11400000, guid: 97271b0bd32bd96468662b38c9dc70a4, type: 2}
   fadeEvent: {fileID: 11400000, guid: 64ef10bfa4d426d4abd3c0e01f8b8d42, type: 2}
@@ -1174,3 +1219,4 @@ SceneRoots:
   - {fileID: 984060091}
   - {fileID: 377766213}
   - {fileID: 1654567241}
+  - {fileID: 757503534}

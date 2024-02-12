@@ -1,5 +1,6 @@
 {
     "currentDay": 1,
+    "currentLanauage": 0,
     "currentStage": 0,
     "playerState": {
         "energy": 2,

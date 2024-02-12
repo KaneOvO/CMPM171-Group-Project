@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
+using UnityEngine.AddressableAssets;
 
 public class CurrentManager : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class CurrentManager : MonoBehaviour
     public int reputation;
     public int health;
     public bool isSick;
+    public string currentLanguage;
+
+    [Header("Events Sender: Load Scene")]
+    public SceneLoadEventSO loadEventSO;
+    [Header("Scene Script Object: Shop Scene")]
+    public GameSceneSO shopScene;
      void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
@@ -20,6 +27,15 @@ public class CurrentManager : MonoBehaviour
     }
     public void InitialData()
     {
+        currentLanguage = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => "EN",
+            Language.Chinese => "",
+            Language.Japanese => "JP",
+            _ => "EN",
+        };
+        flowchart.SetStringVariable("Language", currentLanguage);
+
         energy = GameManager.Instance.saveData.playerState.energy;
         flowchart.SetIntegerVariable("Energy", energy);
 
@@ -37,7 +53,6 @@ public class CurrentManager : MonoBehaviour
 
         isSick = GameManager.Instance.saveData.playerState.isSick;
         flowchart.SetBooleanVariable("IsSick", isSick);
-
     }
     
     public void OnDestroy()
@@ -48,6 +63,12 @@ public class CurrentManager : MonoBehaviour
         GameManager.Instance.saveData.playerState.reputation = flowchart.GetIntegerVariable("Reputation");
         GameManager.Instance.saveData.playerState.health = flowchart.GetIntegerVariable("Health");
         GameManager.Instance.saveData.playerState.isSick = flowchart.GetBooleanVariable("IsSick");
+    }
+
+    public void loadScene()
+    {
+        Debug.Log("Load Scene");
+        loadEventSO.RaiseEvent(shopScene, true);
     }
 
 
