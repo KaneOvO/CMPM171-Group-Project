@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue Test.unity
     guid: e15e88731af3be149b3e1e00b7382417
   - enabled: 0
-    path: Assets/Scenes/Dialogue Test 1.unity
+    path: Assets/Scenes/Unidentified Cargo Event.unity
     guid: 88dd6766f97a5234793e730130eec490
   - enabled: 0
     path: Assets/Scenes/New test scene.unity

@@ -1,0 +1,50 @@
+Key,Description,Standard
+SAY.Counterfeit goods incident.2.,,[今天，你如往常一样来到批发市场，为今天的开店采购货物]
+SAY.Counterfeit goods incident.28.我,,王叔，王叔，王叔你人在吗？
+SAY.Counterfeit goods incident.29.我,,(奇怪，王叔怎么不在？我今天还特意来早了呢。)\n
+SAY.Counterfeit goods incident.30.,,[这时，一个穿着不起眼的神秘商人走了过来，微笑着搭话。]
+SAY.Counterfeit goods incident.31.神秘商人,,嘿，朋友，看你是新来的吗？需要些什么产品？
+SAY.Counterfeit goods incident.32.我,,不是的，我有认识的供货商。但是他今天似乎不在\n
+SAY.Counterfeit goods incident.33.神秘商人,,这样啊，那你幸好遇到我了。我这里正好有一批货，品质和你平时进的一样，价格却便宜得多。\n
+SAY.Counterfeit goods incident.34.我,,(质量和往常一样，但是价格便宜的多，天上哪有这种好事。）\n
+SAY.Counterfeit goods incident.35.我,,(不行，我得问问清楚）\n
+SAY.Counterfeit goods incident.36.我,,听起来不错，但为什么会这么便宜？有什么问题吗？\n\n
+SAY.Counterfeit goods incident.37.神秘商人,,哦，放心吧，我这批货只是因为积压的太久了急需转手，别担心，质量肯定没问题。\n\n\n
+SAY.Counterfeit goods incident.38.我,,那我能看看货吗？\n\n\n
+SAY.Counterfeit goods incident.39.神秘商人,,当然！走，我带你去我的仓库。\n\n\n\n
+SAY.Counterfeit goods incident.40.,,[你跟着他来到仓库，看到了他积压的货物]\n\n\n
+SAY.Counterfeit goods incident.41.我,,（这些东西还真是我之前一直在卖的商品，而且外观看上去确实没问题）\n\n
+SAY.Counterfeit goods incident.42.神秘商人,,怎么样老板，我跟你说了这些商品质量肯定没问题吧\n\n\n
+SAY.Counterfeit goods incident.43.我,,嗯，看上去是不错\n\n\n
+SAY.Counterfeit goods incident.44.我,,(但我还是感觉哪里有些问题）\n\n\n
+SAY.Counterfeit goods incident.45.,,[看到你有些犹豫，神秘商人咬了咬牙]\n\n\n
+SAY.Counterfeit goods incident.46.神秘商人,,这样吧老板，我再给你便宜一些。5000怎么样，只要5000，这里的东西你全部拿走。\n
+SAY.Counterfeit goods incident.47.我,,5000？你确定？这么多东西5000你就全卖给我？
+SAY.Counterfeit goods incident.48.神秘商人,,这是我的底线了，怎么样，这么低的价格你在这个市场上肯定找不到第二家了。\n
+SAY.Counterfeit goods incident.49.我,,(价格这么低，这批货怎么想都有问题吧)\n
+SAY.Counterfeit goods incident.50.我,,(但是这个价格确实太低了，而且外观看上去确实和正常的产品没有任何区别)\n
+SAY.Counterfeit goods incident.52.我,,(如果我把这些货掺杂到正常的商品中卖掉，肯定谁也察觉不到)\n
+SAY.Counterfeit goods incident.51.我,,(但是这样做真的好吗？)\n
+SAY.Counterfeit goods incident.53.,,[在经历了长久的思考后，你选择]\n
+MENU.Counterfeit goods incident.54,,买下这批货物
+MENU.Counterfeit goods incident.64,,放弃这批货物
+SAY.Counterfeit goods incident.75.我,,
+SAY.Counterfeit goods incident.55.我,,好，这批货我要了
+SAY.Counterfeit goods incident.57.神秘商人,,痛快老板，我就喜欢和你这样的爽快人做生意。
+SAY.Counterfeit goods incident.56.,,[你们很快完成了交易]
+SAY.Counterfeit goods incident.58.我,,好，那就麻烦你了
+SAY.Counterfeit goods incident.59.我,,(心里虽然还有点不安，但想到能大幅减轻经济压力，你很快将不安抛在了脑后)
+SAY.Counterfeit goods incident.60.我,,希望这一切顺利
+SAY.Counterfeit goods incident.61.,,"[获得了xxx, xxx, xxx, xxx, xxx, xxx]\n\n"
+SAY.Counterfeit goods incident.62.,,[金钱减少5000]\n\n
+SAY.Counterfeit goods incident.63.,,[道德值减少30]\n\n
+SAY.Counterfeit goods incident.65.我,,我得为我的消费者负责
+SAY.Counterfeit goods incident.66.我,,[说完，你头也不回的离开了那里]
+SAY.Counterfeit goods incident.67.我,,算了，我还是不能要这批来路不明的货物
+SAY.Counterfeit goods incident.68.我,,[道德值增加10点]
+CHARACTER.我,,我
+CHARACTER.神秘商人,,神秘商人
+\n,,
+\n\n,,
+\n\n\n,,
+\n\n\n\n,,
