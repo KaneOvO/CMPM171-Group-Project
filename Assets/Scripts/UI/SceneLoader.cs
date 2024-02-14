@@ -5,19 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public static SceneLoader Instance { get; private set; }
-
-    void Awake()
+    public void LoadSceneAdditive(string sceneName)
     {
-
-        if (Instance == null)
-        {
-            Instance = this; 
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+    }
+    public void UnloadThisScene(string sceneName)
+    {
+        SceneManager.UnloadSceneAsync(sceneName);
     }
     public void GoToScene(int sceneIndex)
     {
@@ -63,10 +57,5 @@ public class SceneLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    public void OnApplicationQuit()
-    {
-        SceneLoader.Instance = null;
     }
 }
