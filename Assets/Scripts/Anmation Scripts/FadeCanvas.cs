@@ -13,11 +13,11 @@ public class FadeCanvas : MonoBehaviour
     }
     public void OnEnable()
     {
-        fadeEventSO.onEventRised += OnFadeEvent;
+        fadeEventSO.onEventRaised += OnFadeEvent;
     }
     public void OnDisable()
     {
-        fadeEventSO.onEventRised -= OnFadeEvent;
+        fadeEventSO.onEventRaised -= OnFadeEvent;
     }
     public void OnFadeEvent(Color color, float duration)
     {
