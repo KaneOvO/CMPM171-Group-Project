@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI testText;
     private static UIManager _instance;
+    [Header("Events Sender: Bckpack Clikcked")]
+    public VoidEventSO backpackClickedEvent;
+    public GameObject backpackPanel;
     public static UIManager Instance
     {
         get
@@ -25,5 +28,24 @@ public class UIManager : MonoBehaviour
         _instance = this;
         transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
         testText.gameObject.SetActive(false);
+    }
+    void OnEnable()
+    {
+        backpackClickedEvent.onEventRaised += HandleBackpackClickedEvent;
+    }
+    void OnDisable()
+    {
+        backpackClickedEvent.onEventRaised -= HandleBackpackClickedEvent;
+    }
+    private void HandleBackpackClickedEvent()
+    {
+        if (backpackPanel.activeSelf)
+        {
+            backpackPanel.SetActive(false);
+        }
+        else
+        {
+            backpackPanel.SetActive(true);
+        }
     }
 }
