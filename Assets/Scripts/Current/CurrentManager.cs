@@ -17,13 +17,15 @@ public class CurrentManager : MonoBehaviour
     public string currentLanguage;
 
     [Header("Events Sender: Load Scene")]
-    public SceneLoadEventSO loadEventSO;
+    public SceneLoadEventSO loadSceneEventSO;
     [Header("Scene Script Object: Shop Scene")]
     public GameSceneSO shopScene;
-     void Awake()
+    [Header("Scene Script Object: Activity Scene")]
+    public GameSceneSO activityScene;
+    void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
-        flowchart =  FindObjectOfType<Flowchart>();
+        flowchart = FindObjectOfType<Flowchart>();
     }
     public void InitialData()
     {
@@ -49,6 +51,7 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetBooleanVariable("IsSick", isSick);
     }
 
+
     private void SwitchLanguage()
     {
         currentLanguage = GameManager.Instance.saveData.currentLanguage switch
@@ -70,11 +73,14 @@ public class CurrentManager : MonoBehaviour
         GameManager.Instance.saveData.playerState.isSick = flowchart.GetBooleanVariable("IsSick");
     }
 
-    public void loadScene()
+    public void loadShopScene()
     {
         Debug.Log("Load Scene");
-        loadEventSO.RaiseEvent(shopScene, true);
+        loadSceneEventSO.RaiseEvent(shopScene, true);
     }
 
-
+    public void loadActivityScene()
+    {
+        loadSceneEventSO.RaiseEvent(activityScene, true);
+    }
 }

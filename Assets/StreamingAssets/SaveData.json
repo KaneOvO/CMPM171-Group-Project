@@ -10,7 +10,14 @@
         "reputation": 50,
         "moral": 50
     },
-    "inventory": {
-        "00": 1
-    }
+    "inventory": [
+        {
+            "id": "00",
+            "amount": 1
+        },
+        {
+            "id": "01",
+            "amount": 2
+        }
+    ]
 }

@@ -9,7 +9,10 @@ TagManager:
   - Manager
   - ManagersContainer
   - EventSystem
+  - BackpackPanel
+  - OptionsPanel
   - Backpack
+  - SettingsPanel
   layers:
   - Default
   - TransparentFX

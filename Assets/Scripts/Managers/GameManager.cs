@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
         yield return LoadJsonFilesAsync();
 
         OnJsonLoad.RaiseEvent();
-        Debug.Log($"{Global.NOTIFICATION}");
     }
 
     private IEnumerator LoadJsonFilesAsync()
@@ -103,7 +102,7 @@ public class GameManager : MonoBehaviour
         saveData = new SaveData();
         saveData.currentDay = 1;
         saveData.playerState = inGameData.initialDatas.playerState;
-        saveData.inventory = new Dictionary<string, int>();
+        saveData.inventory = new List<InventoryItem>();
     }
 
     private void Update()

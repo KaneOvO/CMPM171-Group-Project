@@ -6,8 +6,8 @@ public class ActivityScene : MonoBehaviour
 {
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadEventSO;
-    [Header("Events Sender: Backpack Clikcked")]
-    public VoidEventSO backpackClickedEvent;
+    [Header("Events Sender: Panel Called")]
+    public StringParameterEventSO panelCalledEvent;
     [Header("Scene Script Object: Shop Scene")]
     public GameSceneSO shopScene;
     public void ShopButtonClicked()
@@ -17,6 +17,15 @@ public class ActivityScene : MonoBehaviour
 
     public void BackpackButtonClicked()
     {
-        backpackClickedEvent.RaiseEvent();
+        panelCalledEvent.RaiseEvent("BackpackPanel");
+    }
+
+    public void SettingButtonClicked()
+    {
+        panelCalledEvent.RaiseEvent("SettingsPanel");
+    }
+    public void OptionsButtonClicked()
+    {
+        panelCalledEvent.RaiseEvent("OptionsPanel");
     }
 }

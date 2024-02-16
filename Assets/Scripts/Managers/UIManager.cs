@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI testText;
+    [Header("UI Panels")]
+    public List<GameObject> panels;
     private static UIManager _instance;
-    [Header("Events Sender: Bckpack Clikcked")]
-    public VoidEventSO backpackClickedEvent;
-    public GameObject backpackPanel;
+    [Header("Events Listener: Panel Called")]
+    public StringParameterEventSO PanelCalledEvent;
+
     public static UIManager Instance
     {
         get
@@ -27,25 +28,32 @@ public class UIManager : MonoBehaviour
     {
         _instance = this;
         transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
-        testText.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject openedPanel = panels.Find(x => x.activeSelf);
+            if (openedPanel) { openedPanel.SetActive(false); } else { HandlePanelCalledEvent("SettingsPanel"); }
+        }
     }
     void OnEnable()
     {
-        backpackClickedEvent.onEventRaised += HandleBackpackClickedEvent;
+        PanelCalledEvent.onEventRaised += HandlePanelCalledEvent;
     }
     void OnDisable()
     {
-        backpackClickedEvent.onEventRaised -= HandleBackpackClickedEvent;
+        PanelCalledEvent.onEventRaised -= HandlePanelCalledEvent;
     }
-    private void HandleBackpackClickedEvent()
+    private void HandlePanelCalledEvent(string tag)
     {
-        if (backpackPanel.activeSelf)
+        GameObject targetPanel = panels.Find(x => x.tag == tag);
+        if (!targetPanel) return;
+        bool tempBool = targetPanel.activeSelf;
+        foreach (GameObject panel in panels)
         {
-            backpackPanel.SetActive(false);
+            panel.SetActive(false);
         }
-        else
-        {
-            backpackPanel.SetActive(true);
-        }
+        targetPanel.SetActive(!tempBool);
     }
 }

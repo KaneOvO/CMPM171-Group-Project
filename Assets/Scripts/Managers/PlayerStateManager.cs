@@ -29,15 +29,15 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerState playerState => GameManager.Instance.saveData.playerState;
     public PlayerState initialPlayerStates => GameManager.Instance.inGameData.initialDatas.playerState;
+    public int sick => GameManager.Instance.inGameData.initialDatas.sick;
     [ContextMenu("Check Health")]
     public bool CheckSick()
     {
-        return playerState.isSick = playerState.health * 2 < initialPlayerStates.health;
+        return playerState.isSick = playerState.health  < sick;
     }
     public void EnergyChange(int amount)
     {
-        playerState.energy += amount;
-        playerState.energy = (int)Mathf.Clamp(playerState.energy, 0, initialPlayerStates.energy);
+        playerState.energy = Math.Clamp(playerState.energy + amount, 0, initialPlayerStates.energy);
     }
     public void ResetEnergy()
     {
@@ -49,6 +49,6 @@ public class PlayerStateManager : MonoBehaviour
     }
     public void SetEnergy(int amount)
     {
-        playerState.energy = (int)Mathf.Clamp(amount, 0, initialPlayerStates.energy);
+        playerState.energy = Math.Clamp(amount, 0, initialPlayerStates.energy);
     }
 }

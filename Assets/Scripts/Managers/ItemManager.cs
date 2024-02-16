@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 [AddComponentMenu("Managers/ItemManager")]
 public class ItemManager : MonoBehaviour
 {
@@ -23,34 +24,34 @@ public class ItemManager : MonoBehaviour
         transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
     public List<Item> items { get { return GameManager.Instance.inGameData.items; } }
-    public Dictionary<string, int> inventory => GameManager.Instance.saveData.inventory;
+    public List<InventoryItem> inventory => GameManager.Instance.saveData.inventory;
     public Item ID(string id)
     {
         return items.Find(x => x.id == id);
     }
     public bool AddItemAmount(string id, int amount = 1)
     {
-        if (inventory.ContainsKey(id))
+        if (inventory.Exists(x => x.id == id))
         {
-            inventory[id] += amount;
+            inventory.Find(x => x.id == id).amount += amount;
         }
         else
         {
-            inventory.Add(id, amount);
+            inventory.Add(new InventoryItem(id, amount));
         }
         return OrganizeInventory();
     }
-    public bool AddItemAmount(Dictionary<string, int> itemDic)
+    public bool AddItemAmount(List<InventoryItem> inventories)
     {
-        foreach (var item in itemDic)
+        foreach (var item in inventories)
         {
-            if (inventory.ContainsKey(item.Key))
+            if (inventory.Exists(x => x.id == item.id))
             {
-                inventory[item.Key] += item.Value;
+                inventory.Find(x => x.id == item.id).amount += item.amount;
             }
             else
             {
-                inventory.Add(item.Key, item.Value);
+                inventory.Add(item);
             }
         }
         return OrganizeInventory();
@@ -58,17 +59,18 @@ public class ItemManager : MonoBehaviour
     public bool SetItemAmount(string id, int amount = 0)
     {
         if (amount < 0) return false;
-        if (!inventory.ContainsKey(id)) return false;
-        inventory[id] = amount;
+        if (!inventory.Exists(x => x.id == id)) return false;
+        inventory.Find(x => x.id == id).amount = amount;
         return OrganizeInventory();
     }
     public bool OrganizeInventory()
     {
         foreach (var item in inventory)
         {
-            inventory[item.Key] = (int)Mathf.Clamp(item.Value, 0, ID(item.Key).maxStack);
-            if (inventory[item.Key] <= 0) inventory.Remove(item.Key);
+            item.amount = Math.Clamp(item.amount, 0, ID(item.id).maxStack);
+            if (item.amount <= 0) inventory.Remove(item);
         }
+        inventory.Sort();
         return true;
     }
     public GameObject MakeItemGameObject(Item item)
