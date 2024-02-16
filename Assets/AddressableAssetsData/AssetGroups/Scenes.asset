@@ -66,6 +66,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - Credit Scene
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b4e4816596d1c7468d3a67f21ca1a1c
+    m_Address: Old Man Event
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 09edbaf00523db443a08213adc71ea0e, type: 2}
   m_SchemaSet:
