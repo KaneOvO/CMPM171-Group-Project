@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204be6253f3839419df01b3d6076545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstGameSceneSO: {fileID: 11400000, guid: 72c02b25b61800d4599fed7f0bed042e, type: 2}
+  firstGameSceneSO: {fileID: 11400000, guid: 85ad8b7be2da72c478e654a999717a96, type: 2}
   sceneLoadEvent: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   sceneLoadCompletedEvent: {fileID: 11400000, guid: 97271b0bd32bd96468662b38c9dc70a4, type: 2}
   fadeEvent: {fileID: 11400000, guid: 64ef10bfa4d426d4abd3c0e01f8b8d42, type: 2}

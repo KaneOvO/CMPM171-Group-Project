@@ -1244,8 +1244,9 @@ MonoBehaviour:
   health: 0
   isSick: 0
   currentLanguage: 
-  loadEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
+  loadSceneEventSO: {fileID: 0}
   shopScene: {fileID: 11400000, guid: ff2a079e55124684c8ef5f59ef97b7c9, type: 2}
+  activityScene: {fileID: 0}
 --- !u!4 &926021929
 Transform:
   m_ObjectHideFlags: 0
