@@ -27,13 +27,7 @@ public class CurrentManager : MonoBehaviour
     }
     public void InitialData()
     {
-        currentLanguage = GameManager.Instance.saveData.currentLanguage switch
-        {
-            Language.English => "EN",
-            Language.Chinese => "",
-            Language.Japanese => "JP",
-            _ => "EN",
-        };
+        SwitchLanguage();
         flowchart.SetStringVariable("Language", currentLanguage);
 
         energy = GameManager.Instance.saveData.playerState.energy;
@@ -54,7 +48,18 @@ public class CurrentManager : MonoBehaviour
         isSick = GameManager.Instance.saveData.playerState.isSick;
         flowchart.SetBooleanVariable("IsSick", isSick);
     }
-    
+
+    private void SwitchLanguage()
+    {
+        currentLanguage = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => "EN",
+            Language.Chinese => "",
+            Language.Japanese => "JP",
+            _ => "EN",
+        };
+    }
+
     public void OnDestroy()
     {
         GameManager.Instance.saveData.playerState.energy = flowchart.GetIntegerVariable("Energy");

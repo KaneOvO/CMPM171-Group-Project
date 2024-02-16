@@ -1,0 +1,39 @@
+Key,Description,Standard
+SAY.Old Man Event.77.,,[今天天气很好，你决定出门走走]
+SAY.Old Man Event.78.我,,(真是个好天气啊)
+SAY.Old Man Event.79.,,[当你走到一条无人的小路时，突然看到有一个老人倒在了地上]
+SAY.Old Man Event.80.我,,(我得上去看看发生什么了)
+SAY.Old Man Event.81.,,[你快步走上前，发现老人摔倒在地，已经失去了意识]
+SAY.Old Man Event.82.我,,(这可太糟糕了，他看上去随时都有生命危险，我应该帮他叫救护车)
+SAY.Old Man Event.84.我,,(可是如果我救了他，万一他到时候讹诈我说我撞到了他怎么办?)
+SAY.Old Man Event.83.我,,(这周围一个人都没有，到时候没有人能够为我作证)
+SAY.Old Man Event.85.,,[你面临着一个艰难的抉择，你选择]
+MENU.Old Man Event.86,,决定扶起老人
+MENU.Old Man Event.89,,决定不扶老人
+SAY.Old Man Event.90.我,,"(我不能就这样看着,这让我良心不安)"
+SAY.Old Man Event.91.,,[作为发现人，你陪同着摔倒的老人来到了医院]
+SAY.Old Man Event.92.,,[经过紧急处理，老人虽然还是昏迷不醒，但是脱离了生命危险]
+SAY.Old Man Event.93.医生,,多亏了你，如果再晚一会我们可能都无法把他救回来了
+SAY.Old Man Event.95.,,[就在这时，老人的家属来到了现场]
+SAY.Old Man Event.97.老人的家属,,就是你把我们家老人撞到了是吧?
+SAY.Old Man Event.98.老人的家属,,赔钱!!你这个肇事者!!!\n
+SAY.Old Man Event.99.我,,我没有撞倒他，我看到他时他已经倒在地上了。\n
+SAY.Old Man Event.100.老人的家属,,你没有撞倒他那你为什么要救他？\n
+SAY.Old Man Event.101.,,[家属不依不饶的要你赔钱，这让你非常委屈]\n\n
+SAY.Old Man Event.102.我,,(再这么下去就没完没了了，我一会还要事情要做)\n\n
+SAY.Old Man Event.103.,,[为了避免进一步的麻烦，最终你垫付了医药费]\n\n\n
+SAY.Old Man Event.104.,,金钱减少了1000\n\n\n
+SAY.Old Man Event.105.,,道德值增加了20\n\n
+SAY.Old Man Event.106.我,,(现在这个社会，如果我帮他，谁知道会发生什么呢?)
+SAY.Old Man Event.108.我,,(说不定他到时候还会倒打一耙指责我)
+SAY.Old Man Event.109.我,,(算了，多一事不如少一事)
+SAY.Old Man Event.107.,,[尽管心中良心不安，但是你还是决定无视这件事]
+SAY.Old Man Event.111.,,[你冷漠的离开了现场]\n
+SAY.Old Man Event.110.,,道德值减少20\n
+CHARACTER.我,,我
+CHARACTER.老人的家属,,老人的家属
+CHARACTER.医生,,医生
+\n,,
+\n\n,,
+\n\n\n,,
+\n\n\n\n,,
