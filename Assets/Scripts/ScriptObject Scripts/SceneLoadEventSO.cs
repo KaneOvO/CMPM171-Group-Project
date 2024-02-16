@@ -7,9 +7,9 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Events/SceneLoadEventSO")]
 public class SceneLoadEventSO : ScriptableObject
 {
-    public UnityAction<GameSceneSO, bool> LoadRequestedEvent;
+    public UnityAction<GameSceneSO, bool> onEventRaised;
     public void RaiseEvent(GameSceneSO scene, bool fade)
     {
-        LoadRequestedEvent?.Invoke(scene, fade);
+        onEventRaised?.Invoke(scene, fade);
     }
 }

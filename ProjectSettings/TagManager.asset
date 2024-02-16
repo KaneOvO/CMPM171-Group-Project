@@ -9,6 +9,7 @@ TagManager:
   - Manager
   - ManagersContainer
   - EventSystem
+  - Backpack
   layers:
   - Default
   - TransparentFX

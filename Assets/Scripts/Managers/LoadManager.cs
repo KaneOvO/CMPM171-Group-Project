@@ -51,12 +51,12 @@ public class LoadManager : MonoBehaviour
     // Register this class as listener to the SceneLoadEventSO
     private void OnEnable()
     {
-        sceneLoadEvent.LoadRequestedEvent += OnLoadRequestedEvent;
+        sceneLoadEvent.onEventRaised += OnLoadRequestedEvent;
     }
 
     private void OnDisable()
     {
-        sceneLoadEvent.LoadRequestedEvent -= OnLoadRequestedEvent;
+        sceneLoadEvent.onEventRaised -= OnLoadRequestedEvent;
     }
 
     public void OnLoadRequestedEvent(GameSceneSO sceneSO, bool fade)

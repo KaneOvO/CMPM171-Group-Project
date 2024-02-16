@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Unidentified Cargo Event.unity
     guid: 88dd6766f97a5234793e730130eec490
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BackpackScene.unity
     guid: 0b363023796ad6e4baf3c2f79ad43fa2
   - enabled: 0
