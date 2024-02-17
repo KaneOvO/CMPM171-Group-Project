@@ -9,6 +9,8 @@ using UnityEditor;
 [AddComponentMenu("Managers/PlayerStateManager")]
 public class PlayerStateManager : MonoBehaviour
 {
+    [Header("Events listener:On Player Activity is Done")]
+    public VoidEventSO ActivityDoneEvent;
     private static PlayerStateManager _instance;
     public static PlayerStateManager Instance
     {
@@ -30,10 +32,27 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerState playerState => GameManager.Instance.saveData.playerState;
     public PlayerState initialPlayerStates => GameManager.Instance.inGameData.initialDatas.playerState;
     public int sick => GameManager.Instance.inGameData.initialDatas.sick;
+
+    private void OnEnable()
+    {
+        ActivityDoneEvent.onEventRaised += HandleActivityDone;
+    }
+
+    private void OnDisable()
+    {
+        ActivityDoneEvent.onEventRaised -= HandleActivityDone;
+    }
+
+    private void HandleActivityDone()
+    {
+        EnergyChange(-1);
+        CheckSick();
+    }
+
     [ContextMenu("Check Health")]
     public bool CheckSick()
     {
-        return playerState.isSick = playerState.health  < sick;
+        return playerState.isSick = playerState.health < sick;
     }
     public void EnergyChange(int amount)
     {

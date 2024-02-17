@@ -10,6 +10,7 @@ public class Morning : BasicStage
         timer = maxTime;
         saveData.currentStage = stage;
         stateManager.ResetEnergy();
+        stageManager.InGameEventCheck();
     }
 
     public override void OnExit()
@@ -20,9 +21,5 @@ public class Morning : BasicStage
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        if (timer <= 0 && Input.anyKeyDown)
-        {
-            stageManager.LoadStage(stageManager.DetermineNextStage());
-        }
     }
 }

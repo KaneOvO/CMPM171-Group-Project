@@ -20,7 +20,7 @@ public class Night : BasicStage
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, maxTime);
-        if (timer <= 0 && Input.anyKeyDown)
+        if (timer <= 0)
         {
             stageManager.NewDay();
         }

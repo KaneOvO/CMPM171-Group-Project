@@ -65,11 +65,22 @@ public class ItemManager : MonoBehaviour
     }
     public bool OrganizeInventory()
     {
+        List<InventoryItem> itemsToRemove = new List<InventoryItem>();
+
         foreach (var item in inventory)
         {
             item.amount = Math.Clamp(item.amount, 0, ID(item.id).maxStack);
-            if (item.amount <= 0) inventory.Remove(item);
+            if (item.amount <= 0)
+            {
+                itemsToRemove.Add(item);
+            }
         }
+
+        foreach (var itemToRemove in itemsToRemove)
+        {
+            inventory.Remove(itemToRemove);
+        }
+
         inventory.Sort();
         return true;
     }

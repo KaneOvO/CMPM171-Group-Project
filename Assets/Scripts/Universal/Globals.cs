@@ -43,6 +43,7 @@ public class InGameData
 public class InitialDatas
 {
     public PlayerState playerState;
+    [Range(0, 30)] public int endDay;
     public int sick;
 }
 
