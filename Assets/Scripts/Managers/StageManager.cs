@@ -14,6 +14,10 @@ public class StageManager : MonoBehaviour
     public VoidEventSO OnJsonLoad;
     [Header("Event Listener: Start Button Clicked Event.")]
     public VoidEventSO startClickedEvent;
+    [Header("Event Listener: Player Activity Is Done Event.")]
+    public VoidEventSO playerActivityDoneEvent;
+    [Header("Event Sender: In Game Event Tirgger Checker.")]
+    public VoidEventSO inGameEventTriggerChecker;
     private bool isAbleToStage = false;
     private BasicStage currentStage;
     private BasicStage nextStage;
@@ -22,7 +26,7 @@ public class StageManager : MonoBehaviour
     private BasicStage afternoon = new Afternoon();
     private BasicStage night = new Night();
     private BasicStage emptyStage = new EmptyStage();
-
+    private int endDay => GameManager.Instance.inGameData.initialDatas.endDay;
     public static StageManager Instance
     {
         get
@@ -45,12 +49,14 @@ public class StageManager : MonoBehaviour
         energyEmpty.onEventRaised += HandleEnergyEmpty;
         OnJsonLoad.onEventRaised += HandleJsonLoad;
         startClickedEvent.onEventRaised += HandleGameStartEvent;
+        playerActivityDoneEvent.onEventRaised += HandlePlayerActivityDoneEvent;
     }
     private void OnDisable()
     {
         energyEmpty.onEventRaised -= HandleEnergyEmpty;
         OnJsonLoad.onEventRaised -= HandleJsonLoad;
         startClickedEvent.onEventRaised -= HandleGameStartEvent;
+        playerActivityDoneEvent.onEventRaised -= HandlePlayerActivityDoneEvent;
     }
     private void HandleEnergyEmpty()
     {
@@ -61,6 +67,10 @@ public class StageManager : MonoBehaviour
         isAbleToStage = true;
     }
     private void HandleGameStartEvent()
+    {
+        LoadStage(DetermineNextStage());
+    }
+    private void HandlePlayerActivityDoneEvent()
     {
         LoadStage(DetermineNextStage());
     }
@@ -104,10 +114,14 @@ public class StageManager : MonoBehaviour
     public void NewDay()
     {
         saveData.currentDay++;
-        if (saveData.currentDay > GameManager.Instance.endDay) { LoadEnd(); return; }
+        if (saveData.currentDay > endDay) { LoadEnd(); return; }
         LoadStage(DetermineNextStage());
     }
     public void LoadEnd()
     {
+    }
+
+    public void InGameEventCheck(){
+        inGameEventTriggerChecker.RaiseEvent();
     }
 }

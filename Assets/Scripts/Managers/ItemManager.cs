@@ -68,6 +68,10 @@ public class ItemManager : MonoBehaviour
     public bool OrganizeInventory()
     {
         List<InventoryItem> itemsToRemove = new List<InventoryItem>();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b830de4447f8cb2e36aad98f39b0987649e7861
         foreach (var item in inventory)
         {
             item.amount = Math.Clamp(item.amount, 0, ID(item.id).maxStack);
@@ -76,12 +80,20 @@ public class ItemManager : MonoBehaviour
                 itemsToRemove.Add(item);
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b830de4447f8cb2e36aad98f39b0987649e7861
         foreach (var itemToRemove in itemsToRemove)
         {
             inventory.Remove(itemToRemove);
         }
 
-        // inventory.Sort();
+<<<<<<< HEAD
+        inventory.Sort();
+=======
+        inventory.Sort();
+>>>>>>> 0b830de4447f8cb2e36aad98f39b0987649e7861
         return true;
     }
     public GameObject MakeItemGameObject(Item item)

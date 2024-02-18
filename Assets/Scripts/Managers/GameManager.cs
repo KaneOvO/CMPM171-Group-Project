@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     private double lastInterval;
 
     [Header("InGame Data Information")]
-    [Range(0, 30)] public int endDay = 3;
     [HideInInspector] public InGameData inGameData;
     public SaveData saveData;
     private static GameManager _instance;
@@ -68,6 +67,7 @@ public class GameManager : MonoBehaviour
         yield return LoadJsonFilesAsync();
 
         OnJsonLoad.RaiseEvent();
+        Debug.Log("GameManager: Json files loaded");
     }
 
     private IEnumerator LoadJsonFilesAsync()

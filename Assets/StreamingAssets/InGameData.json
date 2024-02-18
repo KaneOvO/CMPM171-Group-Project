@@ -142,7 +142,10 @@
                 "Cigarette",
                 "香烟"
             ],
-            "price": [50, 120],
+            "price": [
+                50,
+                120
+            ],
             "sellRate": 0.4,
             "maxStack": 99,
             "description": [
@@ -157,7 +160,10 @@
                 "Wine",
                 "葡萄酒"
             ],
-            "price": [100, 210],
+            "price": [
+                100,
+                210
+            ],
             "sellRate": 0.5,
             "maxStack": 99,
             "description": [
@@ -229,6 +235,8 @@
             "health": 100,
             "reputation": 50,
             "moral": 50
-        }
+        },
+        "endDay": 30,
+        "sick": 50
     }
 }

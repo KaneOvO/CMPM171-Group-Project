@@ -10,6 +10,7 @@ public class Noon : BasicStage
     {
         timer = maxTime;
         saveData.currentStage = stage;
+        stageManager.InGameEventCheck();
     }
 
     public override void OnExit()
@@ -20,9 +21,5 @@ public class Noon : BasicStage
     public override void OnUpdate()
     {
         timer = Mathf.Clamp(timer - Time.deltaTime, 0, 2f);
-        if (timer <= 0 && Input.anyKeyDown)
-        {
-            stageManager.LoadStage(stageManager.DetermineNextStage());
-        }
     }
 }
