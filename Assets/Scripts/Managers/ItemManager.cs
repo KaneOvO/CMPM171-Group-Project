@@ -40,6 +40,7 @@ public class ItemManager : MonoBehaviour
             inventory.Add(new InventoryItem(id, amount));
         }
         return OrganizeInventory();
+        // return true;
     }
     public bool AddItemAmount(List<InventoryItem> inventories)
     {
@@ -54,7 +55,8 @@ public class ItemManager : MonoBehaviour
                 inventory.Add(item);
             }
         }
-        return OrganizeInventory();
+        // return OrganizeInventory();
+        return true;
     }
     public bool SetItemAmount(string id, int amount = 0)
     {
@@ -65,12 +67,21 @@ public class ItemManager : MonoBehaviour
     }
     public bool OrganizeInventory()
     {
+        List<InventoryItem> itemsToRemove = new List<InventoryItem>();
         foreach (var item in inventory)
         {
             item.amount = Math.Clamp(item.amount, 0, ID(item.id).maxStack);
-            if (item.amount <= 0) inventory.Remove(item);
+            if (item.amount <= 0)
+            {
+                itemsToRemove.Add(item);
+            }
         }
-        inventory.Sort();
+        foreach (var itemToRemove in itemsToRemove)
+        {
+            inventory.Remove(itemToRemove);
+        }
+
+        // inventory.Sort();
         return true;
     }
     public GameObject MakeItemGameObject(Item item)
@@ -84,3 +95,5 @@ public class ItemManager : MonoBehaviour
         return obj;
     }
 }
+
+
