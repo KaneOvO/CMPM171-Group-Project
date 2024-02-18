@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [System.Serializable]
 public class SaveData
@@ -13,7 +14,7 @@ public class SaveData
 }
 
 [System.Serializable]
-public class InventoryItem
+public class InventoryItem : IComparable<InventoryItem>
 {
     public string id;
     public int amount;
@@ -21,6 +22,11 @@ public class InventoryItem
     {
         this.id = id;
         this.amount = amount;
+    }
+    public int CompareTo(InventoryItem other)
+    {
+        // 根据 id 进行比较
+        return string.Compare(this.id, other.id);
     }
 }
 [System.Serializable]
