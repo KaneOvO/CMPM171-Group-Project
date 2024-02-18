@@ -40,7 +40,6 @@ public class ItemManager : MonoBehaviour
             inventory.Add(new InventoryItem(id, amount));
         }
         return OrganizeInventory();
-        // return true;
     }
     public bool AddItemAmount(List<InventoryItem> inventories)
     {
@@ -55,13 +54,11 @@ public class ItemManager : MonoBehaviour
                 inventory.Add(item);
             }
         }
-        // return OrganizeInventory();
-        return true;
+        return OrganizeInventory();
     }
     public bool SetItemAmount(string id, int amount = 0)
     {
-        if (amount < 0) return false;
-        if (!inventory.Exists(x => x.id == id)) return false;
+        if (amount < 0 || !inventory.Exists(x => x.id == id)) return false;
         inventory.Find(x => x.id == id).amount = amount;
         return OrganizeInventory();
     }
@@ -84,6 +81,11 @@ public class ItemManager : MonoBehaviour
         inventory.Sort();
         return true;
     }
+    /// <summary>
+    /// This function is used to make a gameobject of the item for test only.
+    /// </summary>
+    /// <param name="item">An item type</param>
+    /// <returns>A game object with sprite renderer and its parent set to item manager.</returns>
     public GameObject MakeItemGameObject(Item item)
     {
         GameObject obj = new GameObject($"{item.id}");
