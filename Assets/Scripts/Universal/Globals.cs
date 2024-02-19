@@ -71,8 +71,25 @@ public class InGameTime
     public int hour;
     public int minute;
 }
+[System.Serializable]
+public class RealTime
+{
+    public int hour;
+    public int minute;
+    public int second;
+}
 
+[System.Serializable]
+public class Achievement
+{
+    public string id { get; private set; }
+    public string name;
+    public string description;
+    public bool isCompleted = false;
+    public virtual bool Check() { return this.isCompleted = true; }
+}
 public static class Global
 {
     public const int TEST_INT = 0;
 }
+
