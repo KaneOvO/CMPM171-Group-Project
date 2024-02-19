@@ -25,7 +25,6 @@ public class InventoryItem : IComparable<InventoryItem>
     }
     public int CompareTo(InventoryItem other)
     {
-        // 根据 id 进行比较
         return string.Compare(this.id, other.id);
     }
 }

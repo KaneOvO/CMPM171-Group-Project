@@ -405,13 +405,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 482214964}
+  - {fileID: 1988141979}
   - {fileID: 450749589}
   - {fileID: 760644812}
   - {fileID: 1157925520}
   - {fileID: 1439563384}
   - {fileID: 358662152}
   - {fileID: 1737829370}
-  - {fileID: 2113813616}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &377766214
@@ -566,11 +566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d43a1c9cfca2e4b861c14bb02c0378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyEmpty: {fileID: 11400000, guid: fa8dc010d16d9244c88b5a7f230d7100, type: 2}
-  OnJsonLoad: {fileID: 11400000, guid: 57faeaf991e5e614b95ee70066d3171c, type: 2}
   startClickedEvent: {fileID: 11400000, guid: 3460dd6e3247ef640ad1b5f1931fe41b, type: 2}
   playerActivityDoneEvent: {fileID: 11400000, guid: 91a5c06e95347604ba62e60502dd5d7b, type: 2}
-  inGameEventTriggerChecker: {fileID: 11400000, guid: 7b6b1cead631b4d449ce4d1b5d1906fd, type: 2}
+  onStageMoved: {fileID: 11400000, guid: 150641c8e8c6ed1478cd68dee5994ca0, type: 2}
 --- !u!1 &482214963
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204be6253f3839419df01b3d6076545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstGameSceneSO: {fileID: 11400000, guid: 7b1ca080b36a7f447ad5ebb52ea948ba, type: 2}
+  firstGameSceneSO: {fileID: 11400000, guid: 77f7cd5a7689b6749a9554a7943330a9, type: 2}
   sceneLoadEvent: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   sceneLoadCompletedEvent: {fileID: 11400000, guid: 97271b0bd32bd96468662b38c9dc70a4, type: 2}
   fadeEvent: {fileID: 11400000, guid: 64ef10bfa4d426d4abd3c0e01f8b8d42, type: 2}
@@ -1275,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fc1a587707e284fa1421ca85339429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2113813615
+--- !u!1 &1988141978
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1283,8 +1281,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2113813616}
-  - component: {fileID: 2113813617}
+  - component: {fileID: 1988141979}
+  - component: {fileID: 1988141980}
   m_Layer: 0
   m_Name: InGameEventManager
   m_TagString: Manager
@@ -1292,13 +1290,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2113813616
+--- !u!4 &1988141979
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113813615}
+  m_GameObject: {fileID: 1988141978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1307,19 +1305,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 377766213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2113813617
+--- !u!114 &1988141980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113813615}
+  m_GameObject: {fileID: 1988141978}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9c7e6abe7b7d3345890c1739a739343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InGameEventTirgger: {fileID: 11400000, guid: 7b6b1cead631b4d449ce4d1b5d1906fd, type: 2}
+  inGameEventsListSO: {fileID: 11400000, guid: d09e28c14d342544f80691ab061c0176, type: 2}
+  onStageMoved: {fileID: 11400000, guid: 150641c8e8c6ed1478cd68dee5994ca0, type: 2}
+  currentEvents: []
+  newEvents: []
+  isUpdateAble: 1
 --- !u!1001 &5258233476044124551
 PrefabInstance:
   m_ObjectHideFlags: 0

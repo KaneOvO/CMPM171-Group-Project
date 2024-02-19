@@ -67,7 +67,9 @@ public class GameManager : MonoBehaviour
         yield return LoadJsonFilesAsync();
 
         OnJsonLoad.RaiseEvent();
+#if UNITY_EDITOR
         Debug.Log("GameManager: Json files loaded");
+#endif
     }
 
     private IEnumerator LoadJsonFilesAsync()

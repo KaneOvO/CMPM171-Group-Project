@@ -8,8 +8,15 @@ public class InGameEventManager : MonoBehaviour
 {
     public int currentDay => GameManager.Instance.saveData.currentDay;
     public Stage currentStage => GameManager.Instance.saveData.currentStage;
-    [Header("Events listener:On InGame Event is Rasied")]
-    public VoidEventSO InGameEventTirgger;
+
+    [Header("Events List.")]
+    public InGameEventsListSO inGameEventsListSO;
+    [Header("Event Listener:On Stage Moved.")]
+    public VoidEventSO onStageMoved;
+    public List<InGameEvent> eventList => inGameEventsListSO.eventList;
+    public List<InGameEvent> currentEvents = new List<InGameEvent>();
+    public List<InGameEvent> newEvents = new List<InGameEvent>();
+    public bool isUpdateAble = true;
     private static InGameEventManager _instance;
     public static InGameEventManager Instance
     {
@@ -43,16 +50,84 @@ public class InGameEventManager : MonoBehaviour
 
     private void OnEnable()
     {
-        InGameEventTirgger.onEventRaised += HandleInGameEvent;
+        onStageMoved.onEventRaised += HandleStageMoved;
+
     }
     private void OnDisable()
     {
-        InGameEventTirgger.onEventRaised -= HandleInGameEvent;
+        onStageMoved.onEventRaised -= HandleStageMoved;
     }
-    private void HandleInGameEvent()
+    private void HandleStageMoved()
     {
-        //TODO: Handle InGame Event
-        // Need a list to store the event
-        Debug.Log($"InGameEventManager:Day:{currentDay} Stage:{currentStage}");
+        GetNewEvents();
+        currentEvents.AddRange(newEvents);
+        currentEvents.Sort();
+        for (int i = 0; i < currentEvents.Count; i++)
+        {
+            currentEvents[i].OnStart();
+        }
+    }
+    [ContextMenu("Get New Events")]
+    public List<InGameEvent> GetNewEvents()
+    {
+        return newEvents = eventList.FindAll(x => CheckInGameEventValid(x));
+    }
+
+
+    public void LoadInGameEvent(string id)
+    {
+        InGameEvent inGameEvent = eventList.Find(x => x.id == id);
+        if (inGameEvent != null && CheckInGameEventValid(inGameEvent))
+        {
+            inGameEvent.OnStart();
+        }
+    }
+
+    public void LoadInGameEvent(InGameEvent inGameEvent)
+    {
+        if (CheckInGameEventValid(inGameEvent))
+        {
+            inGameEvent.OnStart();
+        }
+    }
+
+    public void RemoveAllCurrentInGameEvents()
+    {
+        foreach (InGameEvent inGameEvent in currentEvents)
+        {
+            inGameEvent.OnEnd();
+        }
+        currentEvents.Clear();
+    }
+
+    private bool CheckInGameEventValid(InGameEvent inGameEvent)
+    {
+        return (inGameEvent.day == currentDay || inGameEvent.eventType == InGameEventType.Daily) && (inGameEvent.stage == currentStage || inGameEvent.stage == Stage.Default) && !inGameEvent.isTriggered;
+    }
+
+    private void Update()
+    {
+        if (currentEvents.Count == 0) { return; }
+        else
+        {
+            for (int i = 0; i < currentEvents.Count; i++)
+            {
+                if (!currentEvents[i].isEnded)
+                {
+                    currentEvents[i].OnUpdate();
+                }
+            }
+        }
+    }
+
+    public void NewDay()
+    {
+        foreach (InGameEvent ige in eventList)
+        {
+            if (ige.eventType == InGameEventType.Daily)
+            {
+                ige.Initialization();
+            }
+        }
     }
 }

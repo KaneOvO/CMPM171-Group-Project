@@ -33,3 +33,9 @@ public enum Stage
     Afternoon = 3,
     Night = 4,
 }
+
+public enum InGameEventType{
+    Default = 0,
+    Daily = 1,
+    Special = 2,
+}
