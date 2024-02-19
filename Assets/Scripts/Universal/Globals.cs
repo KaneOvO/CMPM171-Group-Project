@@ -57,8 +57,8 @@ public class Item
 {
     public string id;
     public List<string> name;
-    public List<float> price;
-    public float sellRate;
+    public float originalPrice;
+    public float sellValue;
     public int maxStack;
     public List<string> description;
     public string spriteUrl;

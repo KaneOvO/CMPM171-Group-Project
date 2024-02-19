@@ -107,7 +107,7 @@ public class InGameEventManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentEvents.Count == 0) { return; }
+        if (currentEvents == null || currentEvents.Count == 0) { return; }
         else
         {
             for (int i = 0; i < currentEvents.Count; i++)

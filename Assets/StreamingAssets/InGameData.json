@@ -6,10 +6,8 @@
                 "test_item_00",
                 "测试道具_00"
             ],
-            "price": [
-                5
-            ],
-            "sellRate": 0.1,
+            "originalPrice": 5,
+            "sellValue": 0.1,
             "maxStack": 1,
             "description": [
                 "This is test item 00.",
@@ -23,10 +21,8 @@
                 "test_item_01",
                 "测试道具_01"
             ],
-            "price": [
-                10
-            ],
-            "sellRate": 0.1,
+            "originalPrice": 10,
+            "sellValue": 0.1,
             "maxStack": 10,
             "description": [
                 "This is test item 01.",
@@ -40,10 +36,8 @@
                 "Spicy Strips",
                 "辣条"
             ],
-            "sellPrice": 6.5,
-            "purchasePrice": 4,
-            "sellRate": 0.8,
-            "maxSell": 100,
+            "originalPrice": 6.5,
+            "sellValue": 0.8,
             "maxStack": 999,
             "description": [
                 "Who says spicy strips can't be eaten as a meal?",
@@ -57,10 +51,8 @@
                 "Coke",
                 "可乐"
             ],
-            "sellPrice": 2,
-            "purchasePrice": 3,
-            "sellRate": 0.9,
-            "maxSell": 100,
+            "originalPrice": 2,
+            "sellValue": 0.9,
             "maxStack": 999,
             "description": [
                 "Coke, the taste of happiness.",
@@ -74,10 +66,8 @@
                 "Ice Cream",
                 "冰激凌"
             ],
-            "sellPrice": 9,
-            "purchasePrice": 7,
-            "sellRate": 0.8,
-            "maxSell": 100,
+            "originalPrice": 9,
+            "sellValue": 0.8,
             "maxStack": 999,
             "description": [
                 "Ice Cream, the goat of all desserts.",
@@ -91,10 +81,8 @@
                 "Game Console",
                 "游戏机"
             ],
-            "sellPrice": 750,
-            "purchasePrice": 500,
-            "sellRate": 0.3,
-            "maxSell": 100,
+            "originalPrice": 750,
+            "sellValue": 0.3,
             "maxStack": 999,
             "description": [
                 "A game console that has just been listed and has received rave reviews.",
@@ -108,10 +96,8 @@
                 "doll",
                 "娃娃"
             ],
-            "sellPrice": 560,
-            "purchasePrice": 350,
-            "sellRate": 0.3,
-            "maxSell": 100,
+            "originalPrice": 560,
+            "sellValue": 0.3,
             "maxStack": 999,
             "description": [
                 "Every doll has a story.",
@@ -125,10 +111,8 @@
                 "Dinosaur Toys",
                 "小恐龙"
             ],
-            "sellPrice": 360,
-            "purchasePrice": 200,
-            "sellRate": 0.25,
-            "maxSell": 100,
+            "originalPrice": 360,
+            "sellValue": 0.25,
             "maxStack": 999,
             "description": [
                 "",
@@ -142,11 +126,8 @@
                 "Cigarette",
                 "香烟"
             ],
-            "price": [
-                50,
-                120
-            ],
-            "sellRate": 0.4,
+            "originalPrice": 50,
+            "sellValue": 0.4,
             "maxStack": 99,
             "description": [
                 "Smoking is harmful to health.",
@@ -160,11 +141,8 @@
                 "Wine",
                 "葡萄酒"
             ],
-            "price": [
-                100,
-                210
-            ],
-            "sellRate": 0.5,
+            "originalPrice": 100,
+            "sellValue": 0.5,
             "maxStack": 99,
             "description": [
                 "Wine is not afraid of the depth of the alley.",
@@ -178,11 +156,8 @@
                 "Flower",
                 "鲜花"
             ],
-            "price": [
-                35,
-                50
-            ],
-            "sellRate": 0.5,
+            "originalPrice": 35,
+            "sellValue": 0.5,
             "maxStack": 99,
             "description": [
                 "Every bouquet of flowers is waiting for you to come.",
@@ -196,11 +171,8 @@
                 "strange pills",
                 "奇怪的药丸"
             ],
-            "price": [
-                100,
-                200
-            ],
-            "sellRate": 1,
+            "originalPrice": 100,
+            "sellValue": 1,
             "maxStack": 99,
             "description": [
                 "A pill of unknown origin, maybe you guessed what it is.",
@@ -214,14 +186,11 @@
                 "Pistol",
                 "手枪"
             ],
-            "price": [
-                500,
-                1200
-            ],
-            "sellRate": 1,
+            "originalPrice": 500,
+            "sellValue": 1,
             "maxStack": 99,
             "description": [
-                "Maybe you shouldn't sell it, but you have no choice",
+                "Maybe you shouldn't  it, but you have no choice",
                 "或许你不该出售它，但你已经别无选择了"
             ],
             "spriteUrl": "#"

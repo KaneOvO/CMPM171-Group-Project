@@ -20,7 +20,7 @@ public class InGameEvent : ScriptableObject, IComparable<InGameEvent>
     public virtual void OnStart() { isTriggered = true; isEnded = false; isEndAble = false; timer = 0f; }
     public virtual bool CheckEndCondition()
     {
-        return isEndAble = timer >= 2f;
+        return isEndAble = true;
     }
     public virtual void OnEnd() { isEnded = true; timer = 0f; eventManager.currentEvents.Remove(this); }
     public virtual void OnUpdate()

@@ -79,7 +79,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         image.color = finalColor;
         descriptionPanel.SetActive(true);
         descriptionAmountText.text = $"Amount: <size=40>{itemAmount.ToString()}</size>";
-        descriptionPrice.text = $"$: <color=#FF0>{item.price[(int)Price.Default].ToString("F1")}</color>";
+        descriptionPrice.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
 

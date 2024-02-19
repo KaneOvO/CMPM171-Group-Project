@@ -80,7 +80,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         SetItemName(item.name[(int)GameManager.Instance.saveData.currentLanguage]);
         SetItemDescription(item.description[(int)GameManager.Instance.saveData.currentLanguage]);
         SetItemImage(item.spriteUrl);
-        SetItemCost(item.price[(int)Price.Default]);
+        SetItemCost(item.originalPrice);
         maxStack = item.maxStack;
     }
 
@@ -127,7 +127,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public int GetCost()
     {
-        return  (int) itemCost * count;
+        return (int)itemCost * count;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
