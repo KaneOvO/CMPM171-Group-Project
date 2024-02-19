@@ -582,11 +582,13 @@ MonoBehaviour:
   itemDescription: 
   count: 0
   itemCost: 0
+  maxStack: 0
   selectedBox: {fileID: 6312623536808916167}
   fadeDuration: 0.2
   descriptionAmountText: {fileID: 0}
   descriptionPrice: {fileID: 0}
   descriptionText: {fileID: 0}
+  increaseCountButton: {fileID: 1994273041683093354}
 --- !u!1 &6312623536808916167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1060,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 2.8627396, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.40395355, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

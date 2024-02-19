@@ -5,7 +5,7 @@
     "playerState": {
         "energy": 2,
         "isSick": false,
-        "money": 100,
+        "money": 1000,
         "health": 100,
         "reputation": 50,
         "moral": 50

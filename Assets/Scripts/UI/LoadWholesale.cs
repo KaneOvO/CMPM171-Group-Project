@@ -7,6 +7,7 @@ public class LoadWhollesale : MonoBehaviour
 {
     public int totalCost;
     public TMP_Text totalCostText;
+    public TMP_Text moneyText;
     public GameObject itemPrefab;
     public Transform parentForPrefabs;
     public GameObject panelInScene;
@@ -38,17 +39,11 @@ public class LoadWhollesale : MonoBehaviour
 
     void Start()
     {
-        // Debug.Log(GameManager.Instance.saveData.currentLanguage);
         panelInScene = GameObject.Find("Description Panel");
-        // if (panelInScene == null)
-        // {
-        //     Debug.LogError("Panel not found in the scene. Please check the name and ensure it is active.");
-        //     return;
-        // }
-        // else{
-        // 
-        // }
         panelInScene.SetActive(false);
+        
+
+
 
 
         Item itemList1 = ItemManager.Instance.ID("00");
@@ -60,8 +55,17 @@ public class LoadWhollesale : MonoBehaviour
             // itemList3,
         };
         CreateItemPrefabs(items);
+
+
+
+
         CalculateTotalCost();
     }
+
+    void Update()
+    {
+        moneyText.text = $"Money: ${GameManager.Instance.saveData.playerState.money}";
+    } 
 
     public void CalculateTotalCost()
     {
@@ -92,13 +96,15 @@ public class LoadWhollesale : MonoBehaviour
                 if (prefabController != null)
                 {
                     ItemManager.Instance.AddItemAmount(prefabController.name, prefabController.count);
+                    prefabController.count = 0;
+                    prefabController.UpdateCounterText();
                 }
             }
         }
-        // Debug.Log("Bought items:");
-        // foreach (var item in ItemManager.Instance.inventory)
-        // {
-        //     Debug.Log(item.id + " " + item.amount);
-        // }
+        Debug.Log("Bought items:");
+        foreach (var item in ItemManager.Instance.inventory)
+        {
+            Debug.Log(item.id + " " + item.amount);
+        }
     }
 }

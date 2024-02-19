@@ -7,7 +7,7 @@
                 "测试道具_00"
             ],
             "price": [
-                -1
+                5
             ],
             "sellRate": 0.1,
             "maxStack": 1,
@@ -24,7 +24,7 @@
                 "测试道具_01"
             ],
             "price": [
-                1
+                10
             ],
             "sellRate": 0.1,
             "maxStack": 10,

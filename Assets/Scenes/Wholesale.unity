@@ -268,8 +268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.56831485, y: 0}
   m_AnchorMax: {x: 0.7592327, y: 0.06485185}
-  m_AnchoredPosition: {x: -80, y: 4}
-  m_SizeDelta: {x: -169, y: -20}
+  m_AnchoredPosition: {x: -9.0154, y: 10}
+  m_SizeDelta: {x: 108.9692, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269955224
 MonoBehaviour:
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -160.36841, w: 0}
+  m_margin: {x: 0, y: 0, z: 2.5629883, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -857,6 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalCost: 0
   totalCostText: {fileID: 269955224}
+  moneyText: {fileID: 534730942}
   itemPrefab: {fileID: 5802734220138937974, guid: 428a92ba50364cc40b8072439da085a7, type: 3}
   parentForPrefabs: {fileID: 1086596873}
   panelInScene: {fileID: 250397842}

@@ -10,6 +10,7 @@ using UnityEngine.Networking;
 using UnityEngine.EventSystems;
 public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    private string id;
     public Image itemImage;
     public TMP_Text costText;
     public TMP_Text counterText;
@@ -18,6 +19,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public string itemDescription;
     public int count = 0;
     public float itemCost = 0;
+    public int maxStack;
     public GameObject selectedBox;
     private bool isSelected;
     private Coroutine fadeCoroutine;
@@ -25,10 +27,11 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public TMP_Text descriptionAmountText;
     public TMP_Text descriptionPrice;
     public TMP_Text descriptionText;
+    public Button increaseCountButton;
 
     void Start()
     {
-        
+        UpdateButtonState();
     }
 
     private void Update()
@@ -44,9 +47,13 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void IncreaseCount()
     {
-        count++;
-        UpdateCounterText();
-        descriptionAmountText.text = $"Amount: <size=40>{count}</size>";
+        if (ItemManager.Instance.inventory.Find(x => x.id == id).amount < maxStack)
+        {
+            count++;
+            UpdateCounterText();
+            // Optionally, update the button's interactability here or in UpdateCounterText
+        }
+        UpdateButtonState();
     }
 
     public void DecreaseCount()
@@ -55,19 +62,31 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             count--;
             UpdateCounterText();
-            descriptionAmountText.text = $"Amount: <size=40>{count}</size>";
         }
     }
 
+    public void UpdateButtonState()
+    {
+        if (increaseCountButton != null)
+        {
+            increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack;
+        }
+    }
+
+
     public void setItem(Item item)
     {
-
-        itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
-        itemDescription = item.description[(int)GameManager.Instance.saveData.currentLanguage];
+        SetItemID(item.id);
+        SetItemName(item.name[(int)GameManager.Instance.saveData.currentLanguage]);
+        SetItemDescription(item.description[(int)GameManager.Instance.saveData.currentLanguage]);
         SetItemImage(item.spriteUrl);
-        itemCost = item.price[(int)Price.Default];
-        costText.text = $"${itemCost:F2}";
-        
+        SetItemCost(item.price[(int)Price.Default]);
+        maxStack = item.maxStack;
+    }
+
+    public void SetItemID(string id)
+    {
+        this.id = id;
     }
 
     public void SetItemName(string name)
@@ -140,9 +159,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         finalColor.a = targetAlpha;
         image.color = finalColor;
         panelInScene.SetActive(true);
-
-
-        descriptionAmountText.text = $"Amount: <size=40>{count}</size>";
+        descriptionAmountText.text = $"You have: <size=40>{ItemManager.Instance.inventory.Find(x => x.id == id).amount}</size>";
         descriptionPrice.text = $"$: <color=#FF0>{itemCost:F2}</color>";
         descriptionText.text = itemDescription;
     }
