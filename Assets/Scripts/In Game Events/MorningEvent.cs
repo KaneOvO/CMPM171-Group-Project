@@ -7,9 +7,9 @@ public class MorningEvent : InGameEvent
     public override void Initialization()
     {
         base.Initialization();
-        this.id = "MorningEvent";
-        this.stage = Stage.Morning;
-        this.eventType = InGameEventType.Daily;
+        this._id = "MorningEvent";
+        this._startStage = Stage.Morning;
+        this._eventType = InGameEventType.Daily;
     }
     public override void OnStart()
     {

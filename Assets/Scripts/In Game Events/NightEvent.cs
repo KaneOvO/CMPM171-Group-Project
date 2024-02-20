@@ -7,9 +7,9 @@ public class NightEvent : InGameEvent
     public override void Initialization()
     {
         base.Initialization();
-        this.id = "NightEvent";
-        this.stage = Stage.Night;
-        this.eventType = InGameEventType.Daily;
+        this._id = "NightEvent";
+        this._startStage = Stage.Night;
+        this._eventType = InGameEventType.Daily;
     }
     public override void OnStart()
     {
@@ -19,7 +19,18 @@ public class NightEvent : InGameEvent
     public override void OnEnd()
     {
         base.OnEnd();
-        eventManager.NewDay();
+        NewDay();
+    }
+    public void NewDay()
+    {
+        foreach (InGameEvent ige in eventManager.eventList)
+        {
+            if (ige.eventType == InGameEventType.Daily)
+            {
+                ige.Initialization();
+            }
+        }
+        GameManager.Instance.saveData.currentDay++;
     }
 }
 

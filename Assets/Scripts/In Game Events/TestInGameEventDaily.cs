@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "InGameEvent/TestInGameEventSO")]
-public class TestInGameEvent : InGameEvent
+[CreateAssetMenu(menuName = "InGameEvent/TestInGameEventDailySO")]
+public class TestInGameEventDaily : InGameEvent
 {
     public override void Initialization()
     {
         base.Initialization();
-        this._id = "TestInGameEvent";
+        this._id = "TestInGameEventDaily";
         this._startStage = Stage.Default;
         this._eventType = InGameEventType.Daily;
     }
     public override void OnStart()
     {
         base.OnStart();
+        Debug.Log($"Event: {this.id} is Started.");
     }
     public override bool CheckEndCondition()
     {
@@ -23,7 +24,8 @@ public class TestInGameEvent : InGameEvent
     {
         base.OnEnd();
         isTriggered = false;
-        Debug.Log("Event Quit.");
+        isTriggerable = true;
+        Debug.Log($"Event: {this.id} is Quit.");
         stageManager.StageMoved();
     }
 }

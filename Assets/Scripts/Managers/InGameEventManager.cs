@@ -16,7 +16,7 @@ public class InGameEventManager : MonoBehaviour
     public List<InGameEvent> eventList => inGameEventsListSO.eventList;
     public List<InGameEvent> currentEvents = new List<InGameEvent>();
     public List<InGameEvent> newEvents = new List<InGameEvent>();
-    public bool isUpdateAble = true;
+    public bool runUpdate = true;
     private static InGameEventManager _instance;
     public static InGameEventManager Instance
     {
@@ -102,12 +102,13 @@ public class InGameEventManager : MonoBehaviour
 
     private bool CheckInGameEventValid(InGameEvent inGameEvent)
     {
-        return (inGameEvent.day == currentDay || inGameEvent.eventType == InGameEventType.Daily) && (inGameEvent.stage == currentStage || inGameEvent.stage == Stage.Default) && !inGameEvent.isTriggered;
+        return (inGameEvent.startDay == currentDay || inGameEvent.eventType == InGameEventType.Daily) && (inGameEvent.startStage == currentStage || inGameEvent.startStage == Stage.Default) && !inGameEvent.isTriggered && inGameEvent.isTriggerable;
     }
 
     private void Update()
     {
-        if (currentEvents == null || currentEvents.Count == 0) { return; }
+        if (!runUpdate) return;
+        if (currentEvents == null) { return; }
         else
         {
             for (int i = 0; i < currentEvents.Count; i++)
@@ -116,17 +117,6 @@ public class InGameEventManager : MonoBehaviour
                 {
                     currentEvents[i].OnUpdate();
                 }
-            }
-        }
-    }
-
-    public void NewDay()
-    {
-        foreach (InGameEvent ige in eventList)
-        {
-            if (ige.eventType == InGameEventType.Daily)
-            {
-                ige.Initialization();
             }
         }
     }

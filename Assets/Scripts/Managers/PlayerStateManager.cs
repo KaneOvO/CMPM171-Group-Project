@@ -61,7 +61,7 @@ public class PlayerStateManager : MonoBehaviour
     public void ResetEnergy()
     {
         playerState.energy = initialPlayerStates.energy;
-        Debug.Log("Energy is reset");
+        Debug.Log($"{this.GetType().Name}: Energy is reset");
     }
     public void ClearEnergy()
     {

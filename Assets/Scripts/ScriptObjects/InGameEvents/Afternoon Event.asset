@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e930367595d584d99144014b67ea7f, type: 3}
   m_Name: Afternoon Event
   m_EditorClassIdentifier: 
+  onStageMoved: {fileID: 11400000, guid: 150641c8e8c6ed1478cd68dee5994ca0, type: 2}
+  isTriggered: 0
+  isTriggerable: 1
+  isEnded: 0
+  isEndAble: 0
