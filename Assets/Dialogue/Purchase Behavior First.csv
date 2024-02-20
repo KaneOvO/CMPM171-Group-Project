@@ -1,0 +1,26 @@
+Key,Description,Standard
+SAY.Purchase Behavior First.77.,,[刚步入繁忙的批发市场，四周是忙碌的摊贩和各式各样的货物。]
+SAY.Purchase Behavior First.78.,,[阳光从高高的天窗洒下，空气中弥漫着各种食品、花卉和塑料制品的混合气味。]
+SAY.Purchase Behavior First.79.我,,（环顾四周）这里真是应有尽有。我得找找合适的供货商。
+SAY.Purchase Behavior First.81.,,[突然，一位和蔼的中年男子向你招手。]
+SAY.Purchase Behavior First.80.,,[你走近，观察这位男子。]
+SAY.Purchase Behavior First.82.王叔,,哟，你不就是老袁的孩子吗？多年没见，一下子都长这么大了！
+SAY.Purchase Behavior First.84.我,,王叔？是的，我是。父亲生前经常提起您，他总是跟我说当年您和他一起打拼的故事。
+SAY.Purchase Behavior First.85.王叔,,抱歉孩子，你父亲是个了不起的人，我们合作了很多年，一直保持着良好的关系。
+SAY.Purchase Behavior First.86.王叔,,听说你现在接手了店铺，想来进些货是吧？
+SAY.Purchase Behavior First.87.我,,是的，王叔。我希望能继续和你合作，保持店铺的供货。
+SAY.Purchase Behavior First.88.王叔,,好说好说，我这儿的货物品质保证，价格公道。我给你介绍一下怎么挑选货物。\n
+SAY.Purchase Behavior First.89.,,[现在开始，你可以在王叔的店铺进货]\n\n
+SAY.Purchase Behavior First.90.,,[进货是一个行为，当你完成一次进货后，将度过一个阶段]\n\n
+SAY.Purchase Behavior First.91.,,[每次进货的数量不能超过你的库存上限]\n\n\n
+SAY.Purchase Behavior First.92.,,[声望将影响你和王叔的关系，如果声望提升，王叔将提供新的更有价值的商品给你，此外，或许进货价格也会降低]\n\n\n
+SAY.Purchase Behavior First.93.我,,（认真听着）这些信息真是太有用了，谢谢你，王叔。\n\n\n
+SAY.Purchase Behavior First.94.王叔,,不客气。能和老袁的孩子合作，是我的荣幸。记住，做生意要有眼光，也要诚实守信。你有任何问题，随时可以来找我。\n\n\n\n
+SAY.Purchase Behavior First.95.王叔,,事不宜迟，你现在要不要尝试看看如何进货？\n\n\n\n
+MENU.Purchase Behavior First.96,,那我现在就选些货物试试看
+MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情\n
+SAY.Purchase Behavior First.100.,,[你跟随王叔来到了他的店铺]\n
+SAY.Purchase Behavior First.101.王叔,,没事没事，你有别的事情就先去忙，有需要随时来王叔这里
+SAY.Purchase Behavior First.102.我,,谢谢王叔，我要进货的时候一定来找您。
+CHARACTER.我,,我
+CHARACTER.王叔,,王叔

@@ -14,6 +14,8 @@ public class CurrentManager : MonoBehaviour
     public int reputation;
     public int health;
     public bool isSick;
+    public int currentDay;
+    public int currentStage;
     public string currentLanguage;
 
     [Header("Events Sender: Load Scene")]
@@ -22,6 +24,9 @@ public class CurrentManager : MonoBehaviour
     public AssetReference shopScene;
     [Header("Scene Script Object: Activity Scene")]
     public AssetReference activityScene;
+
+    [Header("Scene Script Object: Event Scene")]
+    public AssetReference eventScene;
     void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
@@ -49,6 +54,12 @@ public class CurrentManager : MonoBehaviour
 
         isSick = GameManager.Instance.saveData.playerState.isSick;
         flowchart.SetBooleanVariable("IsSick", isSick);
+
+        currentDay = GameManager.Instance.saveData.currentDay;
+        flowchart.SetIntegerVariable("CurrentDay", currentDay);
+
+        JudgeStage();
+        flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
 
 
@@ -60,6 +71,18 @@ public class CurrentManager : MonoBehaviour
             Language.Chinese => "",
             Language.Japanese => "JP",
             _ => "EN",
+        };
+    }
+
+    public void JudgeStage()
+    {
+        currentStage = GameManager.Instance.saveData.currentStage switch
+        {
+            Stage.Morning => 1,
+            Stage.Noon => 2,
+            Stage.Afternoon => 3,
+            Stage.Night => 4,
+            _ => 1,
         };
     }
 
@@ -84,5 +107,10 @@ public class CurrentManager : MonoBehaviour
     public void loadActivityScene()
     {
         loadSceneEventSO.RaiseEvent(activityScene, true);
+    }
+
+    public void loadEventScene()
+    {
+        loadSceneEventSO.RaiseEvent(eventScene, true);
     }
 }

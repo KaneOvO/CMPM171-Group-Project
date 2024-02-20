@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeLanguage: 
-  localizationFile: {fileID: 4900000, guid: 552bf530e2e2a8d44a8916d0e46d6e6b, type: 3}
+  localizationFile: {fileID: 4900000, guid: 704e83e37490e0f4ebdcf5c9532639c9, type: 3}
 --- !u!4 &1274037025
 Transform:
   m_ObjectHideFlags: 0
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   colorCommands: 1
   hideComponents: 1
   saveSelection: 1
-  localizationId: Counterfeit goods incident
+  localizationId: Purchase Behavior End
   showLineNumbers: 0
   hideCommands: []
   luaEnvironment: {fileID: 0}
@@ -1990,7 +1990,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 267.88492
     y: 53.04332
-    width: 69.90049
+    width: 70.46907
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

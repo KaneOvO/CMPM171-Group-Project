@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeLanguage: 
-  localizationFile: {fileID: 4900000, guid: 552bf530e2e2a8d44a8916d0e46d6e6b, type: 3}
+  localizationFile: {fileID: 4900000, guid: 76993ad1a331c254da9bda36a96e3c68, type: 3}
 --- !u!4 &1274037025
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,8 +1757,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2057562095}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 2057562123}
@@ -1773,7 +1772,7 @@ MonoBehaviour:
   colorCommands: 1
   hideComponents: 1
   saveSelection: 1
-  localizationId: Counterfeit goods incident
+  localizationId: Purchase Behavior Start
   showLineNumbers: 0
   hideCommands: []
   luaEnvironment: {fileID: 0}
@@ -2006,7 +2005,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 249.97433
     y: 100.804565
-    width: 69.90049
+    width: 70.46907
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2033,7 +2032,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 252.95914
     y: -9.643069
-    width: 102.7363
+    width: 102.02556
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

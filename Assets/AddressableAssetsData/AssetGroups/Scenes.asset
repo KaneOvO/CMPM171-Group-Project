@@ -71,6 +71,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25b784872c95dee4b976940f655d6568
+    m_Address: Assets/Scenes/Purchase Behavior End.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54b6ec79b80b2e44e8afa09ee1990093
+    m_Address: Assets/Scenes/Purchase Behavior First.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86763ce5fa248b74b84140ddc9c6fde5
+    m_Address: Assets/Scenes/Purchase Behavior Start.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 09edbaf00523db443a08213adc71ea0e, type: 2}
   m_SchemaSet:
