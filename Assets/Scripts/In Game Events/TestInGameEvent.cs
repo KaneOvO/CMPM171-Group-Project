@@ -17,7 +17,7 @@ public class TestInGameEvent : InGameEvent
     }
     public override bool CheckEndCondition()
     {
-        return isEndAble = Input.anyKeyDown;
+        return isEndAble = Input.GetKeyDown(KeyCode.Space);
     }
     public override void OnEnd()
     {

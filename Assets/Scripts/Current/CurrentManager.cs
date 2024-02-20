@@ -18,15 +18,6 @@ public class CurrentManager : MonoBehaviour
     public int currentStage;
     public string currentLanguage;
 
-    [Header("Events Sender: Load Scene")]
-    public SceneLoadEventSO loadSceneEventSO;
-    [Header("Scene Script Object: Shop Scene")]
-    public AssetReference shopScene;
-    [Header("Scene Script Object: Activity Scene")]
-    public AssetReference activityScene;
-
-    [Header("Scene Script Object: Event Scene")]
-    public AssetReference eventScene;
     void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
@@ -86,6 +77,18 @@ public class CurrentManager : MonoBehaviour
         };
     }
 
+    public Stage JudgeStage2()
+    {
+        return currentStage switch
+        {
+            1 => Stage.Morning,
+            2 => Stage.Noon,
+            3 => Stage.Afternoon,
+            4 => Stage.Night,
+            _ => Stage.Morning,
+        };
+    }
+
     public void OnDestroy()
     {
         GameManager.Instance.saveData.playerState.energy = flowchart.GetIntegerVariable("Energy");
@@ -94,23 +97,12 @@ public class CurrentManager : MonoBehaviour
         GameManager.Instance.saveData.playerState.reputation = flowchart.GetIntegerVariable("Reputation");
         GameManager.Instance.saveData.playerState.health = flowchart.GetIntegerVariable("Health");
         GameManager.Instance.saveData.playerState.isSick = flowchart.GetBooleanVariable("IsSick");
+        GameManager.Instance.saveData.currentDay = flowchart.GetIntegerVariable("CurrentDay");
+        GameManager.Instance.saveData.currentStage = JudgeStage2();
     }
 
-    public void loadShopScene()
+    public void StageMove()
     {
-#if UNITY_EDITOR
-        Debug.Log("Load Scene");
-#endif
-        loadSceneEventSO.RaiseEvent(shopScene, true);
-    }
-
-    public void loadActivityScene()
-    {
-        loadSceneEventSO.RaiseEvent(activityScene, true);
-    }
-
-    public void loadEventScene()
-    {
-        loadSceneEventSO.RaiseEvent(eventScene, true);
+        StageManager.Instance.StageMoved();
     }
 }
