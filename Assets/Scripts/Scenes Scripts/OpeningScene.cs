@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AddressableAssets;
 public class OpeningScene : MonoBehaviour
 {
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadEventSO;
     [Header("Scene Script Object: Title Scene")]
-    public GameSceneSO titleScene;
+    public AssetReference titleScene;
     private Queue<GameObject> queue = new Queue<GameObject>();
     public uint circleCount = 20;
     public float duration = 1f;
     public float radius = 2f;
     public TextMeshPro openingText;
-    public FadeCanvas fadeCanvas;
     void Awake()
     {
         openingText = GetComponent<TextMeshPro>();

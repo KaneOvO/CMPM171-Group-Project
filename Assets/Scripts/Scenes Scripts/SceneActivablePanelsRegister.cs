@@ -12,6 +12,6 @@ public class SceneActivablePanelsRegister : MonoBehaviour
     }
     private void OnDisable()
     {
-        UIManager.Instance.panels?.RemoveAll(x => panels.Contains(x));
+        UIManager.Instance?.panels?.RemoveAll(x => panels.Contains(x));
     }
 }

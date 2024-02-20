@@ -55,11 +55,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6d699095bc268554aa984ef3c4fd8928
-    m_Address: New Scene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 97f2fc7bd7330a64cbaf32fade4cd0c1
     m_Address: CreditScene
     m_ReadOnly: 0

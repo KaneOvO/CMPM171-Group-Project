@@ -863,12 +863,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204be6253f3839419df01b3d6076545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstGameSceneSO: {fileID: 11400000, guid: 77f7cd5a7689b6749a9554a7943330a9, type: 2}
+  firstAssetReference:
+    m_AssetGUID: b1e54160802b07c4ab8f60b7620c3e72
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   sceneLoadEvent: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   sceneLoadCompletedEvent: {fileID: 11400000, guid: 97271b0bd32bd96468662b38c9dc70a4, type: 2}
   fadeEvent: {fileID: 11400000, guid: 64ef10bfa4d426d4abd3c0e01f8b8d42, type: 2}
-  currentSceneSO: {fileID: 0}
-  sceneToGoSO: {fileID: 0}
+  currentScene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  sceneToGo:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1 &984060088
 GameObject:
   m_ObjectHideFlags: 0

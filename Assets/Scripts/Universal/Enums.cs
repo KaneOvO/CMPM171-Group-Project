@@ -9,12 +9,6 @@ public enum Language
     Japanese = 2,
 }
 
-public enum Price
-{
-    Default = 0,
-    Custom = 1,
-}
-
 public enum SceneType
 {
     Opening = 0,
@@ -34,7 +28,8 @@ public enum Stage
     Night = 4,
 }
 
-public enum InGameEventType{
+public enum InGameEventType
+{
     Default = 0,
     Daily = 1,
     Special = 2,

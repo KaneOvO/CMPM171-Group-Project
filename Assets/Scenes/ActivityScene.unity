@@ -875,7 +875,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   panelCalledEvent: {fileID: 11400000, guid: 7106e72bbc9d95740a55ec7b02b8a979, type: 2}
-  shopScene: {fileID: 11400000, guid: b3ad3833b7a5fee4fbd47d483fcc3878, type: 2}
+  shopScene:
+    m_AssetGUID: e15e88731af3be149b3e1e00b7382417
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &1942886126
 MonoBehaviour:
   m_ObjectHideFlags: 0

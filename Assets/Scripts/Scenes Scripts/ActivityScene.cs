@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class ActivityScene : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class ActivityScene : MonoBehaviour
     [Header("Events Sender: Panel Called")]
     public StringParameterEventSO panelCalledEvent;
     [Header("Scene Script Object: Shop Scene")]
-    public GameSceneSO shopScene;
+    public AssetReference shopScene;
     public void ShopButtonClicked()
     {
         loadEventSO.RaiseEvent(shopScene, true);

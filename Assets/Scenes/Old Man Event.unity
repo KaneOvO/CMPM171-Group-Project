@@ -1161,8 +1161,16 @@ MonoBehaviour:
   isSick: 0
   currentLanguage: 
   loadSceneEventSO: {fileID: 0}
-  shopScene: {fileID: 11400000, guid: ff2a079e55124684c8ef5f59ef97b7c9, type: 2}
-  activityScene: {fileID: 0}
+  shopScene:
+    m_AssetGUID: 60d51500cf6e4f24a8d4d0319d7cfa2e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  activityScene:
+    m_AssetGUID: 89ffece56e7ddbe42bdf6588146c0879
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &926021929
 Transform:
   m_ObjectHideFlags: 0

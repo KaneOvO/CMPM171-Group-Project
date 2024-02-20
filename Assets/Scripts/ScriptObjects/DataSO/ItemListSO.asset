@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c2a6d7dc4ad884b9da2689310c44d2, type: 3}
+  m_Name: ItemListSO
+  m_EditorClassIdentifier: 
+  inGameData:
+    items:
+    - id: 00
+      name:
+      - test_item_00
+      - "\u6D4B\u8BD5\u9053\u5177_00"
+      originalPrice: 5
+      sellValue: 0.1
+      maxStack: 1
+      description:
+      - This is test item 00.
+      - "\u8FD9\u662F\u6D4B\u8BD5\u9053\u517700\u3002"
+      spriteUrl: test_item_00
+    - id: 01
+      name:
+      - test_item_01
+      - "\u6D4B\u8BD5\u9053\u5177_01"
+      originalPrice: 10
+      sellValue: 0.1
+      maxStack: 10
+      description:
+      - This is test item 01.
+      - "\u8FD9\u662F\u6D4B\u8BD5\u9053\u517701\u3002"
+      spriteUrl: test_item_01
+    - id: 02
+      name:
+      - Spicy Strips
+      - "\u8FA3\u6761"
+      originalPrice: 6.5
+      sellValue: 0.8
+      maxStack: 999
+      description:
+      - Who says spicy strips can't be eaten as a meal?
+      - "\u8C01\u8BF4\u8FA3\u6761\u4E0D\u80FD\u5F53\u996D\u5403\uFF1F"
+      spriteUrl: '#'
+    - id: 03
+      name:
+      - Coke
+      - "\u53EF\u4E50"
+      originalPrice: 2
+      sellValue: 0.9
+      maxStack: 999
+      description:
+      - Coke, the taste of happiness.
+      - "\u5FEB\u4E50\u6C34\uFF0C\u4EBA\u95F4\u81F3\u5473\u3002"
+      spriteUrl: '#'
+    - id: 04
+      name:
+      - Ice Cream
+      - "\u51B0\u6FC0\u51CC"
+      originalPrice: 9
+      sellValue: 0.8
+      maxStack: 999
+      description:
+      - Ice Cream, the goat of all desserts.
+      - "\u6211\u51B0\u4F1F\u5927\uFF0C\u65E0\u9700\u591A\u8A00"
+      spriteUrl: '#'
+    - id: 05
+      name:
+      - Game Console
+      - "\u6E38\u620F\u673A"
+      originalPrice: 750
+      sellValue: 0.3
+      maxStack: 999
+      description:
+      - A game console that has just been listed and has received rave reviews.
+      - "\u521A\u4E0A\u5E02\u7684\u6E38\u620F\u673A\uFF0C\u5927\u53D7\u597D\u8BC4"
+      spriteUrl: '#'
+    - id: 06
+      name:
+      - doll
+      - "\u5A03\u5A03"
+      originalPrice: 560
+      sellValue: 0.3
+      maxStack: 999
+      description:
+      - Every doll has a story.
+      - "\u6BCF\u4E00\u4E2A\u5A03\u5A03\u90FD\u6709\u4E00\u4E2A\u6545\u4E8B"
+      spriteUrl: '#'
+    - id: 07
+      name:
+      - Dinosaur Toys
+      - "\u5C0F\u6050\u9F99"
+      originalPrice: 360
+      sellValue: 0.25
+      maxStack: 999
+      description:
+      - 
+      - 
+      spriteUrl: '#'
+    - id: 08
+      name:
+      - Cigarette
+      - "\u9999\u70DF"
+      originalPrice: 50
+      sellValue: 0.4
+      maxStack: 99
+      description:
+      - Smoking is harmful to health.
+      - "\u5438\u70DF\u6709\u5BB3\u5065\u5EB7"
+      spriteUrl: '#'
+    - id: 09
+      name:
+      - Wine
+      - "\u8461\u8404\u9152"
+      originalPrice: 100
+      sellValue: 0.5
+      maxStack: 99
+      description:
+      - Wine is not afraid of the depth of the alley.
+      - "\u9152\u9999\u4E0D\u6015\u5DF7\u5B50\u6DF1"
+      spriteUrl: '#'
+    - id: 10
+      name:
+      - Flower
+      - "\u9C9C\u82B1"
+      originalPrice: 35
+      sellValue: 0.5
+      maxStack: 99
+      description:
+      - Every bouquet of flowers is waiting for you to come.
+      - "\u6BCF\u4E00\u675F\u9C9C\u82B1\u90FD\u5728\u7B49\u5F85\u90A3\u4E2A\u4F60\u7684\u5230\u6765"
+      spriteUrl: '#'
+    - id: 11
+      name:
+      - strange pills
+      - "\u5947\u602A\u7684\u836F\u4E38"
+      originalPrice: 100
+      sellValue: 1
+      maxStack: 99
+      description:
+      - A pill of unknown origin, maybe you guessed what it is.
+      - "\u4E0D\u660E\u6765\u6E90\u7684\u836F\u4E38\uFF0C\u6216\u8BB8\u4F60\u731C\u5230\u4E86\u5B83\u662F\u4EC0\u4E48"
+      spriteUrl: '#'
+    - id: 12
+      name:
+      - Pistol
+      - "\u624B\u67AA"
+      originalPrice: 500
+      sellValue: 1
+      maxStack: 99
+      description:
+      - Maybe you shouldn't  it, but you have no choice
+      - "\u6216\u8BB8\u4F60\u4E0D\u8BE5\u51FA\u552E\u5B83\uFF0C\u4F46\u4F60\u5DF2\u7ECF\u522B\u65E0\u9009\u62E9\u4E86"
+      spriteUrl: '#'
+    initialDatas:
+      playerState:
+        energy: 3
+        isSick: 0
+        money: 0
+        health: 100
+        reputation: 50
+        moral: 50
+      endDay: 30
+      sick: 50
+  jsonFilePath: InGameData.json

@@ -19,9 +19,9 @@ public class CurrentManager : MonoBehaviour
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadSceneEventSO;
     [Header("Scene Script Object: Shop Scene")]
-    public GameSceneSO shopScene;
+    public AssetReference shopScene;
     [Header("Scene Script Object: Activity Scene")]
-    public GameSceneSO activityScene;
+    public AssetReference activityScene;
     void Awake()
     {
         localizationComponent = FindObjectOfType<Localization>();
@@ -75,7 +75,9 @@ public class CurrentManager : MonoBehaviour
 
     public void loadShopScene()
     {
+#if UNITY_EDITOR
         Debug.Log("Load Scene");
+#endif
         loadSceneEventSO.RaiseEvent(shopScene, true);
     }
 

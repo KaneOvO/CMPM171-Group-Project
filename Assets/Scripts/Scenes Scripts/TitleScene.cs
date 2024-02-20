@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class TitleScene : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class TitleScene : MonoBehaviour
    [Header("Events Sender: Game Start")]
    public VoidEventSO gameStartEvent;
    [Header("Scene Script Object: Game Scene")]
-   public GameSceneSO gameStartScene;
+   public AssetReference gameStartScene;
    [Header("Scene Script Object: Credit Scene")]
-   public GameSceneSO creditScene;
+   public AssetReference creditScene;
 
    public void StartButtonClicked()
    {

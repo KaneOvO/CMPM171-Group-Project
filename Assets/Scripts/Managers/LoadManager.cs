@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 public class LoadManager : MonoBehaviour
 {
-    public GameSceneSO firstGameSceneSO;
+    public AssetReference firstAssetReference;
     [Header("Events listener:load new scene")]
     public SceneLoadEventSO sceneLoadEvent;
     [Header("Events sender:load new scene completed")]
@@ -16,8 +16,8 @@ public class LoadManager : MonoBehaviour
     [Header("Events sender:fade canvas")]
     public FadeEventSO fadeEvent;
     private static LoadManager _instance;
-    [SerializeField] private GameSceneSO currentSceneSO;
-    [SerializeField] private GameSceneSO sceneToGoSO;
+    [SerializeField] private AssetReference currentScene;
+    [SerializeField] private AssetReference sceneToGo;
     private bool fade = false;
     private float fadeDuration = 0.5f;
     private bool isLoading = false;
@@ -59,11 +59,11 @@ public class LoadManager : MonoBehaviour
         sceneLoadEvent.onEventRaised -= OnLoadRequestedEvent;
     }
 
-    public void OnLoadRequestedEvent(GameSceneSO sceneSO, bool fade)
+    public void OnLoadRequestedEvent(AssetReference sceneSO, bool fade)
     {
         if (isLoading) return;
         isLoading = true;
-        sceneToGoSO = sceneSO;
+        sceneToGo = sceneSO;
         this.fade = fade;
 
         StartCoroutine(UnloadPreviousScene());
@@ -71,32 +71,30 @@ public class LoadManager : MonoBehaviour
 
     public void Start()
     {
-        sceneToGoSO = firstGameSceneSO;
+        sceneToGo = firstAssetReference;
         LoadNewScene();
     }
     private IEnumerator UnloadPreviousScene()
     {
         if (fade)
         {
-            //TODO: DO fade 
             fadeEvent.FadeIn(fadeDuration);
         }
         yield return new WaitForSeconds(fadeDuration);
-        yield return currentSceneSO.sceneReference.UnLoadScene();
+        yield return currentScene.UnLoadScene();
         LoadNewScene();
     }
     public void LoadNewScene()
     {
-        var loadingOption = sceneToGoSO.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+        var loadingOption = sceneToGo.LoadSceneAsync(LoadSceneMode.Additive, true);
         loadingOption.Completed += OnSceneLoadComplete;
     }
     private void OnSceneLoadComplete(AsyncOperationHandle<SceneInstance> obj)
     {
 
-        currentSceneSO = sceneToGoSO;
+        currentScene = sceneToGo;
         if (fade)
         {
-            //TODO: DO fade
             fadeEvent.FadeOut(fadeDuration);
         }
         isLoading = false;
