@@ -67,29 +67,25 @@ public class CurrentManager : MonoBehaviour
 
     public void JudgeStage()
     {
-        currentStage = GameManager.Instance.saveData.currentStage switch
-        {
-            Stage.Morning => 1,
-            Stage.Noon => 2,
-            Stage.Afternoon => 3,
-            Stage.Night => 4,
-            _ => 1,
-        };
+        // currentStage = GameManager.Instance.saveData.currentStage switch
+        // {
+        //     Stage.Morning => 1,
+        //     Stage.Noon => 2,
+        //     Stage.Afternoon => 3,
+        //     Stage.Night => 4,
+        //     _ => 1,
+        // };
+
+        currentStage = (int)GameManager.Instance.saveData.currentStage;
     }
 
-    public Stage JudgeStage2()
+    public void JudgeStage2()
     {
-        return currentStage switch
-        {
-            1 => Stage.Morning,
-            2 => Stage.Noon,
-            3 => Stage.Afternoon,
-            4 => Stage.Night,
-            _ => Stage.Morning,
-        };
+        
+            
     }
 
-    public void OnDestroy()
+    public void OnDisable()
     {
         GameManager.Instance.saveData.playerState.energy = flowchart.GetIntegerVariable("Energy");
         GameManager.Instance.saveData.playerState.money = flowchart.GetFloatVariable("Money");
@@ -97,12 +93,12 @@ public class CurrentManager : MonoBehaviour
         GameManager.Instance.saveData.playerState.reputation = flowchart.GetIntegerVariable("Reputation");
         GameManager.Instance.saveData.playerState.health = flowchart.GetIntegerVariable("Health");
         GameManager.Instance.saveData.playerState.isSick = flowchart.GetBooleanVariable("IsSick");
-        GameManager.Instance.saveData.currentDay = flowchart.GetIntegerVariable("CurrentDay");
-        GameManager.Instance.saveData.currentStage = JudgeStage2();
     }
 
     public void StageMove()
     {
         StageManager.Instance.StageMoved();
+        JudgeStage();
+        flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
 }
