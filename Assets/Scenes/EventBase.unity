@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: "\u6211"
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: b0527491d714e4a4c8a3279c2e4eae57, type: 3}
@@ -1148,18 +1148,9 @@ MonoBehaviour:
   reputation: 0
   health: 0
   isSick: 0
+  currentDay: 0
+  currentStage: 0
   currentLanguage: 
-  loadSceneEventSO: {fileID: 0}
-  shopScene:
-    m_AssetGUID: 60d51500cf6e4f24a8d4d0319d7cfa2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  activityScene:
-    m_AssetGUID: 89ffece56e7ddbe42bdf6588146c0879
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!4 &926021929
 Transform:
   m_ObjectHideFlags: 0
@@ -1333,7 +1324,7 @@ GameObject:
   - component: {fileID: 1696002914}
   - component: {fileID: 1696002913}
   m_Layer: 0
-  m_Name: Mysterious Merchant
+  m_Name: NPC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,8 +1342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: "\u795E\u79D8\u5546\u4EBA"
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameText: NPC
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: a748066904d7bd742b3758a567d90604, type: 3}
@@ -1512,7 +1503,6 @@ GameObject:
   - component: {fileID: 2057562095}
   - component: {fileID: 2057562123}
   - component: {fileID: 2057562155}
-  - component: {fileID: 2057562168}
   - component: {fileID: 2057562167}
   - component: {fileID: 2057562173}
   - component: {fileID: 2057562178}
@@ -1520,6 +1510,8 @@ GameObject:
   - component: {fileID: 2057562176}
   - component: {fileID: 2057562175}
   - component: {fileID: 2057562179}
+  - component: {fileID: 2057562181}
+  - component: {fileID: 2057562180}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1541,8 +1533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 64.936035
-    y: 59.936024
+    x: -115.66097
+    y: -26.631119
     width: 97.76117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1552,7 +1544,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 2057562155}
   commandList:
-  - {fileID: 2057562168}
   - {fileID: 2057562179}
   suppressAllAutoSelections: 0
 --- !u!114 &2057562096
@@ -1581,9 +1572,12 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2057562095}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2057562179}
   variables:
   - {fileID: 2057562123}
+  - {fileID: 2057562181}
+  - {fileID: 2057562180}
   - {fileID: 2057562167}
   - {fileID: 2057562176}
   - {fileID: 2057562173}
@@ -1660,23 +1654,6 @@ MonoBehaviour:
   scope: 2
   key: Money
   value: 0
---- !u!114 &2057562168
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 71
-  indentLevel: 0
-  targetObject: {fileID: 926021927}
-  methodName: InitialData
-  delay: 0
 --- !u!114 &2057562173
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1770,6 +1747,36 @@ MonoBehaviour:
     stringRef: {fileID: 2057562123}
     stringVal: 
   languageCodeOLD: 
+--- !u!114 &2057562180
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057562093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 2
+  key: CurrentStage
+  value: 0
+--- !u!114 &2057562181
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057562093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 2
+  key: CurrentDay
+  value: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
