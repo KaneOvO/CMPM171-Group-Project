@@ -1,6 +1,6 @@
-Key,Description,Standard
-SAY.Purchase Behavior Start.77.王叔,,孩子，今天你要进些什么货物？
-MENU.Purchase Behavior Start.78,,购买货物
-MENU.Purchase Behavior Start.81,,离开
-CHARACTER.我,,我
-CHARACTER.王叔,,王叔
+Key,Description,Standard,
+SAY.Purchase Behavior Start.77.王叔,,孩子，今天你要进些什么货物？,"Young lady, what goods are you looking to purchase today?"
+MENU.Purchase Behavior Start.78,,购买货物,purchase goods
+MENU.Purchase Behavior Start.81,,离开,Left
+CHARACTER.我,,我,Player
+CHARACTER.王叔,,王叔,Mr.Wang
