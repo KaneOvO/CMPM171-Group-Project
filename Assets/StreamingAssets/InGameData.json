@@ -33,83 +33,83 @@
         {
             "id": "02",
             "name": [
-                "Spicy Strips",
-                "辣条"
+                "Mike",
+                "牛奶"
             ],
             "originalPrice": 6.5,
             "sellValue": 0.8,
             "maxStack": 999,
             "description": [
-                "Who says spicy strips can't be eaten as a meal?",
-                "谁说辣条不能当饭吃？"
+                "",
+                ""
             ],
-            "spriteUrl": "#"
+            "spriteUrl": "Mike"
         },
         {
             "id": "03",
             "name": [
-                "Coke",
-                "可乐"
+                "Crispy Noodles",
+                "干脆面"
             ],
             "originalPrice": 2,
             "sellValue": 0.9,
             "maxStack": 999,
             "description": [
-                "Coke, the taste of happiness.",
-                "快乐水，人间至味。"
+                "",
+                ""
             ],
-            "spriteUrl": "#"
+            "spriteUrl": "Crispy_Noodles"
         },
         {
             "id": "04",
             "name": [
-                "Ice Cream",
-                "冰激凌"
+                "Gummies",
+                "软糖"
             ],
             "originalPrice": 9,
             "sellValue": 0.8,
             "maxStack": 999,
             "description": [
-                "Ice Cream, the goat of all desserts.",
-                "我冰伟大，无需多言"
+                "",
+                ""
             ],
-            "spriteUrl": "#"
+            "spriteUrl": "Gummies"
         },
         {
             "id": "05",
             "name": [
-                "Game Console",
-                "游戏机"
+                "Mike Tea",
+                "奶茶"
             ],
             "originalPrice": 750,
             "sellValue": 0.3,
             "maxStack": 999,
             "description": [
-                "A game console that has just been listed and has received rave reviews.",
-                "刚上市的游戏机，大受好评"
+                "",
+                ""
             ],
-            "spriteUrl": "#"
+            "spriteUrl": "Mike_Tea"
         },
         {
             "id": "06",
             "name": [
-                "doll",
-                "娃娃"
+                "Osmanthus Wine",
+                "桂花酿"
             ],
             "originalPrice": 560,
             "sellValue": 0.3,
             "maxStack": 999,
             "description": [
-                "Every doll has a story.",
-                "每一个娃娃都有一个故事"
+                "",
+                ""
             ],
-            "spriteUrl": "#"
+            "spriteUrl": "Osmanthus_Wine"
         },
         {
             "id": "07",
             "name": [
-                "Dinosaur Toys",
-                "小恐龙"
+                "Tea Cake",
+                "茶饼"
             ],
             "originalPrice": 360,
             "sellValue": 0.25,
@@ -118,82 +118,7 @@
                 "",
                 ""
             ],
-            "spriteUrl": "#"
-        },
-        {
-            "id": "08",
-            "name": [
-                "Cigarette",
-                "香烟"
-            ],
-            "originalPrice": 50,
-            "sellValue": 0.4,
-            "maxStack": 99,
-            "description": [
-                "Smoking is harmful to health.",
-                "吸烟有害健康"
-            ],
-            "spriteUrl": "#"
-        },
-        {
-            "id": "09",
-            "name": [
-                "Wine",
-                "葡萄酒"
-            ],
-            "originalPrice": 100,
-            "sellValue": 0.5,
-            "maxStack": 99,
-            "description": [
-                "Wine is not afraid of the depth of the alley.",
-                "酒香不怕巷子深"
-            ],
-            "spriteUrl": "#"
-        },
-        {
-            "id": "10",
-            "name": [
-                "Flower",
-                "鲜花"
-            ],
-            "originalPrice": 35,
-            "sellValue": 0.5,
-            "maxStack": 99,
-            "description": [
-                "Every bouquet of flowers is waiting for you to come.",
-                "每一束鲜花都在等待那个你的到来"
-            ],
-            "spriteUrl": "#"
-        },
-        {
-            "id": "11",
-            "name": [
-                "strange pills",
-                "奇怪的药丸"
-            ],
-            "originalPrice": 100,
-            "sellValue": 1,
-            "maxStack": 99,
-            "description": [
-                "A pill of unknown origin, maybe you guessed what it is.",
-                "不明来源的药丸，或许你猜到了它是什么"
-            ],
-            "spriteUrl": "#"
-        },
-        {
-            "id": "12",
-            "name": [
-                "Pistol",
-                "手枪"
-            ],
-            "originalPrice": 500,
-            "sellValue": 1,
-            "maxStack": 99,
-            "description": [
-                "Maybe you shouldn't  it, but you have no choice",
-                "或许你不该出售它，但你已经别无选择了"
-            ],
-            "spriteUrl": "#"
+            "spriteUrl": "Tea_Cake"
         }
     ],
     "initialDatas": {
