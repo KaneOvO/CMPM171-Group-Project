@@ -101,4 +101,6 @@ public class CurrentManager : MonoBehaviour
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
+
+    
 }

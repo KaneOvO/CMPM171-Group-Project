@@ -1780,7 +1780,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.936035
     y: 58.443485
-    width: 97.76117
+    width: 98.711914
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1808,11 +1808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 754.50275, y: 233.52356}
+  scrollPos: {x: 582.7386, y: 217.28595}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 520
-  zoom: 0.6700003
+  zoom: 0.6100004
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1821,8 +1821,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2057562182}
-  selectedCommands:
-  - {fileID: 2057562192}
+  selectedCommands: []
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562191}
@@ -2037,7 +2036,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 267.88492
     y: 53.04332
-    width: 70.46907
+    width: 68.73535
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2063,7 +2062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 77
   indentLevel: 0
-  storyText: "\u8BB0\u4F4F\uFF0C\u7ECF\u8425\u662F\u4E2A\u5FAA\u73AF\uFF0C\u5B9A\u671F\u56DE\u6765\u770B\u770B\u6709\u4EC0\u4E48\u65B0\u8D27\u3002"
+  storyText: "\u8BB0\u4F4F\uFF0C\u7ECF\u8425\u662F\u4E2A\u957F\u671F\u8FC7\u7A0B\uFF0C\u8BB0\u5F97\u5B9A\u671F\u56DE\u6765\u770B\u770B\u6709\u4EC0\u4E48\u65B0\u8D27\u3002"
   description: 
   character: {fileID: 1696002913}
   portrait: {fileID: 21300000, guid: 8eca2ff1f3f77bd4fb06e7a591afebc2, type: 3}
@@ -2179,7 +2178,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &2057562192
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
