@@ -67,22 +67,13 @@ public class CurrentManager : MonoBehaviour
 
     public void JudgeStage()
     {
-        // currentStage = GameManager.Instance.saveData.currentStage switch
-        // {
-        //     Stage.Morning => 1,
-        //     Stage.Noon => 2,
-        //     Stage.Afternoon => 3,
-        //     Stage.Night => 4,
-        //     _ => 1,
-        // };
-
         currentStage = (int)GameManager.Instance.saveData.currentStage;
     }
 
     public void JudgeStage2()
     {
-        
-            
+
+
     }
 
     public void OnDisable()
@@ -97,7 +88,19 @@ public class CurrentManager : MonoBehaviour
 
     public void StageMove()
     {
-        StageManager.Instance.StageMoved();
+        GameManager.Instance.saveData.currentStage = GameManager.Instance.saveData.currentStage switch
+        {
+            Stage.Morning => Stage.Noon,
+            Stage.Noon => Stage.Afternoon,
+            Stage.Afternoon => Stage.Night,
+            Stage.Night => Stage.Morning,
+            _ => Stage.Morning,
+        };
+        if (GameManager.Instance.saveData.currentStage == Stage.Morning)
+        {
+            GameManager.Instance.saveData.currentDay++;
+            flowchart.SetIntegerVariable("CurrentDay", currentDay);
+        }
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }

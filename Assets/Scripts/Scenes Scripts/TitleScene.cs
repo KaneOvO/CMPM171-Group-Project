@@ -8,8 +8,6 @@ public class TitleScene : MonoBehaviour
    [Header("Events Sender: Load Scene")]
    public SceneLoadEventSO loadEventSO;
    [Header("Events Sender: Game Start")]
-   public VoidEventSO gameStartEvent;
-   [Header("Scene Script Object: Game Scene")]
    public AssetReference gameStartScene;
    [Header("Scene Script Object: Credit Scene")]
    public AssetReference creditScene;
@@ -17,7 +15,6 @@ public class TitleScene : MonoBehaviour
    public void StartButtonClicked()
    {
       loadEventSO.RaiseEvent(gameStartScene, true);
-      gameStartEvent.RaiseEvent();
    }
 
    public void CreditButtonClicked()

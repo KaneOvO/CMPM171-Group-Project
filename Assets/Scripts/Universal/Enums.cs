@@ -21,11 +21,10 @@ public enum SceneType
 }
 public enum Stage
 {
-    Default = 0,
-    Morning = 1,
-    Noon = 2,
-    Afternoon = 3,
-    Night = 4,
+    Morning = 0,
+    Noon = 1,
+    Afternoon = 2,
+    Night = 3,
 }
 
 public enum InGameEventType
