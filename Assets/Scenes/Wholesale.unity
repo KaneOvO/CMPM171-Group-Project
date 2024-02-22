@@ -1266,6 +1266,12 @@ MonoBehaviour:
   itemPrefab: {fileID: 5802734220138937974, guid: 428a92ba50364cc40b8072439da085a7, type: 3}
   parentForPrefabs: {fileID: 1086596873}
   panelInScene: {fileID: 250397842}
+  loadSceneEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
+  wholesaleEndScene:
+    m_AssetGUID: 25b784872c95dee4b976940f655d6568
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &2013636328
 Transform:
   m_ObjectHideFlags: 0

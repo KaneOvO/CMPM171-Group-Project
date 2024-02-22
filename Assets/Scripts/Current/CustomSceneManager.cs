@@ -39,6 +39,7 @@ public class CustomSceneManager : MonoBehaviour
     [Header("Scene Script Object: Wholesale Scene")]
     public AssetReference wholesaleSceneFirst;
     public AssetReference wholesaleSceneStart;
+    public AssetReference wholesaleScene;
     public AssetReference wholesaleSceneEnd;
     #endregion
     #region  Scene Script Object: Activity Scene
@@ -137,6 +138,13 @@ public class CustomSceneManager : MonoBehaviour
     public void loadWholesaleSceneStart()
     {
         loadSceneEventSO.RaiseEvent(wholesaleSceneStart, true);
+#if UNITY_EDITOR
+        Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
+#endif
+    }
+    public void loadWholesaleScene()
+    {
+        loadSceneEventSO.RaiseEvent(wholesaleScene, true);
 #if UNITY_EDITOR
         Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
 #endif

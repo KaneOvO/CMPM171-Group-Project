@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AddressableAssets;
 
-public class LoadWhollesale : MonoBehaviour
+public class LoadWholesale : MonoBehaviour
 {
     public int totalCost;
     public TMP_Text totalCostText;
@@ -11,6 +12,10 @@ public class LoadWhollesale : MonoBehaviour
     public GameObject itemPrefab;
     public Transform parentForPrefabs;
     public GameObject panelInScene;
+
+    [Header("Events Sender: Load Scene")]
+    public SceneLoadEventSO loadSceneEventSO;
+    public AssetReference wholesaleEndScene;
 
     public void CreateItemPrefabs(List<Item> items)
     {
@@ -34,7 +39,7 @@ public class LoadWhollesale : MonoBehaviour
     {
         panelInScene = GameObject.Find("Description Panel");
         panelInScene.SetActive(false);
-        
+
 
 
 
@@ -58,7 +63,7 @@ public class LoadWhollesale : MonoBehaviour
     void Update()
     {
         moneyText.text = $"Money: ${GameManager.Instance.saveData.playerState.money}";
-    } 
+    }
 
     public void CalculateTotalCost()
     {
@@ -81,7 +86,9 @@ public class LoadWhollesale : MonoBehaviour
         {
             Debug.Log("Not enough money");
             return;
-        }else{
+        }
+        else
+        {
             GameManager.Instance.saveData.playerState.money -= totalCost;
             foreach (Transform child in parentForPrefabs)
             {
@@ -99,5 +106,7 @@ public class LoadWhollesale : MonoBehaviour
         {
             Debug.Log(item.id + " " + item.amount);
         }
+
+        loadSceneEventSO.RaiseEvent(wholesaleEndScene, true);
     }
 }

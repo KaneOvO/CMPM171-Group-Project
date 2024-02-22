@@ -140,7 +140,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         counterText.text = count.ToString();
         if(currentScene == 0){
-            GameObject.Find("Wholesale").GetComponent<LoadWhollesale>().CalculateTotalCost();
+            GameObject.Find("Wholesale").GetComponent<LoadWholesale>().CalculateTotalCost();
         }
     }
 

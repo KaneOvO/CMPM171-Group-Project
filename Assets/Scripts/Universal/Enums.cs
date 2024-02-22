@@ -19,6 +19,7 @@ public enum SceneType
     Ending = 5,
     Test = 6,
 }
+
 public enum Stage
 {
     Morning = 0,

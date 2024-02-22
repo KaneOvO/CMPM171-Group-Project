@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstAssetReference:
-    m_AssetGUID: 60d51500cf6e4f24a8d4d0319d7cfa2e
+    m_AssetGUID: b1e54160802b07c4ab8f60b7620c3e72
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1

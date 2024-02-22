@@ -53,6 +53,11 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
 
+    public void DebugTest()
+    {
+    Debug.Log("DebugTest");
+    }
+
 
     private void SwitchLanguage()
     {
