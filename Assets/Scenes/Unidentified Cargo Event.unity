@@ -1180,7 +1180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: a748066904d7bd742b3758a567d90604, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd3febb74fd55344282471ea95099e69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1188,7 +1188,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &908790330
@@ -1246,22 +1246,6 @@ MonoBehaviour:
   currentDay: 0
   currentStage: 0
   currentLanguage: 
-  loadSceneEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
-  shopScene:
-    m_AssetGUID: 60d51500cf6e4f24a8d4d0319d7cfa2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  activityScene:
-    m_AssetGUID: 89ffece56e7ddbe42bdf6588146c0879
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  eventScene:
-    m_AssetGUID: 88dd6766f97a5234793e730130eec490
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!4 &926021929
 Transform:
   m_ObjectHideFlags: 0
@@ -1791,7 +1775,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 57.473343
     y: 67.39871
-    width: 96.42854
+    width: 99.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1924,7 +1908,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 254.93237
     y: 114.286835
-    width: 119.64282
+    width: 124.99996
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1955,7 +1939,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 255.73071
     y: 5.084446
-    width: 119.64282
+    width: 124.99996
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
