@@ -1,0 +1,5 @@
+Key,Description,Standard,EN
+SAY.Rest Behavior Start.77.,,[你回到家中，正在思考要不要休息],"You return home, pondering whether to rest or not."
+MENU.Rest Behavior Start.78,,我需要休息一下,I need to take a rest.
+MENU.Rest Behavior Start.79,,离开,Leave
+CHARACTER.我,,我,Me

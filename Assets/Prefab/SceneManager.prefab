@@ -46,65 +46,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadSceneEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   shopSceneFirst:
-    m_AssetGUID: 54b6ec79b80b2e44e8afa09ee1990093
+    m_AssetGUID: feafc8a7f160cae4c8b53e43472f2525
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 1
+    m_EditorAssetChanged: 0
   shopSceneStart:
-    m_AssetGUID: 86763ce5fa248b74b84140ddc9c6fde5
+    m_AssetGUID: e8245e5356439844a8c87d3150ad1bb3
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 1
+    m_EditorAssetChanged: 0
   shopSceneEnd:
-    m_AssetGUID: 25b784872c95dee4b976940f655d6568
+    m_AssetGUID: 97ac4afbea444a84f8a55605c5b9a406
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   templeSceneFirst:
-    m_AssetGUID: 54b6ec79b80b2e44e8afa09ee1990093
+    m_AssetGUID: c6bac9cc22c32b341b272133f1053d54
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   templeSceneStart:
-    m_AssetGUID: 86763ce5fa248b74b84140ddc9c6fde5
+    m_AssetGUID: f78739ac30bed414e92af5da4d49aa12
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   templeSceneEnd:
-    m_AssetGUID: 25b784872c95dee4b976940f655d6568
+    m_AssetGUID: fe857c3847fac7245a3c6f71d995de08
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   homeSceneFirst:
-    m_AssetGUID: 54b6ec79b80b2e44e8afa09ee1990093
+    m_AssetGUID: 5bd2c4dec75d1db439a0c192719166a6
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   homeSceneStart:
-    m_AssetGUID: 86763ce5fa248b74b84140ddc9c6fde5
+    m_AssetGUID: 2ef4b8ad95509fa47a69066f53b8fc26
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   homeSceneEnd:
-    m_AssetGUID: 25b784872c95dee4b976940f655d6568
+    m_AssetGUID: 4679c2e452e22e047993f0dc3e928781
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   laborMarketSceneFirst:
-    m_AssetGUID: 54b6ec79b80b2e44e8afa09ee1990093
+    m_AssetGUID: ce551b035be344c35adae6d2689250cf
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   laborMarketSceneStart:
-    m_AssetGUID: 86763ce5fa248b74b84140ddc9c6fde5
+    m_AssetGUID: 7678a13da314b43c8a71833c9f0563b4
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   laborMarketSceneEnd:
-    m_AssetGUID: 25b784872c95dee4b976940f655d6568
+    m_AssetGUID: b5a1ee465aac24bbbaf3f800b8be8899
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   wholesaleSceneFirst:
     m_AssetGUID: 54b6ec79b80b2e44e8afa09ee1990093
     m_SubObjectName: 
@@ -115,6 +115,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  wholesaleScene:
+    m_AssetGUID: 60d51500cf6e4f24a8d4d0319d7cfa2e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   wholesaleSceneEnd:
     m_AssetGUID: 25b784872c95dee4b976940f655d6568
     m_SubObjectName: 

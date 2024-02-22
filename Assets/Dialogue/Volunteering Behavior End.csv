@@ -1,0 +1,12 @@
+Key,Description,Standard,EN
+SAY.Volunteering Behavior End.77.大师,,感谢你的帮助孩子，你以你的行动传递了你的善良与爱的光芒。虽然这只是一个开始，但每一步都是向善的旅程。,"Thank you for your help, young one. Through your actions, you have radiated the light of your kindness and love. Though this is just a beginning, every step is a journey towards goodness."
+SAY.Volunteering Behavior End.79.大师,,在这里，我们相信，通过服务他人，我们实际上是在照亮自己的心灵之路。,"Here, we believe that by serving others, we are actually illuminating the path of our own souls."
+SAY.Volunteering Behavior End.90.大师,,你今天所做的，不仅帮助了自己，也许还点亮了某个需要希望的心。,What you have done today not only helped yourself but perhaps also illuminated a heart in need of hope.
+SAY.Volunteering Behavior End.78.大师,,愿你继续在生活中发现和传递善意，就像今天在这里所做的那样。,"May you continue to discover and spread kindness in life, just as you have done here today."
+SAY.Volunteering Behavior End.80.,,声望增加了5,Reputation increased by 5.
+SAY.Volunteering Behavior End.81.,,道德增加了2,Morality increased by 2.
+SAY.Volunteering Behavior End.88.,,健康减少了10,Health decreased by 10.
+MENU.Volunteering Behavior End.84,,离开,Leave
+SAY._CommandCopyBuffer.79.大师,,在这里，我们相信，通过服务他人，我们实际上是在照亮自己的心灵之路。你今天所做的，不仅帮助了自己，也许还点亮了某个需要希望的心。,
+CHARACTER.我,,我,Me
+CHARACTER.大师,,大师,Master

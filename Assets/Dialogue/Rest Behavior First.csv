@@ -1,0 +1,13 @@
+Key,Description,Standard,EN
+SAY.Rest Behavior First.77.,,[你感觉自己有些疲惫，于是回到了自己温暖而安静的家中],"You feel a bit weary, so you return to your warm and quiet home."
+SAY.Rest Behavior First.78.,,[家中的摆设依旧，一切都显得那么安宁。],"The furnishings in your home remain as they were, everything appearing tranquil."
+SAY.Rest Behavior First.79.我,,还是家里舒服啊,Home is still comfortable!
+SAY.Rest Behavior First.80.我,,今天感觉太累了，要不休息一下吧,I feel too tired today. How about taking a rest?
+SAY.Rest Behavior First.81.,,现在开始，你可以在家中休息,"Starting now, you can rest at home."
+SAY.Rest Behavior First.82.,,休息是一个行为，当你完成一次后，时间将度过一个阶段,"Resting is a behavior. Once you complete it, time will progress to the next phase."
+SAY.Rest Behavior First.83.,,休息将大幅提升你的健康,Resting will significantly boost your health.
+SAY.Rest Behavior First.84.,,如果长期处于亚健康状态，可能会有不好的后果,"If you're in a suboptimal state of health for a prolonged period, it could lead to adverse consequences."
+SAY.Rest Behavior First.85.我,,(我应不应该休息呢？）,(Should I take a rest?)
+MENU.Rest Behavior First.86,,我应该休息一下,I should take a rest.
+MENU.Rest Behavior First.89,,算了，我还有重要的事情要做,"Never mind, I have important things to do."
+CHARACTER.我,,我,Me

@@ -1,0 +1,7 @@
+Key,Description,Standard,EN
+SAY.Rest Behavior End.78.,,[休息过后，你从床上醒来],"[After resting, you wake up from the bed.]"
+SAY.Rest Behavior End.77.,,[你伸了个懒腰，感觉浑身充满了力气],[You stretch lazily and feel energized throughout your body.]
+SAY.Rest Behavior End.79.我,,(我现在有足够的精力应付更多的挑战了),(I now have enough energy to face more challenges.)
+SAY.Rest Behavior End.80.,,健康度增加50,Health increased by 50.
+MENU.Rest Behavior End.82,,离开,Leave
+CHARACTER.我,,我,Me

@@ -1,0 +1,6 @@
+Key,Description,Standard,EN
+SAY.Work Behavior Start.77.招聘经理,,你今天要来做什么工作？,What job are you here to do today?
+MENU.Work Behavior Start.78,,我想做收银工作,I would like to work as a cashier.
+MENU.Work Behavior Start.80,,离开,Leave
+CHARACTER.我,,我,Me
+CHARACTER.招聘经理,,招聘经理,Recruitment Manager

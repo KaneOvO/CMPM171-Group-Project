@@ -1,0 +1,11 @@
+Key,Description,Standard,EN
+SAY.Selling Behavior End.77.我,,(好，这次营业也算是圆满结束了。）,"(All right, this sales operation is considered complete.)"
+SAY.Selling Behavior End.78.,,[你检查了一下收入，心中有了大致的计算。],[You check the income and have a rough estimate in your mind.]
+\n,,,
+SAY.Selling Behavior End.79.我,,(这次的收入还不错，看来我引进的那些商品受到了顾客的欢迎）\n,(The income this time is pretty good. It seems that the goods I introduced have been well received by customers.)
+SAY.Selling Behavior End.80.我,,（但是我应该还可以提升我的声望，这样或许可以吸引更多的客人）\n,"(But I should be able to increase my reputation. Perhaps this way, I can attract more customers.)"
+SAY.Selling Behavior End.81.我,,（一步一步来，我相信，只要坚持不懈，我一定可以扭转这家店铺的命运）\n,"(Step by step, I believe that as long as I persevere, I can turn the fate of this shop around.)"
+SAY.Selling Behavior End.82.我,,[怀着对未来的憧憬，你结束了这次开店]\n,"[With hopes for the future, you conclude this sales operation.]"
+SAY.Selling Behavior End.83.,,健康减少10\n,Health decreased by 10.
+MENU.Selling Behavior End.85,,离开,Leave
+CHARACTER.我,,我,Me

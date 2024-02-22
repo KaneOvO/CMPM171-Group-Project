@@ -1,0 +1,34 @@
+Key,Description,Standard,EN
+SAY.Volunteering Behavior First.77.,,[现实的压力让你有些难以招架，你决定出门走走放松一下],"[The pressures of reality weigh heavily on you, leading you to decide to go out for a walk to relax.]"
+SAY.Volunteering Behavior First.78.,,[你慢无目标的走着，不知不觉间，你走到一条郊外的小路上],"[You wander aimlessly, and before you know it, you find yourself on a small path in the countryside.]"
+SAY.Volunteering Behavior First.79.,,[小路的两旁是茂盛的树木和芬芳的花朵，隐隐望去，远处出现了出现了一座古老而宁静的寺庙，寺庙的屋檐在阳光下闪耀着金色的光芒],"[The path is flanked by lush trees and fragrant flowers. In the distance, an ancient and serene temple appears, its eaves shimmering in golden light under the sun.]"
+SAY.Volunteering Behavior First.80.我,,（望着远处的寺庙）这里看起来很平静，我应该进去看看,(Looking at the distant temple) This place looks very peaceful. I should go in and have a look.
+\n,,,
+SAY.Volunteering Behavior First.81.我,,[你走进寺庙，一位身穿灰色僧袍的大师正静静地坐在佛堂的坐垫上，他的目光和蔼且深邃。],"[You enter the temple and see a master dressed in a grey monk's robe sitting quietly on a cushion in the Buddha hall, his gaze kind and profound.]"
+\n\n,,,
+SAY.Volunteering Behavior First.82.大师,,你好孩子，我是这里的住持，你看上去内心充满了焦虑。\n\n,"Hello, young traveler. I am the abbot here. You seem to be filled with anxiety."
+SAY.Volunteering Behavior First.83.我,,是的大师，我最近的生活发生了太多事，这让我压力很大\n\n,"Yes, master. Too many things have happened in my life recently, and it's causing me a lot of stress."
+SAY.Volunteering Behavior First.84.我,,我正在寻找一种能让我平静下来的方法，您能给我任何建议吗？,I am seeking a way to calm myself down. Do you have any advice for me?
+SAY.Volunteering Behavior First.85.大师,,孩子，有时候寻找并非总是为了找到答案，有时候，它是为了理解寻找本身的意义。,"Young one, sometimes the search is not always about finding the answers; sometimes, it's about understanding the meaning of the search itself."
+SAY.Volunteering Behavior First.105.大师,,如果你愿意，这里有一个地方可以让你静下心来，也许在帮助别人的过程中，你会找到自己的答案。,"If you're willing, there's a place here where you can quiet your mind. Perhaps in helping others, you will find your own answers."
+,,,
+SAY.Volunteering Behavior First.88.我,,那是什么地方？,What place is that?
+SAY.Volunteering Behavior First.89.大师,,在这座寺院里，我们欢迎所有内心有疑问的人参与我们的志愿活动。,"Here in this temple, we welcome all those with questions in their hearts to participate in our volunteer activities. "
+SAY.Volunteering Behavior First.106.大师,,在这里，你可以与我们一同修行，与与来访者交流，参与各种布施和义务活动。这不仅是一种服务，也是一种修行。,"Here, you can practice alongside us, engage with visitors, and participate in various acts of giving and duties. It's not just a service; it's also a practice."
+SAY.Volunteering Behavior First.90.大师,,让我来告诉你志愿活动的详情,Let me tell you about the details of the volunteering.
+\n,,,
+SAY.Volunteering Behavior First.91.,,现在开始，你可以在寺庙参与志愿活动\n,"Starting now, you can participate in volunteer activities at the temple."
+SAY.Volunteering Behavior First.92.,,志愿活动是一个行为，当你完成一次后，时间将度过一个阶段\n,"Volunteering is a behavior. Once you complete it, time will progress to the next phase."
+SAY.Volunteering Behavior First.93.,,志愿活动将消耗一定程度的体力，并增加一定的声望和道德\n,Volunteering will consume a certain amount of stamina and increase a certain amount of reputation and morality.
+SAY.Volunteering Behavior First.94.我,,（认真听着）听上去很适合现在的我，谢谢你大师,"(Listening attentively) ""It sounds perfect for me right now. Thank you, Master."
+\n\n,,,
+SAY.Volunteering Behavior First.95.大师,,不客气，如果你有兴趣，你现在就可以开始你第一次志愿活动,"You're welcome. If you're interested, you can start your first volunteer activity now."
+MENU.Volunteering Behavior First.96,,我很有兴趣，让我们开始吧,I'm very interested. Let's get started.
+MENU.Volunteering Behavior First.97,,谢谢大师，但我现在还有其他的事情需要处理。,"Thank you, Master, but I have other matters to attend to right now."
+SAY.Volunteering Behavior First.100.大师,,很好。通过帮助他人，你同时也在帮助自己的心灵。在这里，你将学到许多，不仅是知识，更重要的是找到内心的平和。,"Very well. By helping others, you're also helping your own soul. Here, you will learn many things, not just knowledge, but most importantly, finding inner peace."
+SAY.Volunteering Behavior First.101.大师,,跟我来吧。,Follow me.
+SAY.Volunteering Behavior First.103.大师,,我理解。每个人的旅程都是独一无二的。请记住，这里的大门永远像你敞开。,"I understand. Everyone's journey is unique. Please remember, the doors here are always open for you."
+CHARACTER.我,,我,Me
+CHARACTER.大师,,大师,Master
+\n,,,
+\n\n,,,

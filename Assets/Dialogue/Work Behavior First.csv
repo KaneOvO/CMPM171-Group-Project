@@ -1,0 +1,25 @@
+Key,Description,Standard,EN
+SAY.Work Behavior First.77.,,[为了能够尽快还清贷款，你决定在经营店铺之余，找一份短工]\n,"[To pay off the loan as soon as possible, you decide to take on a part-time job in addition to running your store.]"
+SAY.Work Behavior First.78.,,[为此，你来到了人才市场],"[For this purpose, you head to the labor market.]"
+SAY.Work Behavior First.79.,,[这里四处是寻找工作的人们和招聘广告。空气中弥漫着紧张而期待的气氛]\n,[The place is filled with people looking for jobs and recruitment advertisements. The air is thick with a tense yet hopeful atmosphere.]
+SAY.Work Behavior First.80.我,,(我需要找到一份工作，尽快赚些钱来缓解一下目前的经济压力。）,"(I need to find a job to earn some money as soon as possible, to alleviate my current financial stress.)"
+SAY.Work Behavior First.81.我,,[你四处张望，注意到一个看起来很有经验的招聘经理正在检查一份名单，并向周围寻找合适的人选。],"(You look around and notice an experienced-looking recruitment manager checking a list, searching for suitable candidates in the vicinity.)"
+SAY.Work Behavior First.82.,,[你赶忙走上前去，准备与他交谈],"(You quickly approach, ready to engage in conversation with him.)"
+SAY.Work Behavior First.83.招聘经理,,嗯？你看起来挺精神的，来这里是想找工作吗？,(Hmm? You look quite spirited. Are you here looking for a job?)
+SAY.Work Behavior First.84.我,,是的，我正在寻找可以立即开始的短工。,"(Yes, I'm looking for a part-time job that I can start immediately.)"
+SAY.Work Behavior First.85.招聘经理,,好吧，我这里正好有一份工作。工作稳定，报酬公道，但我要提醒你，我们这里的工作需要勤奋和责任感。\n,"(Alright, I happen to have a job available. It's stable work with fair pay, but I must warn you, the job here requires diligence and a sense of responsibility.)"
+SAY.Work Behavior First.86.我,,我明白，我愿意努力工作。,I understand. I am willing to work hard.
+SAY.Work Behavior First.87.招聘经理,,很好，我跟你讲讲短工的细节\n,"Great, let me tell you about the details of the part-time job."
+SAY.Work Behavior First.88.,,现在开始，你可以在人才市场参与短工,"Starting now, you can participate in part-time jobs at the labor market."
+SAY.Work Behavior First.89.,,短工是一个行为，当你完成一次后，时间将度过一个阶段,"Part-time job is a behavior. Once you complete it, time will progress to the next phase."
+SAY.Work Behavior First.90.,,兼职活动将消耗健康度，并获得金钱奖励,Part-time jobs will consume health points but will reward you with money.
+SAY.Work Behavior First.91.,,提升声望可能将影响招聘对你的好感度，到达一定程度后或许将给你提供更好的工作,Increasing your reputation may influence the recruitment manager's favorability towards you. Reaching a certain level might result in being offered better job opportunities.
+SAY.Work Behavior First.92.招聘经理,,这些就是短工的注意事项了，还有什么问题吗?,These are the key points to note about part-time work. Do you have any other questions?
+SAY.Work Behavior First.93.我,,没有了，谢谢,"No, thank you."
+SAY.Work Behavior First.94.招聘经理,,很好，那你现在要开始工作吗？,"Great, would you like to start working now?"
+MENU.Work Behavior First.97,,好的，我可以现在就开始\n,"Yes, I can start right now."
+MENU.Work Behavior First.99,,抱歉，我今天还有其他事情,"Sorry, I have other commitments today."
+SAY.Work Behavior First.100.招聘经理,,很好，那你跟我来,"Very well, then follow me."
+SAY.Work Behavior First.101.招聘经理,,行，但你记住这个机会很紧张，你得尽快。\n,"Alright, but remember, this opportunity is very competitive. You need to act quickly."
+CHARACTER.我,,我,Me
+CHARACTER.招聘经理,,招聘经理,Recruitment Manager

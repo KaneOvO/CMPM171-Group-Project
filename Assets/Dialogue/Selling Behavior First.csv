@@ -1,0 +1,28 @@
+Key,Description,Standard,EN
+SAY.Selling Behavior First.77.,,[你来到了家里的店铺前，这是父亲去世后你第一次回来],"[You arrive at your father's shop, this being your first visit since his passing.]"
+SAY.Selling Behavior First.78.,,[这里承载了你无数的回忆，你永远记得你童年时期与父亲一起在这个店里度过的那些日子],[This place holds countless memories for you. You will always remember the days you spent with your father in this shop during your childhood.]
+SAY.Selling Behavior First.79.,,[如今父亲已经去世，这家店可能是你与父亲最后的纽带了],"[Now that your father has passed away, this shop may be the last connection you have with him.]"
+SAY.Selling Behavior First.80.,,[但一想到你随时会失去这家店，你的心情就沉重了起来],[But the thought of potentially losing this shop weighs heavily on your mind.]
+SAY.Selling Behavior First.81.,,[你站在店铺前，深深地吸了一口气，推开了门],"[You stand in front of the shop, take a deep breath, and push open the door.]"
+SAY.Selling Behavior First.82.,,[伴随着门的吱嘎声响，你走进了充满尘埃和回忆的店内。],"[With a creak, you enter the dusty and nostalgic interior of the shop.]"
+SAY.Selling Behavior First.83.,,[你看向四周],[You look around.]
+SAY.Selling Behavior First.84.我,,(这里几乎没有变过，每一样摆设都还像是曾经的样子。),(Almost nothing has changed here; every item is still reminiscent of how it used to be.)
+SAY.Selling Behavior First.88.,,[你轻轻地走过每一个角落，触摸着每一件物品，似乎能感受到父亲的存在。],"[You walk gently through every corner, touching each item, as if you can feel your father's presence.]"
+SAY.Selling Behavior First.89.我,,(父亲，我回来了。我不会让这家店就这样消失的。),"(Father, I'm back. I won't let this shop disappear like this.)"
+SAY.Selling Behavior First.90.,,[你仔细的打扫了店铺中的每一个角落，擦去了擦去了积累的灰尘，仿佛也在擦拭你心中的忧愁。],"(You meticulously clean every corner of the shop, wiping away the accumulated dust, as if also wiping away the sorrow in your heart.)"
+SAY.Selling Behavior First.91.,,[随着清洁的进行，店铺逐渐展现出了往日的光彩，而你的心情也渐渐变得明朗起来。],"(As the cleaning progresses, the shop gradually reveals its former glory, and your mood also brightens.)"
+SAY.Selling Behavior First.92.,,[就在这时，你看到柜台下方似乎有什么东西],"(Right at that moment, you notice something beneath the counter.)"
+SAY.Selling Behavior First.93.,,[拿起来一看，原来是父亲的账本。],You pick it up and realize it's your father's ledger.
+SAY.Selling Behavior First.94.,,[页页翻过，每一个数字都是父亲辛勤劳动的证明。],"[As you flip through the pages, each number is a testament to your father's hard work.]"
+SAY.Selling Behavior First.95.,,[这更加坚定了你的决心，你放下账本，抬头向天看去],[This strengthens your determination even more. You set down the ledger and look up at the sky.]
+SAY.Selling Behavior First.96.我,,（父亲，我希望你在天之灵能看到，我绝不会放弃这家店。我们的回忆，我会竭尽全力去守护。）,"(Father, I hope your spirit in heaven can see. I will never give up on this shop. Our memories, I will do everything in my power to protect.)"
+SAY.Selling Behavior First.97.,,[站在店铺中央，你闭上眼睛，深呼吸，然后睁开眼，满怀信心地开始了你的经营之旅。],"[Standing in the center of the shop, you close your eyes, take a deep breath, and then open them, beginning your journey of running the business with confidence.]"
+SAY.Selling Behavior First.98.,,现在开始，你可以在自家的店铺中开店卖货了,"Staring now, you can start selling goods in your own shop."
+SAY.Selling Behavior First.99.,,开店卖货是一个行为，当你完成一次开店后，将度过一个阶段,"Selling goods is a behavior. Once you complete it, you will progress to the next phase."
+SAY.Selling Behavior First.100.,,每次开店将消耗一定的健康,"Each time you selling goods, it will consume a certain amount of health."
+SAY.Selling Behavior First.101.,,单个商品单次卖货的卖出数量是有上限的，提升声望可以提升这个上限,"The maximum quantity sold per item in a single sale is limited, and reputation can increase this limit."
+SAY.Selling Behavior First.102.,,你是否打算现在开始第一次开店?,Would you like to start your first sales operation now?
+MENU.Selling Behavior First.104,,开始第一次开店,Begin My first sales operation.
+\n,,,
+MENU.Selling Behavior First.103,,还有别的事情要做,There are other things to do.
+CHARACTER.我,,我,Me
