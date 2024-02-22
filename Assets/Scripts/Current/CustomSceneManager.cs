@@ -15,6 +15,7 @@ public class CustomSceneManager : MonoBehaviour
     [Header("Scene Script Object: Shop Scene")]
     public AssetReference shopSceneFirst;
     public AssetReference shopSceneStart;
+    public AssetReference SellScene;
     public AssetReference shopSceneEnd;
     #endregion
     #region  Scene Script Object: Temple Scene
@@ -63,6 +64,14 @@ public class CustomSceneManager : MonoBehaviour
     public void loadShopSceneStart()
     {
         loadSceneEventSO.RaiseEvent(shopSceneStart, true);
+#if UNITY_EDITOR
+        Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
+#endif
+    }
+
+    public void loadSellScene()
+    {
+        loadSceneEventSO.RaiseEvent(SellScene, true);
 #if UNITY_EDITOR
         Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
 #endif

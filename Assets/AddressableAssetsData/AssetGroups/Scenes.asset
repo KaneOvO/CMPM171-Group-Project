@@ -87,7 +87,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3922dd369e755014e9fbaa7afeb48117
-    m_Address: Sales
+    m_Address: Assets/Scenes/Sales.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

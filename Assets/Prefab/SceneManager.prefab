@@ -55,6 +55,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  SellScene:
+    m_AssetGUID: 3922dd369e755014e9fbaa7afeb48117
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   shopSceneEnd:
     m_AssetGUID: 97ac4afbea444a84f8a55605c5b9a406
     m_SubObjectName: 
