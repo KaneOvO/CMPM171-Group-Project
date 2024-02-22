@@ -1647,8 +1647,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2057562095}
-  selectedCommands: []
+  - {fileID: 2057562184}
+  selectedCommands:
+  - {fileID: 2057562196}
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562181}
@@ -1893,7 +1894,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 66.392426
     y: 20.20768
-    width: 119.333336
+    width: 116.85714
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1920,7 +1921,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.899734
     y: -72.32962
-    width: 113.33333
+    width: 110.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2230,7 +2231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 90
   indentLevel: 0
-  targetObject: {fileID: 926021927}
+  targetObject: {fileID: 1739413361}
   methodName: loadHomeSceneStart
   delay: 0
 --- !u!114 &2057562197
