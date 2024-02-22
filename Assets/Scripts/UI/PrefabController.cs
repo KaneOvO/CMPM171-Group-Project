@@ -82,7 +82,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (currentScene == 0)
         {
-            increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack;
+            increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id)?.amount + count < maxStack;
             decreaseCOuntButton.interactable = count > 0;
         }
         else if (currentScene == 1)
@@ -192,7 +192,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         finalColor.a = targetAlpha;
         image.color = finalColor;
         panelInScene.SetActive(true);
-        descriptionAmountText.text = $"You have: <size=40>{ItemManager.Instance.inventory.Find(x => x.id == id).amount}</size>";
+        int playerAmount = ItemManager.Instance.inventory.Find(x => x.id == id) != null ? ItemManager.Instance.inventory.Find(x => x.id == id).amount : 0;
+        descriptionAmountText.text = $"You have: <size=40>{playerAmount}</size>";
         descriptionPrice.text = $"$: <color=#FF0>{itemCost:F2}</color>";
         descriptionText.text = itemDescription;
     }

@@ -6,6 +6,7 @@
                 "test_item_00",
                 "测试道具_00"
             ],
+            "moralRequired": 999,
             "originalPrice": 5,
             "sellValue": 0.1,
             "maxStack": 1,
@@ -21,6 +22,7 @@
                 "test_item_01",
                 "测试道具_01"
             ],
+            "moralRequired": 999,
             "originalPrice": 10,
             "sellValue": 0.1,
             "maxStack": 10,
@@ -36,6 +38,7 @@
                 "Mike",
                 "牛奶"
             ],
+            "moralRequired": 0,
             "originalPrice": 6.5,
             "sellValue": 0.8,
             "maxStack": 999,
@@ -51,6 +54,7 @@
                 "Crispy Noodles",
                 "干脆面"
             ],
+            "moralRequired": 0,
             "originalPrice": 2,
             "sellValue": 0.9,
             "maxStack": 999,
@@ -66,6 +70,7 @@
                 "Gummies",
                 "软糖"
             ],
+            "moralRequired": 0,
             "originalPrice": 9,
             "sellValue": 0.8,
             "maxStack": 999,
@@ -81,6 +86,7 @@
                 "Mike Tea",
                 "奶茶"
             ],
+            "moralRequired": 0,
             "originalPrice": 750,
             "sellValue": 0.3,
             "maxStack": 999,
@@ -96,6 +102,7 @@
                 "Osmanthus Wine",
                 "桂花酿"
             ],
+            "moralRequired": 0,
             "originalPrice": 560,
             "sellValue": 0.3,
             "maxStack": 999,
@@ -111,6 +118,7 @@
                 "Tea Cake",
                 "茶饼"
             ],
+            "moralRequired": 0,
             "originalPrice": 360,
             "sellValue": 0.25,
             "maxStack": 999,

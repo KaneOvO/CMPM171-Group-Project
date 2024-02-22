@@ -57,6 +57,7 @@ public class Item
 {
     public string id;
     public List<string> name;
+    public int moralRequired;
     public float originalPrice;
     public float sellValue;
     public int maxStack;

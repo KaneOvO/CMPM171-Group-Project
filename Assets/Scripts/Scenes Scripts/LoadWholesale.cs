@@ -16,7 +16,7 @@ public class LoadWholesale : MonoBehaviour
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadSceneEventSO;
     public AssetReference wholesaleEndScene;
-
+    private int playerMoral => PlayerStateManager.Instance.playerState.moral;
     public void CreateItemPrefabs(List<Item> items)
     {
         foreach (Item item in items)
@@ -39,20 +39,23 @@ public class LoadWholesale : MonoBehaviour
     {
         panelInScene = GameObject.Find("Description Panel");
         panelInScene.SetActive(false);
-
-
-
-
-
-        Item itemList1 = ItemManager.Instance.ID("00");
-        Item itemList2 = ItemManager.Instance.ID("01");
-        Item itemList3 = ItemManager.Instance.ID("02");
-        List<Item> items = new List<Item>{
-            itemList1,
-            itemList2,
-            // itemList3,
-        };
-        CreateItemPrefabs(items);
+        List<Item> buyableItems = new List<Item>();
+        foreach (Item item in ItemManager.Instance.items)
+        {
+            if (playerMoral > item.moralRequired)
+            {
+                buyableItems.Add(item);
+            }
+        }
+        // Item itemList1 = ItemManager.Instance.ID("00");
+        // Item itemList2 = ItemManager.Instance.ID("01");
+        // Item itemList3 = ItemManager.Instance.ID("02");
+        // List<Item> items = new List<Item>{
+        //     itemList1,
+        //     itemList2,
+        //     // itemList3,
+        // };
+        CreateItemPrefabs(buyableItems);
 
 
 

@@ -23,7 +23,7 @@ public class ItemManager : MonoBehaviour
         _instance = this;
         transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
     }
-    public List<Item> items { get { return GameManager.Instance.inGameData.items; } }
+    public List<Item> items => GameManager.Instance.inGameData.items;
     public List<InventoryItem> inventory => GameManager.Instance.saveData.inventory;
     public Item ID(string id)
     {
