@@ -22,13 +22,6 @@ public class LoadWhollesale : MonoBehaviour
             PrefabController prefabController = newItemPrefab.GetComponent<PrefabController>();
             if (prefabController != null)
             {
-                // Set the item image
-                // prefabController.SetItemImage(item.spriteUrl);
-
-                // // Set the item cost
-                // prefabController.SetItemCost(item.price[0]);
-
-                // //Set the panel
                 prefabController.setPanelInScene(panelInScene);
 
                 prefabController.setItem(item);

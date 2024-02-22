@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2013636327}
         m_TargetAssemblyTypeName: LoadWhollesale, Assembly-CSharp
         m_MethodName: BuyItems
         m_Mode: 1

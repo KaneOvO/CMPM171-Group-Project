@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public Transform icon;
     public TextMeshProUGUI itemAmountText;
@@ -19,6 +19,10 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
     private int itemAmount;
     private bool isSelected;
     private Coroutine fadeCoroutine;
+
+
+    public int currentScene;
+    public bool alreadyAdded;
 
     private void OnEnable()
     {
@@ -46,6 +50,14 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
         icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         itemAmountText.text = $"{amount.ToString()}";
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if(currentScene == 1 && !alreadyAdded){
+            descriptionPanel.transform.parent.GetComponent<BackpackPanelScript>().addToDisplay(item);
+            alreadyAdded = true;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

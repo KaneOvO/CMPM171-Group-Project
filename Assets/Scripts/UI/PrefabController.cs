@@ -10,6 +10,7 @@ using UnityEngine.Networking;
 using UnityEngine.EventSystems;
 public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public int currentScene;
     private string id;
     public Image itemImage;
     public TMP_Text costText;
@@ -28,9 +29,14 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public TMP_Text descriptionPrice;
     public TMP_Text descriptionText;
     public Button increaseCountButton;
+    public Button decreaseCOuntButton;
+    public Button closeButton;
 
     void Start()
     {
+        if(currentScene == 0){
+            closeButton.gameObject.SetActive(false);
+        }
         UpdateButtonState();
     }
 
@@ -47,11 +53,16 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void IncreaseCount()
     {
-        if (ItemManager.Instance.inventory.Find(x => x.id == id).amount < maxStack)
+        if (currentScene == 0 && ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack)
         {
             count++;
             UpdateCounterText();
             // Optionally, update the button's interactability here or in UpdateCounterText
+        }
+        else if (currentScene == 1 && count < ItemManager.Instance.inventory.Find(x => x.id == id).amount)
+        {
+            count++;
+            UpdateCounterText();
         }
         UpdateButtonState();
     }
@@ -63,16 +74,30 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             count--;
             UpdateCounterText();
         }
+        UpdateButtonState();
     }
 
     public void UpdateButtonState()
     {
-        if (increaseCountButton != null)
+        if (currentScene == 0)
         {
             increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack;
+            decreaseCOuntButton.interactable = count > 0;
+        }
+        else if (currentScene == 1){
+
+            increaseCountButton.interactable = count < ItemManager.Instance.inventory.Find(x => x.id == id).amount;
+            if (count == 0)
+            {
+                panelInScene.transform.parent.GetComponent<BackpackPanelScript>().removeFromDisplay(id);
+            }
         }
     }
 
+    public void setCurrentScene(int scene)
+    {
+        currentScene = scene;
+    }
 
     public void setItem(Item item)
     {
@@ -114,7 +139,9 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void UpdateCounterText()
     {
         counterText.text = count.ToString();
-        GameObject.Find("Canvas").GetComponent<LoadWhollesale>().CalculateTotalCost();
+        if(currentScene == 0){
+            GameObject.Find("Wholesale").GetComponent<LoadWhollesale>().CalculateTotalCost();
+        }
     }
 
     public void setPanelInScene(GameObject panel)
@@ -132,10 +159,13 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        isSelected = true;
-        selectedBox.SetActive(true);
-        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeIn());
+        if(currentScene == 0)
+        {
+            isSelected = true;
+            selectedBox.SetActive(true);
+            if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+            fadeCoroutine = StartCoroutine(FadeIn());
+        }
     }
     private IEnumerator FadeIn()
     {
@@ -165,10 +195,12 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        isSelected = false;
-        panelInScene.SetActive(false);
-        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeOut());
+        if(currentScene == 0){
+            isSelected = false;
+            panelInScene.SetActive(false);
+            if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+            fadeCoroutine = StartCoroutine(FadeOut());
+        }
     }
     private IEnumerator FadeOut()
     {
