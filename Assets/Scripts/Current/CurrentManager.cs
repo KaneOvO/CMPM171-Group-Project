@@ -31,8 +31,7 @@ public class CurrentManager : MonoBehaviour
         energy = GameManager.Instance.saveData.playerState.energy;
         flowchart.SetIntegerVariable("Energy", energy);
 
-        money = GameManager.Instance.saveData.playerState.money;
-        flowchart.SetFloatVariable("Money", money);
+        UpdateMoney();
 
         moral = GameManager.Instance.saveData.playerState.moral;
         flowchart.SetIntegerVariable("Moral", moral);
@@ -51,6 +50,12 @@ public class CurrentManager : MonoBehaviour
 
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
+    }
+
+    public void UpdateMoney()
+    {
+        money = GameManager.Instance.saveData.playerState.money;
+        flowchart.SetFloatVariable("Money", money);
     }
 
     public void DebugTest()
