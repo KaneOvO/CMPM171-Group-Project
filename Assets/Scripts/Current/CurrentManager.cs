@@ -55,7 +55,7 @@ public class CurrentManager : MonoBehaviour
 
     public void DebugTest()
     {
-    Debug.Log("DebugTest");
+        Debug.Log("DebugTest");
     }
 
 
@@ -110,5 +110,5 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
 
-    
+
 }

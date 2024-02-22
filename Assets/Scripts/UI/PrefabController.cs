@@ -34,7 +34,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void Start()
     {
-        if(currentScene == 0){
+        if (currentScene == 0)
+        {
             closeButton.gameObject.SetActive(false);
         }
         UpdateButtonState();
@@ -84,7 +85,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack;
             decreaseCOuntButton.interactable = count > 0;
         }
-        else if (currentScene == 1){
+        else if (currentScene == 1)
+        {
 
             increaseCountButton.interactable = count < ItemManager.Instance.inventory.Find(x => x.id == id).amount;
             if (count == 0)
@@ -139,7 +141,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void UpdateCounterText()
     {
         counterText.text = count.ToString();
-        if(currentScene == 0){
+        if (currentScene == 0)
+        {
             GameObject.Find("Wholesale").GetComponent<LoadWholesale>().CalculateTotalCost();
         }
     }
@@ -159,7 +162,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(currentScene == 0)
+        if (currentScene == 0)
         {
             isSelected = true;
             selectedBox.SetActive(true);
@@ -195,7 +198,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(currentScene == 0){
+        if (currentScene == 0)
+        {
             isSelected = false;
             panelInScene.SetActive(false);
             if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);

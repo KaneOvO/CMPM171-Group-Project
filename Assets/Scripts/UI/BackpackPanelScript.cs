@@ -15,8 +15,9 @@ public class BackpackPanelScript : MonoBehaviour
     public TextMeshProUGUI descriptionAmountText;
     public TextMeshProUGUI descriptionPrice;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI totalMoneyText;
     public List<InventoryItem> inventory => ItemManager.Instance.inventory;
-
+    public PlayerState playerState => PlayerStateManager.Instance.playerState;
 
     public int currentScene;
     public GameObject displayItemPrefab;
@@ -30,10 +31,12 @@ public class BackpackPanelScript : MonoBehaviour
         descriptionPrice = descriptionPrice ? descriptionPrice : transform.Find("Description Panel/Price Text").GetComponent<TextMeshProUGUI>();
         descriptionText = descriptionText ? descriptionText : transform.Find("Description Panel/Description Text").GetComponent<TextMeshProUGUI>();
         descriptionPanel.SetActive(false);
+        totalMoneyText = totalMoneyText ? totalMoneyText : transform.Find("Total Money Text").GetComponent<TextMeshProUGUI>();
         Refresh();
     }
     public void Refresh()
     {
+        totalMoneyText.text = $"$:<color=#FF0>{playerState.money.ToString("F1")}</color>";
         foreach (Transform child in content.transform)
         {
             Destroy(child.gameObject);
