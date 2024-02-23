@@ -9,6 +9,7 @@ public class SellBackpackPanelCellScript : BackpackPanelCellScript, IPointerDown
     public int currentScene;
     public bool alreadyAdded;
 
+
     public virtual void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Pointer");

@@ -2552,7 +2552,7 @@ MonoBehaviour:
   descriptionPrice: {fileID: 9846466633355795}
   descriptionText: {fileID: 6738185327603017863}
   totalMoneyText: {fileID: 4669627002318216233}
-  currentScene: 0
+  currentScene: 1
   displayItemPrefab: {fileID: 5802734220138937974, guid: 428a92ba50364cc40b8072439da085a7, type: 3}
   parentForDisplayItem: {fileID: 1732083159}
 --- !u!114 &8312800108558900502

@@ -32,6 +32,7 @@ public class WholesaleSellBackpackPanelScript : BackpackPanelScript
             cellScript.descriptionPrice = descriptionPrice;
             cellScript.descriptionText = descriptionText;
             cellScript.backpackPanelScript = this;
+            cellScript.currentScene = currentScene;
             cellScript.Refresh(item.id, item.amount);
         }
     }
