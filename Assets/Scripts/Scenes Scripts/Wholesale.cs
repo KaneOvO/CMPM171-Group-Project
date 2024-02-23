@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.AddressableAssets;
+using UnityEngine.UI;
 
-public class LoadWholesale : MonoBehaviour
+public class Wholesale : MonoBehaviour
 {
     public int totalCost;
     public TMP_Text totalCostText;
@@ -17,6 +18,7 @@ public class LoadWholesale : MonoBehaviour
     public SceneLoadEventSO loadSceneEventSO;
     public AssetReference wholesaleEndScene;
     private int playerMoral => PlayerStateManager.Instance.playerState.moral;
+    public Button buyButton;
     public void CreateItemPrefabs(List<Item> items)
     {
         foreach (Item item in items)
@@ -30,7 +32,7 @@ public class LoadWholesale : MonoBehaviour
                 prefabController.setPanelInScene(panelInScene);
 
                 prefabController.setItem(item);
-
+                prefabController.wholesale = this;
             }
         }
     }
@@ -42,23 +44,12 @@ public class LoadWholesale : MonoBehaviour
         List<Item> buyableItems = new List<Item>();
         foreach (Item item in ItemManager.Instance.items)
         {
-            if (playerMoral > item.moralRequired)
+            if (playerMoral >= item.moralRequired)
             {
                 buyableItems.Add(item);
             }
         }
-        // Item itemList1 = ItemManager.Instance.ID("00");
-        // Item itemList2 = ItemManager.Instance.ID("01");
-        // Item itemList3 = ItemManager.Instance.ID("02");
-        // List<Item> items = new List<Item>{
-        //     itemList1,
-        //     itemList2,
-        //     // itemList3,
-        // };
         CreateItemPrefabs(buyableItems);
-
-
-
 
         CalculateTotalCost();
     }
@@ -80,6 +71,7 @@ public class LoadWholesale : MonoBehaviour
             }
             totalCostText.text = $"Total Cost: ${totalCost}";
         }
+        buyButton.interactable = GameManager.Instance.saveData.playerState.money >= totalCost;
     }
 
     public void BuyItems()

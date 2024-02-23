@@ -4,27 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Transform icon;
     public TextMeshProUGUI itemAmountText;
     public GameObject selectedBox;
-    public GameObject descriptionPanel;
-    public TextMeshProUGUI descriptionAmountText;
-    public TextMeshProUGUI descriptionPrice;
-    public TextMeshProUGUI descriptionText;
-    public BackpackPanelScript backpackPanelScript;
-    public Item item;
+    [HideInInspector] public GameObject descriptionPanel;
+    [HideInInspector] public TextMeshProUGUI descriptionAmountText;
+    [HideInInspector] public TextMeshProUGUI descriptionPrice;
+    [HideInInspector] public TextMeshProUGUI descriptionText;
+    [HideInInspector] public BackpackPanelScript backpackPanelScript;
+    [HideInInspector] public Item item;
     public float fadeDuration = 0.2f;
-    private int itemAmount;
-    private bool isSelected;
-    private Coroutine fadeCoroutine;
+    protected int itemAmount;
+    protected bool isSelected;
+    protected Coroutine fadeCoroutine;
 
-
-    public int currentScene;
-    public bool alreadyAdded;
-
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         icon = icon ? icon : transform.Find("Icon Mask/Icon").transform;
         itemAmountText = itemAmountText ? itemAmountText : transform.Find("Bottom BG/Amount Text").GetComponent<TextMeshProUGUI>();
@@ -32,7 +28,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         selectedBox.SetActive(false);
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (isSelected)
         {
@@ -43,7 +39,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         }
     }
 
-    public void Refresh(string id, int amount = 0)
+    public virtual void Refresh(string id, int amount = 0)
     {
         item = ItemManager.Instance.ID(id);
         itemAmount = amount;
@@ -52,15 +48,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         itemAmountText.text = $"{amount.ToString()}";
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if(currentScene == 1 && !alreadyAdded){
-            descriptionPanel.transform.parent.GetComponent<BackpackPanelScript>().addToDisplay(item);
-            alreadyAdded = true;
-        }
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
         isSelected = true;
         selectedBox.SetActive(true);
@@ -68,7 +56,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         fadeCoroutine = StartCoroutine(FadeIn());
     }
 
-    private IEnumerator FadeIn()
+    protected virtual IEnumerator FadeIn()
     {
         Image image = selectedBox.GetComponent<Image>();
         float targetAlpha = 1f;
@@ -95,14 +83,14 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public virtual void OnPointerExit(PointerEventData eventData)
     {
         isSelected = false;
         descriptionPanel.SetActive(false);
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
         fadeCoroutine = StartCoroutine(FadeOut());
     }
-    private IEnumerator FadeOut()
+    protected virtual IEnumerator FadeOut()
     {
         Image image = selectedBox.GetComponent<Image>();
         float targetAlpha = 0f;

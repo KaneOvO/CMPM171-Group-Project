@@ -87,67 +87,67 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3922dd369e755014e9fbaa7afeb48117
-    m_Address: Assets/Scenes/Sales.unity
+    m_Address: Sales
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b5a1ee465aac24bbbaf3f800b8be8899
-    m_Address: Assets/Scenes/Work Behavior End.unity
+    m_Address: Work Behavior End
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ce551b035be344c35adae6d2689250cf
-    m_Address: Assets/Scenes/Work Behavior First.unity
+    m_Address: Work Behavior First
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7678a13da314b43c8a71833c9f0563b4
-    m_Address: Assets/Scenes/Work Behavior Start.unity
+    m_Address: Work Behavior Start
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f78739ac30bed414e92af5da4d49aa12
-    m_Address: Assets/Scenes/Volunteering Behavior Start.unity
+    m_Address: Volunteering Behavior Start
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6bac9cc22c32b341b272133f1053d54
-    m_Address: Assets/Scenes/Volunteering Behavior First.unity
+    m_Address: Volunteering Behavior First
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe857c3847fac7245a3c6f71d995de08
-    m_Address: Assets/Scenes/Volunteering Behavior End.unity
+    m_Address: Volunteering Behavior End
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4679c2e452e22e047993f0dc3e928781
-    m_Address: Assets/Scenes/Rest Behavior End.unity
+    m_Address: Rest Behavior End
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5bd2c4dec75d1db439a0c192719166a6
-    m_Address: Assets/Scenes/Rest Behavior First.unity
+    m_Address: Rest Behavior First
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2ef4b8ad95509fa47a69066f53b8fc26
-    m_Address: Assets/Scenes/Rest Behavior Start.unity
+    m_Address: Rest Behavior Start
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 97ac4afbea444a84f8a55605c5b9a406
-    m_Address: Assets/Scenes/Selling Behavior End.unity
+    m_Address: Selling Behavior End
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: feafc8a7f160cae4c8b53e43472f2525
-    m_Address: Assets/Scenes/Selling Behavior First.unity
+    m_Address: Selling Behavior First
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8245e5356439844a8c87d3150ad1bb3
-    m_Address: Assets/Scenes/Selling Behavior Start.unity
+    m_Address: Selling Behavior Start
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

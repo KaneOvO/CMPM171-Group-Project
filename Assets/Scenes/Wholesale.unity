@@ -1272,6 +1272,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  buyButton: {fileID: 1309004272}
 --- !u!4 &2013636328
 Transform:
   m_ObjectHideFlags: 0

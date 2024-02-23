@@ -31,7 +31,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Button increaseCountButton;
     public Button decreaseCOuntButton;
     public Button closeButton;
-
+    public Wholesale wholesale;
     void Start()
     {
         if (currentScene == 0)
@@ -54,13 +54,15 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void IncreaseCount()
     {
-        if (currentScene == 0 && ItemManager.Instance.inventory.Find(x => x.id == id).amount + count < maxStack)
+        InventoryItem item = ItemManager.Instance.inventory.Find(x => x.id == id);
+        int amount = item != null ? item.amount : 0;
+        if (currentScene == 0 && amount + count < maxStack)
         {
             count++;
             UpdateCounterText();
             // Optionally, update the button's interactability here or in UpdateCounterText
         }
-        else if (currentScene == 1 && count < ItemManager.Instance.inventory.Find(x => x.id == id).amount)
+        else if (currentScene == 1 && count < amount)
         {
             count++;
             UpdateCounterText();
@@ -80,18 +82,20 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void UpdateButtonState()
     {
+        InventoryItem item = ItemManager.Instance.inventory.Find(x => x.id == id);
+        int amount = item != null ? item.amount : 0;
         if (currentScene == 0)
         {
-            increaseCountButton.interactable = ItemManager.Instance.inventory.Find(x => x.id == id)?.amount + count < maxStack;
+            increaseCountButton.interactable = amount + count < maxStack;
             decreaseCOuntButton.interactable = count > 0;
         }
         else if (currentScene == 1)
         {
 
-            increaseCountButton.interactable = count < ItemManager.Instance.inventory.Find(x => x.id == id).amount;
+            increaseCountButton.interactable = count < amount;
             if (count == 0)
             {
-                panelInScene.transform.parent.GetComponent<BackpackPanelScript>().removeFromDisplay(id);
+                panelInScene.transform.parent.GetComponent<WholesaleSellBackpackPanelScript>().removeFromDisplay(id);
             }
         }
     }
@@ -143,7 +147,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         counterText.text = count.ToString();
         if (currentScene == 0)
         {
-            GameObject.Find("Wholesale").GetComponent<LoadWholesale>().CalculateTotalCost();
+            wholesale.CalculateTotalCost();
         }
     }
 
