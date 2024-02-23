@@ -3,7 +3,7 @@
     "currentLanauage": 0,
     "currentStage": 0,
     "playerState": {
-        "energy": 2,
+        "energy": 3,
         "isSick": false,
         "money": 1000,
         "health": 100,

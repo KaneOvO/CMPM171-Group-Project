@@ -44,7 +44,7 @@ public class Wholesale : MonoBehaviour
         List<Item> buyableItems = new List<Item>();
         foreach (Item item in ItemManager.Instance.items)
         {
-            if (playerMoral >= item.moralRequired)
+            if (playerMoral >= item.reputationRequired)
             {
                 buyableItems.Add(item);
             }
