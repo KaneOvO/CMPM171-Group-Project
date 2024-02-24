@@ -3707,6 +3707,12 @@ MonoBehaviour:
   displayItemPrefab: {fileID: 5802734220138937974, guid: 428a92ba50364cc40b8072439da085a7, type: 3}
   parentForDisplayItem: {fileID: 1732083159}
   flowchart: {fileID: 1822617910}
+  loadEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
+  SaleEndScene:
+    m_AssetGUID: 97ac4afbea444a84f8a55605c5b9a406
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!114 &8312800108558900502
 MonoBehaviour:
   m_ObjectHideFlags: 0
