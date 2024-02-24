@@ -4,8 +4,10 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 using UnityEngine.Events;
+using UnityEngine.AddressableAssets;
 using System;
 using TMPro;
+using Fungus;
 
 public class WholesaleSellBackpackPanelScript : BackpackPanelScript
 
@@ -13,6 +15,11 @@ public class WholesaleSellBackpackPanelScript : BackpackPanelScript
     public int currentScene;
     public GameObject displayItemPrefab;
     public Transform parentForDisplayItem;
+    public Flowchart flowchart;
+
+    [Header("Events Sender: Load Scene")]
+    public SceneLoadEventSO loadEventSO;
+    public AssetReference SaleEndScene;
     public override void Refresh()
     {
         totalMoneyText.text = $"$:<color=#FF0>{playerState.money.ToString("F1")}</color>";
@@ -68,4 +75,17 @@ public class WholesaleSellBackpackPanelScript : BackpackPanelScript
             }
         }
     }
+    public void sellAll()
+    {
+        foreach (Transform child in parentForDisplayItem)
+        {
+            PrefabController sellItem = child.GetComponent<PrefabController>();
+            flowchart.SetIntegerVariable(sellItem.itemName.Replace(" ", "_"), sellItem.count);
+            ItemManager.Instance.AddItemAmount(child.name, -sellItem.count);
+            PlayerStateManager.Instance.playerState.money += ItemManager.Instance.ID(child.name).originalPrice * sellItem.count;
+        }
+        //跳场景
+        loadEventSO.RaiseEvent(SaleEndScene, true);
+    }
+
 }
