@@ -470,6 +470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fpsUpdateInterval: 0.5
   framesPerSecond: 0
+  frames: 0
+  maxFrames: 0
   inGameData:
     items: []
     initialDatas:

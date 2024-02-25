@@ -32,8 +32,6 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Button decreaseCOuntButton;
     public Button closeButton;
     public Wholesale wholesale;
-    bool isAdding = false;
-    bool isDecreasing = false;
     void Start()
     {
         if (currentScene == 0)
@@ -56,7 +54,6 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void IncreaseCount()
     {
-        isAdding = true;
         InventoryItem item = ItemManager.Instance.inventory.Find(x => x.id == id);
         int amount = item != null ? item.amount : 0;
         if (currentScene == 0 && amount + count < maxStack)
@@ -75,7 +72,6 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void DecreaseCount()
     {
-        isDecreasing = true;
         if (count > 0)
         {
             count--;

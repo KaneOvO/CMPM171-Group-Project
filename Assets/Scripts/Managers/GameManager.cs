@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     [Header("Game Information")]
     [Range(0f, 1f)] public float fpsUpdateInterval = 0.5f;
     public float framesPerSecond = 0;
-    private int frames = 0;
+    public uint frames = 0;
+    public uint maxFrames = 0;
     private double lastInterval;
 
     [Header("InGame Data Information")]
@@ -114,10 +115,11 @@ public class GameManager : MonoBehaviour
     private void CaculateFPS()
     {
         ++frames;
+        maxFrames = Math.Max(maxFrames, frames);
         float timeNow = Time.realtimeSinceStartup;
         if (timeNow > lastInterval + fpsUpdateInterval)
         {
-            framesPerSecond = (float)(frames / (timeNow - lastInterval));
+            framesPerSecond = (float)frames / (float)(timeNow - lastInterval);
             frames = 0;
             lastInterval = timeNow;
         }
