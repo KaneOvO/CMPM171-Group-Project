@@ -124,4 +124,12 @@ public class GameManager : MonoBehaviour
             lastInterval = timeNow;
         }
     }
+    private void OnApplicationQuit(){
+        Save();
+    }
+    public void Save(){
+        string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+        string dataAsJson = JsonUtility.ToJson(saveData);
+        File.WriteAllText(saveDataFilePath, dataAsJson);
+    }
 }
