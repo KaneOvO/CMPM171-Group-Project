@@ -12,8 +12,9 @@ public class BackpackPanelScript : MonoBehaviour
     public GameObject content;
     public GameObject itemCellPrefab;
     public GameObject descriptionPanel;
+    public TextMeshProUGUI descriptionNameText;
     public TextMeshProUGUI descriptionAmountText;
-    public TextMeshProUGUI descriptionPrice;
+    public TextMeshProUGUI descriptionPriceText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI totalMoneyText;
     public List<InventoryItem> inventory => ItemManager.Instance.inventory;
@@ -23,8 +24,9 @@ public class BackpackPanelScript : MonoBehaviour
         content = content ? content : transform.Find("Scroll View/Viewport/Content").gameObject;
         itemCellPrefab = itemCellPrefab ? itemCellPrefab : Resources.Load<GameObject>("Backpack Item Cell");
         descriptionPanel = descriptionPanel ? descriptionPanel : transform.Find("Description Panel").gameObject;
+        descriptionNameText = descriptionNameText ? descriptionNameText : transform.Find("Description Panel/Name Text").GetComponent<TextMeshProUGUI>();
         descriptionAmountText = descriptionAmountText ? descriptionAmountText : transform.Find("Description Panel/Amount Text").GetComponent<TextMeshProUGUI>();
-        descriptionPrice = descriptionPrice ? descriptionPrice : transform.Find("Description Panel/Price Text").GetComponent<TextMeshProUGUI>();
+        descriptionPriceText = descriptionPriceText ? descriptionPriceText : transform.Find("Description Panel/Price Text").GetComponent<TextMeshProUGUI>();
         descriptionText = descriptionText ? descriptionText : transform.Find("Description Panel/Description Text").GetComponent<TextMeshProUGUI>();
         descriptionPanel.SetActive(false);
         totalMoneyText = totalMoneyText ? totalMoneyText : transform.Find("Total Money Text").GetComponent<TextMeshProUGUI>();
@@ -44,8 +46,9 @@ public class BackpackPanelScript : MonoBehaviour
             BackpackPanelCellScript cellScript = newItemCell.GetComponent<BackpackPanelCellScript>();
             newItemCell.name = item.id;
             cellScript.descriptionPanel = descriptionPanel;
+            cellScript.descriptionNameText = descriptionNameText;
             cellScript.descriptionAmountText = descriptionAmountText;
-            cellScript.descriptionPrice = descriptionPrice;
+            cellScript.descriptionPriceText = descriptionPriceText;
             cellScript.descriptionText = descriptionText;
             cellScript.backpackPanelScript = this;
             cellScript.Refresh(item.id, item.amount);

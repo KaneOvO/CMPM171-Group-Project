@@ -496,6 +496,7 @@ MonoBehaviour:
       reputation: 0
       moral: 0
     inventory: []
+    teachInfo: []
   OnJsonLoad: {fileID: 11400000, guid: 57faeaf991e5e614b95ee70066d3171c, type: 2}
 --- !u!1 &551946230
 GameObject:
@@ -937,6 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807f7977ca652b499a5dc2245ef08db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sellInventory: []
 --- !u!1 &1439563383
 GameObject:
   m_ObjectHideFlags: 0

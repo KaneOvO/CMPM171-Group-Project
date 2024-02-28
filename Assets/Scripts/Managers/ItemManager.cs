@@ -25,6 +25,11 @@ public class ItemManager : MonoBehaviour
     }
     public List<Item> items => GameManager.Instance.inGameData.items;
     public List<InventoryItem> inventory => GameManager.Instance.saveData.inventory;
+    public List<InventoryItem> sellInventory = new List<InventoryItem>();
+    private void Start()
+    {
+        sellInventory = new List<InventoryItem>();
+    }
     public Item ID(string id)
     {
         return items.Find(x => x.id == id);
@@ -80,6 +85,11 @@ public class ItemManager : MonoBehaviour
 
         inventory.Sort();
         return true;
+    }
+    public int InventoryAmount(string id)
+    {
+        InventoryItem target = inventory.Find(x => x.id == id);
+        return target == null ? 0 : target.amount;
     }
     /// <summary>
     /// This function is used to make a gameobject of the item for test only.

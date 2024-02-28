@@ -17,7 +17,7 @@ public class Wholesale : MonoBehaviour
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadSceneEventSO;
     public AssetReference wholesaleEndScene;
-    private int playerMoral => PlayerStateManager.Instance.playerState.moral;
+    private int playerReputation => PlayerStateManager.Instance.playerState.reputation;
     public Button buyButton;
     public void CreateItemPrefabs(List<Item> items)
     {
@@ -33,6 +33,7 @@ public class Wholesale : MonoBehaviour
 
                 prefabController.setItem(item);
                 prefabController.wholesale = this;
+                prefabController.Refresh();
             }
         }
     }
@@ -44,7 +45,7 @@ public class Wholesale : MonoBehaviour
         List<Item> buyableItems = new List<Item>();
         foreach (Item item in ItemManager.Instance.items)
         {
-            if (playerMoral >= item.reputationRequired)
+            if (playerReputation >= item.reputationRequired)
             {
                 buyableItems.Add(item);
             }

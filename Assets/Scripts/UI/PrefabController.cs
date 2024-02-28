@@ -12,7 +12,9 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 {
     public int currentScene;
     private string id;
+    private InventoryItem inventoryItem;
     public Image itemImage;
+    private int inventoryItemAmount;
     public TMP_Text costText;
     public TMP_Text counterText;
     public GameObject panelInScene;
@@ -25,19 +27,22 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private bool isSelected;
     private Coroutine fadeCoroutine;
     public float fadeDuration = 0.2f;
+    public TMP_Text descriptionNameText;
     public TMP_Text descriptionAmountText;
     public TMP_Text descriptionPrice;
     public TMP_Text descriptionText;
     public Button increaseCountButton;
-    public Button decreaseCOuntButton;
+    public Button decreaseCountButton;
     public Button closeButton;
     public Wholesale wholesale;
-    void Start()
+    public SellBackpackPanelCellScript sellBackpackPanelCellScript;
+    public void Refresh()
     {
         if (currentScene == 0)
         {
             closeButton.gameObject.SetActive(false);
         }
+        decreaseCountButton.interactable = true;
         UpdateButtonState();
     }
 
@@ -54,15 +59,14 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void IncreaseCount()
     {
-        InventoryItem item = ItemManager.Instance.inventory.Find(x => x.id == id);
-        int amount = item != null ? item.amount : 0;
-        if (currentScene == 0 && amount + count < maxStack)
+        inventoryItemAmount = inventoryItem != null ? inventoryItem.amount : 0;
+        if (currentScene == 0 && inventoryItemAmount + count < maxStack)
         {
             count++;
             UpdateCounterText();
             // Optionally, update the button's interactability here or in UpdateCounterText
         }
-        else if (currentScene == 1 && count < amount)
+        else if (currentScene == 1 && count < inventoryItemAmount)
         {
             count++;
             UpdateCounterText();
@@ -82,27 +86,25 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void UpdateButtonState()
     {
-        InventoryItem item = ItemManager.Instance.inventory.Find(x => x.id == id);
-        int amount = item != null ? item.amount : 0;
+        inventoryItemAmount = inventoryItem != null ? inventoryItem.amount : 0;
         if (currentScene == 0)
         {
-            increaseCountButton.interactable = amount + count < maxStack;
-            decreaseCOuntButton.interactable = count > 0;
+            increaseCountButton.interactable = inventoryItemAmount + count < maxStack;
+            decreaseCountButton.interactable = count > 0;
         }
         else if (currentScene == 1)
         {
-
-            increaseCountButton.interactable = count < amount;
+            increaseCountButton.interactable = count < inventoryItemAmount;
             if (count == 0)
             {
-                panelInScene.transform.parent.GetComponent<WholesaleSellBackpackPanelScript>().removeFromDisplay(id);
+                panelInScene.transform.parent.GetComponent<WholesaleSellBackpackPanelScript>().removeFromDisplay(id, sellBackpackPanelCellScript, sellBackpackPanelCellScript.itemAmount);
             }
         }
     }
 
     public void setCurrentScene(int scene)
     {
-        currentScene = scene;
+        this.currentScene = scene;
     }
 
     public void setItem(Item item)
@@ -113,6 +115,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         SetItemImage(item.spriteUrl);
         SetItemCost(item.originalPrice);
         maxStack = item.maxStack;
+        inventoryItem = ItemManager.Instance.inventory.Find(x => x.id == item.id);
     }
 
     public void SetItemID(string id)
@@ -147,15 +150,22 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         counterText.text = count.ToString();
         if (currentScene == 0)
         {
-            wholesale.CalculateTotalCost();
+            wholesale?.CalculateTotalCost();
+        }
+        else if (currentScene == 1)
+        {
+            inventoryItemAmount = inventoryItem != null ? inventoryItem.amount : 0;
+            sellBackpackPanelCellScript.itemAmount = Math.Clamp(inventoryItemAmount - count, 0, maxStack);
+            sellBackpackPanelCellScript.itemAmountText.text = $"{sellBackpackPanelCellScript.itemAmount.ToString()}";
         }
     }
 
     public void setPanelInScene(GameObject panel)
     {
         panelInScene = panel;
-        descriptionAmountText = panel.transform.Find("Amount Text").GetComponent<TMP_Text>();
-        descriptionPrice = panel.transform.Find("Price Text").GetComponent<TMP_Text>();
+        descriptionNameText = panel.transform.Find("TopPart/Name Text").GetComponent<TMP_Text>();
+        descriptionAmountText = panel.transform.Find("TopPart/Amount Text").GetComponent<TMP_Text>();
+        descriptionPrice = panel.transform.Find("TopPart/Price Text").GetComponent<TMP_Text>();
         descriptionText = panel.transform.Find("Description Text").GetComponent<TMP_Text>();
     }
 
@@ -196,8 +206,9 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         finalColor.a = targetAlpha;
         image.color = finalColor;
         panelInScene.SetActive(true);
+        descriptionNameText.text = itemName;
         int playerAmount = ItemManager.Instance.inventory.Find(x => x.id == id) != null ? ItemManager.Instance.inventory.Find(x => x.id == id).amount : 0;
-        descriptionAmountText.text = $"You have: <size=40>{playerAmount}</size>";
+        descriptionAmountText.text = $"You have: <size=30>{playerAmount}</size>";
         descriptionPrice.text = $"$: <color=#FF0>{itemCost:F2}</color>";
         descriptionText.text = itemDescription;
     }

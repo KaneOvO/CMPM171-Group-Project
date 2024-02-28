@@ -10,13 +10,14 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
     public TextMeshProUGUI itemAmountText;
     public GameObject selectedBox;
     [HideInInspector] public GameObject descriptionPanel;
+    [HideInInspector] public TextMeshProUGUI descriptionNameText;
     [HideInInspector] public TextMeshProUGUI descriptionAmountText;
-    [HideInInspector] public TextMeshProUGUI descriptionPrice;
+    [HideInInspector] public TextMeshProUGUI descriptionPriceText;
     [HideInInspector] public TextMeshProUGUI descriptionText;
     [HideInInspector] public BackpackPanelScript backpackPanelScript;
     [HideInInspector] public Item item;
     public float fadeDuration = 0.2f;
-    protected int itemAmount;
+    [HideInInspector] public int itemAmount;
     protected bool isSelected;
     protected Coroutine fadeCoroutine;
 
@@ -78,8 +79,10 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         finalColor.a = targetAlpha;
         image.color = finalColor;
         descriptionPanel.SetActive(true);
-        descriptionAmountText.text = $"Amount: <size=40>{itemAmount.ToString()}</size>";
-        descriptionPrice.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
+        string itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
+        descriptionNameText.text = $"{itemName}";
+        descriptionAmountText.text = $"Amount: {itemAmount.ToString()}";
+        descriptionPriceText.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
 

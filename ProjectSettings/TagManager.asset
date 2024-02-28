@@ -11,8 +11,9 @@ TagManager:
   - EventSystem
   - BackpackPanel
   - OptionsPanel
-  - Backpack
   - SettingsPanel
+  - Backpack
+  - TMP
   layers:
   - Default
   - TransparentFX
