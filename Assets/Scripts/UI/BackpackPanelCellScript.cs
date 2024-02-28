@@ -44,8 +44,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
     {
         item = ItemManager.Instance.ID(id);
         itemAmount = amount;
-        Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
-        icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        icon.GetComponent<Image>().sprite = Resources.Load<Sprite>(item.spriteUrl);
         itemAmountText.text = $"{amount.ToString()}";
     }
 

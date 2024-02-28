@@ -1419,11 +1419,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 318411355526025523, guid: ed148b74237db8441b3576095fdf9022, type: 3}
   m_PrefabInstance: {fileID: 1330227580}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1330227582 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3524241406403486847, guid: ed148b74237db8441b3576095fdf9022, type: 3}
-  m_PrefabInstance: {fileID: 1330227580}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1565426496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,8 +1703,6 @@ GameObject:
   - component: {fileID: 2057562197}
   - component: {fileID: 2057562196}
   - component: {fileID: 2057562195}
-  - component: {fileID: 2057562201}
-  - component: {fileID: 2057562202}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1744,8 +1737,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 2057562179}
   - {fileID: 2057562194}
-  - {fileID: 2057562201}
-  - {fileID: 2057562202}
   - {fileID: 2057562182}
   - {fileID: 2057562189}
   - {fileID: 2057562188}
@@ -1783,7 +1774,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2057562095}
   selectedCommands:
-  - {fileID: 2057562202}
+  - {fileID: 2057562182}
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562181}
@@ -2367,7 +2358,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 169.37741
     y: -29.046051
-    width: 110.69649
+    width: 113.283554
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2528,45 +2519,6 @@ MonoBehaviour:
   scope: 2
   key: Mike
   value: 0
---- !u!114 &2057562201
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 90
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1330227582}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
---- !u!114 &2057562202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 91
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 5
-  durationOLD: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class CurrentManager : MonoBehaviour
     public int currentDay;
     public int currentStage;
     public string currentLanguage;
+    public TeachInfo teachInfo => GameManager.Instance.saveData.teachInfo;
+    public EventInfo eventInfo => GameManager.Instance.saveData.eventInfo;
 
     void Awake()
     {
@@ -47,6 +49,8 @@ public class CurrentManager : MonoBehaviour
 
         currentDay = GameManager.Instance.saveData.currentDay;
         flowchart.SetIntegerVariable("CurrentDay", currentDay);
+
+        UpdateInfo();
 
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
@@ -94,6 +98,12 @@ public class CurrentManager : MonoBehaviour
         GameManager.Instance.saveData.playerState.reputation = flowchart.GetIntegerVariable("Reputation");
         GameManager.Instance.saveData.playerState.health = flowchart.GetIntegerVariable("Health");
         GameManager.Instance.saveData.playerState.isSick = flowchart.GetBooleanVariable("IsSick");
+        teachInfo.purchase = flowchart.GetBooleanVariable("teachPurchase");
+        teachInfo.sale = flowchart.GetBooleanVariable("teachSale");
+        teachInfo.takeBreak = flowchart.GetBooleanVariable("teachTakeBreak");
+        teachInfo.volunteer = flowchart.GetBooleanVariable("teachVolunteer");
+        teachInfo.dayLabor = flowchart.GetBooleanVariable("teachDayLabor");
+        eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
     }
 
     public void StageMove()
@@ -115,5 +125,14 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
     }
 
+    public void UpdateInfo()
+    {
+        flowchart.SetBooleanVariable("teachPurchase", teachInfo.purchase);
+        flowchart.SetBooleanVariable("teachVolunteer", teachInfo.volunteer);
+        flowchart.SetBooleanVariable("teachSale", teachInfo.sale);
+        flowchart.SetBooleanVariable("teachTakeBreak", teachInfo.takeBreak);
+        flowchart.SetBooleanVariable("teachDayLabor", teachInfo.dayLabor);
 
+        flowchart.SetBooleanVariable("CargoEvent", eventInfo.cargo);
+    }
 }

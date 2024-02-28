@@ -11,7 +11,8 @@ public class SaveData
     public Stage currentStage;
     public PlayerState playerState;
     public List<InventoryItem> inventory;
-    public List<TeachInfo> teachInfo;
+    public TeachInfo teachInfo;
+    public EventInfo eventInfo;
 }
 
 [System.Serializable]
@@ -30,19 +31,17 @@ public class InventoryItem : IComparable<InventoryItem>
     }
 }
 [System.Serializable]
-public class TeachInfo : IComparable<TeachInfo>
+public class TeachInfo
 {
-    public string id;
-    public bool isTeach;
-    public TeachInfo(string id, bool isTeach)
-    {
-        this.id = id;
-        this.isTeach = isTeach;
-    }
-    public int CompareTo(TeachInfo other)
-    {
-        return string.Compare(this.id, other.id);
-    }
+    public bool purchase;
+    public bool sale;
+    public bool takeBreak;
+    public bool volunteer;
+    public bool dayLabor;
+}
+[System.Serializable]
+public class EventInfo{
+    public bool cargo;
 }
 
 [System.Serializable]

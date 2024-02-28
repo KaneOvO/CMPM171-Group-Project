@@ -1,1 +1,1 @@
-{"currentLanguage":0,"currentDay":1,"currentStage":2,"playerState":{"energy":3,"isSick":false,"money":27241.0,"health":40,"reputation":50,"moral":50},"inventory":[{"id":"03","amount":41},{"id":"04","amount":53},{"id":"05","amount":66}],"teachInfo":[]}
+{"currentLanguage":0,"currentDay":2,"currentStage":3,"playerState":{"energy":3,"isSick":false,"money":77298.5,"health":40,"reputation":50,"moral":50},"inventory":[{"id":"02","amount":2}],"teachInfo":{"purchase":true,"sale":true,"takeBreak":false,"volunteer":false,"dayLabor":true},"eventInfo":{"cargo":true}}

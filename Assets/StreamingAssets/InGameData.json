@@ -35,7 +35,7 @@
         {
             "id": "02",
             "name": [
-                "Mike",
+                "Milk",
                 "牛奶"
             ],
             "reputationRequired": 0,
@@ -46,7 +46,7 @@
                 "",
                 ""
             ],
-            "spriteUrl": "Mike"
+            "spriteUrl": "Milk"
         },
         {
             "id": "03",
@@ -83,7 +83,7 @@
         {
             "id": "05",
             "name": [
-                "Mike Tea",
+                "Milk Tea",
                 "奶茶"
             ],
             "reputationRequired": 0,
@@ -94,7 +94,7 @@
                 "",
                 ""
             ],
-            "spriteUrl": "Mike_Tea"
+            "spriteUrl": "Milk_Tea"
         },
         {
             "id": "06",
