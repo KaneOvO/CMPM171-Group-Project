@@ -63,14 +63,13 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (currentScene == 0 && inventoryItemAmount + count < maxStack)
         {
             count++;
-            UpdateCounterText();
             // Optionally, update the button's interactability here or in UpdateCounterText
         }
         else if (currentScene == 1 && count < inventoryItemAmount)
         {
             count++;
-            UpdateCounterText();
         }
+        UpdateCounterText();
         UpdateButtonState();
     }
 
@@ -79,8 +78,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (count > 0)
         {
             count--;
-            UpdateCounterText();
         }
+        UpdateCounterText();
         UpdateButtonState();
     }
 

@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 8959190663691576376}
   - component: {fileID: 5029126149048646614}
   - component: {fileID: 1994273041683093354}
+  - component: {fileID: 6487632307618361706}
   m_Layer: 5
   m_Name: Plus
   m_TagString: Untagged
@@ -495,6 +496,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5029126149048646614}
   m_OnClick:
     m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6487632307618361706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833175908227815229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e68fb2a59745974bb776472b131fe63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  isHolding: 0
+  interval: 0.25
+  timer: 0
+  onButtonDownEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6468621183105331055}
+        m_TargetAssemblyTypeName: PrefabController, Assembly-CSharp
+        m_MethodName: IncreaseCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onButtonUpEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+  onButtonHoldEvents:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6468621183105331055}
         m_TargetAssemblyTypeName: PrefabController, Assembly-CSharp
@@ -520,6 +570,7 @@ GameObject:
   - component: {fileID: 3838211908049057261}
   - component: {fileID: 260577704437223737}
   - component: {fileID: 3496187277747283822}
+  - component: {fileID: 4792571847489467895}
   m_Layer: 5
   m_Name: Minus
   m_TagString: Untagged
@@ -627,6 +678,43 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 260577704437223737}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4792571847489467895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878386998291104900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e68fb2a59745974bb776472b131fe63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  isHolding: 0
+  interval: 0.25
+  timer: 0
+  onButtonDownEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6468621183105331055}
+        m_TargetAssemblyTypeName: PrefabController, Assembly-CSharp
+        m_MethodName: DecreaseCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onButtonUpEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  onButtonHoldEvents:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6468621183105331055}
