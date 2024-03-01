@@ -8,14 +8,18 @@ using UnityEngine.AddressableAssets;
 using System;
 using TMPro;
 
-public class WholesaleSellBackpackPanelScript : BackpackPanelScript
+public class SaleBackpackPanelScript : BackpackPanelScript
 
 {
-    public int currentScene;
     public GameObject displayItemPrefab;
     public Transform parentForDisplayItem;
     public override void Refresh()
     {
+        descriptionNameText.font = font;
+        descriptionAmountText.font = font;
+        descriptionPriceText.font = font;
+        descriptionText.font = font;
+        totalMoneyText.font = font;
         totalMoneyText.text = $"$:<color=#FF0>{playerState.money.ToString("F1")}</color>";
         foreach (Transform child in content.transform)
         {
@@ -25,39 +29,35 @@ public class WholesaleSellBackpackPanelScript : BackpackPanelScript
         foreach (var item in inventory)
         {
             GameObject newItemCell = Instantiate(itemCellPrefab, content.transform);
-            SellBackpackPanelCellScript cellScript = newItemCell.GetComponent<SellBackpackPanelCellScript>();
+            SaleBackpackCellScript cellScript = newItemCell.GetComponent<SaleBackpackCellScript>();
             newItemCell.name = item.id;
-            cellScript.descriptionPanel = descriptionPanel;
-            cellScript.descriptionNameText = descriptionNameText;
-            cellScript.descriptionAmountText = descriptionAmountText;
-            cellScript.descriptionPriceText = descriptionPriceText;
-            cellScript.descriptionText = descriptionText;
             cellScript.backpackPanelScript = this;
+            cellScript.saleBackpackPanelScript = this;
             cellScript.Refresh(item.id, item.amount);
         }
     }
-    public virtual void addToDisplay(Item item, SellBackpackPanelCellScript sellBackpackPanelCellScript)
+    public virtual void addToDisplay(Item item, SaleBackpackCellScript saleBackpackCellScript)
     {
         GameObject newItemPrefab = Instantiate(displayItemPrefab, parentForDisplayItem);
         newItemPrefab.name = item.id;
-        Sprite loadedSprite = Resources.Load<Sprite>(item.spriteUrl);
         PrefabController prefabController = newItemPrefab.GetComponent<PrefabController>();
-        prefabController.setItem(item);
-        prefabController.sellBackpackPanelCellScript = sellBackpackPanelCellScript;
-        prefabController.setPanelInScene(descriptionPanel);
+        prefabController.saleBackpackPanelScript = this;
+        prefabController.SetItem(item);
+        prefabController.SetPanelInScene(descriptionPanel);
+        prefabController.saleBackpackCellScript = saleBackpackCellScript;
         int count = ItemManager.Instance.inventory.Find(x => x.id == item.id).amount;
         prefabController.count = count;
-        prefabController.closeButton.onClick.AddListener(() => removeFromDisplay(item.id, sellBackpackPanelCellScript, count));
+        prefabController.closeButton.onClick.AddListener(() => removeFromDisplay(item.id, saleBackpackCellScript, count));
         prefabController.UpdateCounterText();
-        prefabController.setCurrentScene(currentScene);
+        prefabController.SetCurrentScene(1);
         prefabController.Refresh();
-        sellBackpackPanelCellScript.itemAmount = 0;
-        sellBackpackPanelCellScript.itemAmountText.text = $"{sellBackpackPanelCellScript.itemAmount.ToString()}";
+        saleBackpackCellScript.itemAmount = 0;
+        saleBackpackCellScript.itemAmountText.text = $"{saleBackpackCellScript.itemAmount.ToString()}";
     }
-    public virtual void removeFromDisplay(string id, SellBackpackPanelCellScript sellBackpackPanelCellScript, int count)
+    public virtual void removeFromDisplay(string id, SaleBackpackCellScript saleBackpackCellScript, int count)
     {
-        sellBackpackPanelCellScript.itemAmount = count;
-        sellBackpackPanelCellScript.itemAmountText.text = $"{sellBackpackPanelCellScript.itemAmount.ToString()}";
+        saleBackpackCellScript.itemAmount = count;
+        saleBackpackCellScript.itemAmountText.text = $"{saleBackpackCellScript.itemAmount.ToString()}";
         Transform childToRemove = parentForDisplayItem.Find(id);
         if (childToRemove != null)
         {
@@ -67,7 +67,7 @@ public class WholesaleSellBackpackPanelScript : BackpackPanelScript
         Transform childInContent = content.transform.Find(id);
         if (childInContent != null)
         {
-            SellBackpackPanelCellScript cellScript = childInContent.GetComponent<SellBackpackPanelCellScript>();
+            SaleBackpackCellScript cellScript = childInContent.GetComponent<SaleBackpackCellScript>();
             if (cellScript != null)
             {
                 cellScript.alreadyAdded = false;

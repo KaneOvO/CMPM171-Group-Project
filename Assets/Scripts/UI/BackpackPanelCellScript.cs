@@ -6,15 +6,17 @@ using TMPro;
 using UnityEngine.EventSystems;
 public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
     public Transform icon;
     public TextMeshProUGUI itemAmountText;
     public GameObject selectedBox;
-    [HideInInspector] public GameObject descriptionPanel;
-    [HideInInspector] public TextMeshProUGUI descriptionNameText;
-    [HideInInspector] public TextMeshProUGUI descriptionAmountText;
-    [HideInInspector] public TextMeshProUGUI descriptionPriceText;
-    [HideInInspector] public TextMeshProUGUI descriptionText;
-    [HideInInspector] public BackpackPanelScript backpackPanelScript;
+    public BackpackPanelScript backpackPanelScript;
+    public TMP_FontAsset font => UIManager.Instance.font;
+    public GameObject descriptionPanel => backpackPanelScript.descriptionPanel;
+    public TextMeshProUGUI descriptionNameText => backpackPanelScript.descriptionNameText;
+    public TextMeshProUGUI descriptionAmountText => backpackPanelScript.descriptionAmountText;
+    public TextMeshProUGUI descriptionPriceText => backpackPanelScript.descriptionPriceText;
+    public TextMeshProUGUI descriptionText => backpackPanelScript.descriptionText;
     [HideInInspector] public Item item;
     public float fadeDuration = 0.2f;
     [HideInInspector] public int itemAmount;
@@ -45,6 +47,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         item = ItemManager.Instance.ID(id);
         itemAmount = amount;
         icon.GetComponent<Image>().sprite = Resources.Load<Sprite>(item.spriteUrl);
+        itemAmountText.font = font;
         itemAmountText.text = $"{amount.ToString()}";
     }
 
@@ -80,7 +83,14 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         descriptionPanel.SetActive(true);
         string itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
         descriptionNameText.text = $"{itemName}";
-        descriptionAmountText.text = $"Amount: {itemAmount.ToString()}";
+        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => "Amount: ",
+            Language.Chinese => "数量: ",
+            Language.Japanese => "個数: ",
+            _ => "Amount: ",
+        }
+        + $"{itemAmount.ToString()}";
         descriptionPriceText.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }

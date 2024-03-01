@@ -10,32 +10,40 @@ using UnityEngine.Networking;
 using UnityEngine.EventSystems;
 public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [Header("Script Settings")]
+    public WholesaleCanvas wholesaleCanvas;
+    public Wholesale wholesale;
+    public SaleBackpackCellScript saleBackpackCellScript;
+    public SaleBackpackPanelScript saleBackpackPanelScript;
     public int currentScene;
+
+    [Header("Display Item Info")]
     private string id;
+    public string itemName;
+    public string itemDescription;
     private InventoryItem inventoryItem;
     public Image itemImage;
     private int inventoryItemAmount;
     public TMP_Text costText;
     public TMP_Text counterText;
-    public GameObject panelInScene;
-    public string itemName;
-    public string itemDescription;
-    public int count = 0;
-    public float itemCost = 0;
-    public int maxStack;
+    [HideInInspector] public int count = 0;
+    [HideInInspector] public float itemCost = 0;
+    [HideInInspector] public int maxStack;
     public GameObject selectedBox;
     private bool isSelected;
     private Coroutine fadeCoroutine;
     public float fadeDuration = 0.2f;
-    public TMP_Text descriptionNameText;
-    public TMP_Text descriptionAmountText;
-    public TMP_Text descriptionPrice;
-    public TMP_Text descriptionText;
+    [Header("Description Panel Setting")]
+    public GameObject descriptionPanel;
+    [HideInInspector] public TMP_Text descriptionNameText;
+    [HideInInspector] public TMP_Text descriptionAmountText;
+    [HideInInspector] public TMP_Text descriptionPriceText;
+    [HideInInspector] public TMP_Text descriptionText;
+    [Header("Button Setting")]
     public Button increaseCountButton;
     public Button decreaseCountButton;
     public Button closeButton;
-    public Wholesale wholesale;
-    public SellBackpackPanelCellScript sellBackpackPanelCellScript;
+    public TMP_FontAsset font => UIManager.Instance.font;
     public void Refresh()
     {
         if (currentScene == 0)
@@ -53,7 +61,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             Vector3 spawnedPosition = Input.mousePosition + new Vector3(10, 200, 0);
             spawnedPosition.x = Mathf.Clamp(spawnedPosition.x, 300, Screen.width - 300);
             spawnedPosition.y = Mathf.Clamp(spawnedPosition.y, 100, Screen.height - 100);
-            panelInScene.transform.position = spawnedPosition;
+            descriptionPanel.transform.position = spawnedPosition;
         }
     }
 
@@ -63,7 +71,6 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (currentScene == 0 && inventoryItemAmount + count < maxStack)
         {
             count++;
-            // Optionally, update the button's interactability here or in UpdateCounterText
         }
         else if (currentScene == 1 && count < inventoryItemAmount)
         {
@@ -96,17 +103,17 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             increaseCountButton.interactable = count < inventoryItemAmount;
             if (count == 0)
             {
-                panelInScene.transform.parent.GetComponent<WholesaleSellBackpackPanelScript>().removeFromDisplay(id, sellBackpackPanelCellScript, sellBackpackPanelCellScript.itemAmount);
+                saleBackpackPanelScript.removeFromDisplay(id, saleBackpackCellScript, saleBackpackCellScript.itemAmount);
             }
         }
     }
 
-    public void setCurrentScene(int scene)
+    public void SetCurrentScene(int scene)
     {
         this.currentScene = scene;
     }
 
-    public void setItem(Item item)
+    public void SetItem(Item item)
     {
         SetItemID(item.id);
         SetItemName(item.name[(int)GameManager.Instance.saveData.currentLanguage]);
@@ -141,7 +148,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void SetItemCost(float cost)
     {
         itemCost = cost;
-        costText.text = $"${cost:F2}";
+        costText.text = $"$:{cost:F1}";
     }
 
     public void UpdateCounterText()
@@ -154,23 +161,23 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         else if (currentScene == 1)
         {
             inventoryItemAmount = inventoryItem != null ? inventoryItem.amount : 0;
-            sellBackpackPanelCellScript.itemAmount = Math.Clamp(inventoryItemAmount - count, 0, maxStack);
-            sellBackpackPanelCellScript.itemAmountText.text = $"{sellBackpackPanelCellScript.itemAmount.ToString()}";
+            saleBackpackCellScript.itemAmount = Math.Clamp(inventoryItemAmount - count, 0, maxStack);
+            saleBackpackCellScript.itemAmountText.text = $"{saleBackpackCellScript.itemAmount.ToString()}";
         }
     }
 
-    public void setPanelInScene(GameObject panel)
+    public void SetPanelInScene(GameObject panel)
     {
-        panelInScene = panel;
+        descriptionPanel = panel;
         descriptionNameText = panel.transform.Find("TopPart/Name Text").GetComponent<TMP_Text>();
         descriptionAmountText = panel.transform.Find("TopPart/Amount Text").GetComponent<TMP_Text>();
-        descriptionPrice = panel.transform.Find("TopPart/Price Text").GetComponent<TMP_Text>();
+        descriptionPriceText = panel.transform.Find("TopPart/Price Text").GetComponent<TMP_Text>();
         descriptionText = panel.transform.Find("Description Text").GetComponent<TMP_Text>();
     }
 
-    public int GetCost()
+    public float GetCost()
     {
-        return (int)itemCost * count;
+        return itemCost * count;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -204,11 +211,21 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         Color finalColor = image.color;
         finalColor.a = targetAlpha;
         image.color = finalColor;
-        panelInScene.SetActive(true);
+        descriptionPanel.SetActive(true);
+        descriptionAmountText.font = font;
+        descriptionNameText.font = font;
+        descriptionPriceText.font = font;
+        descriptionText.font = font;
         descriptionNameText.text = itemName;
         int playerAmount = ItemManager.Instance.inventory.Find(x => x.id == id) != null ? ItemManager.Instance.inventory.Find(x => x.id == id).amount : 0;
-        descriptionAmountText.text = $"You have: <size=30>{playerAmount}</size>";
-        descriptionPrice.text = $"$: <color=#FF0>{itemCost:F2}</color>";
+        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => "You have: ",
+            Language.Chinese => "你有：",
+            Language.Japanese => "あなたは：",
+            _ => "You have: ",
+        } + $"<size=30>{playerAmount}</size>";
+        descriptionPriceText.text = $"$: <color=#FF0>{itemCost:F2}</color>";
         descriptionText.text = itemDescription;
     }
     public void OnPointerExit(PointerEventData eventData)
@@ -216,7 +233,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (currentScene == 0)
         {
             isSelected = false;
-            panelInScene.SetActive(false);
+            descriptionPanel.SetActive(false);
             if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
             fadeCoroutine = StartCoroutine(FadeOut());
         }

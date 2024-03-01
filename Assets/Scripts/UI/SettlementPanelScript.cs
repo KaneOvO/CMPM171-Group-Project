@@ -22,17 +22,23 @@ public class SettlementPanelScript : MonoBehaviour
     [Header("Sell Item Cell Prefab")]
     public GameObject settlementItemCellPrefab;
     public List<InventoryItem> sellInventory => ItemManager.Instance.sellInventory;
+    public TMP_FontAsset font => UIManager.Instance.font;
 
     private void OnEnable()
     {
         descriptionPanel = descriptionPanel == null ? transform.Find("Description Panel").gameObject : descriptionPanel;
         descriptionNameText = descriptionNameText == null ? transform.Find("Description Panel/TopPart/Name Text").GetComponent<TextMeshProUGUI>() : descriptionNameText;
+        descriptionNameText.font = font;
         descriptionAmountText = descriptionAmountText == null ? transform.Find("Description Panel/TopPart/Amount Text").GetComponent<TextMeshProUGUI>() : descriptionAmountText;
+        descriptionAmountText.font = font;
         descriptionPriceText = descriptionPriceText == null ? transform.Find("Description Panel/TopPart/Price Text").GetComponent<TextMeshProUGUI>() : descriptionPriceText;
+        descriptionPriceText.font = font;
         descriptionText = descriptionText == null ? transform.Find("Description Panel/Description Text").GetComponent<TextMeshProUGUI>() : descriptionText;
+        descriptionText.font = font;
         descriptionPanel.SetActive(false);
         totalMoney = 0f;
         totalMoneyText = totalMoneyText == null ? transform.Find("Scroll View/Toatal Money Text").GetComponent<TextMeshProUGUI>() : totalMoneyText;
+        totalMoneyText.font = font;
         content = content == null ? transform.Find("Scroll View/Viewport/Content").gameObject : content;
         StartCoroutine(Refresh());
     }
@@ -63,10 +69,17 @@ public class SettlementPanelScript : MonoBehaviour
         float start = totalMoney;
         float end = start + amount * item.originalPrice;
         float elapsedTime = 0f;
+        string displayString = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"Total",
+            Language.Chinese => $"共计",
+            Language.Japanese => $"合計",
+            _ => $"Total",
+        };
         while (elapsedTime < 1f && totalMoney < end)
         {
             totalMoney = Mathf.Lerp(start, end, elapsedTime);
-            totalMoneyText.text = $"Total $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
+            totalMoneyText.text = displayString + $" $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
             elapsedTime += Time.deltaTime;
             yield return null;
             if (Input.GetMouseButtonDown(0))
@@ -75,6 +88,6 @@ public class SettlementPanelScript : MonoBehaviour
             }
         }
         totalMoney = end;
-        totalMoneyText.text = $"Total $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
+        totalMoneyText.text = displayString + $" $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
     }
 }

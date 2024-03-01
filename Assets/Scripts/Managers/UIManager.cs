@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
+using System;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Fonts")]
+    public TMP_FontAsset[] fonts;
+    public TMP_FontAsset font => fonts[(int)GameManager.Instance.saveData.currentLanguage];
     [Header("UI Panels")]
     public List<GameObject> panels;
     private static UIManager _instance;
     [Header("Events Listener: Panel Called")]
     public StringParameterEventSO PanelCalledEvent;
+    [Header("Event Sender: On Language Change")]
+    public UnityEvent onLanguageChange;
 
     public static UIManager Instance
     {
@@ -36,6 +43,11 @@ public class UIManager : MonoBehaviour
             GameObject openedPanel = panels.Find(x => x.activeSelf);
             if (openedPanel) { openedPanel.SetActive(false); } else { HandlePanelCalledEvent("SettingsPanel"); }
         }
+    }
+    [ContextMenu("Invoke Language Change Events")]
+    public void InvokeLanguageChangeEvents()
+    {
+        onLanguageChange?.Invoke();
     }
     void OnEnable()
     {

@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 405848086}
   - component: {fileID: 405848088}
   - component: {fileID: 405848087}
+  - component: {fileID: 405848089}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: TMP
@@ -608,6 +609,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405848085}
   m_CullTransparentMesh: 1
+--- !u!114 &405848089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405848085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - Next
+  - "\u7EE7\u7EED"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!1 &413391286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1453,7 @@ GameObject:
   - component: {fileID: 1726503362}
   - component: {fileID: 1726503364}
   - component: {fileID: 1726503363}
+  - component: {fileID: 1726503365}
   m_Layer: 5
   m_Name: ' Settlement Title Text'
   m_TagString: TMP
@@ -1556,6 +1577,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726503361}
   m_CullTransparentMesh: 1
+--- !u!114 &1726503365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726503361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - Settlement
+  - "\u7ED3\u7B97"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!1 &1729361846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1746,9 @@ MonoBehaviour:
   totalMoneyText: {fileID: 961521992}
   content: {fileID: 1695352947}
   settlementItemCellPrefab: {fileID: 722661040607021477, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!1 &1839669802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,7 +2072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2037,15 +2080,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 740
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2077,11 +2120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 390
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796699298352664730, guid: d82290020676f8047b79c07f2b7631fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

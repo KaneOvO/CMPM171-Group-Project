@@ -20,7 +20,7 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
     public TextMeshProUGUI descriptionAmountText => settlementPanelScript.descriptionAmountText;
     public TextMeshProUGUI descriptionPriceText => settlementPanelScript.descriptionPriceText;
     public TextMeshProUGUI descriptionText => settlementPanelScript.descriptionText;
-
+    public TMP_FontAsset font => UIManager.Instance.font;
     protected Coroutine fadeCoroutine;
     public float fadeDuration = 0.2f;
 
@@ -34,6 +34,8 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
     }
     public virtual void Refresh(string id, int amount = 1)
     {
+        sellItemText.font = font;
+        priceText.font = font;
         amount = Math.Abs(amount);
         item = ItemManager.Instance.ID(id);
         Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
@@ -87,7 +89,13 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         string itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
         descriptionNameText.text = itemName;
         int itemAmount = ItemManager.Instance.InventoryAmount(item.id);
-        descriptionAmountText.text = $"Backpack:{itemAmount}";
+        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => "Backpack",
+            Language.Chinese => "背包",
+            Language.Japanese => "背包",
+            _ => "Backpack"
+        } + $" {itemAmount}";
         descriptionPriceText.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }

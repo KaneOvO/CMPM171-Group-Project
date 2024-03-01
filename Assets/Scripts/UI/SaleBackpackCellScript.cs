@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-public class SellBackpackPanelCellScript : BackpackPanelCellScript, IPointerDownHandler
+public class SaleBackpackCellScript : BackpackPanelCellScript, IPointerDownHandler
 {
     public bool alreadyAdded;
-
+    public SaleBackpackPanelScript saleBackpackPanelScript;
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Pointer");
-        if(!alreadyAdded){
-            descriptionPanel.transform.parent.GetComponent<WholesaleSellBackpackPanelScript>().addToDisplay(item,this);
+        if (!alreadyAdded)
+        {
+            saleBackpackPanelScript.addToDisplay(item, this);
             alreadyAdded = true;
         }
     }

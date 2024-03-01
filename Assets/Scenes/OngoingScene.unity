@@ -372,8 +372,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd2ee2d39d8fa42a6f42af56fa0527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
   panels: []
   PanelCalledEvent: {fileID: 11400000, guid: 7106e72bbc9d95740a55ec7b02b8a979, type: 2}
+  onLanguageChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &377766212
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +502,14 @@ MonoBehaviour:
       reputation: 0
       moral: 0
     inventory: []
-    teachInfo: []
+    teachInfo:
+      purchase: 0
+      sale: 0
+      takeBreak: 0
+      volunteer: 0
+      dayLabor: 0
+    eventInfo:
+      cargo: 0
   OnJsonLoad: {fileID: 11400000, guid: 57faeaf991e5e614b95ee70066d3171c, type: 2}
 --- !u!1 &551946230
 GameObject:

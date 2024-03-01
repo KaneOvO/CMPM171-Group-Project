@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 1938376494770911323}
   - component: {fileID: 6346636080609310333}
   - component: {fileID: 3720606274184912076}
+  - component: {fileID: 6346636080609310334}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -576,7 +577,7 @@ MonoBehaviour:
   m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -625,6 +626,7 @@ GameObject:
   - component: {fileID: 2861917587831180294}
   - component: {fileID: 6860087151604704609}
   - component: {fileID: 3014117320818410121}
+  - component: {fileID: 6860087151604704610}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -963,7 +965,7 @@ MonoBehaviour:
   m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1012,6 +1014,7 @@ GameObject:
   - component: {fileID: 1306662939565769510}
   - component: {fileID: 2860466716842975734}
   - component: {fileID: 7135977840878977743}
+  - component: {fileID: 7135977840878977744}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1051,6 +1054,7 @@ GameObject:
   - component: {fileID: 827069804204889351}
   - component: {fileID: 869127563150446845}
   - component: {fileID: 2232452720728362604}
+  - component: {fileID: 4268241102862646269}
   m_Layer: 5
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -1058,6 +1062,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4268241102862646269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268241102862646268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - Exit
+  - "\u9000\u51FA"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!114 &4402755777981545579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1253,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2194128005366304617}
   m_CullTransparentMesh: 1
+--- !u!114 &6346636080609310334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194128005366304617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - Start
+  - "\u5F00\u59CB\u6E38\u620F"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!222 &6450873315538231694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1264,6 +1306,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3123752198963033029}
   m_CullTransparentMesh: 1
+--- !u!114 &6860087151604704610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123752198963033029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - Credit
+  - "\u4F5C\u54C1\u53C2\u8003"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!222 &6917616943969153279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1361,6 +1422,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7135977840878977744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3741382992748376770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96413647624d972448ac517a31570e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
+  contents:
+  - At the Crossroad
+  - "\u51B3\u5883"
+  fonts:
+  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
+  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
 --- !u!224 &7402146889753244632
 RectTransform:
   m_ObjectHideFlags: 0
