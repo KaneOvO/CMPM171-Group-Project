@@ -75,7 +75,7 @@ public class Item
     public List<string> name;
     public int reputationRequired;
     public float originalPrice;
-    public float sellValue;
+    public int sellValue;
     public int maxStack;
     public List<string> description;
     public string spriteUrl;

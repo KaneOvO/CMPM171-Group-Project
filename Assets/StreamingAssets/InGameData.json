@@ -8,7 +8,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 5,
-            "sellValue": 0.1,
+            "sellValue": 100,
             "maxStack": 1,
             "description": [
                 "This is test item 00.",
@@ -24,7 +24,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 10,
-            "sellValue": 0.1,
+            "sellValue": 100,
             "maxStack": 10,
             "description": [
                 "This is test item 01.",
@@ -40,7 +40,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 6.5,
-            "sellValue": 0.8,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",
@@ -56,7 +56,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 2,
-            "sellValue": 0.9,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",
@@ -72,7 +72,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 9,
-            "sellValue": 0.8,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",
@@ -88,7 +88,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 750,
-            "sellValue": 0.3,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",
@@ -104,7 +104,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 560,
-            "sellValue": 0.3,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",
@@ -120,7 +120,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 360,
-            "sellValue": 0.25,
+            "sellValue": 100,
             "maxStack": 999,
             "description": [
                 "",

@@ -18,7 +18,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public int currentScene;
 
     [Header("Display Item Info")]
-    private string id;
+    public string id;
     public string itemName;
     public string itemDescription;
     private InventoryItem inventoryItem;

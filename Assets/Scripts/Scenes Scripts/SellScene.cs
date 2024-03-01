@@ -26,8 +26,10 @@ public class SellScene : MonoBehaviour
         foreach (Transform child in parentForDisplayItem)
         {
             PrefabController sellItem = child.GetComponent<PrefabController>();
-            ItemManager.Instance.sellInventory.Add(new InventoryItem(child.name, -sellItem.count));
-            PlayerStateManager.Instance.playerState.money += ItemManager.Instance.ID(child.name).originalPrice * sellItem.count;
+            Item item = ItemManager.Instance.ID(sellItem.id);
+            int sellCount = Math.Min(sellItem.count, item.sellValue + (int)(item.sellValue * PlayerStateManager.Instance.playerState.reputation / 100f));
+            ItemManager.Instance.sellInventory.Add(new InventoryItem(child.name, -sellCount));
+            PlayerStateManager.Instance.playerState.money += ItemManager.Instance.ID(child.name).originalPrice * sellCount;
         }
         ItemManager.Instance.AddItemAmount(ItemManager.Instance.sellInventory);
         loadEventSO.RaiseEvent(settlementScene, true);

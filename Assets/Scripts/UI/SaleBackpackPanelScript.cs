@@ -47,7 +47,7 @@ public class SaleBackpackPanelScript : BackpackPanelScript
         prefabController.saleBackpackCellScript = saleBackpackCellScript;
         int count = ItemManager.Instance.inventory.Find(x => x.id == item.id).amount;
         prefabController.count = count;
-        prefabController.closeButton.onClick.AddListener(() => removeFromDisplay(item.id, saleBackpackCellScript, count));
+        prefabController.closeButton.onClick.AddListener(() => removeFromDisplay(item.id, saleBackpackCellScript, prefabController.count));
         prefabController.UpdateCounterText();
         prefabController.SetCurrentScene(1);
         prefabController.Refresh();
@@ -56,7 +56,7 @@ public class SaleBackpackPanelScript : BackpackPanelScript
     }
     public virtual void removeFromDisplay(string id, SaleBackpackCellScript saleBackpackCellScript, int count)
     {
-        saleBackpackCellScript.itemAmount = count;
+        saleBackpackCellScript.itemAmount += count;
         saleBackpackCellScript.itemAmountText.text = $"{saleBackpackCellScript.itemAmount.ToString()}";
         Transform childToRemove = parentForDisplayItem.Find(id);
         if (childToRemove != null)
