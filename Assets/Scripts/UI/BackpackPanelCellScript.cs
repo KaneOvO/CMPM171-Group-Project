@@ -91,7 +91,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
             _ => "Amount: ",
         }
         + $"{itemAmount.ToString()}";
-        descriptionPriceText.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
+        descriptionPriceText.text = $"$: {item.originalPrice.ToString("F1")}";
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
 

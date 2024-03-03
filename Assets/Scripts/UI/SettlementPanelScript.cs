@@ -79,7 +79,7 @@ public class SettlementPanelScript : MonoBehaviour
         while (elapsedTime < 1f && totalMoney < end)
         {
             totalMoney = Mathf.Lerp(start, end, elapsedTime);
-            totalMoneyText.text = displayString + $" $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
+            totalMoneyText.text = displayString + $" $:{totalMoney.ToString("F1")}";
             elapsedTime += Time.deltaTime;
             yield return null;
             if (Input.GetMouseButtonDown(0))
@@ -88,6 +88,6 @@ public class SettlementPanelScript : MonoBehaviour
             }
         }
         totalMoney = end;
-        totalMoneyText.text = displayString + $" $:<color=#FF0>{totalMoney.ToString("F1")}</color>";
+        totalMoneyText.text = displayString + $" $:{totalMoney.ToString("F1")}";
     }
 }

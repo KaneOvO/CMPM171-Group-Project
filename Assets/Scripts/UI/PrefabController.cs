@@ -225,7 +225,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             Language.Japanese => "あなたは：",
             _ => "You have: ",
         } + $"<size=30>{playerAmount}</size>";
-        descriptionPriceText.text = $"$: <color=#FF0>{itemCost:F2}</color>";
+        descriptionPriceText.text = $"$: {itemCost:F2}";
         descriptionText.text = itemDescription;
     }
     public void OnPointerExit(PointerEventData eventData)

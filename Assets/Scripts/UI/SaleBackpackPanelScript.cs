@@ -20,7 +20,7 @@ public class SaleBackpackPanelScript : BackpackPanelScript
         descriptionPriceText.font = font;
         descriptionText.font = font;
         totalMoneyText.font = font;
-        totalMoneyText.text = $"$:<color=#FF0>{playerState.money.ToString("F1")}</color>";
+        totalMoneyText.text = $"$:{playerState.money.ToString("F1")}";
         foreach (Transform child in content.transform)
         {
             Destroy(child.gameObject);

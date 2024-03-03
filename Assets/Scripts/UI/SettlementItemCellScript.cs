@@ -42,7 +42,7 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         sellItemText.text = item.name[(int)GameManager.Instance.saveData.currentLanguage] + $" × {amount}";
         float price = item.originalPrice * amount;
-        priceText.text = $"$:<color=#FF0> {price.ToString("F1")}</color>";
+        priceText.text = $"$:{price.ToString("F1")}";
     }
     protected virtual void Update()
     {
