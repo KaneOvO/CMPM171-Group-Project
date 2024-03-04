@@ -710,9 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Buy
-  - "\u8D2D\u4E70"
+  localizationIndex: 18
 --- !u!1 &1086596872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,9 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Wholesale Shop
-  - "\u6279\u53D1\u5546\u5E97"
+  localizationIndex: 17
 --- !u!1 &1309004270
 GameObject:
   m_ObjectHideFlags: 0

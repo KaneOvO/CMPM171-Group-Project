@@ -271,12 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Sale
-  - "\u51FA\u552E"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 16
 --- !u!1001 &319830349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,12 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Shelves
-  - "\u8D27\u67B6"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 15
 --- !u!1 &2091372751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,10 +1221,10 @@ RectTransform:
   - {fileID: 2973748054462064223}
   m_Father: {fileID: 8433082903866232539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 115, y: -95}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &587848981153521599
 GameObject:
@@ -1308,12 +1298,6 @@ MonoBehaviour:
   icon: {fileID: 3666376913120784418}
   itemAmountText: {fileID: 8740483695180822425}
   selectedBox: {fileID: 381185294055887942}
-  font: {fileID: 0}
-  descriptionPanel: {fileID: 0}
-  descriptionNameText: {fileID: 0}
-  descriptionAmountText: {fileID: 0}
-  descriptionPriceText: {fileID: 0}
-  descriptionText: {fileID: 0}
   backpackPanelScript: {fileID: 0}
   item:
     id: 
@@ -2421,7 +2405,6 @@ MonoBehaviour:
   descriptionPriceText: {fileID: 319830352}
   descriptionText: {fileID: 319830350}
   totalMoneyText: {fileID: 4669627002318216233}
-  currentScene: 1
   displayItemPrefab: {fileID: 5802734220138937974, guid: 428a92ba50364cc40b8072439da085a7, type: 3}
   parentForDisplayItem: {fileID: 1732083159}
 --- !u!224 &8433082903866232539

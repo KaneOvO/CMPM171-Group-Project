@@ -8,7 +8,7 @@ public class FilledCircle : MonoBehaviour
     public float maxSizeFactor = 1.5f; // 圆形的大小因子
     private int vertexCount = 80; // 圆形的顶点数
     private float radius = 0.25f; // 圆形的半径
-    private Coroutine animationCourutine; // 倒计时协程
+    private Coroutine animationCoroutine; // 倒计时协程
     private void Awake()
     {
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
@@ -51,11 +51,11 @@ public class FilledCircle : MonoBehaviour
 
     public void OnEnable()
     {
-        if (animationCourutine != null)
+        if (animationCoroutine != null)
         {
-            StopCoroutine(animationCourutine);
+            StopCoroutine(animationCoroutine);
         }
-        animationCourutine = StartCoroutine(PlayAnimation());
+        animationCoroutine = StartCoroutine(PlayAnimation());
     }
 
     private IEnumerator PlayAnimation()
@@ -76,11 +76,11 @@ public class FilledCircle : MonoBehaviour
 
     private void OnDisable()
     {
-        if (animationCourutine != null)
+        if (animationCoroutine != null)
         {
-            StopCoroutine(animationCourutine);
+            StopCoroutine(animationCoroutine);
         }
-        animationCourutine = null;
+        animationCoroutine = null;
         transform.localScale = Vector3.one * originalSizeFactor;
         GetComponent<MeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value);
     }

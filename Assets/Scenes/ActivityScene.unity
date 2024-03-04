@@ -394,9 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Wholesale
-  - "\u6279\u53D1\u5546"
+  localizationIndex: 9
 --- !u!1 &532686591
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,9 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - My Home
-  - "\u6211\u7684\u5BB6"
+  localizationIndex: 6
 --- !u!1 &559552826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7870457380930532077, guid: f3537f55c9409f84da9fa579c2013654, type: 3}
@@ -896,6 +892,10 @@ PrefabInstance:
     - target: {fileID: 2996552320648173805, guid: 8d97b5edacbb20542886ed9eeb4236a1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032421670840959552, guid: 8d97b5edacbb20542886ed9eeb4236a1, type: 3}
+      propertyPath: localizationIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4207383262306899268, guid: 8d97b5edacbb20542886ed9eeb4236a1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1344,9 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Temple
-  - "\u5BFA\u5E99"
+  localizationIndex: 7
 --- !u!1 &926095083
 GameObject:
   m_ObjectHideFlags: 1
@@ -1833,9 +1831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Labor Market
-  - "\u52B3\u52A8\u529B\u5E02\u573A"
+  localizationIndex: 8
 --- !u!1 &1942886123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4502,9 +4498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - 'Volume:'
-  - "\u97F3\u91CF\uFF1A"
+  localizationIndex: 14
 --- !u!114 &4683990588095080395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5468,9 +5462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Restart
-  - "\u91CD\u65B0\u5F00\u59CB"
+  localizationIndex: 11
 --- !u!224 &6395653369958646053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5789,9 +5781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Options
-  - "\u9009\u9879"
+  localizationIndex: 12
 --- !u!114 &7222346233808021342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6053,9 +6043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 5807635575693321976}
-  contents:
-  - My Shop
-  - "\u6211\u7684\u5E97\u94FA"
+  localizationIndex: 5
 --- !u!224 &7528095259841019854
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6321,9 +6309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Options
-  - "\u9009\u9879"
+  localizationIndex: 12
 --- !u!222 &7963769583787098577
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6594,9 +6580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Backpack
-  - "\u80CC\u5305"
+  localizationIndex: 4
 --- !u!224 &8182641226928510115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6738,9 +6722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Main Menu
-  - "\u4E3B\u83DC\u5355"
+  localizationIndex: 13
 --- !u!1 &8293367334080181561
 GameObject:
   m_ObjectHideFlags: 0
@@ -10726,9 +10708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Setting
-  - "\u8BBE\u7F6E"
+  localizationIndex: 10
 --- !u!1 &8966955401019749963
 GameObject:
   m_ObjectHideFlags: 0

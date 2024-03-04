@@ -7,7 +7,7 @@
                 "测试道具_00"
             ],
             "reputationRequired": 999,
-            "originalPrice": 5,
+            "originalPrice": 5.0,
             "sellValue": 100,
             "maxStack": 1,
             "description": [
@@ -23,7 +23,7 @@
                 "测试道具_01"
             ],
             "reputationRequired": 999,
-            "originalPrice": 10,
+            "originalPrice": 10.0,
             "sellValue": 100,
             "maxStack": 10,
             "description": [
@@ -55,7 +55,7 @@
                 "干脆面"
             ],
             "reputationRequired": 0,
-            "originalPrice": 2,
+            "originalPrice": 2.0,
             "sellValue": 100,
             "maxStack": 999,
             "description": [
@@ -71,7 +71,7 @@
                 "软糖"
             ],
             "reputationRequired": 0,
-            "originalPrice": 9,
+            "originalPrice": 9.0,
             "sellValue": 100,
             "maxStack": 999,
             "description": [
@@ -87,7 +87,7 @@
                 "奶茶"
             ],
             "reputationRequired": 0,
-            "originalPrice": 750,
+            "originalPrice": 750.0,
             "sellValue": 100,
             "maxStack": 999,
             "description": [
@@ -103,7 +103,7 @@
                 "桂花酿"
             ],
             "reputationRequired": 0,
-            "originalPrice": 560,
+            "originalPrice": 560.0,
             "sellValue": 100,
             "maxStack": 999,
             "description": [
@@ -119,7 +119,7 @@
                 "茶饼"
             ],
             "reputationRequired": 0,
-            "originalPrice": 360,
+            "originalPrice": 360.0,
             "sellValue": 100,
             "maxStack": 999,
             "description": [
@@ -133,12 +133,140 @@
         "playerState": {
             "energy": 3,
             "isSick": false,
-            "money": 0,
+            "money": 0.0,
             "health": 100,
             "reputation": 50,
             "moral": 50
         },
         "endDay": 30,
         "sick": 50
-    }
+    },
+    "localization": [
+        {
+            "contents": [
+                "At the At the Crossroad",
+                "决境"
+            ]
+        },
+        {
+            "contents": [
+                "Start",
+                "开始游戏"
+            ]
+        },
+        {
+            "contents": [
+                "Credit",
+                "参考作品"
+            ]
+        },
+        {
+            "contents": [
+                "Exit",
+                "退出游戏"
+            ]
+        },
+        {
+            "contents": [
+                "Backpack",
+                "背包"
+            ]
+        },
+        {
+            "contents": [
+                "My Shop",
+                "我的店铺"
+            ]
+        },
+        {
+            "contents": [
+                "My Home",
+                "我的家"
+            ]
+        },
+        {
+            "contents": [
+                "Temple",
+                "寺庙"
+            ]
+        },
+        {
+            "contents": [
+                "Labor Market",
+                "劳动力市场"
+            ]
+        },
+        {
+            "contents": [
+                "Wholesale",
+                "批发市场"
+            ]
+        },
+        {
+            "contents": [
+                "Setting",
+                "设置"
+            ]
+        },
+        {
+            "contents": [
+                "Restart",
+                "重新开始"
+            ]
+        },
+        {
+            "contents": [
+                "Options",
+                "选项"
+            ]
+        },
+        {
+            "contents": [
+                "Title",
+                "主菜单"
+            ]
+        },
+        {
+            "contents": [
+                "Volume",
+                "音量"
+            ]
+        },
+        {
+            "contents": [
+                "Shelves",
+                "货架"
+            ]
+        },
+        {
+            "contents": [
+                "Sale",
+                "出售"
+            ]
+        },
+        {
+            "contents": [
+                "Wholesale Shop",
+                "批发商店"
+            ]
+        },
+        {
+            "contents": [
+                "Buy",
+                "购货"
+            ]
+        },
+        {
+            "contents": [
+                "Settlement",
+                "结算"
+            ]
+        },
+        {
+            "contents": [
+                "Continue",
+                "继续"
+            ]
+        }
+    ]
 }

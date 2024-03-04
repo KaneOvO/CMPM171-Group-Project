@@ -40,7 +40,8 @@ public class TeachInfo
     public bool dayLabor;
 }
 [System.Serializable]
-public class EventInfo{
+public class EventInfo
+{
     public bool cargo;
 }
 
@@ -59,6 +60,11 @@ public class InGameData
 {
     public List<Item> items;
     public InitialDatas initialDatas;
+    public List<Contents> localization;
+}
+[System.Serializable]
+public class Contents{
+    public List<string> contents;
 }
 [System.Serializable]
 public class InitialDatas

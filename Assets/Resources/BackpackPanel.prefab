@@ -257,9 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - My Bag
-  - "\u6211\u7684\u80CC\u5305"
+  localizationIndex: 4
 --- !u!1 &2561163120613817630
 GameObject:
   m_ObjectHideFlags: 0

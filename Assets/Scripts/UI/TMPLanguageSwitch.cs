@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class TMPLanguageSwitch : MonoBehaviour
 {
     [HideInInspector] public TextMeshProUGUI textMesh;
-    public string[] contents;
+    public int localizationIndex = 0;
+    public List<Contents> localization => GameManager.Instance.inGameData.localization;
     public TMP_FontAsset font => UIManager.Instance.font;
     void OnEnable()
     {
@@ -22,9 +23,10 @@ public class TMPLanguageSwitch : MonoBehaviour
     public void Refresh()
     {
         textMesh.font = font;
-        if (contents.Length <= 0) return;
+        if (localizationIndex >= localization.Count) return;
+        List<string> contents = localization[localizationIndex].contents;
+        if (contents.Count <= 0) return;
         string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
         if (content != null) { textMesh.text = content; }
-        else { textMesh.text = contents[0]; }
     }
 }

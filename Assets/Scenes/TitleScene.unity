@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 7135977840878977743}
   - component: {fileID: 7135977840878977744}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,12 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Exit
-  - "\u9000\u51FA"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 3
 --- !u!114 &4402755777981545579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,12 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Start
-  - "\u5F00\u59CB\u6E38\u620F"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 1
 --- !u!222 &6450873315538231694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1319,12 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - Credit
-  - "\u4F5C\u54C1\u53C2\u8003"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 2
 --- !u!222 &6917616943969153279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1435,12 +1420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 0}
-  contents:
-  - At the Crossroad
-  - "\u51B3\u5883"
-  fonts:
-  - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  localizationIndex: 0
 --- !u!224 &7402146889753244632
 RectTransform:
   m_ObjectHideFlags: 0
