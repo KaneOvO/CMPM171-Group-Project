@@ -49,12 +49,13 @@ public class CustomSceneManager : MonoBehaviour
     [Header("Scene Script Object: Activity Scene")]
     public AssetReference activityScene;
     #endregion
-    #region  Scene Script Object: Cargo Event Scene
-    [Header("Scene Script Object: Cargo Event Scene")]
+    #region  Scene Script Object: Event Scene
+    [Header("Scene Script Object: Event Scene")]
     public AssetReference CargoEvent;
     #endregion
 
     public AssetReference SickEvent;
+     public AssetReference ElderEvent;
 
     #region Shop Scene
     public void loadShopSceneFirst()
@@ -234,5 +235,10 @@ public class CustomSceneManager : MonoBehaviour
     public void loadSickEvent()
     {
         loadSceneEventSO.RaiseEvent(SickEvent, true);
+    }
+
+    public void loadElderEvent()
+    {
+        loadSceneEventSO.RaiseEvent(ElderEvent, true);
     }
 }

@@ -374,7 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fonts:
   - {fileID: 11400000, guid: 671f7acff51fd5e48b6fbedb7ea62017, type: 2}
-  - {fileID: 11400000, guid: 18be9e865cece3242b400a3b80fd5c49, type: 2}
+  - {fileID: 11400000, guid: eb8bacd46357fb4418b3d529965e7b08, type: 2}
   panels: []
   PanelCalledEvent: {fileID: 11400000, guid: 7106e72bbc9d95740a55ec7b02b8a979, type: 2}
   onLanguageChange:

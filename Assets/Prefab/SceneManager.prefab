@@ -136,7 +136,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   wholesaleSceneNight:
-    m_AssetGUID: 
+    m_AssetGUID: 63efeca0dd8e5004fbeabaf2d9d5e503
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -147,6 +147,11 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   CargoEvent:
     m_AssetGUID: 88dd6766f97a5234793e730130eec490
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  SickEvent:
+    m_AssetGUID: 0b516408b47220149bd32d82985e26bc
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
