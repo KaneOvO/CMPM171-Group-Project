@@ -182,13 +182,13 @@
         {
             "contents": [
                 "My Shop",
-                "我的店铺"
+                "我的商店"
             ]
         },
         {
             "contents": [
-                "My Home",
-                "我的家"
+                "Home",
+                "家"
             ]
         },
         {
@@ -205,7 +205,7 @@
         },
         {
             "contents": [
-                "Wholesale",
+                "Wholesale Market",
                 "批发市场"
             ]
         },
