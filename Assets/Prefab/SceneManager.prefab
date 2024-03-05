@@ -65,6 +65,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  shopSceneNight:
+    m_AssetGUID: 169de833c1a250b408e8c421dffe550b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   templeSceneFirst:
     m_AssetGUID: c6bac9cc22c32b341b272133f1053d54
     m_SubObjectName: 
@@ -130,6 +135,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  wholesaleSceneNight:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   activityScene:
     m_AssetGUID: 89ffece56e7ddbe42bdf6588146c0879
     m_SubObjectName: 

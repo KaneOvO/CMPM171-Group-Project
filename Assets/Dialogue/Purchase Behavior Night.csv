@@ -1,0 +1,5 @@
+Key,Description,Standard
+SAY.Purchase Behavior Night.77.,,[夜晚的批发市场空无一人],[The wholesale market is deserted at night.]
+MENU.Purchase Behavior Night.78,,离开,leave
+CHARACTER.我,,我
+CHARACTER.NPC,,NPC

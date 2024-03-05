@@ -17,6 +17,7 @@ public class CustomSceneManager : MonoBehaviour
     public AssetReference shopSceneStart;
     public AssetReference SellScene;
     public AssetReference shopSceneEnd;
+    public AssetReference shopSceneNight;
     #endregion
     #region  Scene Script Object: Temple Scene
     [Header("Scene Script Object: Temple Scene")]
@@ -42,6 +43,7 @@ public class CustomSceneManager : MonoBehaviour
     public AssetReference wholesaleSceneStart;
     public AssetReference wholesaleScene;
     public AssetReference wholesaleSceneEnd;
+    public AssetReference wholesaleSceneNight;
     #endregion
     #region  Scene Script Object: Activity Scene
     [Header("Scene Script Object: Activity Scene")]
@@ -80,6 +82,14 @@ public class CustomSceneManager : MonoBehaviour
     public void loadShopSceneEnd()
     {
         loadSceneEventSO.RaiseEvent(shopSceneEnd, true);
+#if UNITY_EDITOR
+        Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
+#endif
+    }
+
+    public void loadShopSceneNight()
+    {
+        loadSceneEventSO.RaiseEvent(shopSceneNight, true);
 #if UNITY_EDITOR
         Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
 #endif
@@ -162,6 +172,14 @@ public class CustomSceneManager : MonoBehaviour
     public void loadWholesaleSceneEnd()
     {
         loadSceneEventSO.RaiseEvent(wholesaleSceneEnd, true);
+#if UNITY_EDITOR
+        Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
+#endif
+    }
+
+    public void loadWholesaleSceneNight()
+    {
+        loadSceneEventSO.RaiseEvent(wholesaleSceneNight, true);
 #if UNITY_EDITOR
         Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
 #endif

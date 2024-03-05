@@ -3,6 +3,6 @@ SAY.Purchase Behavior End.84.王叔,,好了，我会尽快把这批货物送到�
 SAY.Purchase Behavior End.77.王叔,,记住，经营是个长期过程，记得定期回来看看有什么新货。,"Remember, running a business is a long-term endeavor. Make sure to come back regularly to see what new items we have in stock."
 SAY.Purchase Behavior End.85.王叔,,祝你生意兴隆，如果需要什么帮助，王叔这里随时欢迎你。,"Wishing you prosperity in your business, and remember, Mr.Wang is always here to help if you need anything."
 SAY.Purchase Behavior End.95.,,健康减少10,health reduce by 10
-MENU.Purchase Behavior End.81,,离开,Left
+MENU.Purchase Behavior End.81,,离开,Leave
 CHARACTER.我,,我,Player
 CHARACTER.王叔,,王叔,Mr.Wang

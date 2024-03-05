@@ -9,24 +9,26 @@ SAY.Purchase Behavior First.84.我,,王叔？是的，我是。父亲生前经�
 SAY.Purchase Behavior First.85.王叔,,抱歉孩子，你父亲是个了不起的人，我们合作了很多年，一直保持着良好的关系。,"yes young lady. Your dad was quite a good person. We've been in business together for years, always got along well."
 SAY.Purchase Behavior First.86.王叔,,听说你现在接手了店铺，想来进些货是吧？,"I heard you've taken over the store now. Looking to stock up on some goods, huh?"
 SAY.Purchase Behavior First.87.我,,是的，王叔。我希望能继续和你合作，保持店铺的供货。,Yes that's right Mr.Wang. I hope we can keep up our collaboration and maintain the supply for the store.
-SAY.Purchase Behavior First.88.王叔,,好说好说，我这儿的货物品质保证，价格公道。我给你介绍一下怎么挑选货物。,"Alright, no problem. The quality of the goods here is guaranteed, and the prices are fair. Let me show you how to pick out the merchandise."
-\n,,,
-SAY.Purchase Behavior First.89.,,[现在开始，你可以在王叔的店铺进货],"[Starting now, you can purchase goods at Mr.Wang's store.]"
-\n\n,,,
-SAY.Purchase Behavior First.90.,,[进货是一个行为，当你完成一次进货后，将度过一个阶段]\n\n,"[Purchasing goods is an action, and once you complete a purchase, you will progress to the next stage.]"
-SAY.Purchase Behavior First.91.,,[每次进货的数量不能超过你的库存上限],[The quantity of each purchase cannot exceed your inventory limit.]
-\n\n\n,,,
-SAY.Purchase Behavior First.92.,,[声望将影响你和王叔的关系，如果声望提升，王叔将提供新的更有价值的商品给你，此外，或许进货价格也会降低]\n\n\n,"[Your reputation will affect your relationship with Mr.Wang. If your reputation increases, Uncle Wang will provide you with new and more valuable goods. Additionally, purchasing prices may also decrease.]"
+SAY.Purchase Behavior First.88.王叔,,好说好说，我这儿的货物品质保证，价格公道。我给你介绍一下怎么挑选货物。\n,"Alright, no problem. The quality of the goods here is guaranteed, and the prices are fair. Let me show you how to pick out the merchandise."
+SAY.Purchase Behavior First.89.,,现在开始，你可以在王叔的店铺进货\n\n,"[Starting now, you can purchase goods at Mr.Wang's store.]"
+SAY.Purchase Behavior First.90.,,进货是一个行为，当你完成一次进货后，将度过一个阶段\n\n,"[Purchasing goods is an action, and once you complete a purchase, you will progress to the next stage.]"
+SAY.Purchase Behavior First.91.,,每次进货的数量不能超过你的库存上限]\n\n\n,[The quantity of each purchase cannot exceed your inventory limit.]
+SAY.Purchase Behavior First.92.,,声望将影响你和王叔的关系，如果声望提升，王叔将提供新的更有价值的商品给你，此外，或许进货价格也会降低\n\n\n,"[Your reputation will affect your relationship with Mr.Wang. If your reputation increases, Uncle Wang will provide you with new and more valuable goods. Additionally, purchasing prices may also decrease.]"
 SAY.Purchase Behavior First.93.我,,（认真听着）这些信息真是太有用了，谢谢你，王叔。\n\n\n,"(Listening attentively) ""This information is really useful, thank you, Mr.Wang."
-SAY.Purchase Behavior First.94.王叔,,不客气。能和老袁的孩子合作，是我的荣幸。记住，做生意要有眼光，也要诚实守信。你有任何问题，随时可以来找我。,"You're welcome. It's an honor for me to collaborate with Mr.Yuan's daughter. Remember, in business, you need vision as well as honesty and integrity. If you have any questions, feel free to come to me anytime."
-\n\n\n\n,,,
+SAY.Purchase Behavior First.94.王叔,,不客气。能和老袁的孩子合作，是我的荣幸。\n\n\n,"You're welcome. It's an honor for me to collaborate with Mr.Yuan's daughter."
+SAY.Purchase Behavior First.107.王叔,,记住，做生意要有眼光，也要诚实守信。你有任何问题，随时可以来找我。,"Remember, in business, you need vision as well as honesty and integrity. If you have any questions, feel free to come to me anytime."
+,
 SAY.Purchase Behavior First.95.王叔,,事不宜迟，你现在要不要尝试看看如何进货？\n\n\n\n,Let's not delay any longer. Would you like to try purchasing goods now?
 MENU.Purchase Behavior First.96,,那我现在就选些货物试试看,"Alright, I'll select some goods to try it out now."
-MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情,"Sorry, Mr.Wang, I have other things to do today."
-\n,,,
-SAY.Purchase Behavior First.100.,,[你跟随王叔来到了他的店铺],You follow Mr.Wang to his store.
-\n,,,
+MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情
+\n,"Sorry, Mr.Wang, I have other things to do today."
+SAY.Purchase Behavior First.100.,,[你跟随王叔来到了他的店铺]
+\n,You follow Mr.Wang to his store.
 SAY.Purchase Behavior First.101.王叔,,没事没事，你有别的事情就先去忙，有需要随时来王叔这里,"No worries, no worries. If you have other things to do, go ahead and take care of them. If you need anything, feel free to come by Mr.Wang's place anytime."
 SAY.Purchase Behavior First.102.我,,谢谢王叔，我要进货的时候一定来找您。,"Thanks, Mr.Wang. I'll be sure to come to you when I need to restock."
 CHARACTER.我,,我,Player
 CHARACTER.王叔,,王叔,Mr.Wang
+\n,,,
+\n\n,,,
+\n\n\n,,,
+\n\n\n\n,,,

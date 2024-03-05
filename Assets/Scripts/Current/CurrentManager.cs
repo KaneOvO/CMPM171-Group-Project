@@ -54,6 +54,7 @@ public class CurrentManager : MonoBehaviour
 
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
+        Debug.Log("InitialData");
     }
 
     public void UpdateMoney()
