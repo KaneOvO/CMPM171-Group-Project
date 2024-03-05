@@ -1,0 +1,13 @@
+Key,Description,Standard,EN
+SAY.SickEvent.77.,,[你刚刚结束了上一段工作，走在回家的路上],"You have just finished your last day at work, walking on your way home."
+SAY.SickEvent.78.,,[就在这时，你突然感觉到身体传来极大地不适。],"[Just then, you suddenly feel a great discomfort in your body.]"
+SAY.SickEvent.79.我,,(我可能是生病了。我需要回家休息),(I might be sick. I need to go home and rest.)
+SAY.SickEvent.80.,,[就这样，你不得不放弃今天的原定安排，回到家中休息],"[And so, you are forced to abandon your plans for the day, returning home to rest.]"
+SAY.SickEvent.82.,,[第二天],[The next day]
+SAY.SickEvent.83.我,,(休息了一天，我感觉好多了),"(After a day of rest, I feel much better.)"
+SAY.SickEvent.84.我,,(但我下次得注意，长期处于亚健康确实不太好。),(But I need to be careful next time. Being in a state of sub-health for a long time is indeed not good.)
+SAY.SickEvent.85.我,,是时候回去工作了,(It's time to go back to work.)
+MENU.SickEvent.86,,离开,Leave
+SAY._CommandCopyBuffer.84.我,,(但我下次得注意，长期处于亚健康确实不太好。),
+CHARACTER.我,,我,Me
+CHARACTER.NPC,,NPC,

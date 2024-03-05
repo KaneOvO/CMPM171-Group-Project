@@ -54,6 +54,8 @@ public class CustomSceneManager : MonoBehaviour
     public AssetReference CargoEvent;
     #endregion
 
+    public AssetReference SickEvent;
+
     #region Shop Scene
     public void loadShopSceneFirst()
     {
@@ -228,4 +230,9 @@ public class CustomSceneManager : MonoBehaviour
 #endif
     }
     #endregion
+
+    public void loadSickEvent()
+    {
+        loadSceneEventSO.RaiseEvent(SickEvent, true);
+    }
 }
