@@ -8,6 +8,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 5.0,
+            "sellPrice": 5.0,
             "sellValue": 100,
             "maxStack": 1,
             "description": [
@@ -24,6 +25,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 10.0,
+            "sellPrice": 10.0,
             "sellValue": 100,
             "maxStack": 10,
             "description": [
@@ -271,6 +273,30 @@
             "contents": [
                 "Continue",
                 "继续"
+            ]
+        },
+        {
+            "contents": [
+                "Health",
+                "健康"
+            ]
+        },
+        {
+            "contents": [
+                "Moral",
+                "道德"
+            ]
+        },
+        {
+            "contents": [
+                "Reputation",
+                "声望"
+            ]
+        },
+        {
+            "contents": [
+                "Money",
+                "资金"
             ]
         }
     ]
