@@ -25,6 +25,16 @@ public class CurrentManager : MonoBehaviour
         localizationComponent = FindObjectOfType<Localization>();
         flowchart = FindObjectOfType<Flowchart>();
     }
+    private void OnEnable()
+    {
+        UIManager.Instance.onLanguageChange.AddListener(OnLanguageChanged);
+    }
+
+    public void OnLanguageChanged()
+    {
+        SwitchLanguage();
+        flowchart.SetStringVariable("Language", currentLanguage);
+    }
     public void InitialData()
     {
         SwitchLanguage();
@@ -93,6 +103,7 @@ public class CurrentManager : MonoBehaviour
 
     public void OnDisable()
     {
+        UIManager.Instance.onLanguageChange.RemoveListener(OnLanguageChanged);
         GameManager.Instance.saveData.playerState.energy = flowchart.GetIntegerVariable("Energy");
         GameManager.Instance.saveData.playerState.money = flowchart.GetFloatVariable("Money");
         GameManager.Instance.saveData.playerState.moral = flowchart.GetIntegerVariable("Moral");
