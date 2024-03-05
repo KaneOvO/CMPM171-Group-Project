@@ -8,6 +8,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 5.0,
+            "sellPrice": 6.5,
             "sellValue": 100,
             "maxStack": 1,
             "description": [
@@ -24,6 +25,7 @@
             ],
             "reputationRequired": 999,
             "originalPrice": 10.0,
+            "sellPrice": 6.5,
             "sellValue": 100,
             "maxStack": 10,
             "description": [
