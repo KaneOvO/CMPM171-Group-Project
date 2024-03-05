@@ -39,9 +39,10 @@
                 "牛奶"
             ],
             "reputationRequired": 0,
-            "originalPrice": 6.5,
-            "sellValue": 100,
-            "maxStack": 999,
+            "originalPrice": 5,
+            "sellPrice": 6.5,
+            "sellValue": 1000,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""
@@ -55,9 +56,10 @@
                 "干脆面"
             ],
             "reputationRequired": 0,
-            "originalPrice": 2.0,
-            "sellValue": 100,
-            "maxStack": 999,
+            "originalPrice": 3.0,
+            "sellPrice": 4,
+            "sellValue": 1000,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""
@@ -71,9 +73,10 @@
                 "软糖"
             ],
             "reputationRequired": 0,
-            "originalPrice": 9.0,
-            "sellValue": 100,
-            "maxStack": 999,
+            "originalPrice": 8.0,
+            "sellPrice": 12,
+            "sellValue": 1000,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""
@@ -86,10 +89,11 @@
                 "Milk Tea",
                 "奶茶"
             ],
-            "reputationRequired": 0,
-            "originalPrice": 750.0,
-            "sellValue": 100,
-            "maxStack": 999,
+            "reputationRequired": 20,
+            "originalPrice": 20,
+            "sellPrice": 28,
+            "sellValue": 500,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""
@@ -102,10 +106,11 @@
                 "Osmanthus Wine",
                 "桂花酿"
             ],
-            "reputationRequired": 0,
-            "originalPrice": 560.0,
-            "sellValue": 100,
-            "maxStack": 999,
+            "reputationRequired": 20,
+            "originalPrice": 100,
+            "sellPrice": 150,
+            "sellValue": 500,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""
@@ -118,10 +123,10 @@
                 "Tea Cake",
                 "茶饼"
             ],
-            "reputationRequired": 0,
+            "reputationRequired": 20,
             "originalPrice": 360.0,
-            "sellValue": 100,
-            "maxStack": 999,
+            "sellValue": 500,
+            "maxStack": 9999,
             "description": [
                 "",
                 ""

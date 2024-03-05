@@ -113,7 +113,7 @@ public class CurrentManager : MonoBehaviour
         {
             Stage.Morning => Stage.Noon,
             Stage.Noon => Stage.Afternoon,
-            Stage.Afternoon => Stage.Night,
+            Stage.Afternoon => Stage.Morning,
             Stage.Night => Stage.Morning,
             _ => Stage.Morning,
         };
@@ -124,6 +124,21 @@ public class CurrentManager : MonoBehaviour
         }
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
+
+        JudgeSick();
+
+    }
+
+    public void JudgeSick()
+    {
+        if (flowchart.GetIntegerVariable("Health") <= 30)
+        {
+            int randomInt = UnityEngine.Random.Range(0, 99);
+            if (randomInt < 50)
+            {
+                flowchart.SetBooleanVariable("IsSick", true);
+            }
+        }
     }
 
     public void UpdateInfo()
@@ -135,5 +150,11 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetBooleanVariable("teachDayLabor", teachInfo.dayLabor);
 
         flowchart.SetBooleanVariable("CargoEvent", eventInfo.cargo);
+    }
+
+    public void SickeEffect()
+    {
+        flowchart.SetIntegerVariable("CurrentDay", currentDay++);
+        flowchart.SetIntegerVariable("CurrentStage", 0);
     }
 }

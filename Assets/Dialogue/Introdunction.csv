@@ -1,40 +1,41 @@
-Key,Description,Standard
-SAY.Introdunction.77.,,[走出墓园的大门，你缓缓走在回家的路上。]
-SAY.Introdunction.78.,,[四周的世界仿佛也在为你披上了一层哀伤的面纱，空气中弥漫着一种说不出的沉重。]
-SAY.Introdunction.79.,,[回想过去的48小时，一切仿佛如梦幻泡影]
-SAY.Introdunction.80.,,[那通承载了父亲去世消息的电话，将你从日常的平静中无情抽离，投入到一个不可思议的悲伤的深渊]
-SAY.Introdunction.81.,,[你的脚步不自觉地放慢，每一步都踏在记忆的影子上。]
-SAY.Introdunction.82.,,[就在这沉浸于往昔回忆的时刻，不知不觉间，你已经走到了家门口]
-SAY.Introdunction.83.,,[就在这时，你看到一个身穿黑衣的男子，站在你家门口]
-SAY.Introdunction.84.黑衣人,,你好，袁小姐。我是借贷公司的业务员。
-SAY.Introdunction.85.黑衣人,,您的父亲生前在我们公司以店铺为抵押，借走了十万元。
-SAY.Introdunction.86.我,,怎么可能，我从来没有听父亲说起过这件事？
-SAY.Introdunction.87.黑衣人,,不幸的是，这是真的。这是我们公司与您的父亲的合同。
-SAY.Introdunction.88.,,[你检查了合同，上面确实有着父亲的签名]
-SAY.Introdunction.89.黑衣人,,我们对您父亲的去世深表遗憾
-SAY.Introdunction.90.黑衣人,,但是，如今这十万元还有一个月就要到期了
-SAY.Introdunction.91.黑衣人,,因此我们特来向您询问您是否要替您的父亲还上这笔钱？
-SAY.Introdunction.92.黑衣人,,当然，您也可以选择不还这笔钱，但是我们将收走作为抵押物的店铺。
-SAY.Introdunction.93.黑衣人,,选择权在您，但是您要尽快作出决定。
-SAY.Introdunction.94.,,[突如其来的消息让你有些不知所措]
-SAY.Introdunction.95.,,[父亲的去世本就让你感到天旋地转，现在这份意外的债务仿佛给你的心头又添上了一块沉重的石头]
-SAY.Introdunction.96.,,[你凝视着那份合同，父亲熟悉的签名静静地印在纸上，那是无法否认的事实]
-SAY.Introdunction.97.,,[回想童年，你在那座店铺中与父亲度过了无数美好的时光]
-SAY.Introdunction.98.,,[而如今父亲已去，那所店铺是你为数不多与父亲仅剩的纽带了]
-SAY.Introdunction.99.,,[经过了漫长的思考，你开口说道]
-SAY.Introdunction.100.我,,一个月是吗？我会在一个月内想办法还上这十万元的。
-SAY.Introdunction.101.,,[黑衣人微微点了点头，他的脸上依旧没有太多表情，但眼神中似乎透露出一丝惊讶。]
-SAY.Introdunction.102.黑衣人,,很好袁小姐，我们期待您的好消息。
-SAY.Introdunction.103.,,[他转身离开，留你一个人站在门前，心中充满了复杂的情绪。]
-SAY.Introdunction.105.,,[是的，你也知道这是一个巨大的挑战，但你别无选择]
-SAY.Introdunction.104.,,[为了之后的计划，回到家后，你开始了漫长的思考]
-SAY.Introdunction.106.我,,(如果我继续现有的工作，怎么也不可能在一个月内筹集十万元。)
-SAY.Introdunction.107.我,,(但是，如果我接手的父亲的店铺呢？)
-SAY.Introdunction.108.我,,（父亲以前和我说过，店铺在业绩好的时候，一个月能有数万元的收入。）
-SAY.Introdunction.109.我,,（这或许离十万元仍有些距离，但是当下我还有更好的选择吗？）
-SAY.Introdunction.110.,,[最终，你毅然决然的辞去了工作，全身心投入到父亲留下的店铺中。]\n
-SAY.Introdunction.111.,,[你知道，尽管这条路十分艰难，但是与父亲的回忆将支撑你前进下去]\n
-SAY.Introdunction.112.,,[为期一个月的紧张而充满挑战的奋斗开始了]\n
-SAY._CommandCopyBuffer.111.,,[你知道，尽管这条路十分艰难，但是与父亲的回忆将支撑你前进下去]\n
-CHARACTER.我,,我
-CHARACTER.黑衣人,,黑衣人
+Key,Description,Standard,EN
+SAY.Introdunction.77.,,[走出墓园的大门，你缓缓走在回家的路上。],"[As you walk out of the cemetery gates, you slowly make your way home.]"
+SAY.Introdunction.78.,,[四周的世界仿佛也在为你披上了一层哀伤的面纱，空气中弥漫着一种说不出的沉重。],"[The world around you seems to drape itself in a veil of sorrow for you, with an indescribable heaviness permeating the air.]"
+SAY.Introdunction.79.,,[回想过去的48小时，一切仿佛如梦幻泡影],"[Reflecting on the past 48 hours, everything seems like a fleeting dream.]"
+SAY.Introdunction.80.,,[那通承载了父亲去世消息的电话，将你从日常的平静中无情抽离，投入到一个不可思议的悲伤的深渊],"[The phone call bearing the news of your father's passing mercilessly pulled you from your daily tranquility, casting you into an unfathomable abyss of grief.]"
+SAY.Introdunction.81.,,[你的脚步不自觉地放慢，每一步都踏在记忆的影子上。],"[Your steps slow unconsciously, each one treading on the shadows of memories.]"
+SAY.Introdunction.82.,,[就在这沉浸于往昔回忆的时刻，不知不觉间，你已经走到了家门口],"[Lost in these reflections of the past, before you realize it, you've arrived at your doorstep.]"
+SAY.Introdunction.83.,,[就在这时，你看到一个身穿黑衣的男子，站在你家门口],"[Just then, you see a man dressed in black standing at your doorstep.]"
+SAY.Introdunction.84.黑衣人,,你好，袁小姐。我是借贷公司的业务员。,"Hello, Miss Yuan. I am a salesman from the loan company."
+SAY.Introdunction.85.黑衣人,,您的父亲生前在我们公司以店铺为抵押，借走了十万元。,Your father had mortgaged his shop with our company and borrowed one hundred thousand yuan.
+SAY.Introdunction.86.我,,怎么可能，我从来没有听父亲说起过这件事？,How is that possible? I've never heard my father mention this.
+SAY.Introdunction.87.黑衣人,,不幸的是，这是真的。这是我们公司与您的父亲的合同。,"Unfortunately, this is true. Here is the contract between our company and your father."
+SAY.Introdunction.88.,,[你检查了合同，上面确实有着父亲的签名],"[You examine the contract, and indeed, there is your father's signature on it.]"
+SAY.Introdunction.89.黑衣人,,我们对您父亲的去世深表遗憾,We deeply regret the passing of your father.
+SAY.Introdunction.90.黑衣人,,但是，如今这十万元还有一个月就要到期了,"However, the one hundred thousand yuan is due in a month's time."
+SAY.Introdunction.91.黑衣人,,因此我们特来向您询问您是否要替您的父亲还上这笔钱？,"Therefore, we have come to ask if you intend to repay this money on behalf of your father?"
+SAY.Introdunction.92.黑衣人,,当然，您也可以选择不还这笔钱，但是我们将收走作为抵押物的店铺。,"Of course, you may also choose not to repay the money, but we will then take possession of the shop that was put up as collateral."
+SAY.Introdunction.93.黑衣人,,选择权在您，但是您要尽快作出决定。,"The choice is yours, but you need to make a decision quickly."
+SAY.Introdunction.94.,,[突如其来的消息让你有些不知所措],[The sudden news leaves you somewhat at a loss.]
+SAY.Introdunction.95.,,[父亲的去世本就让你感到天旋地转，现在这份意外的债务仿佛给你的心头又添上了一块沉重的石头],"[Your father's passing already had you reeling, and now this unexpected debt feels like another heavy stone added to your burden.]"
+SAY.Introdunction.96.,,[你凝视着那份合同，父亲熟悉的签名静静地印在纸上，那是无法否认的事实],"[You stare at the contract, your father's familiar signature quietly imprinted on the paper, an undeniable reality.]"
+SAY.Introdunction.97.,,[回想童年，你在那座店铺中与父亲度过了无数美好的时光],"[Recalling your childhood, you spent countless wonderful moments with your father in that shop.]"
+SAY.Introdunction.98.,,[而如今父亲已去，那所店铺是你为数不多与父亲仅剩的纽带了],"[And now, with your father gone, that shop is one of the few remaining ties you have to him.]"
+SAY.Introdunction.99.,,[经过了漫长的思考，你开口说道],"[After much thought, you finally speak.]"
+SAY.Introdunction.100.我,,一个月是吗？我会在一个月内想办法还上这十万元的。,"A month, is it? I will find a way to repay the one hundred thousand yuan within a month."
+SAY.Introdunction.101.,,[黑衣人微微点了点头，他的脸上依旧没有太多表情，但眼神中似乎透露出一丝惊讶。],"[The man in black nods slightly, his face still largely expressionless, but there seems to be a hint of surprise in his eyes.]"
+SAY.Introdunction.102.黑衣人,,很好袁小姐，我们期待您的好消息。,"Very well, Miss Yuan. We look forward to your good news."
+SAY.Introdunction.103.,,[他转身离开，留你一个人站在门前，心中充满了复杂的情绪。],"[He turns and leaves, leaving you standing at the door alone, your heart filled with complex emotions.]"
+SAY.Introdunction.105.,,[是的，你也知道这是一个巨大的挑战，但你别无选择],"[Yes, you also recognize this as a tremendous challenge, but you have no other choice.]"
+SAY.Introdunction.104.,,[为了之后的计划，回到家后，你开始了漫长的思考],"[For the plans ahead, once you're back home, you begin a long period of contemplation.]"
+SAY.Introdunction.106.我,,(如果我继续现有的工作，怎么也不可能在一个月内筹集十万元。),"(Continuing with my current job, it's impossible to raise one hundred thousand yuan within a month.)"
+SAY.Introdunction.107.我,,(但是，如果我接手的父亲的店铺呢？),"(But, what if I take over my father's shop?)"
+SAY.Introdunction.108.我,,（父亲以前和我说过，店铺在业绩好的时候，一个月能有数万元的收入。）,"(My father used to tell me that, when business was good, the shop could bring in tens of thousands of yuan in a month.)"
+SAY.Introdunction.109.我,,（这或许离十万元仍有些距离，但是当下我还有更好的选择吗？）,"(This might still be some distance from one hundred thousand yuan, but do I have a better option right now?)"
+SAY.Introdunction.110.,,[最终，你毅然决然的辞去了工作，全身心投入到父亲留下的店铺中。],"[Ultimately, you make the resolute decision to quit your job and devote yourself entirely to the shop left by your father.]"
+\n,,,
+SAY.Introdunction.111.,,[你知道，尽管这条路十分艰难，但是与父亲的回忆将支撑你前进下去]\n,"[You know that, despite the path being extremely challenging, the memories of your father will support you and propel you forward.]"
+SAY.Introdunction.112.,,[为期一个月的紧张而充满挑战的奋斗开始了]\n,"[The tense and challenging struggle, set to last a month, begins.]"
+SAY._CommandCopyBuffer.111.,,[你知道，尽管这条路十分艰难，但是与父亲的回忆将支撑你前进下去]\n,"[You know that, despite the path being extremely challenging, the memories of your father will support you and propel you forward.]"
+CHARACTER.我,,我,Me
+CHARACTER.黑衣人,,黑衣人,Mysterious Man
