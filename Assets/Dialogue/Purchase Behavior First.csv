@@ -20,8 +20,7 @@ SAY.Purchase Behavior First.107.王叔,,记住，做生意要有眼光，也要�
 ,
 SAY.Purchase Behavior First.95.王叔,,事不宜迟，你现在要不要尝试看看如何进货？\n\n\n\n,Let's not delay any longer. Would you like to try purchasing goods now?
 MENU.Purchase Behavior First.96,,那我现在就选些货物试试看,"Alright, I'll select some goods to try it out now."
-MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情
-\n,"Sorry, Mr.Wang, I have other things to do today."
+MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情,"Sorry, Mr.Wang, I have other things to do today."
 SAY.Purchase Behavior First.100.,,[你跟随王叔来到了他的店铺]
 \n,You follow Mr.Wang to his store.
 SAY.Purchase Behavior First.101.王叔,,没事没事，你有别的事情就先去忙，有需要随时来王叔这里,"No worries, no worries. If you have other things to do, go ahead and take care of them. If you need anything, feel free to come by Mr.Wang's place anytime."

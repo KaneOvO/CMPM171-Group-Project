@@ -78,11 +78,11 @@ public class GameManager : MonoBehaviour
         string inGameDataFilePath = Path.Combine(Application.streamingAssetsPath, "InGameData.json");
         yield return LoadJsonFileAsync<InGameData>(inGameDataFilePath, (data) => inGameData = data);
 
-        string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-        yield return LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => saveData = data);
+        // string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+        // yield return LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => saveData = data);
     }
 
-    private IEnumerator LoadJsonFileAsync<T>(string filePath, Action<T> onDataLoaded)
+    public IEnumerator LoadJsonFileAsync<T>(string filePath, Action<T> onDataLoaded)
     {
         UnityWebRequest webRequest = UnityWebRequest.Get(filePath);
         yield return webRequest.SendWebRequest();
