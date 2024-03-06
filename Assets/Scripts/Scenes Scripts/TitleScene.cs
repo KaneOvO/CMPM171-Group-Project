@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using System.IO;
 
@@ -10,38 +11,36 @@ public class TitleScene : MonoBehaviour
    public SceneLoadEventSO loadEventSO;
    [Header("Events Sender: Game Start")]
    public AssetReference gameStartScene;
+   [Header("Scene Script Object: Intro Scene")]
+   public AssetReference IntroScene;
    [Header("Scene Script Object: Credit Scene")]
    public AssetReference creditScene;
+   public GameObject LoadButton;
 
 
    public void StartButtonClicked()
    {
-      string initSaveDataFilePath = Path.Combine(Application.streamingAssetsPath, "init_SaveData.json");
-      StartCoroutine(GameManager.Instance.LoadJsonFileAsync<SaveData>(initSaveDataFilePath, (data) => GameManager.Instance.saveData = data));
+      StartCoroutine(StartCliked());
+   }
 
-      loadEventSO.RaiseEvent(gameStartScene, true);
+   public IEnumerator StartCliked()
+   {
+      string initSaveDataFilePath = Path.Combine(Application.streamingAssetsPath, "init_SaveData.json");
+      yield return GameManager.Instance.LoadJsonFileAsync<SaveData>(initSaveDataFilePath, (data) => GameManager.Instance.saveData = data);
+      loadEventSO.RaiseEvent(IntroScene, true);
    }
 
    public void LoadButtonClicked()
    {
-      string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-      GameManager.Instance.LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => GameManager.Instance.saveData = data);
-      loadEventSO.RaiseEvent(gameStartScene, true);
+      StartCoroutine(LoadCliked());
    }
 
-   // public void checkSaveData()
-   // {
-   //    string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-
-   //    if (File.Exists(saveDataFilePath))
-   //    {
-   //       //Load按钮可以点亮
-   //    }
-   //    else
-   //    {
-   //       //Load按钮不可以点亮
-   //    }
-   // }
+   public IEnumerator LoadCliked()
+   {
+      string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+      yield return GameManager.Instance.LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => GameManager.Instance.saveData = data);
+      loadEventSO.RaiseEvent(gameStartScene, true);
+   }
 
    public void CreditButtonClicked()
    {
@@ -53,5 +52,18 @@ public class TitleScene : MonoBehaviour
       //TODO: save the game
       //GameManager.Instance.SaveGame();
       Application.Quit();
+   }
+   void Start()
+   {
+      string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+
+      if (File.Exists(saveDataFilePath))
+      {
+         LoadButton.SetActive(true);
+      }
+      else
+      {
+         LoadButton.SetActive(false);
+      }
    }
 }

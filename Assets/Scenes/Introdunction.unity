@@ -1211,7 +1211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &926021928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,15 +1687,7 @@ GameObject:
   - component: {fileID: 2057562095}
   - component: {fileID: 2057562123}
   - component: {fileID: 2057562155}
-  - component: {fileID: 2057562167}
-  - component: {fileID: 2057562173}
-  - component: {fileID: 2057562178}
-  - component: {fileID: 2057562177}
-  - component: {fileID: 2057562176}
-  - component: {fileID: 2057562175}
   - component: {fileID: 2057562179}
-  - component: {fileID: 2057562181}
-  - component: {fileID: 2057562180}
   - component: {fileID: 2057562182}
   - component: {fileID: 2057562220}
   - component: {fileID: 2057562219}
@@ -1834,18 +1826,9 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2057562095}
-  selectedCommands:
-  - {fileID: 2057562183}
+  selectedCommands: []
   variables:
   - {fileID: 2057562123}
-  - {fileID: 2057562181}
-  - {fileID: 2057562180}
-  - {fileID: 2057562167}
-  - {fileID: 2057562176}
-  - {fileID: 2057562173}
-  - {fileID: 2057562178}
-  - {fileID: 2057562177}
-  - {fileID: 2057562175}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1883,7 +1866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 2
+  scope: 0
   key: Language
   value: 
 --- !u!114 &2057562155
@@ -1901,96 +1884,6 @@ MonoBehaviour:
   parentBlock: {fileID: 2057562095}
   suppressBlockAutoSelect: 0
   waitForFrames: 1
---- !u!114 &2057562167
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705fa1ac97df74e3a84ff952ffd923f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: Money
-  value: 0
---- !u!114 &2057562173
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: Moral
-  value: 0
---- !u!114 &2057562175
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: IsSick
-  value: 0
---- !u!114 &2057562176
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: Energy
-  value: 0
---- !u!114 &2057562177
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: Health
-  value: 0
---- !u!114 &2057562178
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: Reputation
-  value: 0
 --- !u!114 &2057562179
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2009,36 +1902,6 @@ MonoBehaviour:
     stringRef: {fileID: 2057562123}
     stringVal: 
   languageCodeOLD: 
---- !u!114 &2057562180
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: CurrentStage
-  value: 0
---- !u!114 &2057562181
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057562093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: CurrentDay
-  value: 0
 --- !u!114 &2057562182
 MonoBehaviour:
   m_ObjectHideFlags: 2

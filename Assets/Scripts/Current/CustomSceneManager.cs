@@ -53,6 +53,11 @@ public class CustomSceneManager : MonoBehaviour
     [Header("Scene Script Object: Event Scene")]
     public AssetReference CargoEvent;
     #endregion
+    #region  Scene Script Object: Intro Scene
+    [Header("Scene Script Object: Intro Scene")]
+    public AssetReference IntroScene;
+    #endregion
+
 
     public AssetReference SickEvent;
      public AssetReference ElderEvent;
