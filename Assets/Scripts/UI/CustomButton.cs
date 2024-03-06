@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CustomButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class CustomButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public List<CustomButton> buttons;
     Vector3 startingScale;
     public float ScaleValue = 1.1f;
     public Button CurrentButton;
+    public bool usePointerEnter = false;
 
     private void Start()
     {
@@ -19,12 +20,27 @@ public class CustomButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (usePointerEnter) return;
         Scale();
         UnScaleButtons();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (usePointerEnter) return;
+        UnScale();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (!usePointerEnter) return;
+        Scale();
+        UnScaleButtons();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (!usePointerEnter) return;
         UnScale();
     }
 
