@@ -21,4 +21,18 @@ public class ActivityScene : MonoBehaviour
     {
         panelCalledEvent.RaiseEvent("OptionsPanel");
     }
+    public void EnglishButtonClicked()
+    {
+        GameManager.Instance.saveData.currentLanguage = Language.English;
+        UIManager.Instance.InvokeLanguageChangeEvents();
+    }
+    public void ChineseButtonClicked()
+    {
+        GameManager.Instance.saveData.currentLanguage = Language.Chinese;
+        UIManager.Instance.InvokeLanguageChangeEvents();
+    }
+    public void CallLanguageChangeEvents()
+    {
+        UIManager.Instance.InvokeLanguageChangeEvents();
+    }
 }

@@ -235,8 +235,8 @@
         },
         {
             "contents": [
-                "Volume",
-                "音量"
+                "Volume:",
+                "音量:"
             ]
         },
         {
@@ -333,6 +333,12 @@
             "contents": [
                 "Night",
                 "晚上"
+            ]
+        },
+        {
+            "contents": [
+                "Language:",
+                "语言:"
             ]
         }
     ]
