@@ -24,7 +24,7 @@ MENU.Purchase Behavior First.99,,抱歉王叔，我今天还有别的事情,"Sor
 SAY.Purchase Behavior First.100.,,[你跟随王叔来到了他的店铺]\n,You follow Mr.Wang to his store.
 SAY.Purchase Behavior First.101.王叔,,没事没事，你有别的事情就先去忙，有需要随时来王叔这里,"No worries, no worries. If you have other things to do, go ahead and take care of them. If you need anything, feel free to come by Mr.Wang's place anytime."
 SAY.Purchase Behavior First.102.我,,谢谢王叔，我要进货的时候一定来找您。,"Thanks, Mr.Wang. I'll be sure to come to you when I need to restock."
-CHARACTER.我,,我,Player
+CHARACTER.我,,我,Me
 CHARACTER.王叔,,王叔,Mr.Wang
 \n,,,
 \n\n,,,

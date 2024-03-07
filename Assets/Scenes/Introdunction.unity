@@ -350,6 +350,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168056607}
   m_CullTransparentMesh: 1
+--- !u!1 &179973561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179973563}
+  - component: {fileID: 179973562}
+  m_Layer: 0
+  m_Name: IntrodunctionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &179973562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179973561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caf09a78b01e234d9e71cabce39b375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 0}
+  localizationComponent: {fileID: 0}
+  currentLanguage: 
+--- !u!4 &179973563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179973561}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245037744
 GameObject:
   m_ObjectHideFlags: 1
@@ -1195,61 +1242,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &926021927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 926021929}
-  - component: {fileID: 926021928}
-  m_Layer: 0
-  m_Name: CurrentManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &926021928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926021927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805014cf96a77a8409f90be66415ab0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flowchart: {fileID: 0}
-  localizationComponent: {fileID: 0}
-  energy: 0
-  money: 0
-  moral: 0
-  reputation: 0
-  health: 0
-  isSick: 0
-  currentDay: 0
-  currentStage: 0
-  currentLanguage: 
---- !u!4 &926021929
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926021927}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201804004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1818,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2057562095}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2057562183}
   variables:
   - {fileID: 2057562123}
   description: 
@@ -1945,7 +1938,7 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1739413361}
   methodName: loadActivityScene
-  delay: 3
+  delay: 1
 --- !u!114 &2057562184
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2937,7 +2930,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 926021929}
+  - {fileID: 179973563}
   - {fileID: 1739413360}
   - {fileID: 464177074}
   - {fileID: 245037746}

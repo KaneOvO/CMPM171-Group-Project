@@ -1,6 +1,8 @@
 Key,Description,Standard,EN
-SAY.Cashier Work Behavior End.77.招聘经理,,好，时间到了。我必须说，你的工作表现超出了我的预期。你展现出了极大的努力和责任感，这在今天不是常见的品质。,"Alright, time's up. I must say, your work performance exceeded my expectations. You demonstrated great effort and responsibility, qualities that are not common today."
-SAY.Cashier Work Behavior End.79.招聘经理,,你今天的工资已经计算好了，这是你的报酬。如果你未来还在寻找工作，我强烈建议你再来找我。可能会有更稳定、更有挑战的工作机会等着你。,"Your wages for today have been calculated; this is your compensation. If you're looking for work in the future, I strongly suggest you come back to me. There might be more stable and challenging job opportunities waiting for you."
+SAY.Cashier Work Behavior End.77.招聘经理,,好，时间到了。我必须说，你的工作表现超出了我的预期。,"Alright, time's up. I must say, your work performance exceeded my expectations."
+SAY.Cashier Work Behavior End.90.招聘经理,,你展现出了极大的努力和责任感，这在今天不是常见的品质。,"You demonstrated great effort and responsibility, qualities that are not common today."
+SAY.Cashier Work Behavior End.79.招聘经理,,你今天的工资已经计算好了，这是你的报酬。,"Your wages for today have been calculated; this is your compensation. If you're looking for work in the future, I strongly suggest you come back to me. There might be more stable and challenging job opportunities waiting for you."
+SAY.Cashier Work Behavior End.91.招聘经理,,如果你未来还在寻找工作，我强烈建议你再来找我。可能会有更稳定、更有挑战的工作机会等着你。,"If you're looking for work in the future, I strongly suggest you come back to me. There might be more stable and challenging job opportunities waiting for you."
 SAY.Cashier Work Behavior End.88.,,获得了2000元,You have received 2000 yuan.
 SAY.Cashier Work Behavior End.84.,,健康减少了10,Health decreased by 10.
 SAY.Cashier Work Behavior End.78.招聘经理,,再次感谢你的辛勤工作，祝你一切顺利。,Thank you again for your hard work. I wish you all the best.
