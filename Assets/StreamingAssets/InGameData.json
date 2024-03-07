@@ -319,12 +319,6 @@
         },
         {
             "contents": [
-                "Noon",
-                "正午"
-            ]
-        },
-        {
-            "contents": [
                 "Afternoon",
                 "下午"
             ]
@@ -333,6 +327,12 @@
             "contents": [
                 "Night",
                 "晚上"
+            ]
+        },
+        {
+            "contents": [
+                "Midnight",
+                "午夜"
             ]
         },
         {
