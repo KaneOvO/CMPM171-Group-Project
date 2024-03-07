@@ -304,6 +304,36 @@
                 "Load",
                 "加载游戏"
             ]
+        },
+        {
+            "contents": [
+                "Day",
+                "天"
+            ]
+        },
+        {
+            "contents": [
+                "Morning",
+                "早上"
+            ]
+        },
+        {
+            "contents": [
+                "Noon",
+                "正午"
+            ]
+        },
+        {
+            "contents": [
+                "Afternoon",
+                "下午"
+            ]
+        },
+        {
+            "contents": [
+                "Night",
+                "晚上"
+            ]
         }
     ]
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 [RequireComponent(typeof(TMP_Text))]
 public class TMPLanguageSwitch : MonoBehaviour
 {
@@ -10,10 +12,14 @@ public class TMPLanguageSwitch : MonoBehaviour
     public int localizationIndex = 0;
     public List<Contents> localization => GameManager.Instance.inGameData.localization;
     public TMP_FontAsset font => UIManager.Instance.font;
+    public UnityEvent refreshDone;
     void OnEnable()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
         UIManager.Instance.onLanguageChange.AddListener(Refresh);
+    }
+    void Start()
+    {
         Refresh();
     }
     void OnDisable()
@@ -28,5 +34,6 @@ public class TMPLanguageSwitch : MonoBehaviour
         if (contents.Count <= 0) return;
         string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
         if (content != null) { textMesh.text = content; }
+        refreshDone?.Invoke();
     }
 }

@@ -6,11 +6,12 @@ using TMPro;
 public class MoneyDisplayer : MonoBehaviour
 {
     public PlayerState playerState => PlayerStateManager.Instance.playerState;
-    public TextMeshProUGUI totalMoneyText;
+    private TextMeshProUGUI totalMoneyText;
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
+        totalMoneyText = gameObject.GetComponent<TextMeshProUGUI>();
         totalMoneyText.text = $"$:{playerState.money.ToString("F1")}";
     }
 }
