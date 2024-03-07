@@ -43,6 +43,7 @@ public class TeachInfo
 public class EventInfo
 {
     public bool cargo;
+    public bool elder1;
 }
 
 [System.Serializable]

@@ -116,6 +116,7 @@ public class CurrentManager : MonoBehaviour
         teachInfo.volunteer = flowchart.GetBooleanVariable("teachVolunteer");
         teachInfo.dayLabor = flowchart.GetBooleanVariable("teachDayLabor");
         eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
+        eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
     }
 
     public void StageMove()
