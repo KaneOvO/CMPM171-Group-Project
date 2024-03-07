@@ -17,9 +17,6 @@ public class TMPLanguageSwitch : MonoBehaviour
     {
         textMesh = GetComponent<TextMeshProUGUI>();
         UIManager.Instance.onLanguageChange.AddListener(Refresh);
-    }
-    void Start()
-    {
         Refresh();
     }
     void OnDisable()

@@ -7,46 +7,55 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 public class DayPanel : MonoBehaviour
 {
-    private TMPLanguageSwitch dayText;
-    private TMPLanguageSwitch stageText;
+    private TextMeshProUGUI dayTextMesh;
+    private TextMeshProUGUI stageTextMesh;
     public int currentDay => GameManager.Instance.saveData.currentDay;
+    public int dayTextIndex;
+    public List<Contents> localization => GameManager.Instance.inGameData.localization;
+    public TMP_FontAsset font => UIManager.Instance.font;
     public List<int> StageTextList;
-
-    private void Awake()
-    {
-        dayText = transform.Find("DayText").GetComponent<TMPLanguageSwitch>();
-        stageText = transform.Find("StageText").GetComponent<TMPLanguageSwitch>();
-    }
+    private int stageTextIndex;
     private void OnEnable()
     {
-        dayText.refreshDone.AddListener(HandleDayTextRefreshDone);
-        stageText.refreshDone.AddListener(HandleStageTextRefreshDone);
+        dayTextMesh = transform.Find("DayText").GetComponent<TextMeshProUGUI>();
+        stageTextMesh = transform.Find("StageText").GetComponent<TextMeshProUGUI>();
+        UIManager.Instance.onLanguageChange.AddListener(Refresh);
+        Refresh();
     }
     private void OnDisable()
     {
-        dayText.refreshDone.RemoveListener(HandleDayTextRefreshDone);
-        stageText.refreshDone.RemoveListener(HandleStageTextRefreshDone);
-    }
-    public void HandleDayTextRefreshDone()
-    {
-        Debug.Log("DayText Refresh Done");
-        dayText.textMesh.text = $"{GameManager.Instance.saveData.currentDay}/30 {dayText.textMesh.text}";
+        UIManager.Instance.onLanguageChange.RemoveListener(Refresh);
     }
 
-    public void HandleStageTextRefreshDone()
+    public void Refresh()
     {
-        Debug.Log("StageText Refresh Done");
-        stageText.localizationIndex = GameManager.Instance.saveData.currentStage switch
+        DayTextRefresh();
+        StageTextRefresh();
+    }
+    public void DayTextRefresh()
+    {
+        dayTextMesh.font = font;
+        if (dayTextIndex >= localization.Count) return;
+        List<string> contents = localization[dayTextIndex].contents;
+        if (contents.Count <= 0) return;
+        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        dayTextMesh.text = $"{content}:{GameManager.Instance.saveData.currentDay}";
+    }
+
+    public void StageTextRefresh()
+    {
+        stageTextMesh.font = font;
+        stageTextIndex = GameManager.Instance.saveData.currentStage switch
         {
             Stage.Morning => StageTextList[0],
             Stage.Noon => StageTextList[1],
             Stage.Afternoon => StageTextList[2],
             _ => StageTextList[0],
         };
-        if (stageText.localizationIndex >= stageText.localization.Count) return;
-        List<string> contents = stageText.localization[stageText.localizationIndex].contents;
+        if (stageTextIndex >= localization.Count) return;
+        List<string> contents = localization[stageTextIndex].contents;
         if (contents.Count <= 0) return;
         string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
-        if (content != null) { stageText.textMesh.text = content; }
+        if (content != null) { stageTextMesh.text = content; }
     }
 }
