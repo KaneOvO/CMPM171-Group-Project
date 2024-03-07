@@ -340,6 +340,18 @@
                 "Language:",
                 "语言:"
             ]
+        },
+        {
+            "contents": [
+                "States",
+                "人物状态"
+            ]
+        },
+        {
+            "contents": [
+                "Current Time:",
+                "当前时间："
+            ]
         }
     ]
 }
