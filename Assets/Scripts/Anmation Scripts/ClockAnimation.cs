@@ -21,9 +21,9 @@ public class ClockAnimation : MonoBehaviour
         currentHours = GameManager.Instance.saveData.currentStage switch
         {
             Stage.Morning => 8,
-            Stage.Noon => 11,
-            Stage.Afternoon => 14,
-            _ => 17
+            Stage.Afternoon => 13,
+            Stage.Night => 18,
+            _ => 23
         };
         hourHand.rotation = Quaternion.Euler(0f, 0f, -30 * currentHours);
         minuteHand.rotation = Quaternion.Euler(0f, 0f, -6 * currentMinutes);
@@ -63,7 +63,7 @@ public class ClockAnimation : MonoBehaviour
         float startTime = Time.time;
         float startHours = this.currentHours;
         float startMinutes = this.currentMinutes;
-        passingTime = GameManager.Instance.saveData.currentStage == Stage.Night ? Mathf.Abs(24 - this.currentHours) : 3;
+        passingTime = GameManager.Instance.saveData.currentStage == Stage.Midnight ? Mathf.Abs(24 - this.currentHours) : 3;
         float endHours = this.currentHours + passingTime;
         float endMinutes = this.currentMinutes + passingTime * 60;
         yield return new WaitForSeconds(0.5f);

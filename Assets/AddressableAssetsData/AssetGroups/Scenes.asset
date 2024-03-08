@@ -29,17 +29,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Permanent Scene
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8c9cfa26abfee488c85f1582747f6a02
-    m_Address: TestScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Test Scene
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e15e88731af3be149b3e1e00b7382417
-    m_Address: DialogueScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 88dd6766f97a5234793e730130eec490
     m_Address: Unidentified Cargo Event
     m_ReadOnly: 0

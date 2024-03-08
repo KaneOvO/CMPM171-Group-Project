@@ -116,6 +116,7 @@ public class CurrentManager : MonoBehaviour
         teachInfo.volunteer = flowchart.GetBooleanVariable("teachVolunteer");
         teachInfo.dayLabor = flowchart.GetBooleanVariable("teachDayLabor");
         eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
+        eventInfo.elder1 = flowchart.GetBooleanVariable("ElderEvent1");
         eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
     }
 
@@ -123,9 +124,8 @@ public class CurrentManager : MonoBehaviour
     {
         GameManager.Instance.saveData.currentStage = GameManager.Instance.saveData.currentStage switch
         {
-            Stage.Morning => Stage.Noon,
-            Stage.Noon => Stage.Afternoon,
-            Stage.Afternoon => Stage.Morning,
+            Stage.Morning => Stage.Afternoon,
+            Stage.Afternoon => Stage.Night,
             Stage.Night => Stage.Morning,
             _ => Stage.Morning,
         };
@@ -162,6 +162,7 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetBooleanVariable("teachDayLabor", teachInfo.dayLabor);
 
         flowchart.SetBooleanVariable("CargoEvent", eventInfo.cargo);
+        flowchart.SetBooleanVariable("ElderEvent1", eventInfo.elder1);
     }
 
     public void SickeEffect()

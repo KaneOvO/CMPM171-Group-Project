@@ -41,7 +41,7 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
         icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         sellItemText.text = item.name[(int)GameManager.Instance.saveData.currentLanguage] + $" × {amount}";
-        float price = item.originalPrice * amount;
+        float price = item.sellPrice * amount;
         priceText.text = $"$:{price.ToString("F1")}";
     }
     protected virtual void Update()

@@ -67,7 +67,7 @@ public class SettlementPanelScript : MonoBehaviour
     {
         Item item = ItemManager.Instance.ID(id);
         float start = totalMoney;
-        float end = start + amount * item.originalPrice;
+        float end = start + amount * item.sellPrice;
         float elapsedTime = 0f;
         string displayString = GameManager.Instance.saveData.currentLanguage switch
         {

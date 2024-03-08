@@ -48,8 +48,8 @@ public class DayPanel : MonoBehaviour
         stageTextIndex = GameManager.Instance.saveData.currentStage switch
         {
             Stage.Morning => StageTextList[0],
-            Stage.Noon => StageTextList[1],
-            Stage.Afternoon => StageTextList[2],
+            Stage.Afternoon => StageTextList[1],
+            Stage.Night => StageTextList[2],
             _ => StageTextList[0],
         };
         if (stageTextIndex >= localization.Count) return;
