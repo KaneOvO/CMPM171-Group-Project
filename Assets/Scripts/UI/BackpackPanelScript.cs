@@ -46,7 +46,13 @@ public class BackpackPanelScript : MonoBehaviour
         descriptionPriceText.font = font;
         descriptionText.font = font;
         totalMoneyText.font = font;
-        totalMoneyText.text = $"$:{playerState.money.ToString("F1")}";
+        totalMoneyText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"{playerState.money:F1} yuan",
+            Language.Chinese => $"{playerState.money:F1} 元",
+            Language.Japanese => $"{playerState.money:F1} 円",
+            _ => $"{playerState.money:F1} yuan",
+        };
         foreach (Transform child in content.transform)
         {
             Destroy(child.gameObject);

@@ -19,12 +19,12 @@ public class Panel : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
     public void ClosePanel()
     {
@@ -38,7 +38,13 @@ public class Panel : MonoBehaviour
         nameText.text = selectItem.itemName;
         detailedItemImage.sprite = selectItem.itemImage.sprite;
         detailedDescriptionText.text = $"Description: {selectItem.itemDescription}";
-        detailedItemCostText.text = $"${selectItem.costText.text:F2}";;
+        detailedItemCostText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"{selectItem.costText.text:F1} yuan",
+            Language.Chinese => $"{selectItem.costText.text:F1} 元",
+            Language.Japanese => $"{selectItem.costText.text:F1} 円",
+            _ => $"{selectItem.costText.text:F1} yuan",
+        };
         counterText.text = selectedPrefab.count.ToString();
     }
 
@@ -50,6 +56,6 @@ public class Panel : MonoBehaviour
     public void minusPressed()
     {
         selectedPrefab.DecreaseCount();
-        
+
     }
 }

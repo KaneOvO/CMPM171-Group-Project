@@ -11,7 +11,15 @@ public class UIManager : MonoBehaviour
 {
     [Header("Fonts")]
     public TMP_FontAsset[] fonts;
-    public TMP_FontAsset font => fonts[(int)GameManager.Instance.saveData.currentLanguage];
+    public TMP_FontAsset font
+    {
+        get
+        {
+            if ((int)GameManager.Instance.saveData.currentLanguage >= fonts.Length)
+            { return fonts[0]; }
+            return fonts[(int)GameManager.Instance.saveData.currentLanguage];
+        }
+    }
     [Header("UI Panels")]
     public List<GameObject> panels;
     private static UIManager _instance;

@@ -27,11 +27,11 @@ public class WholesaleCanvas : MonoBehaviour
 
         string content = currentLanguage switch
         {
-            Language.English => "Money:",
-            Language.Chinese => "资金：",
-            Language.Japanese => "資金:",
-            _ => "Money:",
-        } + $"${GameManager.Instance.saveData.playerState.money}";
+            Language.English => $"Money:{GameManager.Instance.saveData.playerState.money:F1} yuan",
+            Language.Chinese => $"资金：{GameManager.Instance.saveData.playerState.money:F1} 元",
+            Language.Japanese => $"資金:{GameManager.Instance.saveData.playerState.money:F1} 円",
+            _ => $"Money:{GameManager.Instance.saveData.playerState.money:F1} yuan",
+        };
         moneyText.text = content;
     }
 
@@ -39,11 +39,11 @@ public class WholesaleCanvas : MonoBehaviour
     {
         string content = currentLanguage switch
         {
-            Language.English => "Total:",
-            Language.Chinese => "合计：",
-            Language.Japanese => "合計額：",
-            _ => "Total:"
-        } + $" {totalCost:F1}";
+            Language.English => $"Total: {totalCost:F1} yuan",
+            Language.Chinese => $"合计：{totalCost:F1} 元",
+            Language.Japanese => $"合計額：{totalCost:F1} 円",
+            _ => $"Total: {totalCost:F1} yuan"
+        };
         totalCostText.text = content;
     }
 

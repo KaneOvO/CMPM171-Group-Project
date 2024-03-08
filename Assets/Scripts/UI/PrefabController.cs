@@ -225,7 +225,13 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             Language.Japanese => "あなたは：",
             _ => "You have: ",
         } + $"<size=30>{playerAmount}</size>";
-        descriptionPriceText.text = $"$: {itemCost:F2}";
+        descriptionPriceText.text = $"{itemCost:F1}" + GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => " yuan",
+            Language.Chinese => " 元",
+            Language.Japanese => " 円",
+            _ => " yuan",
+        };
         descriptionText.text = itemDescription;
     }
     public void OnPointerExit(PointerEventData eventData)

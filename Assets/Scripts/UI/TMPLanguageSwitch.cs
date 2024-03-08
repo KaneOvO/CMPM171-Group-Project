@@ -28,7 +28,7 @@ public class TMPLanguageSwitch : MonoBehaviour
         textMesh.font = font;
         if (localizationIndex >= localization.Count) return;
         List<string> contents = localization[localizationIndex].contents;
-        if (contents.Count <= 0) return;
+        if (contents.Count <= 0 || (int)GameManager.Instance.saveData.currentLanguage >= contents.Count) return;
         string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
         if (content != null) { textMesh.text = content; }
         refreshDone?.Invoke();

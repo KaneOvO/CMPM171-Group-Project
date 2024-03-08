@@ -20,7 +20,13 @@ public class SaleBackpackPanelScript : BackpackPanelScript
         descriptionPriceText.font = font;
         descriptionText.font = font;
         totalMoneyText.font = font;
-        totalMoneyText.text = $"$:{playerState.money.ToString("F1")}";
+        totalMoneyText.text = playerState.money.ToString("F1") + GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => " yuan",
+            Language.Chinese => " 元",
+            Language.Japanese => " 円",
+            _ => " yuan",
+        };
         foreach (Transform child in content.transform)
         {
             Destroy(child.gameObject);

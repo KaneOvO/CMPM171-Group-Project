@@ -71,15 +71,22 @@ public class SettlementPanelScript : MonoBehaviour
         float elapsedTime = 0f;
         string displayString = GameManager.Instance.saveData.currentLanguage switch
         {
-            Language.English => $"Total",
-            Language.Chinese => $"共计",
-            Language.Japanese => $"合計",
-            _ => $"Total",
+            Language.English => $"Total:{totalMoney:F1} yuan",
+            Language.Chinese => $"共计:{totalMoney:F1} 元",
+            Language.Japanese => $"合計:{totalMoney:F1} 円",
+            _ => $"Total:{totalMoney:F1} yuan",
         };
         while (elapsedTime < 1f && totalMoney < end)
         {
             totalMoney = Mathf.Lerp(start, end, elapsedTime);
-            totalMoneyText.text = displayString + $" $:{totalMoney.ToString("F1")}";
+            displayString = GameManager.Instance.saveData.currentLanguage switch
+            {
+                Language.English => $"Total:{totalMoney:F1} yuan",
+                Language.Chinese => $"共计:{totalMoney:F1} 元",
+                Language.Japanese => $"合計:{totalMoney:F1} 円",
+                _ => $"Total:{totalMoney:F1} yuan",
+            };
+            totalMoneyText.text = displayString;
             elapsedTime += Time.deltaTime;
             yield return null;
             if (Input.GetMouseButtonDown(0))
@@ -88,6 +95,13 @@ public class SettlementPanelScript : MonoBehaviour
             }
         }
         totalMoney = end;
-        totalMoneyText.text = displayString + $" $:{totalMoney.ToString("F1")}";
+        displayString = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"Total:{totalMoney:F1} yuan",
+            Language.Chinese => $"共计:{totalMoney:F1} 元",
+            Language.Japanese => $"合計:{totalMoney:F1} 円",
+            _ => $"Total:{totalMoney:F1} yuan",
+        };
+        totalMoneyText.text = displayString;
     }
 }

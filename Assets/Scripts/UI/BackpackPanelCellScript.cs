@@ -91,7 +91,13 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
             _ => "Amount: ",
         }
         + $"{itemAmount.ToString()}";
-        descriptionPriceText.text = $"$: {item.originalPrice.ToString("F1")}";
+        descriptionPriceText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"{item.originalPrice:F1} yuan",
+            Language.Chinese => $"{item.originalPrice:F1} 元",
+            Language.Japanese => $"{item.originalPrice:F1} 円",
+            _ => $"{item.originalPrice:F1} yuan",
+        };
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
 

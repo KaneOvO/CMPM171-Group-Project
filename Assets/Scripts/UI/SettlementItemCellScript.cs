@@ -42,7 +42,13 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         sellItemText.text = item.name[(int)GameManager.Instance.saveData.currentLanguage] + $" × {amount}";
         float price = item.sellPrice * amount;
-        priceText.text = $"$:{price.ToString("F1")}";
+        priceText.text = $"{price:F1}" + GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => " yuan",
+            Language.Chinese => " 元",
+            Language.Japanese => " 円",
+            _ => " yuan",
+        };
     }
     protected virtual void Update()
     {
@@ -96,7 +102,13 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
             Language.Japanese => "背包",
             _ => "Backpack"
         } + $" {itemAmount}";
-        descriptionPriceText.text = $"$: <color=#FF0>{item.originalPrice.ToString("F1")}</color>";
+        descriptionPriceText.text = GameManager.Instance.saveData.currentLanguage switch
+        {
+            Language.English => $"Sell Price: {item.sellPrice:F1} yuan",
+            Language.Chinese => $"售价：{item.sellPrice:F1} 元",
+            Language.Japanese => $"販売価格: {item.sellPrice:F1} 円",
+            _ => $"Sell Price: {item.sellPrice:F1} yuan",
+        };
         descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
     }
     protected virtual IEnumerator FadeOut()
