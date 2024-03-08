@@ -46,8 +46,8 @@
             "sellValue": 1000,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "A common beverage, also relatively inexpensive.",
+                "一款常见的饮料，售价也相对低廉。"
             ],
             "spriteUrl": "Milk"
         },
@@ -63,8 +63,8 @@
             "sellValue": 1000,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "A flavored instant noodle. \nIt's one of the kids' favorite snacks.",
+                "调味方便面。这是孩子们最爱的零食之一。"
             ],
             "spriteUrl": "Crispy_Noodles"
         },
@@ -80,8 +80,8 @@
             "sellValue": 1000,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "Candies made from edible gelatin. \nIt's a very popular type of snack.",
+                "由食用明胶制成的糖果。是一种很受欢迎的小零食。"
             ],
             "spriteUrl": "Gummies"
         },
@@ -97,8 +97,8 @@
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "A beverage made by mixing sugar, tea, and milk in certain proportions. \nIt's very popular among young people.",
+                "由糖、茶和牛奶按一定比例兑制的饮料。在年轻人中很受欢迎。"
             ],
             "spriteUrl": "Milk_Tea"
         },
@@ -114,8 +114,8 @@
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "White wine brewed with osmanthus flowers. \nIt has a fragrance of osmanthus when you drink it.",
+                "由桂花酿制的白酒。喝起来有一股桂花的香气。"
             ],
             "spriteUrl": "Osmanthus_Wine"
         },
@@ -130,8 +130,8 @@
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
-                "",
-                ""
+                "A block-like object made from dried tea leaves. \nIt's quite pricey.",
+                "由干燥的茶叶制作成的块状物。价格不菲。"
             ],
             "spriteUrl": "Tea_Cake"
         }
