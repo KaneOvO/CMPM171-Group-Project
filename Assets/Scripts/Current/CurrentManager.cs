@@ -171,4 +171,12 @@ public class CurrentManager : MonoBehaviour
         flowchart.SetIntegerVariable("CurrentDay", currentDay++);
         flowchart.SetIntegerVariable("CurrentStage", 0);
     }
+
+    public void CargoEventEffect()
+    {
+        ItemManager.Instance.AddItemAmount("02", 600);
+        ItemManager.Instance.AddItemAmount("03", 1000);
+        ItemManager.Instance.AddItemAmount("04", 500);
+    }
+    
 }

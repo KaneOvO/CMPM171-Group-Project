@@ -1859,6 +1859,7 @@ GameObject:
   - component: {fileID: 2057562201}
   - component: {fileID: 2057562200}
   - component: {fileID: 2057562199}
+  - component: {fileID: 2057562203}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1964,9 +1965,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2057562095}
-  selectedCommands:
-  - {fileID: 2057562185}
+  - {fileID: 2057562108}
+  selectedCommands: []
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562190}
@@ -2065,6 +2065,7 @@ MonoBehaviour:
   - {fileID: 2057562162}
   - {fileID: 2057562161}
   - {fileID: 2057562160}
+  - {fileID: 2057562203}
   - {fileID: 2057562159}
   - {fileID: 2057562174}
   - {fileID: 2057562158}
@@ -2978,7 +2979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 63
   indentLevel: 0
-  storyText: "[\u9053\u5FB7\u503C\u51CF\u5C1130]\r\n\n"
+  storyText: "\u9053\u5FB7\u503C\u51CF\u5C1130\n\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3005,7 +3006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 62
   indentLevel: 0
-  storyText: "[\u91D1\u94B1\u51CF\u5C115000]\r\n\n"
+  storyText: "\u91D1\u94B1\u51CF\u5C115000\n\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3032,7 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 61
   indentLevel: 0
-  storyText: "[\u83B7\u5F97\u4E86xxx, xxx, xxx, xxx, xxx, xxx]\r\n\n"
+  storyText: "\u83B7\u5F97\u4E861000\u5305\u5E72\u8106\u9762\uFF0C600\u74F6\u725B\u5976\uFF0C500\u888B\u8F6F\u7CD6\n\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4488,6 +4489,23 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 1
   durationOLD: 0
+--- !u!114 &2057562203
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057562093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 0
+  targetObject: {fileID: 926021927}
+  methodName: CargoEventEffect
+  delay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
