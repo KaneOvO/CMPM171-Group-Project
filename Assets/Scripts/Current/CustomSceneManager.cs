@@ -11,6 +11,10 @@ public class CustomSceneManager : MonoBehaviour
     [Header("Events Sender: Load Scene")]
     public SceneLoadEventSO loadSceneEventSO;
     #endregion
+    #region  Scene Script Object: Main Menu
+    [Header("Scene Script Object: Main Menu")]
+    public AssetReference mainMenu;
+    #endregion
     #region  Scene Script Object: Shop Scene
     [Header("Scene Script Object: Shop Scene")]
     public AssetReference shopSceneFirst;
@@ -60,7 +64,9 @@ public class CustomSceneManager : MonoBehaviour
 
 
     public AssetReference SickEvent;
-     public AssetReference ElderEvent;
+    public AssetReference ElderEvent;
+    public AssetReference InterestEvent;
+
 
     #region Shop Scene
     public void loadShopSceneFirst()
@@ -246,4 +252,14 @@ public class CustomSceneManager : MonoBehaviour
     {
         loadSceneEventSO.RaiseEvent(ElderEvent, true);
     }
+
+    public void loadMainMenu()
+    {
+        loadSceneEventSO.RaiseEvent(mainMenu, true);
+    }
+
+        public void loadInterestEvent()
+        {
+                loadSceneEventSO.RaiseEvent(InterestEvent, true);
+        }
 }

@@ -511,6 +511,7 @@ MonoBehaviour:
       dayLabor: 0
     eventInfo:
       cargo: 0
+      elder1: 0
   OnJsonLoad: {fileID: 11400000, guid: 57faeaf991e5e614b95ee70066d3171c, type: 2}
 --- !u!1 &757503532
 GameObject:
@@ -605,7 +606,7 @@ MonoBehaviour:
     m_AssetGUID: b1e54160802b07c4ab8f60b7620c3e72
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 1
+    m_EditorAssetChanged: 0
   sceneLoadEvent: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
   sceneLoadCompletedEvent: {fileID: 11400000, guid: 150641c8e8c6ed1478cd68dee5994ca0, type: 2}
   fadeEvent: {fileID: 11400000, guid: 64ef10bfa4d426d4abd3c0e01f8b8d42, type: 2}

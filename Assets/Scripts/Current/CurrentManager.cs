@@ -117,7 +117,7 @@ public class CurrentManager : MonoBehaviour
         teachInfo.dayLabor = flowchart.GetBooleanVariable("teachDayLabor");
         eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
         eventInfo.elder1 = flowchart.GetBooleanVariable("ElderEvent1");
-        eventInfo.cargo = flowchart.GetBooleanVariable("CargoEvent");
+        eventInfo.interest1 = flowchart.GetBooleanVariable("InterestEvent1");
     }
 
     public void StageMove()
@@ -163,6 +163,7 @@ public class CurrentManager : MonoBehaviour
 
         flowchart.SetBooleanVariable("CargoEvent", eventInfo.cargo);
         flowchart.SetBooleanVariable("ElderEvent1", eventInfo.elder1);
+        flowchart.SetBooleanVariable("InterestEvent1", eventInfo.interest1);
     }
 
     public void SickeEffect()

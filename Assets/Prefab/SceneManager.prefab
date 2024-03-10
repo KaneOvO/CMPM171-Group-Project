@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadSceneEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
+  mainMenu:
+    m_AssetGUID: b1e54160802b07c4ab8f60b7620c3e72
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   shopSceneFirst:
     m_AssetGUID: feafc8a7f160cae4c8b53e43472f2525
     m_SubObjectName: 
@@ -150,8 +155,23 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  IntroScene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   SickEvent:
     m_AssetGUID: 0b516408b47220149bd32d82985e26bc
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  ElderEvent:
+    m_AssetGUID: 7b4e4816596d1c7468d3a67f21ca1a1c
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  InterestEvent:
+    m_AssetGUID: 2475316fe9553f64491f719eb6642f07
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

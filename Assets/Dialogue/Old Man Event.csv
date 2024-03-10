@@ -8,8 +8,8 @@ SAY.Old Man Event.82.我,,(这可太糟糕了，他看上去随时都有生命�
 SAY.Old Man Event.84.我,,(可是如果我救了他，万一他到时候讹诈我说我撞到了他怎么办?),"(But what if I save him, and he accuses me of hitting him later on?)"
 SAY.Old Man Event.83.我,,(这周围一个人都没有，到时候没有人能够为我作证),"(There's nobody around, no one would be able to testify for me later.)"
 SAY.Old Man Event.85.,,[你面临着一个艰难的抉择，你选择],"[You are facing a difficult decision, you choose]"
-MENU.Old Man Event.86,,决定扶起老人,to help the elderly person up
-MENU.Old Man Event.89,,决定不扶老人,to not help the elderly person
+MENU.Old Man Event.86,,决定帮助老人,Decided to help the elderly
+MENU.Old Man Event.89,,决定不帮助老人,Decide not to help the elderly
 SAY.Old Man Event.90.我,,"(我不能就这样看着,这让我良心不安)",(I can't just watch; it would weigh on my conscience.)
 SAY.Old Man Event.91.,,[作为发现人，你陪同着摔倒的老人来到了医院],"[As the person who found him, you accompany the fallen elderly man to the hospital.]"
 SAY.Old Man Event.92.,,[经过紧急处理，老人虽然还是昏迷不醒，但是脱离了生命危险],"[After emergency treatment, the elderly man is still unconscious but is no longer in life-threatening danger.]"
@@ -27,7 +27,7 @@ SAY.Old Man Event.103.,,[为了避免进一步的麻烦，最终你垫付了医�
 SAY.Old Man Event.104.,,金钱减少了1000,Money decreased by 1000.
 \n\n\n,,,
 SAY.Old Man Event.105.,,道德值增加了20,Morality increased by 20.
-SAY.Old Man Event.106.我,,(现在这个社会，如果我帮他，谁知道会发生什么呢?),"""(In today's society, if I help him, who knows what might happen?)"
+SAY.Old Man Event.106.我,,(现在这个社会，如果我帮他，谁知道会发生什么呢?),"(In today's society, if I help him, who knows what might happen?)"
 SAY.Old Man Event.108.我,,(说不定他到时候还会倒打一耙指责我),(He might even turn around and blame me later on.)
 SAY.Old Man Event.109.我,,(算了，多一事不如少一事),"(Forget it, better to avoid trouble than to create more.)"
 SAY.Old Man Event.107.,,[尽管心中良心不安，但是你还是决定无视这件事],"[Despite feeling uneasy in your conscience, you decide to ignore the situation.]"
@@ -35,7 +35,7 @@ SAY.Old Man Event.111.,,[你冷漠的离开了现场],[You coldly leave the scen
 \n,,,
 SAY.Old Man Event.110.,,道德值减少20,Morality decreased by 20.
 CHARACTER.我,,我,Me
-CHARACTER.老人的家属,,老人的家属,The elderly man's family members
+CHARACTER.老人的家属,,老人的家属,The elderly's family members
 CHARACTER.医生,,医生,Doctor
 \n,,,
 \n\n,,,

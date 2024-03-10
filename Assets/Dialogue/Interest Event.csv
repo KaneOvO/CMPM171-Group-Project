@@ -1,0 +1,83 @@
+Key,Description,Standard,EN
+SAY.Interest Event.77.,,[今天，你如往常一样离开家中，打算前往店铺进行开店的准备],"[Today, as usual, you leave your home, planning to head to the shop to prepare for opening.]"
+SAY.Interest Event.78.,,[走到门口时，你忽然看到那个黑衣人低着头站在你家门口],"[As you reach the door, you suddenly see the mysterious person from before, standing at your doorstep with their head lowered.]"
+SAY.Interest Event.79.我,,(他来干什么？离约定的还款日期不是还有一段时间吗？),(What is he doing here? Isn't there still some time left until the agreed repayment date?)
+SAY.Interest Event.81.,,[似乎是察觉到了你的视线，黑衣人抬起头来，向你走来],"[Seemingly noticing your gaze, the man in black raises his head and walks towards you.]"
+SAY.Interest Event.82.我,,袁小姐你好，好久不见了。,"Hello, Miss Yuan. It's been a long time."
+SAY.Interest Event.83.我,,但我可是一点都不想看到你，先生。,"But I must say, I didn't wish to see you at all, sir."
+SAY.Interest Event.84.我,,距离我们约定的日期还有三周吧，你今天来是做什么？,There are still three weeks until our agreed date. What brings you here today?
+SAY.Interest Event.85.黑衣人,,您可真是毫不留情啊。,"You really don't mince words, do you?"
+SAY.Interest Event.86.黑衣人,,算了，让我们进入正题吧。,"Let's cut to the chase, then."
+SAY.Interest Event.87.黑衣人,,不知道袁小姐是否知道您的父亲在向我们借款时，曾经跟我们约定每个星期要向我们支付一些利息这件事？,"Miss Yuan, are you aware that when your father borrowed money from us, he agreed to pay us some interest every week?"
+SAY.Interest Event.88.我,,这又是什么时候的事情? 我可没在之前的合同上看到有这一项。,When did this happen? I didn't see this clause in the contract before.
+SAY.Interest Event.89.黑衣人,,抱歉袁小姐，按照我们公司的规定，关于利息的部分，我们是写在另一份合同的上的。,"I'm sorry, Miss Yuan. According to our company's policy, the part about the interest is written in another contract."
+\n,,,
+SAY.Interest Event.90.黑衣人,,如果您不相信，我现在可以给您看看这份合同，上面还有您父亲的签名。,"If you don't believe me, I can show you the contract right now, which also has your father's signature on it."
+\n\n,,,
+SAY.Interest Event.91.,,[说完，黑衣人从包中掏出一份合同递给你]\n\n,"[Having said that, the man in black takes out a contract from his bag and hands it to you.]"
+SAY.Interest Event.92.,,[你接过合同一看，上面确实约定了每周支付，还有父亲的签名]\n\n,"[You take the contract and see that it indeed stipulates weekly payments, complete with your father's signature.]"
+SAY.Interest Event.93.,,[你仔细看了看约定支付的金额，上面赫然写着每周一万元]\n\n,"[You carefully check the amount agreed upon for the payments, and it shockingly states ten thousand yuan per week.]"
+SAY.Interest Event.94.我,,每周一万元？你们这利息是怎么算的，怎么能这么多？,Ten thousand yuan per week? How do you calculate your interest? How can it be so much?
+SAY.Interest Event.95.我,,而且这么高的利息合法吗？,And is such high interest even legal?
+SAY.Interest Event.96.黑衣人,,冷静点袁小姐，这些利息是我们当时和您父亲一起商量好的，您父亲也同意了。,"Calm down, Miss Yuan. These interest rates were discussed and agreed upon with your father at the time, and he consented to them."
+SAY.Interest Event.97.黑衣人,,而且这份利息的合同并不是以借款的利息为名义签署的。,"Moreover, this interest contract was not signed under the guise of being a loan interest agreement."
+SAY.Interest Event.98.黑衣人,,这是一份您父亲单方面向我们支付的合同。,This is a contract for payments made unilaterally by your father to us.
+SAY.Interest Event.99.我,,你们这不是钻法律空子吗？,Aren't you just exploiting legal loopholes?
+SAY.Interest Event.100.黑衣人,,我个人更喜欢称呼这为法律的灰色地带，这并不违法不是吗？,"I personally prefer to refer to it as a legal gray area, which isn't illegal, right?"
+SAY.Interest Event.101.黑衣人,,况且当初签订合约时，您的父亲也同意了。,"Moreover, your father agreed to it when the contract was initially signed."
+SAY.Interest Event.102.黑衣人,,当然，如果您也可以选择让我们收走抵押物，也就是那所店铺。,"Of course, you also have the option to let us take the collateral, which is the shop."
+SAY.Interest Event.103.黑衣人,,这样不用说利息了，连本金您都不用还了。,"This way, you won't have to talk about interest, and you won't even have to repay the principal."
+SAY.Interest Event.104.黑衣人,,这听上去很划算吧。,"That sounds like a good deal, doesn't it?"
+SAY.Interest Event.105.黑衣人,,要知道现在这个城市早就不是当年的那个城市了。这店铺早就不值这么多钱了。,You should know that this city is no longer what it was back then. That shop is no longer worth that much money.
+SAY.Interest Event.106.黑衣人,,这样您也可以告别这个伤心的地方，重新开始新的生活。,"This way, you can also say goodbye to this place of sorrow and start a new life."
+SAY.Interest Event.107.黑衣人,,这对您来说应该是最好的选择。,This should be the best option for you.
+SAY.Interest Event.108.我,,为什么你们对于我们家的店铺那么执着？,Why are you so persistent about our family's shop?
+SAY.Interest Event.109.我,,照你所说，如果我们家的店铺真的不值钱，那你们为什么一直要引诱我放弃它？,"According to you, if our family's shop really isn't worth much, then why do you keep trying to persuade me to give it up?"
+SAY.Interest Event.110.我,,说到底这件事情从一开始就很奇怪。,"At the end of the day, this whole situation has been strange from the beginning."
+SAY.Interest Event.111.我,,父亲他一向沉稳，怎么可能借这么大一笔钱从来不让我知道。,My father has always been prudent. How could he possibly borrow such a large sum of money and never let me know about it?
+SAY.Interest Event.112.我,,我很难不怀疑这件事背后有什么问题,It's hard for me not to suspect there's something wrong behind all this.
+SAY.Interest Event.113.黑衣人,,您这就是血口喷人了，这些问题您应该去询问您的父亲，而不是我。,"You're making baseless accusations. These are questions you should have asked your father, not me."
+SAY.Interest Event.114.黑衣人,,况且，现在的问题是这些吗？您应该想想您是否能还上这笔利息。,"Besides, is that the issue at hand? You should be considering whether you can afford to pay this interest."
+SAY.Interest Event.115.我,,(他的情绪明显不对劲，这背后肯定有什么我不知道的事情）,(His demeanor is clearly off. There must be something going on behind the scenes that I don't know about.)
+SAY.Interest Event.117.我,,(我不能随他的心意，他越是想要店铺我越不能给他),"(I can't just follow his will. The more he wants the shop, the less I can give it to him.)"
+SAY.Interest Event.116.我,,(但是他说的是对的，如果我把店铺给他，我也可以借此机会重新回到之前的生活）,"(But he's right. If I give him the shop, I can also seize this opportunity to return to my previous life.)"
+MENU.Interest Event.121,,选择支付一万的利息,Choosing to pay the ten thousand interest
+MENU.Interest Event.122,,放弃店铺，回到原本的生活中,Giving up the shop and returning to my original life
+SAY.Interest Event.123.我,,我会支付这笔钱,I will pay this amount.
+SAY.Interest Event.124.我,,你等着，我现在就把这笔钱转给你。,You wait here. I'll transfer the money to you right now.
+SAY.Interest Event.125.我,,[说完你打开手机，准备开始转账],"[After speaking, you open your phone, ready to start the transfer.]"
+SAY.Interest Event.127.我,,(坏了，我居然忘了我现在没有一万块）,"(Uh-oh, I forgot I don't have ten thousand right now.)"
+SAY.Interest Event.128.,,[你讪讪的抬起头],[You sheepishly raise your head.]
+SAY.Interest Event.129.我,,我能不能晚点把这笔钱给你,Can I give you the money later?
+SAY.Interest Event.130.黑衣人,,抱歉，袁小姐。合同规定好了，您需要今天支付这笔钱。,"I'm sorry, Miss Yuan. It's specified in the contract that you need to pay this amount today."
+SAY.Interest Event.131.黑衣人,,如果您没有钱支付，按照合同，我们就要收走您的店铺。,"If you don't have the money to pay, according to the contract, we'll have to take possession of your shop."
+SAY.Interest Event.132.,,[你眼睁睁看着黑衣人夺走了你的店铺],You watch helplessly as the men in black take away your shop.
+SAY.Interest Event.133.,,坏结局：错失真相,Bad Ending: Missing the Truth
+SAY.Interest Event.134.,,游戏结束,Game Over
+MENU.Interest Event.135,,返回主菜单,Returning to the main menu
+SAY.Interest Event.139.我,,(幸好我有储蓄一些钱的习惯),"(Luckily, I have a habit of saving some money.)"
+SAY.Interest Event.140.,,[你很快把钱转给了黑衣人],[You quickly transfer the money to the mysterious man.]
+SAY.Interest Event.141.我,,我把钱转过去了，你看看吧。,I've transferred the money. Take a look.
+SAY.Interest Event.142.,,[或许是没想到你真的能掏出钱，黑衣人神色上有些诧异],"[Perhaps not expecting you to actually produce the money, the man in black looks somewhat surprised.]"
+SAY.Interest Event.143.黑衣人,,很好袁小姐，您真是个有能力的人。,"Very well, Miss Yuan. You're truly capable."
+SAY.Interest Event.161.黑衣人,,那么我下周还会再来，希望您那时还能准备好钱。,"Then I'll be back next week, and I hope you'll still have the money ready by then."
+SAY.Interest Event.144.黑衣人,,告辞。,Goodbye.
+SAY.Interest Event.145.,,[说完，黑衣人头也不回的离开了],"[After saying that, the man in black leaves without looking back.]"
+SAY.Interest Event.146.我,,(这件事背后肯定没这么简单，我得想想办法查清这件事的真相）,(There's definitely more to this than meets the eye. I need to find a way to uncover the truth behind this.)
+SAY.Interest Event.147.我,,(在那之前，我得确保每周能交给他们这笔钱，不让他们有借口收走店铺）,"(Before that, I need to make sure I can pay them this amount every week, so they don't have an excuse to take away the shop.)"
+SAY.Interest Event.148.,,[就这样，伴随着这扑朔迷离的情况，新的一周开始了],"[And so, with this mysterious situation looming over, a new week begins.]"
+SAY.Interest Event.149.我,,(在那之前，我得确保每周能交给他们这笔钱，不让他们有借口收走店铺）,"(Before that, I need to make sure I can pay them this amount every week, so they don't have an excuse to take away the shop.)"
+SAY.Interest Event.162.,,[就这样，伴随着这扑朔迷离的情况，新的一周开始了],"And so, with this perplexing situation lingering, a new week begins."
+SAY.Interest Event.150.,,未完待续...,To be continued...
+\n,,,
+MENU.Interest Event.151,,返回主菜单,Returning to the main menu
+SAY.Interest Event.153.我,,我放弃这所店铺，你们把它收走吧。,I'm giving up this shop. You can take it away.
+SAY.Interest Event.154.黑衣人,,您做出了明智的选择，袁小姐。,"You've made a wise decision, Miss Yuan."
+SAY.Interest Event.155.,,[就这样，你放弃了父亲的店铺，离开了这座城市，回到了之前的日常中],"[And so, you gave up your father's shop, left the city, and returned to your previous routine.]"
+SAY.Interest Event.156.,,[尽管如此，这件事背后的真相成为了你心头一直无法平息的疑问],"[Nevertheless, the truth behind this matter remained a lingering question in your mind that you couldn't shake off.]"
+SAY.Interest Event.157.,,[但你或许永远也没有机会知道了],[But perhaps you'll never have the chance to find out.]
+SAY.Interest Event.158.,,普通结局：逃避的平静,Normal Ending: The Calm of Escape
+MENU.Interest Event.159,,返回主菜单,Returning to the main menu
+SAY._CommandCopyBuffer.143.黑衣人,,很好袁小姐，您真是个有能力的人。,
+CHARACTER.我,,我,Me
+CHARACTER.黑衣人,,黑衣人,Mysterious Man

@@ -44,6 +44,7 @@ public class EventInfo
 {
     public bool cargo;
     public bool elder1;
+    public bool interest1;
 }
 
 [System.Serializable]
