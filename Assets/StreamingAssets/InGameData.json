@@ -352,6 +352,12 @@
                 "Current Time:",
                 "当前时间："
             ]
+        },
+        {
+            "contents": [
+                "Target: Earn 50,000 yuan in 7 days.",
+                "任务：在7天内赚取5万元。"
+            ]
         }
     ]
 }
