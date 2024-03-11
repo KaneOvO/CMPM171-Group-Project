@@ -151,8 +151,8 @@
     "localization": [
         {
             "contents": [
-                "At the At the Crossroad",
-                "决境"
+                "At the Crossroad",
+                "十字路口"
             ]
         },
         {
@@ -357,6 +357,12 @@
             "contents": [
                 "Target: Earn 50,000 yuan in 7 days.",
                 "任务：在7天内赚取5万元。"
+            ]
+        },
+        {
+            "contents": [
+                "<b>Title</b>\n<i>At the Crossroad</i>\n\n\n<b>Team</b>\n<size=50>Production Lead  - Zexuan Li\nDesign Lead - Diana Yee\nEngine Lead - Xing Zhong\nTools Lead - Zhuo Chen\nPlaytesting Lead - Guixiang Li</size>\n\n\n<b>Plugin Reference</b>\n<size=50>Fungus\nhttps://github.com/snozbot/fungus</size>\n\n\n<b>Font Asset</b>\n<size=50>Unity-TextMeshPro-Chinese-Characters-Set\nhttps://github.com/wy-luke/Unity-TextMeshPro-Chinese-Characters-Set</size>\n\n\n<b>UI Asset</b>\n<size=50>Coins, Crystals, Diamonds vector icons for IAP\nhttps://assetstore.unity.com/packages/2d/gui/icons/coins-crystals-diamonds-vector-icons-for-iap-163473\n\nDoodle UI Pack\nhttps://assetstore.unity.com/packages/2d/gui/icons/doodle-ui-pack-43583</size>",
+                "<b>游戏标题</b>\n十字路口\n\n\n<b>团队成员</b>\n<size=50>文案设计 - Zexuan Li\n美术设计 - Diana Yee\n代码设计 - Xing Zhong\n代码框架 - Zhuo Chen\n视觉设计 - Guixiang Li</size>\n\n\n<b>插件参考</b>\n<size=50>Fungus\nhttps://github.com/snozbot/fungus</size>\n\n\n<b>字体资产</b>\n<size=50>Unity-TextMeshPro-Chinese-Characters-Set\nhttps://github.com/wy-luke/Unity-TextMeshPro-Chinese-Characters-Set</size>\n\n\n<b>UI资产</b>\n<size=50>Coins, Crystals, Diamonds vector icons for IAP\nhttps://assetstore.unity.com/packages/2d/gui/icons/coins-crystals-diamonds-vector-icons-for-iap-163473\n\nDoodle UI Pack\nhttps://assetstore.unity.com/packages/2d/gui/icons/doodle-ui-pack-43583</size>"
             ]
         }
     ]
