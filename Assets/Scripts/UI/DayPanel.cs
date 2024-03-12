@@ -9,16 +9,19 @@ public class DayPanel : MonoBehaviour
 {
     private TextMeshProUGUI dayTextMesh;
     private TextMeshProUGUI stageTextMesh;
+    private TextMeshProUGUI targetTextMesh;
     public int currentDay => GameManager.Instance.saveData.currentDay;
     public int dayTextIndex;
     public List<Contents> localization => GameManager.Instance.inGameData.localization;
     public TMP_FontAsset font => UIManager.Instance.font;
     public List<int> StageTextList;
     private int stageTextIndex;
+    public int targetTextIndex;
     private void OnEnable()
     {
         dayTextMesh = transform.Find("DayText").GetComponent<TextMeshProUGUI>();
         stageTextMesh = transform.Find("StageText").GetComponent<TextMeshProUGUI>();
+        targetTextMesh = transform.Find("TargetText").GetComponent<TextMeshProUGUI>();
         UIManager.Instance.onLanguageChange.AddListener(Refresh);
         Refresh();
     }
@@ -31,6 +34,7 @@ public class DayPanel : MonoBehaviour
     {
         DayTextRefresh();
         StageTextRefresh();
+        TargetTextRefresh();
     }
     public void DayTextRefresh()
     {
@@ -57,5 +61,15 @@ public class DayPanel : MonoBehaviour
         if (contents.Count <= 0) return;
         string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
         if (content != null) { stageTextMesh.text = content; }
+    }
+
+    public void TargetTextRefresh()
+    {
+        targetTextMesh.font = font;
+        if (targetTextIndex >= localization.Count) return;
+        List<string> contents = localization[targetTextIndex].contents;
+        if (contents.Count <= 0) return;
+        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        if (content != null) { targetTextMesh.text = content; }
     }
 }
