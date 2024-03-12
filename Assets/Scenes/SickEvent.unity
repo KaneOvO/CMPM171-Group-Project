@@ -1621,7 +1621,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2057562095}
+  - {fileID: 2057562184}
   selectedCommands: []
   variables:
   - {fileID: 2057562123}
@@ -1858,7 +1858,7 @@ MonoBehaviour:
   itemId: 88
   indentLevel: 0
   targetObject: {fileID: 926021927}
-  methodName: SickeEffect()
+  methodName: SickeEffect
   delay: 0
 --- !u!114 &2057562184
 MonoBehaviour:
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 57.437164
-    y: -27.55351
+    y: -26.060974
     width: 111.40722
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
