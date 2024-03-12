@@ -6,13 +6,18 @@ using System;
 [System.Serializable]
 public class SaveData
 {
-    public Language currentLanguage;
     public int currentDay;
     public Stage currentStage;
     public PlayerState playerState;
     public List<InventoryItem> inventory;
     public TeachInfo teachInfo;
     public EventInfo eventInfo;
+}
+[System.Serializable]
+public class PlayerConfig
+{
+    public Language currentLanguage;
+    public int volume;
 }
 
 [System.Serializable]
@@ -65,7 +70,8 @@ public class InGameData
     public List<Contents> localization;
 }
 [System.Serializable]
-public class Contents{
+public class Contents
+{
     public List<string> contents;
 }
 [System.Serializable]

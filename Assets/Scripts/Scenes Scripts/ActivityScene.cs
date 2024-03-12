@@ -23,12 +23,12 @@ public class ActivityScene : MonoBehaviour
     }
     public void EnglishButtonClicked()
     {
-        GameManager.Instance.saveData.currentLanguage = Language.English;
+        GameManager.Instance.playerConfig.currentLanguage = Language.English;
         UIManager.Instance.InvokeLanguageChangeEvents();
     }
     public void ChineseButtonClicked()
     {
-        GameManager.Instance.saveData.currentLanguage = Language.Chinese;
+        GameManager.Instance.playerConfig.currentLanguage = Language.Chinese;
         UIManager.Instance.InvokeLanguageChangeEvents();
     }
     public void CallLanguageChangeEvents()

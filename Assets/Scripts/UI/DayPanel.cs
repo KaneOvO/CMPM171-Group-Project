@@ -17,6 +17,7 @@ public class DayPanel : MonoBehaviour
     public List<int> StageTextList;
     private int stageTextIndex;
     public int targetTextIndex;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
     private void OnEnable()
     {
         dayTextMesh = transform.Find("DayText").GetComponent<TextMeshProUGUI>();
@@ -42,7 +43,7 @@ public class DayPanel : MonoBehaviour
         if (dayTextIndex >= localization.Count) return;
         List<string> contents = localization[dayTextIndex].contents;
         if (contents.Count <= 0) return;
-        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        string content = contents[(int)currentLanguage];
         dayTextMesh.text = $"{content}:{GameManager.Instance.saveData.currentDay}";
     }
 
@@ -59,7 +60,7 @@ public class DayPanel : MonoBehaviour
         if (stageTextIndex >= localization.Count) return;
         List<string> contents = localization[stageTextIndex].contents;
         if (contents.Count <= 0) return;
-        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        string content = contents[(int)currentLanguage];
         if (content != null) { stageTextMesh.text = content; }
     }
 
@@ -69,7 +70,7 @@ public class DayPanel : MonoBehaviour
         if (targetTextIndex >= localization.Count) return;
         List<string> contents = localization[targetTextIndex].contents;
         if (contents.Count <= 0) return;
-        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        string content = contents[(int)currentLanguage];
         if (content != null) { targetTextMesh.text = content; }
     }
 }

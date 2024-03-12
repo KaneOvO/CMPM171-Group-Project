@@ -21,6 +21,7 @@ public class BackpackPanelScript : MonoBehaviour
     public TextMeshProUGUI totalMoneyText;
     public List<InventoryItem> inventory => ItemManager.Instance.inventory;
     public PlayerState playerState => PlayerStateManager.Instance.playerState;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
     protected virtual void OnEnable()
     {
         UIManager.Instance.onLanguageChange.AddListener(Refresh);
@@ -46,7 +47,7 @@ public class BackpackPanelScript : MonoBehaviour
         descriptionPriceText.font = font;
         descriptionText.font = font;
         totalMoneyText.font = font;
-        totalMoneyText.text = GameManager.Instance.saveData.currentLanguage switch
+        totalMoneyText.text = currentLanguage switch
         {
             Language.English => $"{playerState.money:F1} yuan",
             Language.Chinese => $"{playerState.money:F1} 元",

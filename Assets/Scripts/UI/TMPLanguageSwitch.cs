@@ -13,6 +13,7 @@ public class TMPLanguageSwitch : MonoBehaviour
     public List<Contents> localization => GameManager.Instance.inGameData.localization;
     public TMP_FontAsset font => UIManager.Instance.font;
     public UnityEvent refreshDone;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
     void OnEnable()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
@@ -28,8 +29,8 @@ public class TMPLanguageSwitch : MonoBehaviour
         textMesh.font = font;
         if (localizationIndex >= localization.Count) return;
         List<string> contents = localization[localizationIndex].contents;
-        if (contents.Count <= 0 || (int)GameManager.Instance.saveData.currentLanguage >= contents.Count) return;
-        string content = contents[(int)GameManager.Instance.saveData.currentLanguage];
+        if (contents.Count <= 0 || (int)currentLanguage >= contents.Count) return;
+        string content = contents[(int)currentLanguage];
         if (content != null) { textMesh.text = content; }
         refreshDone?.Invoke();
     }

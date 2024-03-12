@@ -81,7 +81,7 @@ public class CurrentManager : MonoBehaviour
 
     private void SwitchLanguage()
     {
-        currentLanguage = GameManager.Instance.saveData.currentLanguage switch
+        currentLanguage = GameManager.Instance.playerConfig.currentLanguage switch
         {
             Language.English => "EN",
             Language.Chinese => "",

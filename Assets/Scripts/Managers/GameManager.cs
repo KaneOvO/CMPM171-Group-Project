@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [Header("InGame Data Information")]
     [HideInInspector] public InGameData inGameData;
     public SaveData saveData;
+    public PlayerConfig playerConfig;
     private static GameManager _instance;
 
     public VoidEventSO OnJsonLoad;
@@ -78,6 +79,9 @@ public class GameManager : MonoBehaviour
         string inGameDataFilePath = Path.Combine(Application.streamingAssetsPath, "InGameData.json");
         yield return LoadJsonFileAsync<InGameData>(inGameDataFilePath, (data) => inGameData = data);
 
+        string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
+        yield return LoadJsonFileAsync<PlayerConfig>(playerConfigFilePath, (data) => playerConfig = data);
+
         // string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
         // yield return LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => saveData = data);
     }
@@ -130,8 +134,11 @@ public class GameManager : MonoBehaviour
     }
     public void Save()
     {
+        string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
+        string dataAsJson = JsonUtility.ToJson(playerConfig);
+        File.WriteAllText(playerConfigFilePath, dataAsJson);
         string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-        string dataAsJson = JsonUtility.ToJson(saveData);
+        dataAsJson = JsonUtility.ToJson(saveData);
         File.WriteAllText(saveDataFilePath, dataAsJson);
     }
 }

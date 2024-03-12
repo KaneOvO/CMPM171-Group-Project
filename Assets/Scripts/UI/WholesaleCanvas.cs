@@ -13,7 +13,7 @@ public class WholesaleCanvas : MonoBehaviour
     public GameObject itemPrefab;
     public List<Item> items;
     public TMP_FontAsset font => UIManager.Instance.font;
-    public Language currentLanguage => GameManager.Instance.saveData.currentLanguage;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
     [Header("Player Info Display")]
     public TMP_Text totalCostText;
     public TMP_Text moneyText;

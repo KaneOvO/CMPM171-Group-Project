@@ -44,6 +44,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Button decreaseCountButton;
     public Button closeButton;
     public TMP_FontAsset font => UIManager.Instance.font;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
     public void Refresh()
     {
         if (currentScene == 0)
@@ -116,8 +117,8 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void SetItem(Item item)
     {
         SetItemID(item.id);
-        SetItemName(item.name[(int)GameManager.Instance.saveData.currentLanguage]);
-        SetItemDescription(item.description[(int)GameManager.Instance.saveData.currentLanguage]);
+        SetItemName(item.name[(int)currentLanguage]);
+        SetItemDescription(item.description[(int)currentLanguage]);
         SetItemImage(item.spriteUrl);
         SetItemCost(item.originalPrice);
         maxStack = item.maxStack;
@@ -218,14 +219,14 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         descriptionText.font = font;
         descriptionNameText.text = itemName;
         int playerAmount = ItemManager.Instance.inventory.Find(x => x.id == id) != null ? ItemManager.Instance.inventory.Find(x => x.id == id).amount : 0;
-        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        descriptionAmountText.text = currentLanguage switch
         {
             Language.English => "You have: ",
             Language.Chinese => "你有：",
             Language.Japanese => "あなたは：",
             _ => "You have: ",
         } + $"<size=30>{playerAmount}</size>";
-        descriptionPriceText.text = $"{itemCost:F1}" + GameManager.Instance.saveData.currentLanguage switch
+        descriptionPriceText.text = $"{itemCost:F1}" + currentLanguage switch
         {
             Language.English => " yuan",
             Language.Chinese => " 元",

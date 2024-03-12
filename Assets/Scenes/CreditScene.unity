@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 1227546783}
   - component: {fileID: 1227546782}
   - component: {fileID: 1227546781}
+  - component: {fileID: 1227546784}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -861,19 +862,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1227546782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 529140437}
-        m_TargetAssemblyTypeName: CreditScene, Assembly-CSharp
-        m_MethodName: BackButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1227546782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +901,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227546779}
   m_CullTransparentMesh: 1
+--- !u!114 &1227546784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227546779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a874065406a59b341bd6c04459f77080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadEventSO: {fileID: 11400000, guid: 78761208961acd94c9e59d4a0ba47ecf, type: 2}
+  titleScene:
+    m_AssetGUID: 3c3e8be3c0ba0674289b46d94c8c087f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1 &1544025635
 GameObject:
   m_ObjectHideFlags: 0

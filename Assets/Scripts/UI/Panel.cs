@@ -16,6 +16,7 @@ public class Panel : MonoBehaviour
     public TMP_Text detailedDescriptionText;
     public TMP_Text detailedItemCostText;
     public TMP_Text counterText;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class Panel : MonoBehaviour
         nameText.text = selectItem.itemName;
         detailedItemImage.sprite = selectItem.itemImage.sprite;
         detailedDescriptionText.text = $"Description: {selectItem.itemDescription}";
-        detailedItemCostText.text = GameManager.Instance.saveData.currentLanguage switch
+        detailedItemCostText.text = currentLanguage switch
         {
             Language.English => $"{selectItem.costText.text:F1} yuan",
             Language.Chinese => $"{selectItem.costText.text:F1} 元",

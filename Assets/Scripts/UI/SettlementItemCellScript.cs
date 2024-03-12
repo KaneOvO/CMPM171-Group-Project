@@ -23,6 +23,7 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
     public TMP_FontAsset font => UIManager.Instance.font;
     protected Coroutine fadeCoroutine;
     public float fadeDuration = 0.2f;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
 
     protected virtual void OnEnable()
     {
@@ -40,9 +41,9 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         item = ItemManager.Instance.ID(id);
         Texture2D texture = Resources.Load<Texture2D>(item.spriteUrl);
         icon.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
-        sellItemText.text = item.name[(int)GameManager.Instance.saveData.currentLanguage] + $" × {amount}";
+        sellItemText.text = item.name[(int)currentLanguage] + $" × {amount}";
         float price = item.sellPrice * amount;
-        priceText.text = $"{price:F1}" + GameManager.Instance.saveData.currentLanguage switch
+        priceText.text = $"{price:F1}" + currentLanguage switch
         {
             Language.English => " yuan",
             Language.Chinese => " 元",
@@ -92,24 +93,24 @@ public class SettlementItemCellScript : MonoBehaviour, IPointerEnterHandler, IPo
         finalColor.a = targetAlpha;
         image.color = finalColor;
         descriptionPanel.SetActive(true);
-        string itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
+        string itemName = item.name[(int)currentLanguage];
         descriptionNameText.text = itemName;
         int itemAmount = ItemManager.Instance.InventoryAmount(item.id);
-        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        descriptionAmountText.text = currentLanguage switch
         {
             Language.English => "Backpack",
             Language.Chinese => "背包",
             Language.Japanese => "背包",
             _ => "Backpack"
         } + $" {itemAmount}";
-        descriptionPriceText.text = GameManager.Instance.saveData.currentLanguage switch
+        descriptionPriceText.text = currentLanguage switch
         {
             Language.English => $"Sell Price: {item.sellPrice:F1} yuan",
             Language.Chinese => $"售价：{item.sellPrice:F1} 元",
             Language.Japanese => $"販売価格: {item.sellPrice:F1} 円",
             _ => $"Sell Price: {item.sellPrice:F1} yuan",
         };
-        descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
+        descriptionText.text = item.description[(int)currentLanguage];
     }
     protected virtual IEnumerator FadeOut()
     {

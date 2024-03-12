@@ -7,6 +7,7 @@ public class MoneyDisplayer : MonoBehaviour
 {
     public PlayerState playerState => PlayerStateManager.Instance.playerState;
     private TextMeshProUGUI totalMoneyText;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
 
     void OnEnable()
     {
@@ -21,7 +22,7 @@ public class MoneyDisplayer : MonoBehaviour
     public void Refresh()
     {
         totalMoneyText.font = UIManager.Instance.font;
-        totalMoneyText.text = GameManager.Instance.saveData.currentLanguage switch
+        totalMoneyText.text = currentLanguage switch
         {
             Language.English => $"{playerState.money:F1} yuan",
             Language.Chinese => $"{playerState.money:F1} 元",

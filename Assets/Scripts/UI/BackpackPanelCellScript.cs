@@ -22,6 +22,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
     [HideInInspector] public int itemAmount;
     protected bool isSelected;
     protected Coroutine fadeCoroutine;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
 
     protected virtual void OnEnable()
     {
@@ -81,9 +82,9 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
         finalColor.a = targetAlpha;
         image.color = finalColor;
         descriptionPanel.SetActive(true);
-        string itemName = item.name[(int)GameManager.Instance.saveData.currentLanguage];
+        string itemName = item.name[(int)currentLanguage];
         descriptionNameText.text = $"{itemName}";
-        descriptionAmountText.text = GameManager.Instance.saveData.currentLanguage switch
+        descriptionAmountText.text = currentLanguage switch
         {
             Language.English => "Amount: ",
             Language.Chinese => "数量: ",
@@ -91,14 +92,14 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
             _ => "Amount: ",
         }
         + $"{itemAmount.ToString()}";
-        descriptionPriceText.text = GameManager.Instance.saveData.currentLanguage switch
+        descriptionPriceText.text = currentLanguage switch
         {
             Language.English => $"{item.originalPrice:F1} yuan",
             Language.Chinese => $"{item.originalPrice:F1} 元",
             Language.Japanese => $"{item.originalPrice:F1} 円",
             _ => $"{item.originalPrice:F1} yuan",
         };
-        descriptionText.text = item.description[(int)GameManager.Instance.saveData.currentLanguage];
+        descriptionText.text = item.description[(int)currentLanguage];
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)

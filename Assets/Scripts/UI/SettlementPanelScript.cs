@@ -23,6 +23,7 @@ public class SettlementPanelScript : MonoBehaviour
     public GameObject settlementItemCellPrefab;
     public List<InventoryItem> sellInventory => ItemManager.Instance.sellInventory;
     public TMP_FontAsset font => UIManager.Instance.font;
+    public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
 
     private void OnEnable()
     {
@@ -69,7 +70,7 @@ public class SettlementPanelScript : MonoBehaviour
         float start = totalMoney;
         float end = start + amount * item.sellPrice;
         float elapsedTime = 0f;
-        string displayString = GameManager.Instance.saveData.currentLanguage switch
+        string displayString = currentLanguage switch
         {
             Language.English => $"Total:{totalMoney:F1} yuan",
             Language.Chinese => $"共计:{totalMoney:F1} 元",
@@ -79,7 +80,7 @@ public class SettlementPanelScript : MonoBehaviour
         while (elapsedTime < 1f && totalMoney < end)
         {
             totalMoney = Mathf.Lerp(start, end, elapsedTime);
-            displayString = GameManager.Instance.saveData.currentLanguage switch
+            displayString = currentLanguage switch
             {
                 Language.English => $"Total:{totalMoney:F1} yuan",
                 Language.Chinese => $"共计:{totalMoney:F1} 元",
@@ -95,7 +96,7 @@ public class SettlementPanelScript : MonoBehaviour
             }
         }
         totalMoney = end;
-        displayString = GameManager.Instance.saveData.currentLanguage switch
+        displayString = currentLanguage switch
         {
             Language.English => $"Total:{totalMoney:F1} yuan",
             Language.Chinese => $"共计:{totalMoney:F1} 元",

@@ -15,9 +15,9 @@ public class UIManager : MonoBehaviour
     {
         get
         {
-            if ((int)GameManager.Instance.saveData.currentLanguage >= fonts.Length)
+            if ((int)GameManager.Instance.playerConfig.currentLanguage >= fonts.Length)
             { return fonts[0]; }
-            return fonts[(int)GameManager.Instance.saveData.currentLanguage];
+            return fonts[(int)GameManager.Instance.playerConfig.currentLanguage];
         }
     }
     [Header("UI Panels")]
