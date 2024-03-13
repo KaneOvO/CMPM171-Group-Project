@@ -16,7 +16,7 @@ public class TitleScene : MonoBehaviour
    [Header("Scene Script Object: Credit Scene")]
    public AssetReference creditScene;
    public GameObject LoadButton;
-
+   private SaveData tempSaveData;
 
    public void StartButtonClicked()
    {
@@ -32,7 +32,9 @@ public class TitleScene : MonoBehaviour
 
    public void LoadButtonClicked()
    {
-      StartCoroutine(LoadCliked());
+      GameManager.Instance.saveData = tempSaveData;
+      loadEventSO.RaiseEvent(gameStartScene, true);
+      // StartCoroutine(LoadCliked());
    }
 
    public IEnumerator LoadCliked()
@@ -53,11 +55,12 @@ public class TitleScene : MonoBehaviour
       //GameManager.Instance.SaveGame();
       Application.Quit();
    }
-   void Start()
+   public IEnumerator Start()
    {
       string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-
-      if (File.Exists(saveDataFilePath))
+      tempSaveData = null;
+      yield return GameManager.Instance.LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => tempSaveData = data);
+      if (tempSaveData != null)
       {
          LoadButton.SetActive(true);
       }
