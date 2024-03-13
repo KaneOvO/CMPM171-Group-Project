@@ -1328,6 +1328,7 @@ GameObject:
   - component: {fileID: 2057562200}
   - component: {fileID: 2057562199}
   - component: {fileID: 2057562203}
+  - component: {fileID: 2057562204}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1434,7 +1435,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2057562108}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2057562204}
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562190}
@@ -1527,6 +1529,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2057562204}
   - {fileID: 2057562165}
   - {fileID: 2057562163}
   - {fileID: 2057562164}
@@ -3834,7 +3837,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 450.02313
     y: 59.07602
-    width: 110.69649
+    width: 111.40722
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3974,6 +3977,20 @@ MonoBehaviour:
   targetObject: {fileID: 926021927}
   methodName: CargoEventEffect
   delay: 0
+--- !u!114 &2057562204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057562093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

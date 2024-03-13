@@ -5005,6 +5005,7 @@ GameObject:
   - component: {fileID: 8317272117488901130}
   - component: {fileID: 8317272117488901129}
   - component: {fileID: 8317272117488901132}
+  - component: {fileID: 8317272117488901133}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -5700,7 +5701,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 8317272117488901049}
   selectedCommands:
-  - {fileID: 8317272117488901132}
+  - {fileID: 8317272117488901133}
   variables:
   - {fileID: 5145755238186768819}
   - {fileID: 4056987223820466436}
@@ -8207,7 +8208,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -952.40405
     y: -119.14151
-    width: 79.45734
+    width: 76.57805
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8216,6 +8217,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 8317272117488901048}
   commandList:
+  - {fileID: 8317272117488901133}
   - {fileID: 8317272117488901047}
   - {fileID: 8317272117488901050}
   - {fileID: 8317272117488901120}
@@ -8265,7 +8267,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -744.5484
     y: -259.20517
-    width: 189.53473
+    width: 174.91681
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8611,7 +8613,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -788.85175
     y: -19.61621
-    width: 180.23242
+    width: 166.9434
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9788,7 +9790,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -774.5804
     y: -70.899025
-    width: 161.62778
+    width: 152.32547
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10430,7 +10432,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -793.21045
     y: -123.43636
-    width: 209.68974
+    width: 190.86365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10754,7 +10756,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -761.5412
     y: -196.27036
-    width: 170.9301
+    width: 160.29889
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13699,6 +13701,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 81
   indentLevel: 0
+--- !u!114 &8317272117488901133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534668113423323553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 82
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: b121e151f4a8e434f89b28ca4f01a185, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
 --- !u!224 &8424525383816788699 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 841758879979948523, guid: ebe34040282fbfd4db80a5bd4cc355c5, type: 3}
