@@ -14,6 +14,19 @@ public class IntroductionManager : MonoBehaviour
         localizationComponent = FindObjectOfType<Localization>();
         flowchart = FindObjectOfType<Flowchart>();
 
+        
+    }
+
+    public void InitialData()
+    {
+        SwitchLanguage();
+        flowchart.SetStringVariable("Language", currentLanguage);
+        Debug.Log(flowchart.GetStringVariable("Language"));
+        Debug.Log(GameManager.Instance.playerConfig.currentLanguage);
+    }
+
+    private void SwitchLanguage()
+    {
         currentLanguage = GameManager.Instance.playerConfig.currentLanguage switch
         {
             Language.English => "EN",
@@ -21,17 +34,8 @@ public class IntroductionManager : MonoBehaviour
             Language.Japanese => "JP",
             _ => "EN",
         };
-
-        flowchart.SetStringVariable("Language", currentLanguage);
-    }
-    void Start()
-    {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

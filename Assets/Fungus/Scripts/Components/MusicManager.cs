@@ -12,7 +12,7 @@ namespace Fungus
     //[RequireComponent(typeof(AudioSource))]
     public class MusicManager : MonoBehaviour
     {
-        protected AudioSource audioSourceMusic;
+        public AudioSource audioSourceMusic;
         protected AudioSource audioSourceAmbiance;
         protected AudioSource audioSourceSoundEffect;
 
