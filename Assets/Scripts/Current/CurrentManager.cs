@@ -132,7 +132,7 @@ public class CurrentManager : MonoBehaviour
         if (GameManager.Instance.saveData.currentStage == Stage.Morning)
         {
             GameManager.Instance.saveData.currentDay++;
-            flowchart.SetIntegerVariable("CurrentDay", currentDay);
+            flowchart.SetIntegerVariable("CurrentDay", GameManager.Instance.saveData.currentDay);
         }
         JudgeStage();
         flowchart.SetIntegerVariable("CurrentStage", currentStage);
