@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadJsonFilesAsync()
     {
         string inGameDataFilePath = Path.Combine(Application.streamingAssetsPath, "InGameData.json");
-        yield return LoadJsonFileAsync<InGameData>(inGameDataFilePath, (data) => inGameData = data);
+        StartCoroutine(LoadJsonFileAsync<InGameData>(inGameDataFilePath, (data) => inGameData = data));
 
         string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
         yield return LoadJsonFileAsync<PlayerConfig>(playerConfigFilePath, (data) => playerConfig = data);

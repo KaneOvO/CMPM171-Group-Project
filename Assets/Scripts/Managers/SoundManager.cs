@@ -19,9 +19,12 @@ public class SoundManager : MonoBehaviour
             return _instance;
         }
     }
+    public AudioSource BGMAudioSource;
+
     private void Awake()
     {
         _instance = this;
         transform.parent = GameObject.FindWithTag("ManagersContainer").transform;
+        BGMAudioSource = transform.Find("BGM").GetComponent<AudioSource>();
     }
 }
