@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator Start()
     {
         lastInterval = Time.realtimeSinceStartup;
+        LoadDataFromPlayerPrefs();
 
         yield return LoadJsonFilesAsync();
 
@@ -79,11 +80,33 @@ public class GameManager : MonoBehaviour
         string inGameDataFilePath = Path.Combine(Application.streamingAssetsPath, "InGameData.json");
         StartCoroutine(LoadJsonFileAsync<InGameData>(inGameDataFilePath, (data) => inGameData = data));
 
-        string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
-        yield return LoadJsonFileAsync<PlayerConfig>(playerConfigFilePath, (data) => playerConfig = data);
+        // string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
+        // yield return LoadJsonFileAsync<PlayerConfig>(playerConfigFilePath, (data) => playerConfig = data);
 
         // string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
         // yield return LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => saveData = data);
+
+        yield return null;
+    }
+
+    private void LoadDataFromPlayerPrefs()
+    {
+        // Loading PlayerConfig
+        if (PlayerPrefs.HasKey("PlayerConfig"))
+        {
+            string playerConfigJson = PlayerPrefs.GetString("PlayerConfig");
+            playerConfig = JsonUtility.FromJson<PlayerConfig>(playerConfigJson);
+            Debug.Log("PlayerConfig loaded");
+        }
+        else
+        {
+            playerConfig = new PlayerConfig
+            {
+                currentLanguage = Language.English,
+                volume = 1
+            };
+            Debug.Log("PlayerConfig created");
+        }
     }
 
     public IEnumerator LoadJsonFileAsync<T>(string filePath, Action<T> onDataLoaded)
@@ -127,16 +150,27 @@ public class GameManager : MonoBehaviour
     {
         Save();
     }
+    // public void Save(bool hardSave = false)
+    // {
+    //     string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
+    //     string dataAsJson = JsonUtility.ToJson(playerConfig);
+    //     File.WriteAllText(playerConfigFilePath, dataAsJson);
+    //     string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+    //     if (File.Exists(saveDataFilePath)||hardSave)
+    //     {
+    //         dataAsJson = JsonUtility.ToJson(saveData);
+    //         File.WriteAllText(saveDataFilePath, dataAsJson);
+    //     }
+    // }
+
     public void Save(bool hardSave = false)
     {
-        string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
-        string dataAsJson = JsonUtility.ToJson(playerConfig);
-        File.WriteAllText(playerConfigFilePath, dataAsJson);
-        string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-        if (File.Exists(saveDataFilePath)||hardSave)
-        {
-            dataAsJson = JsonUtility.ToJson(saveData);
-            File.WriteAllText(saveDataFilePath, dataAsJson);
-        }
+        string playerConfigJson = JsonUtility.ToJson(playerConfig);
+        PlayerPrefs.SetString("PlayerConfig", playerConfigJson);
+        string saveDataJson = JsonUtility.ToJson(saveData);
+        PlayerPrefs.SetString("SaveData", saveDataJson);
+
+        PlayerPrefs.Save();
     }
+
 }

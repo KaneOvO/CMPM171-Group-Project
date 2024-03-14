@@ -30,15 +30,27 @@ public class TitleScene : MonoBehaviour
       loadEventSO.RaiseEvent(IntroScene, true);
    }
 
+   // public void LoadButtonClicked()
+   // {
+   //    StartCoroutine(LoadCliked());
+   // }
+
+   // public IEnumerator LoadCliked()
+   // {
+   //    string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
+   //    yield return GameManager.Instance.LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => GameManager.Instance.saveData = data);
+   //    loadEventSO.RaiseEvent(gameStartScene, true);
+   // }
+
    public void LoadButtonClicked()
    {
-      StartCoroutine(LoadCliked());
+      LoadCliked();
    }
 
-   public IEnumerator LoadCliked()
+   private void LoadCliked()
    {
-      string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-      yield return GameManager.Instance.LoadJsonFileAsync<SaveData>(saveDataFilePath, (data) => GameManager.Instance.saveData = data);
+      string saveDataFilePath = PlayerPrefs.GetString("SaveData");
+      GameManager.Instance.saveData = JsonUtility.FromJson<SaveData>(saveDataFilePath);
       loadEventSO.RaiseEvent(gameStartScene, true);
    }
 
@@ -49,15 +61,12 @@ public class TitleScene : MonoBehaviour
 
    public void QuitButtonClicked()
    {
-      //TODO: save the game
       GameManager.Instance.Save();
       Application.Quit();
    }
    public void Awake()
    {
-      string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-
-      if (File.Exists(saveDataFilePath))
+      if (PlayerPrefs.HasKey("SaveData"))
       {
          LoadButton.SetActive(true);
       }
