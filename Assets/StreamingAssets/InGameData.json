@@ -59,7 +59,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 3.0,
-            "sellPrice": 4,
+            "sellPrice": 4.0,
             "sellValue": 1000,
             "maxStack": 9999,
             "description": [
@@ -76,7 +76,7 @@
             ],
             "reputationRequired": 0,
             "originalPrice": 8.0,
-            "sellPrice": 12,
+            "sellPrice": 12.0,
             "sellValue": 1000,
             "maxStack": 9999,
             "description": [
@@ -92,8 +92,8 @@
                 "奶茶"
             ],
             "reputationRequired": 20,
-            "originalPrice": 20,
-            "sellPrice": 28,
+            "originalPrice": 20.0,
+            "sellPrice": 28.0,
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
@@ -109,8 +109,8 @@
                 "桂花酿"
             ],
             "reputationRequired": 20,
-            "originalPrice": 100,
-            "sellPrice": 150,
+            "originalPrice": 100.0,
+            "sellPrice": 150.0,
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
@@ -127,6 +127,7 @@
             ],
             "reputationRequired": 20,
             "originalPrice": 360.0,
+            "sellPrice": 480.0,
             "sellValue": 500,
             "maxStack": 9999,
             "description": [
