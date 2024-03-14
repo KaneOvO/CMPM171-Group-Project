@@ -45,7 +45,6 @@ public class PlayerStateManager : MonoBehaviour
 
     private void HandleActivityDone()
     {
-        EnergyChange(-1);
         CheckSick();
     }
 
@@ -53,23 +52,5 @@ public class PlayerStateManager : MonoBehaviour
     public bool CheckSick()
     {
         return playerState.isSick = playerState.health < sick;
-    }
-    public void EnergyChange(int amount)
-    {
-        playerState.energy = Math.Clamp(playerState.energy + amount, 0, initialPlayerStates.energy);
-    }
-    public void ResetEnergy()
-    {
-        playerState.energy = initialPlayerStates.energy;
-        Debug.Log($"{this.GetType().Name}: Energy is reset");
-    }
-    public void ClearEnergy()
-    {
-        playerState.energy = 0;
-        Debug.Log("Energy is empty.");
-    }
-    public void SetEnergy(int amount)
-    {
-        playerState.energy = Math.Clamp(amount, 0, initialPlayerStates.energy);
     }
 }

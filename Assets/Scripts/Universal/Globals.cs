@@ -55,7 +55,6 @@ public class EventInfo
 [System.Serializable]
 public class PlayerState
 {
-    [Range(0, 3)] public int energy;
     public bool isSick;
     public float money;
     [Range(0, 100)] public int health;

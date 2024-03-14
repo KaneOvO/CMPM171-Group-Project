@@ -93,7 +93,10 @@ public class GameManager : MonoBehaviour
 
         if (webRequest.result == UnityWebRequest.Result.ProtocolError)
         {
+#if UNITY_EDITOR
             Debug.LogError($"Error loading JSON file from {filePath}: {webRequest.error}");
+#endif
+            yield break;
         }
         else
         {
@@ -102,14 +105,6 @@ public class GameManager : MonoBehaviour
             onDataLoaded?.Invoke(data);
         }
         webRequest.Dispose();
-    }
-
-    private void InitializedSaveData()
-    {
-        saveData = new SaveData();
-        saveData.currentDay = 1;
-        saveData.playerState = inGameData.initialDatas.playerState;
-        saveData.inventory = new List<InventoryItem>();
     }
 
     private void Update()
@@ -132,13 +127,16 @@ public class GameManager : MonoBehaviour
     {
         Save();
     }
-    public void Save()
+    public void Save(bool hardSave = false)
     {
         string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");
         string dataAsJson = JsonUtility.ToJson(playerConfig);
         File.WriteAllText(playerConfigFilePath, dataAsJson);
         string saveDataFilePath = Path.Combine(Application.streamingAssetsPath, "SaveData.json");
-        dataAsJson = JsonUtility.ToJson(saveData);
-        File.WriteAllText(saveDataFilePath, dataAsJson);
+        if (File.Exists(saveDataFilePath)||hardSave)
+        {
+            dataAsJson = JsonUtility.ToJson(saveData);
+            File.WriteAllText(saveDataFilePath, dataAsJson);
+        }
     }
 }

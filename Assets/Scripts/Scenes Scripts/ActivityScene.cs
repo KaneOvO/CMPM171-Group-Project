@@ -35,4 +35,9 @@ public class ActivityScene : MonoBehaviour
     {
         UIManager.Instance.InvokeLanguageChangeEvents();
     }
+
+    public void Start()
+    {
+        GameManager.Instance.Save(true);
+    }
 }

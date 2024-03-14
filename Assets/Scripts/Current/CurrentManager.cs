@@ -8,7 +8,6 @@ public class CurrentManager : MonoBehaviour
 {
     public Flowchart flowchart;
     public Localization localizationComponent;
-    public int energy;
     public float money;
     public int moral;
     public int reputation;
@@ -39,9 +38,6 @@ public class CurrentManager : MonoBehaviour
     {
         SwitchLanguage();
         flowchart.SetStringVariable("Language", currentLanguage);
-
-        energy = GameManager.Instance.saveData.playerState.energy;
-        flowchart.SetIntegerVariable("Energy", energy);
 
         UpdateMoney();
 
@@ -104,7 +100,6 @@ public class CurrentManager : MonoBehaviour
     public void OnDisable()
     {
         UIManager.Instance.onLanguageChange.RemoveListener(OnLanguageChanged);
-        GameManager.Instance.saveData.playerState.energy = flowchart.GetIntegerVariable("Energy");
         GameManager.Instance.saveData.playerState.money = flowchart.GetFloatVariable("Money");
         GameManager.Instance.saveData.playerState.moral = flowchart.GetIntegerVariable("Moral");
         GameManager.Instance.saveData.playerState.reputation = flowchart.GetIntegerVariable("Reputation");
