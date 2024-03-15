@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 112119074}
   - component: {fileID: 112119076}
   - component: {fileID: 112119077}
+  - component: {fileID: 112119078}
   m_Layer: 5
   m_Name: CreditText
   m_TagString: TMP
@@ -290,6 +291,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &112119078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112119072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0e2d2e5e10a3b44a3b0e96803b2958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &529140435
 GameObject:
   m_ObjectHideFlags: 0
