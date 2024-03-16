@@ -10,6 +10,8 @@ using System;
 [AddComponentMenu("Managers/GameManager")]
 public class GameManager : MonoBehaviour
 {
+    [Header("Mouse Position")]
+    public Vector3 mousePosition;
     [Header("Game Information")]
     [Range(0f, 1f)] public float fpsUpdateInterval = 0.5f;
     public float framesPerSecond = 0;
@@ -96,7 +98,9 @@ public class GameManager : MonoBehaviour
         {
             string playerConfigJson = PlayerPrefs.GetString("PlayerConfig");
             playerConfig = JsonUtility.FromJson<PlayerConfig>(playerConfigJson);
+#if UNITY_EDITOR
             Debug.Log("PlayerConfig loaded");
+#endif
         }
         else
         {
@@ -105,7 +109,10 @@ public class GameManager : MonoBehaviour
                 currentLanguage = Language.English,
                 volume = 1
             };
+            Save();
+#if UNITY_EDITOR
             Debug.Log("PlayerConfig created");
+#endif
         }
     }
 
@@ -133,6 +140,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         CaculateFPS();
+        mousePosition = Input.mousePosition;
     }
     private void CaculateFPS()
     {
@@ -168,9 +176,16 @@ public class GameManager : MonoBehaviour
         string playerConfigJson = JsonUtility.ToJson(playerConfig);
         PlayerPrefs.SetString("PlayerConfig", playerConfigJson);
         string saveDataJson = JsonUtility.ToJson(saveData);
-        PlayerPrefs.SetString("SaveData", saveDataJson);
+        if (PlayerPrefs.HasKey("SaveData") || hardSave)
+        {
+            PlayerPrefs.SetString("SaveData", saveDataJson);
+        }
 
         PlayerPrefs.Save();
     }
-
+    [ContextMenu("Clear PlayerPrefs")]
+    public void ClearPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

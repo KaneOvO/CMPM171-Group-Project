@@ -23,6 +23,7 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
     protected bool isSelected;
     protected Coroutine fadeCoroutine;
     public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
+    private Vector3 lastMousePosition;
 
     protected virtual void OnEnable()
     {
@@ -34,8 +35,9 @@ public class BackpackPanelCellScript : MonoBehaviour, IPointerEnterHandler, IPoi
 
     protected virtual void Update()
     {
-        if (isSelected)
+        if (isSelected && (lastMousePosition - Input.mousePosition).magnitude > 1)
         {
+            lastMousePosition = Input.mousePosition;
             Vector3 spawnedPosition = Input.mousePosition + new Vector3(10, 200, 0);
             spawnedPosition.x = Mathf.Clamp(spawnedPosition.x, 300, Screen.width - 300);
             spawnedPosition.y = Mathf.Clamp(spawnedPosition.y, 100, Screen.height - 100);

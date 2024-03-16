@@ -30,7 +30,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [HideInInspector] public float itemCost = 0;
     [HideInInspector] public int maxStack;
     public GameObject selectedBox;
-    private bool isSelected;
+    [SerializeField] private bool isSelected;
     private Coroutine fadeCoroutine;
     public float fadeDuration = 0.2f;
     [Header("Description Panel Setting")]
@@ -45,6 +45,7 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Button closeButton;
     public TMP_FontAsset font => UIManager.Instance.font;
     public Language currentLanguage => GameManager.Instance.playerConfig.currentLanguage;
+    private Vector3 lastMousePosition;
     public void Refresh()
     {
         if (currentScene == 0)
@@ -57,8 +58,9 @@ public class PrefabController : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private void Update()
     {
-        if (isSelected)
+        if (isSelected && (lastMousePosition - Input.mousePosition).magnitude > 1)
         {
+            lastMousePosition = Input.mousePosition;
             Vector3 spawnedPosition = Input.mousePosition + new Vector3(10, 200, 0);
             spawnedPosition.x = Mathf.Clamp(spawnedPosition.x, 300, Screen.width - 300);
             spawnedPosition.y = Mathf.Clamp(spawnedPosition.y, 100, Screen.height - 100);
