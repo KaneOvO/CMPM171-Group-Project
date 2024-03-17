@@ -38,6 +38,6 @@ public class ActivityScene : MonoBehaviour
 
     public void Start()
     {
-        GameManager.Instance.Save(true);
+        
     }
 }

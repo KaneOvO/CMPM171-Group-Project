@@ -790,7 +790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowchart: {fileID: 0}
   localizationComponent: {fileID: 0}
-  energy: 0
   money: 0
   moral: 0
   reputation: 0
@@ -1350,9 +1349,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2057562248}
+  - {fileID: 2057562232}
   selectedCommands:
-  - {fileID: 2057562215}
+  - {fileID: 2057562209}
   variables:
   - {fileID: 2057562123}
   - {fileID: 2057562181}
@@ -2294,7 +2293,7 @@ MonoBehaviour:
   itemId: 160
   indentLevel: 0
   targetObject: {fileID: 1739413361}
-  methodName: loadMainMenu
+  methodName: loadCreditScene
   delay: 0
 --- !u!114 &2057562210
 MonoBehaviour:
@@ -2875,7 +2874,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 263.4073
-    y: -33.52364
+    y: -35.01618
     width: 117.66166
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}

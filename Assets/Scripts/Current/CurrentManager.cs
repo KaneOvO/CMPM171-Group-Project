@@ -174,5 +174,6 @@ public class CurrentManager : MonoBehaviour
         ItemManager.Instance.AddItemAmount("03", 1000);
         ItemManager.Instance.AddItemAmount("04", 500);
     }
+
     
 }

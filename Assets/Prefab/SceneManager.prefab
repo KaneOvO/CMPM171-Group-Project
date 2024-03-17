@@ -50,6 +50,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  creditScene:
+    m_AssetGUID: 97f2fc7bd7330a64cbaf32fade4cd0c1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   shopSceneFirst:
     m_AssetGUID: feafc8a7f160cae4c8b53e43472f2525
     m_SubObjectName: 
@@ -156,7 +161,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   IntroScene:
-    m_AssetGUID: 
+    m_AssetGUID: 15036a68c045e654884d0e6a39a6dd75
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
