@@ -17,15 +17,20 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        if (FungusManager.Instance.MusicManager.audioSourceMusic.volume != 1)
+        if (PlayerPrefs.HasKey("PlayerConfig"))
         {
-            volumeSlider.value = FungusManager.Instance.MusicManager.audioSourceMusic.volume;
+            volumeSlider.value = GameManager.Instance.playerConfig.volume;
+
+            FungusManager.Instance.MusicManager.audioSourceMusic.volume = volumeSlider.value;
+
+            SetVolume();
         }
     }
 
     public void SetVolume()
     {
         FungusManager.Instance.MusicManager.SetAudioVolume(volumeSlider.value, 1f, null);
+        GameManager.Instance.playerConfig.volume = volumeSlider.value;
     }
 
     public void SavePlayerConfig()
@@ -69,13 +74,13 @@ public class AudioManager : MonoBehaviour
     {
         flowchart.SetIntegerVariable("CurrentDay", GameManager.Instance.saveData.currentDay);
         flowchart.SetIntegerVariable("CurrentStage", (int)GameManager.Instance.saveData.currentStage);
-        
+
         flowchart.SetFloatVariable("Money", GameManager.Instance.saveData.playerState.money);
         flowchart.SetIntegerVariable("Moral", GameManager.Instance.saveData.playerState.moral);
         flowchart.SetIntegerVariable("Reputation", GameManager.Instance.saveData.playerState.reputation);
         flowchart.SetIntegerVariable("Health", GameManager.Instance.saveData.playerState.health);
         flowchart.SetBooleanVariable("IsSick", GameManager.Instance.saveData.playerState.isSick);
-        
+
 
         flowchart.SetBooleanVariable("teachPurchase", GameManager.Instance.saveData.teachInfo.purchase);
         flowchart.SetBooleanVariable("teachVolunteer", GameManager.Instance.saveData.teachInfo.volunteer);

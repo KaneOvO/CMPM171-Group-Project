@@ -17,7 +17,7 @@ public class SaveData
 public class PlayerConfig
 {
     public Language currentLanguage;
-    public int volume;
+    public float volume;
 }
 
 [System.Serializable]
