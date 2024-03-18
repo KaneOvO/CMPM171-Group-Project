@@ -8193,7 +8193,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -952.40405
     y: -123.79267
-    width: 76.046486
+    width: 79.45734
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8254,7 +8254,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -744.5484
     y: -259.20517
-    width: 187.67427
+    width: 189.53473
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8600,7 +8600,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -788.85175
     y: -19.61621
-    width: 178.37196
+    width: 180.23242
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9777,7 +9777,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -774.5804
     y: -70.899025
-    width: 159.76733
+    width: 161.62778
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10419,7 +10419,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -793.21045
     y: -123.43636
-    width: 204.41844
+    width: 209.68974
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10743,7 +10743,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -761.5412
     y: -196.27036
-    width: 169.06964
+    width: 170.9301
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13302,7 +13302,7 @@ MonoBehaviour:
           gameObjectVal: {fileID: 0}
         integerData:
           integerRef: {fileID: 0}
-          integerVal: 2
+          integerVal: 8
         materialData:
           materialRef: {fileID: 0}
           materialVal: {fileID: 0}

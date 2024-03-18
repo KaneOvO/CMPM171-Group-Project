@@ -74,6 +74,14 @@ public class AudioManager : MonoBehaviour
     {
         flowchart.SetIntegerVariable("CurrentDay", GameManager.Instance.saveData.currentDay);
         flowchart.SetIntegerVariable("CurrentStage", (int)GameManager.Instance.saveData.currentStage);
+        string currentLanguage = GameManager.Instance.playerConfig.currentLanguage switch
+        {
+            Language.English => "EN",
+            Language.Chinese => "",
+            Language.Japanese => "JP",
+            _ => "EN",
+        };
+        flowchart.SetStringVariable("Language", currentLanguage);
 
         flowchart.SetFloatVariable("Money", GameManager.Instance.saveData.playerState.money);
         flowchart.SetIntegerVariable("Moral", GameManager.Instance.saveData.playerState.moral);

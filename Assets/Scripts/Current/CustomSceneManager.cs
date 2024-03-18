@@ -262,12 +262,10 @@ public class CustomSceneManager : MonoBehaviour
         public void loadInterestEvent()
         {
                 loadSceneEventSO.RaiseEvent(InterestEvent, true);
-                Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
         }
 
         public void loadCreditScene()
         {
                 loadSceneEventSO.RaiseEvent(creditScene, true);
-                Debug.Log($"{MethodBase.GetCurrentMethod().Name} is called.");
         }
 }
