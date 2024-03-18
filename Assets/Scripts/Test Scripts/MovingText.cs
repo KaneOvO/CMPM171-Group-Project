@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 public class MovingText : MonoBehaviour
 {
+    public bool moving = true;
     public float speed = 10f;
     public IEnumerator Start()
     {
@@ -14,7 +15,7 @@ public class MovingText : MonoBehaviour
 
     public IEnumerator MoveText()
     {
-        while (true)
+        while (moving)
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
             yield return null;

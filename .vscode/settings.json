@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CMPM171.sln"
+    "dotnet.defaultSolution": "CMPM171.sln",
+    "liveServer.settings.port": 5501
 }

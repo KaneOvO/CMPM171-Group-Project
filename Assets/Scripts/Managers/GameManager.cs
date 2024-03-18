@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
             playerConfig = new PlayerConfig
             {
                 currentLanguage = Language.English,
-                volume = 1
+                volume = 1f
             };
             Save();
 #if UNITY_EDITOR
@@ -154,10 +154,10 @@ public class GameManager : MonoBehaviour
             lastInterval = timeNow;
         }
     }
-    private void OnApplicationQuit()
-    {
-        Save();
-    }
+    // private void OnApplicationQuit()
+    // {
+    //     Save();
+    // }
     // public void Save(bool hardSave = false)
     // {
     //     string playerConfigFilePath = Path.Combine(Application.streamingAssetsPath, "PlayerConfig.json");

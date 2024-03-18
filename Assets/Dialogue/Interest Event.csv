@@ -54,7 +54,7 @@ SAY.Interest Event.131.黑衣人,,如果您没有钱支付，按照合同，我�
 SAY.Interest Event.132.,,[你眼睁睁看着黑衣人夺走了你的店铺],You watch helplessly as the men in black take away your shop.
 SAY.Interest Event.133.,,坏结局：错失真相,Bad Ending: Missing the Truth
 SAY.Interest Event.134.,,游戏结束,Game Over
-MENU.Interest Event.135,,返回主菜单,Returning to the main menu
+MENU.Interest Event.135,,结束,End...
 SAY.Interest Event.139.我,,(幸好我有储蓄一些钱的习惯),"(Luckily, I have a habit of saving some money.)"
 SAY.Interest Event.140.,,[你很快把钱转给了黑衣人],[You quickly transfer the money to the mysterious man.]
 SAY.Interest Event.141.我,,我把钱转过去了，你看看吧。,I've transferred the money. Take a look.
@@ -70,14 +70,14 @@ SAY.Interest Event.149.我,,(在那之前，我得确保每周能交给他们这
 SAY.Interest Event.162.,,[就这样，伴随着这扑朔迷离的情况，新的一周开始了],"And so, with this perplexing situation lingering, a new week begins."
 SAY.Interest Event.150.,,未完待续...,To be continued...
 \n,,,
-MENU.Interest Event.151,,返回主菜单,Returning to the main menu
+MENU.Interest Event.151,,结束,End...
 SAY.Interest Event.153.我,,我放弃这所店铺，你们把它收走吧。,I'm giving up this shop. You can take it away.
 SAY.Interest Event.154.黑衣人,,您做出了明智的选择，袁小姐。,"You've made a wise decision, Miss Yuan."
 SAY.Interest Event.155.,,[就这样，你放弃了父亲的店铺，离开了这座城市，回到了之前的日常中],"[And so, you gave up your father's shop, left the city, and returned to your previous routine.]"
 SAY.Interest Event.156.,,[尽管如此，这件事背后的真相成为了你心头一直无法平息的疑问],"[Nevertheless, the truth behind this matter remained a lingering question in your mind that you couldn't shake off.]"
 SAY.Interest Event.157.,,[但你或许永远也没有机会知道了],[But perhaps you'll never have the chance to find out.]
 SAY.Interest Event.158.,,普通结局：逃避的平静,Normal Ending: The Calm of Escape
-MENU.Interest Event.159,,返回主菜单,Returning to the main menu
+MENU.Interest Event.159,,结束,End...
 SAY._CommandCopyBuffer.143.黑衣人,,很好袁小姐，您真是个有能力的人。,
 CHARACTER.我,,我,Me
 CHARACTER.黑衣人,,黑衣人,Mysterious Man
